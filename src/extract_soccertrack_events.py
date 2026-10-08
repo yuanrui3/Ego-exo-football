@@ -88,5 +88,5 @@ def main():
     print(f'state-match rate:                        {state_match_rate:.2%}')
     print(f'actor-presence rate:                     {actor_presence_rate:.2%}')
     print(f'skipped because actor missing:           {skipped_actor_missing}')
-    print(f'GSR frame offsets (-1, 0, +1):           -1={offset_counts[-1]}, 0={offset_counts[0]}, +1={offset_counts[1]}')
+    print(f'GSR frame offsets over state-matched events (including actor-missing) (-1, 0, +1): -1={offset_counts[-1]}, 0={offset_counts[0]}, +1={offset_counts[1]}')
 if __name__=='__main__': main()

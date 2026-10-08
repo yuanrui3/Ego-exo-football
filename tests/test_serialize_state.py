@@ -1,6 +1,11 @@
 import copy
+import json
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
+from src.make_sft_dataset import main as make_sft_dataset
 from src.serialize_state import serialize_state
 
 
@@ -135,6 +140,44 @@ class AnonymousSerializerTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "actor to be present.*x and y"):
             serialize_state(state, mode="anonymous")
+
+    def test_sft_generation_skips_actor_without_available_team(self):
+        row = {
+            "decision_id": "decision-1",
+            "match_id": "match-1",
+            "actor_id": "actor-id",
+            "players": [
+                {
+                    "player_id": "actor-id",
+                    "team": None,
+                    "role": "player",
+                    "x": 1.0,
+                    "y": 2.0,
+                }
+            ],
+            "action": {"label": "Pass"},
+        }
+
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            input_path = directory / "input.jsonl"
+            train_path = directory / "train.jsonl"
+            val_path = directory / "val.jsonl"
+            input_path.write_text(json.dumps(row) + "\n", encoding="utf-8")
+            argv = [
+                "make_sft_dataset.py",
+                "--input",
+                str(input_path),
+                "--train",
+                str(train_path),
+                "--val",
+                str(val_path),
+            ]
+            with patch("sys.argv", argv):
+                make_sft_dataset()
+
+            self.assertEqual(train_path.read_text(encoding="utf-8"), "")
+            self.assertEqual(val_path.read_text(encoding="utf-8"), "")
 
 
 if __name__ == "__main__":

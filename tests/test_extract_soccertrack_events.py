@@ -93,6 +93,7 @@ class ExtractSoccerTrackEventsTests(unittest.TestCase):
         self.assertEqual(rows[0]["actor_team"], "right")
         self.assertEqual(rows[0]["players"][0]["x"], 42.5)
         self.assertEqual(rows[0]["players"][0]["y"], 17.25)
+        self.assertIn("over state-matched events (including actor-missing)", output)
         self.assertIn("-1=0, 0=1, +1=1", output)
         self.assertIn("records written:                         1", output)
         self.assertIn("actor-missing count:                     1", output)

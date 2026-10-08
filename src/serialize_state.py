@@ -29,7 +29,8 @@ def find_anonymous_actor(r):
     return actor
 
 def has_valid_anonymous_actor(r):
-    return find_anonymous_actor(r) is not None
+    actor=find_anonymous_actor(r)
+    return actor is not None and bool(r.get('actor_team') or actor.get('team'))
 
 def serialize_anonymous_state(r,include_answer=False):
     players=list(r.get('players') or [])
