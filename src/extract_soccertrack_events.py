@@ -59,18 +59,34 @@ def choose_state(frame,mapping,states):
     return None,None,[]
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--bas',required=True); ap.add_argument('--gsr',required=True); ap.add_argument('--match-id',required=True); ap.add_argument('--period',required=True,type=int,choices=[1,2]); ap.add_argument('--output',required=True); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--bas',required=True); ap.add_argument('--gsr',required=True); ap.add_argument('--match-id',required=True); ap.add_argument('--period',required=True,type=int,choices=[1,2]); ap.add_argument('--output',required=True); ap.add_argument('--require-actor-present',action='store_true'); a=ap.parse_args()
     events=load_bas(a.bas,a.period); mapping=collect_ids(a.gsr,[e['frame'] for e in events]); states=stream_states(a.gsr,mapping.values())
-    written=missing=actor_missing=0
+    written=missing=actor_missing=state_matches=skipped_actor_missing=0
+    offset_counts={-1:0,0:0,1:0}
     with open(a.output,'w',encoding='utf-8') as out:
         for e in events:
             matched,iid,players=choose_state(e['frame'],mapping,states)
             if not players: missing+=1; continue
+            state_matches+=1
+            frame_offset=matched-e['frame']
+            offset_counts[frame_offset]+=1
             actor_ids={str(p['player_id']) for p in players}
-            if e['player_id'] is not None and str(e['player_id']) not in actor_ids: actor_missing+=1
-            row={'decision_id':f"{a.match_id}_p{a.period}_f{e['frame']}_{e['idx']}",'match_id':str(a.match_id),'period':a.period,'timestamp_ms':e['timestamp_ms'],'frame':e['frame'],'matched_gsr_frame':matched,'gsr_image_id':iid,'possession_team':e['team'],'actor_id':e['player_id'],'actor_team':e['team'],'event_visibility':e['visibility'],'players':players,'ball':{'x':None,'y':None,'z':None,'vx':None,'vy':None,'vz':None},'action':{'label':e['label'],'target_player_id':None,'target_x':None,'target_y':None},'outcome':{'success':None,'future_value':None,'shot_within_5s':None,'xg_within_5s':None}}
+            actor_present=e['player_id'] is not None and str(e['player_id']) in actor_ids
+            if not actor_present:
+                actor_missing+=1
+                if a.require_actor_present:
+                    skipped_actor_missing+=1
+                    continue
+            row={'decision_id':f"{a.match_id}_p{a.period}_f{e['frame']}_{e['idx']}",'match_id':str(a.match_id),'period':a.period,'timestamp_ms':e['timestamp_ms'],'frame':e['frame'],'matched_gsr_frame':matched,'gsr_frame_offset':frame_offset,'gsr_image_id':iid,'possession_team':None,'actor_id':e['player_id'],'actor_team':e['team'],'event_visibility':e['visibility'],'players':players,'ball':{'x':None,'y':None,'z':None,'vx':None,'vy':None,'vz':None},'action':{'label':e['label'],'target_player_id':None,'target_x':None,'target_y':None},'outcome':{'success':None,'future_value':None,'shot_within_5s':None,'xg_within_5s':None}}
             out.write(json.dumps(row,ensure_ascii=False)+'\n'); written+=1
-    print(f'BAS events in half:          {len(events)}'); print(f'decision records written:   {written}'); print(f'missing GSR state:           {missing}'); print(f'actor absent from GSR frame: {actor_missing}')
-    if events: print(f'state match rate:            {written/len(events):.2%}')
-    if written: print(f'actor-presence rate:         {(written-actor_missing)/written:.2%}')
+    state_match_rate=state_matches/len(events) if events else 0.0
+    actor_presence_rate=(state_matches-actor_missing)/state_matches if state_matches else 0.0
+    print(f'BAS event count:                         {len(events)}')
+    print(f'records written:                         {written}')
+    print(f'missing GSR state count:                 {missing}')
+    print(f'actor-missing count:                     {actor_missing}')
+    print(f'state-match rate:                        {state_match_rate:.2%}')
+    print(f'actor-presence rate:                     {actor_presence_rate:.2%}')
+    print(f'skipped because actor missing:           {skipped_actor_missing}')
+    print(f'GSR frame offsets (-1, 0, +1):           -1={offset_counts[-1]}, 0={offset_counts[0]}, +1={offset_counts[1]}')
 if __name__=='__main__': main()

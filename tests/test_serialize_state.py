@@ -1,0 +1,107 @@
+import copy
+import unittest
+
+from src.serialize_state import serialize_state
+
+
+class AnonymousSerializerTests(unittest.TestCase):
+    def test_player_identity_changes_do_not_change_anonymous_state(self):
+        state = {
+            "match_id": "match-a",
+            "period": 1,
+            "timestamp_ms": 1234,
+            "actor_id": "actor-id",
+            "actor_team": "home",
+            "possession_team": "home",
+            "players": [
+                {
+                    "player_id": "opponent-id",
+                    "track_id": "opponent-track",
+                    "jersey": 9,
+                    "team": "away",
+                    "role": "player",
+                    "x": 12.0,
+                    "y": 10.0,
+                    "vx": 1.0,
+                    "vy": 0.0,
+                },
+                {
+                    "player_id": "teammate-far",
+                    "track_id": "teammate-track-far",
+                    "jersey": 8,
+                    "team": "home",
+                    "role": "player",
+                    "x": 30.0,
+                    "y": 10.0,
+                    "vx": 0.0,
+                    "vy": 1.0,
+                },
+                {
+                    "player_id": "actor-id",
+                    "track_id": "actor-track",
+                    "jersey": 10,
+                    "team": "home",
+                    "role": "player",
+                    "x": 10.0,
+                    "y": 10.0,
+                    "vx": 0.5,
+                    "vy": 0.0,
+                },
+                {
+                    "player_id": "teammate-near",
+                    "track_id": "teammate-track-near",
+                    "jersey": 7,
+                    "team": "home",
+                    "role": "goalkeeper",
+                    "x": 11.0,
+                    "y": 10.0,
+                    "vx": 0.0,
+                    "vy": 0.0,
+                },
+            ],
+            "action": {"label": "Pass"},
+        }
+
+        changed_ids = copy.deepcopy(state)
+        changed_ids["match_id"] = "different-match"
+        for index, player in enumerate(changed_ids["players"]):
+            player["player_id"] = f"new-player-{index}"
+            player["track_id"] = f"new-track-{index}"
+            player["jersey"] = index + 20
+        changed_ids["actor_id"] = "new-player-2"
+
+        serialized = serialize_state(state, mode="anonymous")
+        self.assertEqual(serialized, serialize_state(changed_ids, mode="anonymous"))
+        self.assertNotIn("MATCH", serialized)
+        self.assertNotIn("player_id", serialized)
+        self.assertNotIn("track_id", serialized)
+        self.assertNotIn("jersey", serialized)
+        self.assertLess(serialized.index("TEAMMATE_1"), serialized.index("TEAMMATE_2"))
+        self.assertLess(serialized.index("TEAMMATE_2"), serialized.index("OPPONENT_1"))
+        self.assertIn("ACTOR team=home role=player x=10.00 y=10.00", serialized)
+
+    def test_identity_mode_preserves_identity_fields(self):
+        state = {
+            "actor_id": "actor-id",
+            "actor_team": "home",
+            "players": [
+                {
+                    "player_id": "actor-id",
+                    "track_id": "actor-track",
+                    "jersey": 10,
+                    "team": "home",
+                    "role": "player",
+                    "x": 1.0,
+                    "y": 2.0,
+                }
+            ],
+            "action": {"label": "Pass"},
+        }
+        serialized = serialize_state(state, mode="identity")
+        self.assertIn("ACTOR actor-id", serialized)
+        self.assertIn("PLAYER id=actor-id track=actor-track", serialized)
+        self.assertIn("jersey=10", serialized)
+
+
+if __name__ == "__main__":
+    unittest.main()

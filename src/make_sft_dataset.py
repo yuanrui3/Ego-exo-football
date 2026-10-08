@@ -10,11 +10,11 @@ def write(p,rows):
     with open(p,'w',encoding='utf-8') as f:
         for r in rows:f.write(json.dumps(r,ensure_ascii=False)+'\n')
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--input',required=True); ap.add_argument('--train',required=True); ap.add_argument('--val',required=True); ap.add_argument('--val-frac',type=float,default=.2); ap.add_argument('--seed',type=int,default=42); a=ap.parse_args(); by=defaultdict(list)
+    ap=argparse.ArgumentParser(); ap.add_argument('--input',required=True); ap.add_argument('--train',required=True); ap.add_argument('--val',required=True); ap.add_argument('--val-frac',type=float,default=.2); ap.add_argument('--seed',type=int,default=42); ap.add_argument('--serializer-mode',choices=['identity','anonymous'],default='anonymous'); a=ap.parse_args(); by=defaultdict(list)
     for r in read(a.input):by[str(r['match_id'])].append(r)
     ms=sorted(by); random.Random(a.seed).shuffle(ms); nv=max(1,round(len(ms)*a.val_frac)) if len(ms)>1 else 0; vm=set(ms[:nv]); tr=[];va=[]
     for m in ms:
         target=va if m in vm else tr
-        for r in by[m]: target.append({'id':r['decision_id'],'match_id':r['match_id'],'prompt':f"<|system|>\n{SYSTEM}\n<|user|>\n{serialize_state(r)}\n<|assistant|>\n",'response':str(r['action']['label']).strip()})
+        for r in by[m]: target.append({'id':r['decision_id'],'match_id':r['match_id'],'prompt':f"<|system|>\n{SYSTEM}\n<|user|>\n{serialize_state(r,mode=a.serializer_mode)}\n<|assistant|>\n",'response':str(r['action']['label']).strip()})
     write(a.train,tr);write(a.val,va);print('train',len(tr),'val',len(va),'val_matches',sorted(vm))
 if __name__=='__main__':main()
