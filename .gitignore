@@ -5,8 +5,12 @@ __pycache__/
 venv/
 
 # Data
-data/*.json
-data/*.jsonl
+/data/**
+!/data/
+# To keep a small reference/example file, explicitly unignore its parent
+# directories and the file itself here, for example:
+# !/data/examples/
+# !/data/examples/reference.json
 data/raw/
 datasets/
 soccertrack/

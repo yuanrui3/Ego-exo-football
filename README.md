@@ -60,8 +60,8 @@ The project depends on:
 
 ```powershell
 py src\extract_soccertrack_events.py `
-  --bas  "C:\Users\flexadmin\Downloads\football_tactical_llm_starter_v2\football_tactical_llm_starter_v2\data\117093_12_class_events.json" `
-  --gsr "C:\Users\flexadmin\Downloads\football_tactical_llm_starter_v2\football_tactical_llm_starter_v2\data\117093_1st.json" `
+  --bas "D:\SoccerTrack\BAS\117093\117093_12_class_events.json" `
+  --gsr "D:\SoccerTrack\GSR\117093\117093_1st.json" `
   --match-id 117093 `
   --period 1 `
   --output data\117093_1st_decisions.jsonl
