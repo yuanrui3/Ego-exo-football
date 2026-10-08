@@ -59,7 +59,7 @@ def choose_state(frame,mapping,states):
     return None,None,[]
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--bas',required=True); ap.add_argument('--gsr',required=True); ap.add_argument('--match-id',required=True); ap.add_argument('--period',required=True,type=int,choices=[1,2]); ap.add_argument('--output',required=True); ap.add_argument('--require-actor-present',action='store_true'); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--bas',required=True); ap.add_argument('--gsr',required=True); ap.add_argument('--match-id',required=True); ap.add_argument('--period',required=True,type=int,choices=[1,2]); ap.add_argument('--output',required=True); ap.add_argument('--include-actor-missing',action='store_true',help='include actor-missing records for diagnostics (excluded by default)'); a=ap.parse_args()
     events=load_bas(a.bas,a.period); mapping=collect_ids(a.gsr,[e['frame'] for e in events]); states=stream_states(a.gsr,mapping.values())
     written=missing=actor_missing=state_matches=skipped_actor_missing=0
     offset_counts={-1:0,0:0,1:0}
@@ -74,7 +74,7 @@ def main():
             actor_present=e['player_id'] is not None and str(e['player_id']) in actor_ids
             if not actor_present:
                 actor_missing+=1
-                if a.require_actor_present:
+                if not a.include_actor_missing:
                     skipped_actor_missing+=1
                     continue
             row={'decision_id':f"{a.match_id}_p{a.period}_f{e['frame']}_{e['idx']}",'match_id':str(a.match_id),'period':a.period,'timestamp_ms':e['timestamp_ms'],'frame':e['frame'],'matched_gsr_frame':matched,'gsr_frame_offset':frame_offset,'gsr_image_id':iid,'possession_team':None,'actor_id':e['player_id'],'actor_team':e['team'],'event_visibility':e['visibility'],'players':players,'ball':{'x':None,'y':None,'z':None,'vx':None,'vy':None,'vz':None},'action':{'label':e['label'],'target_player_id':None,'target_x':None,'target_y':None},'outcome':{'success':None,'future_value':None,'shot_within_5s':None,'xg_within_5s':None}}

@@ -34,7 +34,7 @@ def gsr_image(frame, player_id, x=42.5, y=17.25):
 
 
 class ExtractSoccerTrackEventsTests(unittest.TestCase):
-    def run_extractor(self, directory, events, frames, require_actor=False):
+    def run_extractor(self, directory, events, frames, include_actor_missing=False):
         bas_path = directory / "bas.json"
         gsr_path = directory / "gsr.json"
         output_path = directory / "decisions.jsonl"
@@ -64,8 +64,8 @@ class ExtractSoccerTrackEventsTests(unittest.TestCase):
             "--output",
             str(output_path),
         ]
-        if require_actor:
-            argv.append("--require-actor-present")
+        if include_actor_missing:
+            argv.append("--include-actor-missing")
 
         stdout = io.StringIO()
         with patch("sys.argv", argv), contextlib.redirect_stdout(stdout):
@@ -86,26 +86,24 @@ class ExtractSoccerTrackEventsTests(unittest.TestCase):
                 [(10, "actor-10"), (21, "other-player")],
             )
 
-        self.assertEqual(len(rows), 2)
+        self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["matched_gsr_frame"], 10)
         self.assertEqual(rows[0]["gsr_frame_offset"], 0)
         self.assertEqual(rows[0]["possession_team"], None)
         self.assertEqual(rows[0]["actor_team"], "right")
         self.assertEqual(rows[0]["players"][0]["x"], 42.5)
         self.assertEqual(rows[0]["players"][0]["y"], 17.25)
-        self.assertEqual(rows[1]["matched_gsr_frame"], 21)
-        self.assertEqual(rows[1]["gsr_frame_offset"], 1)
         self.assertIn("-1=0, 0=1, +1=1", output)
+        self.assertIn("records written:                         1", output)
         self.assertIn("actor-missing count:                     1", output)
         self.assertIn("actor-presence rate:                     50.00%", output)
 
-    def test_require_actor_present_skips_missing_actor(self):
+    def test_actor_missing_is_skipped_by_default(self):
         with tempfile.TemporaryDirectory() as temp:
             rows, output = self.run_extractor(
                 Path(temp),
                 [event(20, "event-actor")],
                 [(20, "different-player")],
-                require_actor=True,
             )
 
         self.assertEqual(rows, [])
@@ -113,6 +111,18 @@ class ExtractSoccerTrackEventsTests(unittest.TestCase):
         self.assertIn("records written:                         0", output)
         self.assertIn("actor-missing count:                     1", output)
         self.assertIn("skipped because actor missing:           1", output)
+
+    def test_actor_missing_can_be_included_explicitly_for_diagnostics(self):
+        with tempfile.TemporaryDirectory() as temp:
+            rows, output = self.run_extractor(
+                Path(temp),
+                [event(20, "event-actor")],
+                [(20, "different-player")],
+                include_actor_missing=True,
+            )
+
+        self.assertEqual(len(rows), 1)
+        self.assertIn("skipped because actor missing:           0", output)
 
 
 if __name__ == "__main__":

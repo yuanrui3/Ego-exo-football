@@ -20,12 +20,26 @@ def player_distance(player,actor):
     except (KeyError,TypeError,ValueError):
         return math.inf
 
+def find_anonymous_actor(r):
+    actor_id=r.get('actor_id')
+    players=list(r.get('players') or [])
+    actor=next((p for p in players if actor_id is not None and str(p.get('player_id'))==str(actor_id)),None)
+    if actor is None or actor.get('x') is None or actor.get('y') is None:
+        return None
+    return actor
+
+def has_valid_anonymous_actor(r):
+    return find_anonymous_actor(r) is not None
+
 def serialize_anonymous_state(r,include_answer=False):
     players=list(r.get('players') or [])
-    actor_id=r.get('actor_id')
-    actor_index=next((i for i,p in enumerate(players) if actor_id is not None and str(p.get('player_id'))==str(actor_id)),None)
-    actor=players[actor_index] if actor_index is not None else {}
+    actor=find_anonymous_actor(r)
+    if actor is None:
+        raise ValueError("Anonymous serialization requires the actor to be present in the player state with x and y coordinates")
+    actor_index=next(i for i,p in enumerate(players) if p is actor)
     actor_team=r.get('actor_team') or actor.get('team')
+    if not actor_team:
+        raise ValueError("Anonymous serialization requires actor_team or the actor player's team")
     lines=[]
     if r.get('period') is not None: lines.append(f"PERIOD {r['period']}")
     lines.append(f"ACTOR team={actor_team or 'NA'} role={actor.get('role') or 'NA'} x={fmt(actor.get('x'))} y={fmt(actor.get('y'))} vx={fmt(actor.get('vx'))} vy={fmt(actor.get('vy'))}")

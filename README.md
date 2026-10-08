@@ -73,13 +73,13 @@ This creates a per-event decision file that includes:
 - frame and timestamp information
 - matched GSR state
 - event label
-- player and possession context
+- player and team context (possession is unknown and left unset)
 
 ### 2) Check dataset quality before training
 
 ```powershell
 py src\inspect_dataset.py --decisions data\117093_1st_decisions.jsonl
-py src\serialize_state.py data\117093_1st_decisions.jsonl
+py src\serialize_state.py data\117093_1st_decisions.jsonl --mode anonymous
 ```
 
 Before any training run, verify the key quality signals:
@@ -98,7 +98,7 @@ py src\make_sft_dataset.py `
   --val data\val.jsonl
 ```
 
-The split should be match-level and should preserve realistic tactical variation across training and validation windows.
+The split is match-level and preserves the existing train/validation assignment. Anonymous serialization is the default for SFT generation, and records without a valid actor state are excluded. Extraction also excludes events whose actor is missing from the matched GSR frame by default. Use `--include-actor-missing` on extraction only when retaining such records for diagnostics.
 
 ### 4) Run the reference baseline
 

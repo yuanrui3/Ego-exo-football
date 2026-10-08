@@ -102,6 +102,40 @@ class AnonymousSerializerTests(unittest.TestCase):
         self.assertIn("PLAYER id=actor-id track=actor-track", serialized)
         self.assertIn("jersey=10", serialized)
 
+    def test_anonymous_mode_rejects_missing_actor_team(self):
+        state = {
+            "actor_id": "actor-id",
+            "players": [
+                {
+                    "player_id": "actor-id",
+                    "team": None,
+                    "role": "player",
+                    "x": 1.0,
+                    "y": 2.0,
+                },
+                {
+                    "player_id": "other-id",
+                    "team": "away",
+                    "role": "player",
+                    "x": 3.0,
+                    "y": 4.0,
+                },
+            ],
+        }
+
+        with self.assertRaisesRegex(ValueError, "requires actor_team"):
+            serialize_state(state, mode="anonymous")
+
+    def test_anonymous_mode_rejects_actor_without_coordinates(self):
+        state = {
+            "actor_id": "actor-id",
+            "actor_team": "home",
+            "players": [{"player_id": "actor-id", "team": "home", "x": None, "y": 2.0}],
+        }
+
+        with self.assertRaisesRegex(ValueError, "actor to be present.*x and y"):
+            serialize_state(state, mode="anonymous")
+
 
 if __name__ == "__main__":
     unittest.main()
