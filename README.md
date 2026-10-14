@@ -29,6 +29,7 @@ The extractor supports the released SoccerTrack-v2 BAS format, where events are 
 - `src/inspect_dataset.py` — inspects the generated JSONL dataset
 - `src/serialize_state.py` — serializes decision records into state-aware structured text
 - `src/make_sft_dataset.py` — creates train/validation splits for supervised fine-tuning
+- `src/make_temporal_sft_dataset.py` — builds a separate, temporally aligned anonymous SFT dataset
 - `src/majority_baseline.py` — establishes a simple baseline for comparison
 - `train/train_lora_qwen.py` — fine-tunes a Qwen3-4B model with LoRA
 - `src/evaluate_action_model.py` — evaluates model predictions with classification metrics
@@ -124,6 +125,50 @@ py src\evaluate_action_model.py `
   --val data\val.jsonl `
   --adapter outputs\qwen3_4b_football `
   --predictions outputs\qwen3_4b_football\val_predictions.jsonl
+```
+
+### Optional: build the short-history temporal experiment
+
+This creates separate temporal JSONL files while reusing the existing match-level
+train/validation assignment. GSR is streamed and states are taken only from
+exact frames `t-10`, `t-5`, and `t`; no adjacent-frame fallback or future frame
+is used. Decisions missing any required frame are skipped. Anonymous player
+labels are assigned at event time and held fixed across all three states.
+
+```powershell
+py src\make_temporal_sft_dataset.py `
+  --decisions data\all_decisions.jsonl `
+  --train-reference data\train.jsonl `
+  --val-reference data\val.jsonl `
+  --gsr-dir data `
+  --train data\train_temporal.jsonl `
+  --val data\val_temporal.jsonl
+
+py train\train_lora_qwen.py `
+  --train data\train_temporal.jsonl `
+  --val data\val_temporal.jsonl `
+  --output outputs\qwen3_4b_football_temporal `
+  --epochs 1
+
+py src\evaluate_action_model.py `
+  --val data\val_temporal.jsonl `
+  --adapter outputs\qwen3_4b_football_temporal `
+  --predictions outputs\qwen3_4b_football_temporal\val_predictions.jsonl
+```
+
+An optional mild-balancing screen can continue from that trained adapter using
+inverse-square-root class sampling for half an epoch. This is a screening run,
+not a clean comparison against training with balancing from initialization.
+It writes a separate adapter and does not alter the temporal baseline:
+
+```powershell
+py train\train_temporal_mild_balance.py `
+  --train data\train_temporal.jsonl `
+  --val data\val_temporal.jsonl `
+  --start-adapter outputs\qwen3_4b_football_temporal `
+  --output outputs\qwen3_4b_football_temporal_mildbalance `
+  --examples 7568 `
+  --lr 2e-4
 ```
 
 ## Evaluation standards
