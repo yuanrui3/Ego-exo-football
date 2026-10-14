@@ -171,6 +171,44 @@ py train\train_temporal_mild_balance.py `
   --lr 2e-4
 ```
 
+### Clean 7-class temporal + mild-balance run
+
+Direct-action labels only (PASS, HIGH_PASS, DRIVE, CROSS, SHOT, HEADER,
+DEFENSIVE_INTERVENTION = Block + Tackle). Out, Goal, Throw In and Free Kick are
+excluded. The original label is kept as `source_label` metadata.
+
+```powershell
+py src\recode_primary_actions.py
+
+# Fresh run from Qwen/Qwen3-4B-Base (no adapter), 1 epoch, seed 42,
+# replacement sampling with weight = 1/sqrt(N_class); validation unbalanced.
+py train\train_temporal_7class_mild_balance.py `
+  --train data\train_temporal_7class.jsonl `
+  --val data\val_temporal_7class.jsonl `
+  --output outputs\qwen3_4b_football_temporal_7class_mildbalance
+
+# Labels are inferred from the validation file (or pass --labels A,B,...).
+py src\evaluate_action_model.py `
+  --val data\val_temporal_7class.jsonl `
+  --adapter outputs\qwen3_4b_football_temporal_7class_mildbalance `
+  --predictions outputs\qwen3_4b_football_temporal_7class_mildbalance\val_predictions.jsonl
+```
+
+The run writes `run_config.json` (config, seed, class/sampled counts, dataset sizes,
+Git SHA and dirty flag, dataset SHA256 hashes, library/CUDA/GPU versions). It saves a
+checkpoint every 200 optimizer steps (latest 2 kept) and refuses a non-empty output
+directory. To resume an interrupted run:
+
+```powershell
+py train\train_temporal_7class_mild_balance.py `
+  --train data\train_temporal_7class.jsonl `
+  --val data\val_temporal_7class.jsonl `
+  --output outputs\qwen3_4b_football_temporal_7class_mildbalance `
+  --resume-from-checkpoint outputs\qwen3_4b_football_temporal_7class_mildbalance\checkpoint-NNN
+```
+
+Run tests with `py -m unittest discover -s tests -v`.
+
 ## Evaluation standards
 
 We treat language-model loss as a secondary signal, not the main product metric.
