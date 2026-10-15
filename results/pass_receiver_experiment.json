@@ -1,0 +1,150 @@
+{
+  "task": "temporal PASS receiver, high-confidence next-action pseudo-labels",
+  "completed_date": "2026-10-15",
+  "recorded_git_commit": "8b5b5b6b438d6f8e67513682de2d0e48eaa3676b",
+  "recorded_git_working_tree_dirty": true,
+  "base_model": "Qwen/Qwen3-4B-Base",
+  "start_adapter": null,
+  "train_file": "data/train_pass_receiver.jsonl",
+  "val_file": "data/val_pass_receiver.jsonl",
+  "train_sha256": "4795616041231020a85edded0d25e497a3723cebfc32db9d043c6393b596c730",
+  "val_sha256": "063f5f45ea2441a8e0dc06c8c63c0a0f90183589af0c0b398d25938f00a80b11",
+  "dataset_sizes": {"train": 4799, "validation": 1224},
+  "train_matches": ["117092", "117093", "118576", "118578", "128057", "132831", "132877"],
+  "validation_matches": ["118577", "128058"],
+  "train_target_counts": {"TEAMMATE_1": 1672, "TEAMMATE_2": 1233, "TEAMMATE_3": 855, "TEAMMATE_4": 499, "TEAMMATE_5": 260, "TEAMMATE_6": 145, "TEAMMATE_7": 77, "TEAMMATE_8": 33, "TEAMMATE_9": 16, "TEAMMATE_10": 9},
+  "validation_target_counts": {"TEAMMATE_1": 437, "TEAMMATE_2": 321, "TEAMMATE_3": 219, "TEAMMATE_4": 125, "TEAMMATE_5": 62, "TEAMMATE_6": 30, "TEAMMATE_7": 21, "TEAMMATE_8": 4, "TEAMMATE_9": 1, "TEAMMATE_10": 4},
+  "training": {
+    "epochs": 1,
+    "sampling": "natural unbalanced distribution",
+    "learning_rate": 0.0002,
+    "per_device_batch_size": 1,
+    "gradient_accumulation_steps": 16,
+    "max_length": 2048,
+    "loss": "response tokens + EOS only",
+    "lora": {"r": 16, "lora_alpha": 32, "lora_dropout": 0.05, "bias": "none", "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]},
+    "save_steps": 100,
+    "save_total_limit": 2
+  },
+  "environment": {"torch": "2.11.0+cu128", "transformers": "5.19.0", "peft": "0.21.2", "cuda": "12.8", "gpu": "NVIDIA RTX A5000"},
+  "scoring": "mean conditional log-probability of candidate tokens plus EOS, prompt excluded",
+  "validation_geometric_baseline": {
+    "n": 1224,
+    "top1": 0.35784313725490197,
+    "top3": 0.798202614379085,
+    "top5": 0.9509803921568627,
+    "mrr": 0.5913625635439361,
+    "mean_rank": 2.411764705882353,
+    "median_rank": 2.0,
+    "random_uniform_accuracy_seed42": 0.11274509803921569,
+    "rank_matches_label_rate": 0.9983660130718954
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "data_seed": 42,
+      "output_directory": "outputs/qwen3_4b_pass_receiver",
+      "global_step": 300,
+      "runtime_seconds_including_epoch_validation": 12061.458409899991,
+      "train_loss": 0.2577487587928772,
+      "final_eval_loss": 0.2064528912305832,
+      "metrics": {
+        "n": 1224,
+        "top1": 0.5506535947712419,
+        "top3": 0.8848039215686274,
+        "top5": 0.9763071895424836,
+        "mrr": 0.7247056229899367,
+        "mean_rank": 1.8888888888888888,
+        "median_rank": 1.0,
+        "macro_f1": 0.27800663268848985,
+        "invalid_or_nonfinite_cases": 0,
+        "generation_check": {"examples": 20, "generated_equals_ranked_top1": 20},
+        "per_class": {
+          "TEAMMATE_1": {"support": 437, "precision": 0.5882352941176471, "recall": 0.7551487414187643, "f1": 0.6613226452905812, "prediction_count": 561},
+          "TEAMMATE_2": {"support": 321, "precision": 0.5449101796407185, "recall": 0.5669781931464174, "f1": 0.5557251908396947, "prediction_count": 334},
+          "TEAMMATE_3": {"support": 219, "precision": 0.5174129353233831, "recall": 0.4748858447488584, "f1": 0.4952380952380952, "prediction_count": 201},
+          "TEAMMATE_4": {"support": 125, "precision": 0.47560975609756095, "recall": 0.312, "f1": 0.3768115942028985, "prediction_count": 82},
+          "TEAMMATE_5": {"support": 62, "precision": 0.44, "recall": 0.1774193548387097, "f1": 0.2528735632183908, "prediction_count": 25},
+          "TEAMMATE_6": {"support": 30, "precision": 0.4166666666666667, "recall": 0.16666666666666666, "f1": 0.23809523809523808, "prediction_count": 12},
+          "TEAMMATE_7": {"support": 21, "precision": 0.3333333333333333, "recall": 0.14285714285714285, "f1": 0.2, "prediction_count": 9},
+          "TEAMMATE_8": {"support": 4, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0},
+          "TEAMMATE_9": {"support": 1, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0},
+          "TEAMMATE_10": {"support": 4, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0}
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "data_seed": 7,
+      "output_directory": "outputs/qwen3_4b_pass_receiver_seed7",
+      "global_step": 300,
+      "runtime_seconds_including_epoch_validation": 11992.3002287,
+      "train_loss": 0.258432502746582,
+      "final_eval_loss": 0.20628315210342407,
+      "metrics": {
+        "n": 1224,
+        "top1": 0.5506535947712419,
+        "top3": 0.8839869281045751,
+        "top5": 0.9754901960784313,
+        "mrr": 0.7233932461873638,
+        "mean_rank": 1.8970588235294117,
+        "median_rank": 1.0,
+        "macro_f1": 0.29583510460693396,
+        "invalid_or_nonfinite_cases": 0,
+        "generation_check": {"examples": 20, "generated_equals_ranked_top1": 20},
+        "per_class": {
+          "TEAMMATE_1": {"support": 437, "precision": 0.6199575371549894, "recall": 0.6681922196796338, "f1": 0.6431718061674009, "prediction_count": 471},
+          "TEAMMATE_2": {"support": 321, "precision": 0.5412087912087912, "recall": 0.6137071651090342, "f1": 0.5751824817518248, "prediction_count": 364},
+          "TEAMMATE_3": {"support": 219, "precision": 0.5094339622641509, "recall": 0.4931506849315068, "f1": 0.5011600928074246, "prediction_count": 212},
+          "TEAMMATE_4": {"support": 125, "precision": 0.4435483870967742, "recall": 0.44, "f1": 0.44176706827309237, "prediction_count": 124},
+          "TEAMMATE_5": {"support": 62, "precision": 0.41379310344827586, "recall": 0.1935483870967742, "f1": 0.26373626373626374, "prediction_count": 29},
+          "TEAMMATE_6": {"support": 30, "precision": 0.4, "recall": 0.2, "f1": 0.26666666666666666, "prediction_count": 15},
+          "TEAMMATE_7": {"support": 21, "precision": 0.4444444444444444, "recall": 0.19047619047619047, "f1": 0.26666666666666666, "prediction_count": 9},
+          "TEAMMATE_8": {"support": 4, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0},
+          "TEAMMATE_9": {"support": 1, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0},
+          "TEAMMATE_10": {"support": 4, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0}
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "data_seed": 123,
+      "output_directory": "outputs/qwen3_4b_pass_receiver_seed123",
+      "global_step": 300,
+      "runtime_seconds_including_epoch_validation": 11990.629104399999,
+      "train_loss": 0.26345975319544473,
+      "final_eval_loss": 0.21311013400554657,
+      "metrics": {
+        "n": 1224,
+        "top1": 0.5187908496732027,
+        "top3": 0.8799019607843137,
+        "top5": 0.9705882352941176,
+        "mrr": 0.7033243853096794,
+        "mean_rank": 1.9673202614379084,
+        "median_rank": 1.0,
+        "macro_f1": 0.25210712890949066,
+        "invalid_or_nonfinite_cases": 0,
+        "generation_check": {"examples": 20, "generated_equals_ranked_top1": 18},
+        "per_class": {
+          "TEAMMATE_1": {"support": 437, "precision": 0.5745526838966203, "recall": 0.6613272311212814, "f1": 0.6148936170212767, "prediction_count": 503},
+          "TEAMMATE_2": {"support": 321, "precision": 0.5172413793103449, "recall": 0.5607476635514018, "f1": 0.5381165919282511, "prediction_count": 348},
+          "TEAMMATE_3": {"support": 219, "precision": 0.4646017699115044, "recall": 0.4794520547945205, "f1": 0.47191011235955055, "prediction_count": 226},
+          "TEAMMATE_4": {"support": 125, "precision": 0.41228070175438597, "recall": 0.376, "f1": 0.39330543933054396, "prediction_count": 114},
+          "TEAMMATE_5": {"support": 62, "precision": 0.45, "recall": 0.14516129032258066, "f1": 0.2195121951219512, "prediction_count": 20},
+          "TEAMMATE_6": {"support": 30, "precision": 0.4, "recall": 0.13333333333333333, "f1": 0.2, "prediction_count": 10},
+          "TEAMMATE_7": {"support": 21, "precision": 0.3333333333333333, "recall": 0.047619047619047616, "f1": 0.08333333333333333, "prediction_count": 3},
+          "TEAMMATE_8": {"support": 4, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0},
+          "TEAMMATE_9": {"support": 1, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0},
+          "TEAMMATE_10": {"support": 4, "precision": 0.0, "recall": 0.0, "f1": 0.0, "prediction_count": 0}
+        }
+      }
+    }
+  ],
+  "decision": {
+    "required_top1": 0.39,
+    "required_mrr": 0.610,
+    "selected_branch": "A: fresh seeds 7 and 123",
+    "verdict": "RECEIVER QWEN RESULT IS REPRODUCIBLE",
+    "recommendation": "PROCEED WITH PASS-RECEIVER MODELING"
+  }
+}

@@ -33,6 +33,11 @@ The extractor supports the released SoccerTrack-v2 BAS format, where events are 
 - `src/majority_baseline.py` — establishes a simple baseline for comparison
 - `train/train_lora_qwen.py` — fine-tunes a Qwen3-4B model with LoRA
 - `src/evaluate_action_model.py` — evaluates model predictions with classification metrics
+- `src/audit_pass_receivers.py` — audits event-sequence receiver candidates without changing datasets
+- `src/build_pass_receiver_dataset.py` — builds separate high-confidence PASS-receiver datasets and geometric baselines
+- `train/train_pass_receiver_qwen.py` — trains a fresh, unbalanced temporal receiver model
+- `src/evaluate_pass_receiver_model.py` — ranks all ten receiver candidates by conditional token scores
+- `results/` — compact, verified experiment summaries; no datasets or model weights
 - `data/` — stores extracted and prepared datasets
 - `outputs/` — stores trained adapters and evaluation artifacts
 
@@ -208,6 +213,102 @@ py train\train_temporal_7class_mild_balance.py `
 ```
 
 Run tests with `py -m unittest discover -s tests -v`.
+
+## PASS-receiver modeling
+
+This separate task predicts `TEAMMATE_1` through `TEAMMATE_10` from anonymous
+player states at `t-10`, `t-5`, and `t` frames. Entity identities are held fixed
+over the three states. It does not change the action-classification datasets.
+
+Labels are **high-confidence pseudo-labels, not verified intended-pass ground
+truth**: the next same-team direct action must be by a different player within
+50 frames (2 seconds), without an intervening opponent action, restart, outcome,
+block, tackle, or other ambiguity. The receiver must map to a teammate present
+at pass time. Future events construct targets only; prompts contain no future
+event information or permanent player IDs. HIGH_PASS, CROSS, and reconstructed
+ball coordinates are not used by the receiver dataset or model.
+
+The fixed match split is:
+
+- Train: 117092, 117093, 118576, 118578, 128057, 132831, 132877 (4,799 examples).
+- Validation: 118577, 128058 (1,224 examples).
+
+With the original per-half decision, BAS, and GSR files available locally, build
+the receiver data once. This command refuses to overwrite its output files;
+do not rerun it to change labels during an experiment. Create the report directory
+first if it does not exist:
+
+```powershell
+New-Item -ItemType Directory -Force analysis | Out-Null
+py src\build_pass_receiver_dataset.py --data-dir data
+```
+
+Train from `Qwen/Qwen3-4B-Base`, not an existing adapter:
+
+```powershell
+New-Item -ItemType Directory -Force outputs | Out-Null
+py train\train_pass_receiver_qwen.py `
+  --output outputs\qwen3_4b_pass_receiver `
+  --seed 42 2>&1 |
+  Tee-Object -FilePath outputs\qwen3_4b_pass_receiver_training.log
+```
+
+Defaults match the validated temporal LoRA configuration: one epoch, natural
+unbalanced targets, learning rate `2e-4`, batch size 1, gradient accumulation 16,
+maximum length 2048, LoRA rank 16 / alpha 32 / dropout 0.05. Loss is computed
+only on response tokens plus EOS. Checkpoints are saved every 100 optimizer
+steps, retaining the latest two. Non-empty output directories are rejected unless
+resuming. Resume an interrupted run without restarting from scratch:
+
+```powershell
+py train\train_pass_receiver_qwen.py `
+  --output outputs\qwen3_4b_pass_receiver `
+  --seed 42 `
+  --resume-from-checkpoint outputs\qwen3_4b_pass_receiver\checkpoint-NNN
+```
+
+Use a new output directory and `--seed 7` or `--seed 123` for fresh replicas.
+Each run records its configuration, dataset SHA256 hashes, Git state, environment,
+target counts, and training metrics in `run_config.json`.
+
+```powershell
+py src\evaluate_pass_receiver_model.py `
+  --adapter outputs\qwen3_4b_pass_receiver `
+  --val data\val_pass_receiver.jsonl
+```
+
+The primary evaluation scores all ten candidates, using **mean conditional
+log-probability over candidate tokens plus EOS**, not prompt-token loss or
+generated text alone. This normalizes for the different token length of
+`TEAMMATE_10`. The evaluator writes `val_predictions.jsonl` and `val_metrics.json`
+inside the adapter directory. It also checks generated text on the first 20
+examples; generation agreement is diagnostic, not the ranking metric.
+
+### Verified results
+
+The clean 7-class mildly balanced action run reached **52.13% accuracy** and
+**0.4715 macro-F1**, with no invalid generations on 3,800 validation examples.
+This is a different task from receiver prediction and is not directly comparable
+to receiver metrics.
+
+Receiver validation on the same 1,224 examples for every seed:
+
+| Model / baseline | Top-1 | Top-3 | Top-5 | MRR | Macro-F1 |
+|---|---:|---:|---:|---:|---:|
+| Geometric distance ranking | 35.78% | 79.82% | 95.10% | 0.5914 | - |
+| Qwen receiver, seed 42 | 55.07% | 88.48% | 97.63% | 0.7247 | 0.2780 |
+| Qwen receiver, seed 7 | 55.07% | 88.40% | 97.55% | 0.7234 | 0.2958 |
+| Qwen receiver, seed 123 | 51.88% | 87.99% | 97.06% | 0.7033 | 0.2521 |
+
+All three seeds beat geometric top-1 and MRR. This supports continuing
+PASS-receiver modeling, not claiming ground-truth intended-pass accuracy.
+Ranks 8-10 have only nine validation examples combined and no top-1 predictions.
+See the [experiment report](results/pass_receiver_experiment.md) for limitations,
+per-target results, provenance, and three-seed variability, and the
+[machine-readable record](results/pass_receiver_experiment.json) for exact metrics.
+
+Only source, tests, documentation, and compact result summaries belong in Git.
+Datasets, per-example predictions, logs, adapters, and checkpoints remain local.
 
 ## Evaluation standards
 
