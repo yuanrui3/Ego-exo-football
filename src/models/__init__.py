@@ -1,0 +1,1 @@
+"""Compact structured football models."""

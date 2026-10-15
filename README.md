@@ -310,6 +310,58 @@ per-target results, provenance, and three-seed variability, and the
 Only source, tests, documentation, and compact result summaries belong in Git.
 Datasets, per-example predictions, logs, adapters, and checkpoints remain local.
 
+### Compact Entity Transformer control
+
+The structured baseline reads the existing receiver JSONL prompts without
+rebuilding labels or changing text. Its parser produces `[3, 22, 8]` tensors:
+normalized x/y, observed mask, actor/teammate/opponent indicators, and
+goalkeeper/player indicators. Anonymous labels fix slots across time; absent
+slots and NA coordinates are masked. Match IDs are used only to split data,
+never as model features. Missing candidate slots receive a finite low logit.
+
+The fixed model has 128-dimensional feature, time, slot, and relation
+embeddings, three Transformer encoder layers with four heads and feed-forward
+size 256, and dropout 0.1. A shared MLP scores each current teammate using the
+contextual actor/teammate representations plus relative x/y and distance.
+Training uses AdamW (learning rate `1e-3`, weight decay `1e-4`), batch size 64,
+gradient clipping 1.0, and natural unbalanced targets.
+
+```powershell
+py train\train_entity_transformer_receiver.py 2>&1 |
+  Tee-Object -FilePath outputs\entity_transformer_receiver_training.log
+```
+
+This runs seed 42 for 50 epochs on six training matches, selecting the earliest
+epoch with the highest MRR on development match **132877** (788 examples).
+It then retrains fresh models on all 4,799 training examples for exactly that
+duration at seeds 42, 7, and 123. The two final validation matches are not used
+for epoch selection. Each final model is evaluated once on all 1,224 validation
+examples using the same ranking-metric function as Qwen. A separate,
+evaluation-only seed-42 ablation shuffles complete x/y pairs among observed
+entities independently within each state, preserving missing masks.
+
+The script refuses to overwrite an existing experiment. Outputs are
+`outputs/entity_transformer_receiver_development` and
+`outputs/entity_transformer_receiver_seed42`, `..._seed7`, `..._seed123`.
+They contain weights, run metadata, training histories, metrics, and predictions.
+The seed-42 directory also contains shuffle metrics/predictions. The combined
+`outputs/entity_transformer_receiver_summary.json` records per-seed results and
+mean/population standard deviation. Final-fit `best_model.pt` equals
+`final_model.pt`: no final-validation checkpoint selection is performed.
+
+The initial fixed-architecture control selected **epoch 49** on match 132877.
+Across seeds 42/7/123 it achieved mean top-1 **36.85%**, top-3 **80.23%**, top-5
+**95.32%**, MRR **0.5984**, and macro-F1 **0.0778**. This slightly exceeds
+distance ranking but is substantially below Qwen's mean 54.00% top-1 / 0.7171 MRR.
+Shuffling coordinates at seed 42 reduced top-1 from 38.07% to 14.46% and MRR
+from 0.6068 to 0.3381. It is geometry-sensitive but heavily predicts TEAMMATE_1.
+This is one compact configuration, not proof that pretraining or model scale
+alone causes Qwen's advantage. See the committed
+[v1 result report](results/entity_transformer_receiver_v1.md) for protocol,
+per-seed metrics, target behavior, shuffle results, and provenance. The longer
+local report is `outputs/entity_transformer_receiver_report.md`; no further
+validation tuning was performed.
+
 ## Evaluation standards
 
 We treat language-model loss as a secondary signal, not the main product metric.
