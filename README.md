@@ -362,6 +362,58 @@ per-seed metrics, target behavior, shuffle results, and provenance. The longer
 local report is `outputs/entity_transformer_receiver_report.md`; no further
 validation tuning was performed.
 
+## Football-feature candidate ranker v2
+
+The v2 control adds explicit actor/candidate relative geometry at all three
+frozen times, displacement and velocity over each 0.2 s interval and the full
+0.4 s interval, distance changes, opponent proximity/counts, current teammate
+distance rank, goalkeeper status, and observed/feature-validity masks.
+A shared 256 -> 128 candidate MLP is combined with current contextual actor
+and candidate tokens and a masked mean-pooled scene representation from the
+same 128-dimensional, three-layer/four-head scene encoder architecture.
+No IDs, future events, or ball inputs are features.
+
+Continuous candidate features and scene coordinates are standardized using
+only fitting-partition statistics. Selection uses six training matches;
+normalization is refitted on all seven matches for fresh final fits.
+Missing features stay zero after standardization, with explicit validity masks.
+
+```powershell
+py train\train_candidate_ranker_receiver.py 2>&1 |
+  Tee-Object -FilePath outputs\candidate_ranker_receiver_training.log
+```
+
+Seed 42 selects alpha from `0`, `0.25`, `0.5` and epoch using development-match
+132877 MRR only (maximum 100 epochs per alpha, early-stopping patience 15).
+Ties prefer lower alpha, then earlier epoch. Each alpha starts fresh.
+The training-only adjustment subtracts alpha times log target frequency
+from logits before cross-entropy; inference and selection use raw model
+logits, with no correction added at inference. Frequencies come from the
+fitting partition only. AdamW uses batch 64, learning rate `1e-3`, weight decay
+`1e-4`, and gradient clipping 1.0, without resampling.
+
+Fresh final seeds 42/7/123 use the selected alpha and exact epoch count on all
+4,799 training examples. Only then are held-out prompts/targets opened for
+one evaluation per seed. Seed-42 coordinate shuffling recomputes every
+engineered feature from shuffled pairs, using the unchanged training
+normalization. It disrupts trajectories as well as geometry.
+Outputs stay under `outputs/candidate_ranker_receiver_*`; the script refuses
+to overwrite existing runs. The summary includes all per-target metrics,
+prediction counts, mean/population SD, provenance, and shuffle results.
+
+The first v2 experiment selected **alpha 0.0, epoch 21**. Final three-seed means
+were **64.30% top-1**, **92.57% top-3**, **98.53% top-5**, **0.7869 MRR**,
+and **36.56% macro-F1**, exceeding the recorded Qwen means on this frozen
+pseudo-label benchmark. TEAMMATE_1 prediction share fell to approximately 40%
+(true share 35.70%), versus 85-93% for v1. Seed-42 coordinate shuffling reduced
+top-1 from 64.22% to 10.29% and MRR from 0.7863 to 0.2953.
+All 63 tests passed; selection and three final fits/evaluations took about
+224 seconds on the RTX A5000. These are descriptive results on two held-out
+matches, not verified intended-receiver accuracy or proof of feature causality.
+The full local report is `outputs/candidate_ranker_receiver_report.md`.
+The compact archived [v2 result report](results/candidate_ranker_receiver_v2.md)
+records the frozen configuration, selection, three-seed metrics, and provenance.
+
 ## Evaluation standards
 
 We treat language-model loss as a secondary signal, not the main product metric.
