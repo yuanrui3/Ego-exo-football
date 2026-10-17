@@ -2,7 +2,7 @@
   "schema": 1,
   "seed_forecast": 42,
   "receiver_seeds": [42, 7, 123],
-  "max_hours": 12,
+  "max_hours": null,
   "cpu_threads": 4,
   "loader_workers": 0,
   "gpu_memory_fraction": 0.72,

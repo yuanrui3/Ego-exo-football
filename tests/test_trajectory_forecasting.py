@@ -1,8 +1,10 @@
 import copy
 import math
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 import torch
@@ -11,7 +13,7 @@ from src.models.trajectory_forecasting import (
     TrajectoryForecaster, constant_velocity, masked_loss, persistence,
 )
 from src.trajectory_dataset import (
-    TRAIN_MATCHES, VALIDATION_MATCHES, build_half, causal_velocity, identity, make_window,
+    TRAIN_MATCHES, VALIDATION_MATCHES, build_half, causal_velocity, identity, make_window, write_json,
     segment_tracks, validate_splits,
 )
 from train.run_trajectory_forecasting import finish_metric, metric_sums, pass_frames
@@ -35,6 +37,25 @@ def tensor_batch(row):
 
 
 class TrajectoryTests(unittest.TestCase):
+    def test_atomic_json_replace_retries_transient_windows_lock(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = Path(directory) / "progress.json"
+            real_replace = os.replace
+            attempts = 0
+
+            def transient_replace(source, destination):
+                nonlocal attempts
+                attempts += 1
+                if attempts < 3:
+                    raise PermissionError("simulated transient file lock")
+                real_replace(source, destination)
+
+            with patch("src.trajectory_dataset.os.replace", side_effect=transient_replace), \
+                    patch("src.trajectory_dataset.time.sleep"):
+                write_json(target, {"status": "RUNNING"})
+            self.assertEqual(attempts, 3)
+            self.assertEqual(target.read_text(encoding="utf-8"), '{\n  "status": "RUNNING"\n}\n')
+
     def test_identity_requires_player_and_track(self):
         self.assertEqual(identity({"attributes": {"player_id": 9}, "track_id": 3}), ("9", "3"))
         self.assertIsNone(identity({"attributes": {"player_id": None}, "track_id": 3}))

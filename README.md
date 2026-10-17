@@ -86,9 +86,10 @@ py train\run_receiver_forecast_integration.py
 Use the same command/output/configuration to resume; completed fits and forecast
 caches are reused. The default output is
 `outputs/receiver_forecast_integration_20261016`, with progress, logs, per-fold
-provenance, checkpoints, predictions and charts. The single CUDA process has a
-12-hour total wall-clock cap, four CPU threads, no loader workers and a bounded
-GPU allocator. It requires the verified local trajectory caches and association
+provenance, checkpoints, predictions and charts. The single CUDA process has no
+wall-clock cap by default (set `max_hours` to a positive value up to 12 for a
+bounded run), four CPU threads, no loader workers and a bounded GPU allocator.
+It requires the verified local trajectory caches and association
 sidecars from the preceding audit; no new downloads or video processing occur.
 The primary timing is 20--60 ms after BAS event time and is not strictly pre-pass.
 Upstream architecture selection reused development match 132877, but every new

@@ -563,7 +563,7 @@ def publish(root, progress):
         if fold["status"] == "COMPLETE":
             completed_folds.append(fold)
     progress["completed_forecast_folds"] = len(completed_folds)
-    progress["elapsed_seconds"] = time.time() - progress["started_unix"]
+    progress["elapsed_seconds"] = progress.get("elapsed_offset_seconds", 0.) + time.time() - progress["started_unix"]
     progress["updated_unix"] = time.time()
     write_json(root / "progress.json", progress)
     metrics = {
@@ -756,7 +756,8 @@ def run(root, base, args):
         }
     progress.update(status="RUNNING", pid=os.getpid())
     progress.pop("blocker", None)
-    deadline = time.monotonic() + max(0, base["max_hours"]*3600 - (time.time() - progress["started_unix"]))
+    deadline = (float("inf") if base["max_hours"] is None else
+                time.monotonic() + max(0, base["max_hours"]*3600 - (time.time() - progress["started_unix"])))
 
     def callback(stage):
         check_deadline(deadline)
@@ -901,7 +902,8 @@ def main():
     parser.add_argument("--smoke", action="store_true")
     args = parser.parse_args()
     base, root = read_json(args.config), args.output
-    if not 0 < base["max_hours"] <= 12 or base["cpu_threads"] > 4 or base["loader_workers"] > 2:
+    if (base["max_hours"] is not None and not 0 < base["max_hours"] <= 12) \
+            or base["cpu_threads"] > 4 or base["loader_workers"] > 2:
         raise ValueError("Resource cap violation")
     root.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
