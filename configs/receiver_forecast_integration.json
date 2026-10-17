@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "seed_forecast": 42,
+  "receiver_seeds": [42, 7, 123],
+  "max_hours": 12,
+  "cpu_threads": 4,
+  "loader_workers": 0,
+  "gpu_memory_fraction": 0.72,
+  "trajectory_root": "outputs/trajectory_forecasting_20261016",
+  "association_root": "outputs/trajectory_audit_20261016",
+  "forecast": {
+    "width": 128, "layers": 3, "learning_rate": 0.001,
+    "batch_size": 128, "max_epochs": 32, "patience": 5,
+    "min_delta_m": 0.005, "weight_decay": 0.0001, "gradient_clip": 1.0,
+    "stride_frames": 13
+  },
+  "receiver": {
+    "widths": [128, 256],
+    "learning_rates": [0.001, 0.0003],
+    "batch_size": 64, "max_epochs": 80, "patience": 12,
+    "weight_decay": 0.0001
+  },
+  "primary_order": ["A", "B", "D"],
+  "optional_order": ["E", "F", "C"],
+  "timings": ["legacy", "asof"],
+  "fold_rule": "Match-excluded fitting; one deterministic inner development match inside fitting set selects epoch; refit all fitting matches. No predicted match in fitting/stopping.",
+  "reused_development_context": "Architecture/lr fixed from earlier 132877 selection; all new fold stopping stays inside upstream fitting matches. Not fresh nested architecture selection.",
+  "receiver_selection": "Same width/lr grid and MRR early stopping for every variant, six OOF fitting matches and development 132877.",
+  "fallback": "Use same-seed separately trained A logits on rows without forecast coverage. Never drop full-set frozen examples.",
+  "asof_rule": "Separate sensitivity, floor(BAS_ms/40), regenerate all base/forecast inputs and anonymous candidate order at as-of frame; no physical contact synchronization claim."
+}

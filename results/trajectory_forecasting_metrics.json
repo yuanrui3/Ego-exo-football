@@ -1,0 +1,5142 @@
+{
+  "status": "COMPLETE",
+  "progress": {
+    "started_unix": 1792125850.2902312,
+    "completed": {
+      "persistence": {
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.8450303455715348,
+              "1.0": 1.966644802003695,
+              "2.0": 3.7216416237248504,
+              "3.0": 5.321329197360866
+            },
+            "ade_m": 2.9636614921652367,
+            "fde_3s_m": 5.321329197360866,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4320749075813885,
+              "1.0": 0.9627803533227872,
+              "2.0": 1.7339039817338628,
+              "3.0": 2.419395443952296
+            },
+            "ade_m": 1.3870386716475838,
+            "fde_3s_m": 2.419395443952296,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.886366546431144,
+              "1.0": 2.0671340317902858,
+              "2.0": 3.920634611162037,
+              "3.0": 5.611863453296132
+            },
+            "ade_m": 3.1214996606698997,
+            "fde_3s_m": 5.611863453296132,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.8034249033190978,
+              "1.0": 1.8628748790770016,
+              "2.0": 3.525528816468255,
+              "3.0": 5.052195695797004
+            },
+            "ade_m": 2.8110060736653395,
+            "fde_3s_m": 5.052195695797004,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.9088616880967155,
+              "1.0": 2.117639261806978,
+              "2.0": 4.034768812378116,
+              "3.0": 5.826985450189506
+            },
+            "ade_m": 3.2220638031178286,
+            "fde_3s_m": 5.826985450189506,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.8891491078436068,
+              "1.0": 2.076681217119536,
+              "2.0": 3.929592970338189,
+              "3.0": 5.606701876859143
+            },
+            "ade_m": 3.1255312930401185,
+            "fde_3s_m": 5.606701876859143,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        }
+      },
+      "constant_velocity": {
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.7601220232205067,
+              "1.0": 1.5997266362046927,
+              "2.0": 3.374901882857022,
+              "3.0": 5.440284728120136
+            },
+            "ade_m": 2.7937588176005894,
+            "fde_3s_m": 5.440284728120136,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.6170343543390134,
+              "1.0": 1.2949567283201318,
+              "2.0": 2.5254800928491488,
+              "3.0": 3.8253821929387817
+            },
+            "ade_m": 2.065713342111769,
+            "fde_3s_m": 3.8253821929387817,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.7744448753741784,
+              "1.0": 1.630234830569897,
+              "2.0": 3.4599377392083084,
+              "3.0": 5.601964680121086
+            },
+            "ade_m": 2.866645531318367,
+            "fde_3s_m": 5.601964680121086,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.7637646484175216,
+              "1.0": 1.5903618783961693,
+              "2.0": 3.303385812956142,
+              "3.0": 5.270897068296661
+            },
+            "ade_m": 2.732102352016623,
+            "fde_3s_m": 5.270897068296661,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.7828482005881435,
+              "1.0": 1.705598446922816,
+              "2.0": 3.7551434644883885,
+              "3.0": 6.183220913705405
+            },
+            "ade_m": 3.106702756426188,
+            "fde_3s_m": 6.183220913705405,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.7562593528132555,
+              "1.0": 1.6096569168781016,
+              "2.0": 3.450735091774103,
+              "3.0": 5.6198930263413756
+            },
+            "ade_m": 2.8591360969517092,
+            "fde_3s_m": 5.6198930263413756,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        }
+      },
+      "social_seed42": {
+        "fit": {
+          "completed_epochs": 24,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 13992,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.4896646555763583,
+              "1.0": 0.9224082225526851,
+              "2.0": 1.906425384071723,
+              "3.0": 3.0560004936627996
+            },
+            "ade_m": 1.5936246889658916,
+            "fde_3s_m": 3.0560004936627996,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4121910787351538,
+              "1.0": 0.7191455273406424,
+              "2.0": 1.2385703992854664,
+              "3.0": 1.775554333691022
+            },
+            "ade_m": 1.0363653347630712,
+            "fde_3s_m": 1.775554333691022,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.4974196379044022,
+              "1.0": 0.9427553082523882,
+              "2.0": 1.9732845360767923,
+              "3.0": 3.1841954883384056
+            },
+            "ade_m": 1.649413742642997,
+            "fde_3s_m": 3.1841954883384056,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.484937383559614,
+              "1.0": 0.898778715276215,
+              "2.0": 1.8251075040767597,
+              "3.0": 2.8986069768799188
+            },
+            "ade_m": 1.526857644948127,
+            "fde_3s_m": 2.8986069768799188,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5253273131028645,
+              "1.0": 1.039674164336073,
+              "2.0": 2.2585359016628725,
+              "3.0": 3.691155542497173
+            },
+            "ade_m": 1.8786732303997458,
+            "fde_3s_m": 3.691155542497173,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.4946774948352957,
+              "1.0": 0.9474646773350214,
+              "2.0": 1.992652098779898,
+              "3.0": 3.2228909380141118
+            },
+            "ade_m": 1.6644213022410819,
+            "fde_3s_m": 3.2228909380141118,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 42
+      },
+      "social_seed7": {
+        "fit": {
+          "completed_epochs": 24,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 13992,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.4901815993218259,
+              "1.0": 0.9231759536334307,
+              "2.0": 1.9078920145275442,
+              "3.0": 3.0582583873313314
+            },
+            "ade_m": 1.594876988703533,
+            "fde_3s_m": 3.0582583873313314,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.41585232752998846,
+              "1.0": 0.7189422363761508,
+              "2.0": 1.2315741735209857,
+              "3.0": 1.7575392988152427
+            },
+            "ade_m": 1.0309770090605919,
+            "fde_3s_m": 1.7575392988152427,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.4976218416825176,
+              "1.0": 0.9436202431756412,
+              "2.0": 1.9755983819838345,
+              "3.0": 3.188483093197939
+            },
+            "ade_m": 1.651330890009983,
+            "fde_3s_m": 3.188483093197939,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.4847376382916132,
+              "1.0": 0.8982293786408764,
+              "2.0": 1.8213700274369253,
+              "3.0": 2.890824318798559
+            },
+            "ade_m": 1.5237903407919933,
+            "fde_3s_m": 2.890824318798559,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5271668794801053,
+              "1.0": 1.044907518500897,
+              "2.0": 2.2667635924274743,
+              "3.0": 3.6997352672766746
+            },
+            "ade_m": 1.8846433144212877,
+            "fde_3s_m": 3.6997352672766746,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.4959544214019616,
+              "1.0": 0.9496290093986858,
+              "2.0": 1.9996369835555148,
+              "3.0": 3.2357952196928945
+            },
+            "ade_m": 1.6702539085122643,
+            "fde_3s_m": 3.2357952196928945,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 7
+      },
+      "social_seed123": {
+        "fit": {
+          "completed_epochs": 24,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 13992,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.4895958466424766,
+              "1.0": 0.9302695377731943,
+              "2.0": 1.9307431145920864,
+              "3.0": 3.0949098976847043
+            },
+            "ade_m": 1.6113795991731155,
+            "fde_3s_m": 3.0949098976847043,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.41668633247133596,
+              "1.0": 0.7272870403449586,
+              "2.0": 1.2537634307713013,
+              "3.0": 1.7956985205253277
+            },
+            "ade_m": 1.0483588310282308,
+            "fde_3s_m": 1.7956985205253277,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.496893977561063,
+              "1.0": 0.9505885735364246,
+              "2.0": 1.9985157539189926,
+              "3.0": 3.224983625003222
+            },
+            "ade_m": 1.6677454825049254,
+            "fde_3s_m": 3.224983625003222,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.4836760877253793,
+              "1.0": 0.9055542532129347,
+              "2.0": 1.8471869686657283,
+              "3.0": 2.933344560787385
+            },
+            "ade_m": 1.542440467597857,
+            "fde_3s_m": 2.933344560787385,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5272317943971818,
+              "1.0": 1.05231516437695,
+              "2.0": 2.291004702921671,
+              "3.0": 3.738911548582897
+            },
+            "ade_m": 1.902365802569675,
+            "fde_3s_m": 3.738911548582897,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.49587320955067543,
+              "1.0": 0.9564773369228546,
+              "2.0": 2.0193432040843966,
+              "3.0": 3.2662238781216573
+            },
+            "ade_m": 1.684479407169896,
+            "fde_3s_m": 3.2662238781216573,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 123
+      },
+      "independent_seed42": {
+        "fit": {
+          "completed_epochs": 13,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 269832,
+          "steps": 7579,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.5198419625606726,
+              "1.0": 1.032862734097538,
+              "2.0": 2.2043970224577825,
+              "3.0": 3.543863243615148
+            },
+            "ade_m": 1.8252412406827854,
+            "fde_3s_m": 3.543863243615148,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.42525218503669965,
+              "1.0": 0.7778129796577918,
+              "2.0": 1.4014505571304883,
+              "3.0": 2.0282857300313197
+            },
+            "ade_m": 1.1582003629640747,
+            "fde_3s_m": 2.0282857300313197,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.529310256570065,
+              "1.0": 1.058393826769308,
+              "2.0": 2.2847802304267937,
+              "3.0": 3.695599010118836
+            },
+            "ade_m": 1.8920208309712507,
+            "fde_3s_m": 3.695599010118836,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.5115886708273302,
+              "1.0": 0.9961430944912177,
+              "2.0": 2.085975240078691,
+              "3.0": 3.329430783765881
+            },
+            "ade_m": 1.7307844472907798,
+            "fde_3s_m": 3.329430783765881,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.558729496264494,
+              "1.0": 1.172258663451612,
+              "2.0": 2.628584286798816,
+              "3.0": 4.302345985800023
+            },
+            "ade_m": 2.165479608078736,
+            "fde_3s_m": 4.302345985800023,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.5285938229556032,
+              "1.0": 1.0717998120231063,
+              "2.0": 2.329967452051693,
+              "3.0": 3.7712342868314273
+            },
+            "ade_m": 1.9253988434654574,
+            "fde_3s_m": 3.7712342868314273,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 42
+      },
+      "independent_seed7": {
+        "fit": {
+          "completed_epochs": 13,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 269832,
+          "steps": 7579,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.5130147947876936,
+              "1.0": 1.0321550855028727,
+              "2.0": 2.2073724151780874,
+              "3.0": 3.549298714393621
+            },
+            "ade_m": 1.8254602524655685,
+            "fde_3s_m": 3.549298714393621,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4121880381892495,
+              "1.0": 0.7784175681229185,
+              "2.0": 1.3979452922867834,
+              "3.0": 2.007722900433001
+            },
+            "ade_m": 1.149068449757988,
+            "fde_3s_m": 2.007722900433001,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.5231073950671802,
+              "1.0": 1.0575548217977615,
+              "2.0": 2.2884043937701346,
+              "3.0": 3.703637384588171
+            },
+            "ade_m": 1.8931759988058119,
+            "fde_3s_m": 3.703637384588171,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.50563581742034,
+              "1.0": 0.9956793573692654,
+              "2.0": 2.089370927036679,
+              "3.0": 3.3371954195983977
+            },
+            "ade_m": 1.7319703803561706,
+            "fde_3s_m": 3.3371954195983977,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5507722384415141,
+              "1.0": 1.1695881321499677,
+              "2.0": 2.623081253822308,
+              "3.0": 4.287451661036879
+            },
+            "ade_m": 2.1577233213626674,
+            "fde_3s_m": 4.287451661036879,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.5208395248408385,
+              "1.0": 1.0708335229468353,
+              "2.0": 2.332497176155042,
+              "3.0": 3.7742000491919274
+            },
+            "ade_m": 1.9245925682836609,
+            "fde_3s_m": 3.7742000491919274,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 7
+      },
+      "independent_seed123": {
+        "fit": {
+          "completed_epochs": 13,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 269832,
+          "steps": 7579,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.5105120495455479,
+              "1.0": 1.0269949102549945,
+              "2.0": 2.19563565518341,
+              "3.0": 3.531626286816585
+            },
+            "ade_m": 1.8161922254501341,
+            "fde_3s_m": 3.531626286816585,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4196582876292403,
+              "1.0": 0.7772085306793969,
+              "2.0": 1.392420519824603,
+              "3.0": 2.0063547541824267
+            },
+            "ade_m": 1.1489105230789167,
+            "fde_3s_m": 2.0063547541824267,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.519606372128283,
+              "1.0": 1.0519991144383618,
+              "2.0": 2.276045746386395,
+              "3.0": 3.684332605277136
+            },
+            "ade_m": 1.8829959595575438,
+            "fde_3s_m": 3.684332605277136,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.5022456104713533,
+              "1.0": 0.9906980456906244,
+              "2.0": 2.077235298824696,
+              "3.0": 3.3178488352036135
+            },
+            "ade_m": 1.7220069475475719,
+            "fde_3s_m": 3.3178488352036135,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.550623732462936,
+              "1.0": 1.1682187348431197,
+              "2.0": 2.6170942537318167,
+              "3.0": 4.274466399510092
+            },
+            "ade_m": 2.152600780136991,
+            "fde_3s_m": 4.274466399510092,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.5192778516904275,
+              "1.0": 1.065483681268813,
+              "2.0": 2.3211833637655714,
+              "3.0": 3.7583027978423034
+            },
+            "ade_m": 1.9160619236417789,
+            "fde_3s_m": 3.7583027978423034,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 123
+      },
+      "static_seed42": {
+        "fit": {
+          "completed_epochs": 11,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 6413,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.8534247042931282,
+              "1.0": 1.858512237113623,
+              "2.0": 3.4891715004694404,
+              "3.0": 4.977552511745661
+            },
+            "ade_m": 2.7946652384054635,
+            "fde_3s_m": 4.977552511745661,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.48715946706901186,
+              "1.0": 0.9755186372707079,
+              "2.0": 1.6961561736672104,
+              "3.0": 2.3336354635954177
+            },
+            "ade_m": 1.3731174354005868,
+            "fde_3s_m": 2.3336354635954177,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.8900872936702778,
+              "1.0": 1.946902008415082,
+              "2.0": 3.6686707940081384,
+              "3.0": 5.2422548151195105
+            },
+            "ade_m": 2.936978727803252,
+            "fde_3s_m": 5.2422548151195105,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.8428920185766319,
+              "1.0": 1.8163478044168357,
+              "2.0": 3.397420280197945,
+              "3.0": 4.835099674246304
+            },
+            "ade_m": 2.722939944359429,
+            "fde_3s_m": 4.835099674246304,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.9175415442182455,
+              "1.0": 2.0285386000210073,
+              "2.0": 3.8390881088455493,
+              "3.0": 5.512540518736977
+            },
+            "ade_m": 3.0744271929554445,
+            "fde_3s_m": 5.512540518736977,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.864593653295924,
+              "1.0": 1.9032229069052788,
+              "2.0": 3.586461371959525,
+              "3.0": 5.128600769372711
+            },
+            "ade_m": 2.8707196753833593,
+            "fde_3s_m": 5.128600769372711,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 42
+      },
+      "static_seed7": {
+        "fit": {
+          "completed_epochs": 11,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 6413,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.8577332273640098,
+              "1.0": 1.8584110736184187,
+              "2.0": 3.4843744344240566,
+              "3.0": 4.978182602426032
+            },
+            "ade_m": 2.7946753344581294,
+            "fde_3s_m": 4.978182602426032,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.5064636355830243,
+              "1.0": 0.9922096762715653,
+              "2.0": 1.7216059996612203,
+              "3.0": 2.3697356937605316
+            },
+            "ade_m": 1.3975037513190856,
+            "fde_3s_m": 2.3697356937605316,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.8928947674868427,
+              "1.0": 1.9451199053770216,
+              "2.0": 3.6608456781376124,
+              "3.0": 5.239333702094986
+            },
+            "ade_m": 2.934548513274116,
+            "fde_3s_m": 5.239333702094986,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.8506403243283598,
+              "1.0": 1.8245818176867663,
+              "2.0": 3.406276324943708,
+              "3.0": 4.854564030710184
+            },
+            "ade_m": 2.734015624417254,
+            "fde_3s_m": 4.854564030710184,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.9229054290547027,
+              "1.0": 2.02644465156817,
+              "2.0": 3.8323502836478425,
+              "3.0": 5.517803769836443
+            },
+            "ade_m": 3.07487603352679,
+            "fde_3s_m": 5.517803769836443,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.8652546014805256,
+              "1.0": 1.8942832207092688,
+              "2.0": 3.56718701089457,
+              "3.0": 5.10926016282853
+            },
+            "ade_m": 2.8589962489782237,
+            "fde_3s_m": 5.10926016282853,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 7
+      },
+      "static_seed123": {
+        "fit": {
+          "completed_epochs": 11,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 6413,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.84501042311354,
+              "1.0": 1.836059897808937,
+              "2.0": 3.4443153669887794,
+              "3.0": 4.918951444771897
+            },
+            "ade_m": 2.7610842831707885,
+            "fde_3s_m": 4.918951444771897,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.490248990561007,
+              "1.0": 0.9743633876766107,
+              "2.0": 1.6909556195736484,
+              "3.0": 2.327153130963676
+            },
+            "ade_m": 1.3706802821937356,
+            "fde_3s_m": 2.327153130963676,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.8805214918404688,
+              "1.0": 1.9223177813846914,
+              "2.0": 3.619844747142478,
+              "3.0": 5.1784357657362525
+            },
+            "ade_m": 2.9002799465259725,
+            "fde_3s_m": 5.1784357657362525,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.8299137288479385,
+              "1.0": 1.7843705631864584,
+              "2.0": 3.335643423903981,
+              "3.0": 4.755531067935122
+            },
+            "ade_m": 2.676364695968375,
+            "fde_3s_m": 4.755531067935122,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.9110693845849412,
+              "1.0": 2.007887667574407,
+              "2.0": 3.798382313673562,
+              "3.0": 5.4618722539081626
+            },
+            "ade_m": 3.044802904935268,
+            "fde_3s_m": 5.4618722539081626,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.8610190855469954,
+              "1.0": 1.8908706652128926,
+              "2.0": 3.5595473962103235,
+              "3.0": 5.0922324017292055
+            },
+            "ade_m": 2.8509173871748543,
+            "fde_3s_m": 5.0922324017292055,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 123
+      },
+      "short_history_seed42": {
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 11077,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.5934024634027351,
+              "1.0": 1.120342254927866,
+              "2.0": 2.2182181298120436,
+              "3.0": 3.431628050911707
+            },
+            "ade_m": 1.8408977247635878,
+            "fde_3s_m": 3.431628050911707,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4630231038477376,
+              "1.0": 0.8044857177875627,
+              "2.0": 1.362167418077571,
+              "3.0": 1.916125466740261
+            },
+            "ade_m": 1.136450426613283,
+            "fde_3s_m": 1.916125466740261,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.606453238622173,
+              "1.0": 1.1519602498828825,
+              "2.0": 2.3039176004371718,
+              "3.0": 3.5833563385111233
+            },
+            "ade_m": 1.9114218568633377,
+            "fde_3s_m": 3.5833563385111233,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.591312602425505,
+              "1.0": 1.0999266854872647,
+              "2.0": 2.148075061971415,
+              "3.0": 3.2968829110858375
+            },
+            "ade_m": 1.7840493152425054,
+            "fde_3s_m": 3.2968829110858375,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.6240916195968184,
+              "1.0": 1.21943997656863,
+              "2.0": 2.516896251572473,
+              "3.0": 3.9824694008002965
+            },
+            "ade_m": 2.0857243121345546,
+            "fde_3s_m": 3.9824694008002965,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.5956185701391681,
+              "1.0": 1.1419906858193252,
+              "2.0": 2.2925954509004165,
+              "3.0": 3.5745035387057915
+            },
+            "ade_m": 1.9011770613911754,
+            "fde_3s_m": 3.5745035387057915,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 42
+      },
+      "short_history_seed7": {
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 11077,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.5891877693291863,
+              "1.0": 1.1199366726977287,
+              "2.0": 2.2176443987777175,
+              "3.0": 3.4314314407929447
+            },
+            "ade_m": 1.8395500703993943,
+            "fde_3s_m": 3.4314314407929447,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4546836272126904,
+              "1.0": 0.8012582132259581,
+              "2.0": 1.3600069490524112,
+              "3.0": 1.9087000078140821
+            },
+            "ade_m": 1.1311621993262855,
+            "fde_3s_m": 1.9087000078140821,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.6026514260063452,
+              "1.0": 1.151837146523731,
+              "2.0": 2.303502724163747,
+              "3.0": 3.5838834786866256
+            },
+            "ade_m": 1.910468693845112,
+            "fde_3s_m": 3.5838834786866256,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.5849311875937229,
+              "1.0": 1.0958669806178598,
+              "2.0": 2.1388783764502675,
+              "3.0": 3.282058577316363
+            },
+            "ade_m": 1.7754337804945532,
+            "fde_3s_m": 3.282058577316363,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.6220871251283688,
+              "1.0": 1.2187113603072592,
+              "2.0": 2.516842783354036,
+              "3.0": 3.9883205392533627
+            },
+            "ade_m": 2.0864904520107563,
+            "fde_3s_m": 3.9883205392533627,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.5937014849343665,
+              "1.0": 1.145459892387982,
+              "2.0": 2.3011652066348725,
+              "3.0": 3.589817272095385
+            },
+            "ade_m": 1.9075359640131513,
+            "fde_3s_m": 3.589817272095385,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 7
+      },
+      "short_history_seed123": {
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 469620,
+          "steps": 11077,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.5955485645537867,
+              "1.0": 1.1199777184894177,
+              "2.0": 2.209459090653918,
+              "3.0": 3.413576794859526
+            },
+            "ade_m": 1.8346405421391623,
+            "fde_3s_m": 3.413576794859526,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.4689787596526231,
+              "1.0": 0.8074097975678147,
+              "2.0": 1.3613503595381748,
+              "3.0": 1.905606390916206
+            },
+            "ade_m": 1.1358363269187046,
+            "fde_3s_m": 1.905606390916206,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.6082180070161833,
+              "1.0": 1.151266525545198,
+              "2.0": 2.294363502249462,
+              "3.0": 3.564550975162798
+            },
+            "ade_m": 1.9045997524934104,
+            "fde_3s_m": 3.564550975162798,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.5928967190058839,
+              "1.0": 1.09923451300534,
+              "2.0": 2.1403586035582642,
+              "3.0": 3.2804514938815714
+            },
+            "ade_m": 1.7782353323627649,
+            "fde_3s_m": 3.2804514938815714,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.6248812067302435,
+              "1.0": 1.217474069548575,
+              "2.0": 2.5041865514525092,
+              "3.0": 3.9537391604548384
+            },
+            "ade_m": 2.0750702470465416,
+            "fde_3s_m": 3.9537391604548384,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.5983606039150826,
+              "1.0": 1.1419735718766526,
+              "2.0": 2.282730895799318,
+              "3.0": 3.554734709554093
+            },
+            "ade_m": 1.8944499452862869,
+            "fde_3s_m": 3.554734709554093,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          }
+        },
+        "seed": 123
+      },
+      "probabilistic_seed42": {
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 470136,
+          "steps": 11077,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.47620038609162446,
+              "1.0": 0.9200864946572982,
+              "2.0": 1.9076656844031612,
+              "3.0": 3.059633106840824
+            },
+            "ade_m": 1.590896417998227,
+            "fde_3s_m": 3.059633106840824,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.40007196756127644,
+              "1.0": 0.7184454247179586,
+              "2.0": 1.2465686175702375,
+              "3.0": 1.793694266752081
+            },
+            "ade_m": 1.0396950691503883,
+            "fde_3s_m": 1.793694266752081,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.4838207201881208,
+              "1.0": 0.9402712510043034,
+              "2.0": 1.9738482936501156,
+              "3.0": 3.1863756802470005
+            },
+            "ade_m": 1.6460789862723852,
+            "fde_3s_m": 3.1863756802470005,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.46970259260833563,
+              "1.0": 0.8968604837058997,
+              "2.0": 1.8278270415991895,
+              "3.0": 2.904188663575054
+            },
+            "ade_m": 1.5246446953721198,
+            "fde_3s_m": 2.904188663575054,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5144097468955524,
+              "1.0": 1.0364412213570435,
+              "2.0": 2.252488572789792,
+              "3.0": 3.6800269044279372
+            },
+            "ade_m": 1.8708416113675814,
+            "fde_3s_m": 3.6800269044279372,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.4830907014072735,
+              "1.0": 0.9447150862487204,
+              "2.0": 1.9923238643577863,
+              "3.0": 3.224456870405708
+            },
+            "ade_m": 1.6611466306048719,
+            "fde_3s_m": 3.224456870405708,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          },
+          "uncertainty": {
+            "temperature": 0.9838814061666733,
+            "mean_squared_standardized_radius": [
+              2.1109712067625583,
+              2.1281742178303364,
+              2.1408146808032518,
+              2.1746772230403977
+            ],
+            "radial_coverage_50_80_95": [
+              [
+                0.5516914621434663,
+                0.7888204512671488,
+                0.9207344936142434
+              ],
+              [
+                0.5327543654236546,
+                0.7989335983894472,
+                0.9293108821819959
+              ],
+              [
+                0.5538040662631573,
+                0.804129443131705,
+                0.9253654961523395
+              ],
+              [
+                0.5547332262011824,
+                0.8005088426147265,
+                0.9220687316634478
+              ]
+            ]
+          }
+        },
+        "seed": 42
+      },
+      "probabilistic_seed7": {
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 470136,
+          "steps": 11077,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.4707509674577052,
+              "1.0": 0.913806222213084,
+              "2.0": 1.8948651377581758,
+              "3.0": 3.040827263573656
+            },
+            "ade_m": 1.5800623977506554,
+            "fde_3s_m": 3.040827263573656,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.3979193091751166,
+              "1.0": 0.711430092979101,
+              "2.0": 1.2242493088944482,
+              "3.0": 1.7550075464793804
+            },
+            "ade_m": 1.0221515643820114,
+            "fde_3s_m": 1.7550075464793804,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.47804130078328605,
+              "1.0": 0.9340645585370464,
+              "2.0": 1.9620006721706855,
+              "3.0": 3.16956027571386
+            },
+            "ade_m": 1.6359167018012193,
+            "fde_3s_m": 3.16956027571386,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.4639770849443953,
+              "1.0": 0.8880317377278221,
+              "2.0": 1.8085764554610806,
+              "3.0": 2.8772293655701615
+            },
+            "ade_m": 1.5094536609258649,
+            "fde_3s_m": 2.8772293655701615,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5092814415987225,
+              "1.0": 1.0319200008460918,
+              "2.0": 2.2446743215292058,
+              "3.0": 3.6676495359694146
+            },
+            "ade_m": 1.8633813249858586,
+            "fde_3s_m": 3.6676495359694146,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.4779340500792937,
+              "1.0": 0.9411371841372734,
+              "2.0": 1.9863627209726848,
+              "3.0": 3.214296447007815
+            },
+            "ade_m": 1.6549326005492668,
+            "fde_3s_m": 3.214296447007815,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          },
+          "uncertainty": {
+            "temperature": 0.9838814061666733,
+            "mean_squared_standardized_radius": [
+              2.0747790038558676,
+              2.0928666901825217,
+              2.141747469781874,
+              2.1061431641616366
+            ],
+            "radial_coverage_50_80_95": [
+              [
+                0.5609505459216442,
+                0.7933120650262695,
+                0.9234425176621709
+              ],
+              [
+                0.5420074631265952,
+                0.8047689042007463,
+                0.9317220785565673
+              ],
+              [
+                0.5566450591153961,
+                0.8063238942451467,
+                0.9259299039243188
+              ],
+              [
+                0.5693835127410737,
+                0.8117893105140448,
+                0.927462547625015
+              ]
+            ]
+          }
+        },
+        "seed": 7
+      },
+      "probabilistic_seed123": {
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 0,
+          "best_development_ade_m": null,
+          "parameters": 470136,
+          "steps": 11077,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "metrics": {
+          "overall": {
+            "mde_m": {
+              "0.4": 0.4745585995748066,
+              "1.0": 0.921653480792952,
+              "2.0": 1.9090075724572297,
+              "3.0": 3.057080745342509
+            },
+            "ade_m": 1.5905750995418741,
+            "fde_3s_m": 3.057080745342509,
+            "valid_targets": [
+              474885,
+              474868,
+              474834,
+              474803
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "goalkeeper": {
+            "mde_m": {
+              "0.4": 0.3998402792169827,
+              "1.0": 0.7180496259961683,
+              "2.0": 1.2440234346043262,
+              "3.0": 1.7886044241603507
+            },
+            "ade_m": 1.0376294409944569,
+            "fde_3s_m": 1.7886044241603507,
+            "valid_targets": [
+              43210,
+              43210,
+              43210,
+              43210
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "outfield": {
+            "mde_m": {
+              "0.4": 0.4820377879408699,
+              "1.0": 0.9420347196114676,
+              "2.0": 1.9755793354357611,
+              "3.0": 3.184077410265031
+            },
+            "ade_m": 1.6459323133132824,
+            "fde_3s_m": 3.184077410265031,
+            "valid_targets": [
+              431675,
+              431658,
+              431624,
+              431593
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_118577": {
+            "mde_m": {
+              "0.4": 0.46795804260097074,
+              "1.0": 0.8974263602434782,
+              "2.0": 1.8265127855186412,
+              "3.0": 2.898145538169968
+            },
+            "ade_m": 1.5225106816332645,
+            "fde_3s_m": 2.898145538169968,
+            "valid_targets": [
+              244404,
+              244393,
+              244373,
+              244354
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "around_PASS": {
+            "mde_m": {
+              "0.4": 0.5134726020560582,
+              "1.0": 1.0416951138923651,
+              "2.0": 2.2628213719800825,
+              "3.0": 3.6875584818482
+            },
+            "ade_m": 1.8763868924441764,
+            "fde_3s_m": 3.6875584818482,
+            "valid_targets": [
+              141944,
+              141944,
+              141944,
+              141944
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "match_128058": {
+            "mde_m": {
+              "0.4": 0.4815578864952195,
+              "1.0": 0.9473436357287345,
+              "2.0": 1.996482237242732,
+              "3.0": 3.2256059000157706
+            },
+            "ade_m": 1.6627474148706143,
+            "fde_3s_m": 3.2256059000157706,
+            "valid_targets": [
+              230481,
+              230475,
+              230461,
+              230449
+            ],
+            "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+          },
+          "coverage": {
+            "windows": 21605,
+            "mean_observed_players": 21.980837769034945,
+            "possible_targets_by_horizon": [
+              474896,
+              474896,
+              474896,
+              474896
+            ],
+            "valid_fraction_by_horizon": [
+              0.9999768370337927,
+              0.9999410397223814,
+              0.9998694450995587,
+              0.999804167649338
+            ]
+          },
+          "uncertainty": {
+            "temperature": 0.9838814061666733,
+            "mean_squared_standardized_radius": [
+              2.0417077066191025,
+              2.101785520446603,
+              2.0748575088996564,
+              2.0439859836647054
+            ],
+            "radial_coverage_50_80_95": [
+              [
+                0.5623656253619297,
+                0.7986228244732936,
+                0.9261421186181917
+              ],
+              [
+                0.5373893376685731,
+                0.8031810945357447,
+                0.9311155942282908
+              ],
+              [
+                0.5626808526769356,
+                0.8124755177598908,
+                0.9299523622992456
+              ],
+              [
+                0.5739222372225955,
+                0.8159742040383064,
+                0.9308155171723852
+              ]
+            ]
+          }
+        },
+        "seed": 123
+      }
+    },
+    "selected": {
+      "social": {
+        "candidate": {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.001
+        },
+        "fit": {
+          "completed_epochs": 32,
+          "best_epoch": 24,
+          "best_development_ade_m": 1.528632745365452,
+          "parameters": 469620,
+          "steps": 16032,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1095574016
+        },
+        "directory": "outputs\\trajectory_forecasting_20261016\\selection\\social_0",
+        "epochs": 24,
+        "selection_rule": "Minimum development ADE, tie smaller parameter count",
+        "temperature": 1.0
+      },
+      "independent": {
+        "candidate": {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.001
+        },
+        "fit": {
+          "completed_epochs": 21,
+          "best_epoch": 13,
+          "best_development_ade_m": 1.7378725701424078,
+          "parameters": 269832,
+          "steps": 10521,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "directory": "outputs\\trajectory_forecasting_20261016\\selection\\independent_0",
+        "epochs": 13,
+        "selection_rule": "Minimum development ADE, tie smaller parameter count",
+        "temperature": 1.0
+      },
+      "static": {
+        "candidate": {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.001
+        },
+        "fit": {
+          "completed_epochs": 19,
+          "best_epoch": 11,
+          "best_development_ade_m": 2.601992090320386,
+          "parameters": 469620,
+          "steps": 9519,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "directory": "outputs\\trajectory_forecasting_20261016\\selection\\static_0",
+        "epochs": 11,
+        "selection_rule": "Minimum development ADE, tie smaller parameter count",
+        "temperature": 1.0
+      },
+      "short_history": {
+        "candidate": {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.001
+        },
+        "fit": {
+          "completed_epochs": 27,
+          "best_epoch": 19,
+          "best_development_ade_m": 1.758086532863195,
+          "parameters": 469620,
+          "steps": 13527,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "directory": "outputs\\trajectory_forecasting_20261016\\selection\\short_history_0",
+        "epochs": 19,
+        "selection_rule": "Minimum development ADE, tie smaller parameter count",
+        "temperature": 1.0
+      },
+      "probabilistic": {
+        "candidate": {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.001
+        },
+        "fit": {
+          "completed_epochs": 27,
+          "best_epoch": 19,
+          "best_development_ade_m": 1.5135473325652744,
+          "parameters": 470136,
+          "steps": 13527,
+          "status": "COMPLETE",
+          "peak_cuda_allocated_bytes": 1494669824
+        },
+        "directory": "outputs\\trajectory_forecasting_20261016\\selection\\probabilistic_0",
+        "epochs": 19,
+        "selection_rule": "Minimum development ADE, tie smaller parameter count",
+        "temperature": 0.9838814061666733
+      }
+    },
+    "config": {
+      "schema_version": 1,
+      "train_matches": [
+        "117092",
+        "117093",
+        "118576",
+        "118578",
+        "128057",
+        "132831",
+        "132877"
+      ],
+      "validation_matches": [
+        "118577",
+        "128058"
+      ],
+      "development_match": "132877",
+      "fps": 25,
+      "history_frames": 50,
+      "horizons_frames": [
+        10,
+        25,
+        50,
+        75
+      ],
+      "stride_frames": 13,
+      "seeds": [
+        42,
+        7,
+        123
+      ],
+      "batch_size": 128,
+      "max_epochs": 60,
+      "patience": 8,
+      "min_delta_m": 0.005,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1.0,
+      "cpu_threads": 4,
+      "loader_workers": 0,
+      "gpu_memory_fraction": 0.72,
+      "max_hours": 14,
+      "selection_candidates": [
+        {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.001
+        },
+        {
+          "width": 128,
+          "layers": 3,
+          "learning_rate": 0.0003
+        },
+        {
+          "width": 192,
+          "layers": 4,
+          "learning_rate": 0.0003
+        }
+      ],
+      "independent_rule": "Independent baseline also serves as no-social ablation: match selected social width, layer count, learning rate and three seeds; select its stopping epoch on development only.",
+      "experiment_order": [
+        "social",
+        "independent",
+        "static",
+        "short_history",
+        "probabilistic"
+      ],
+      "evaluation_rule": "Select solely on 132877; refit all seven for selected best epoch; held-out evaluation once per final seed.",
+      "history_rule": "51 observed time points over 2 s; short history 11 points; no interpolation; segment break on gaps/track changes/jumps.",
+      "constant_velocity_rule": "Least squares over last 11 actual samples, require 6 samples, cap 12 m/s; no future data.",
+      "uncertainty_rule": "Optional isotropic Gaussian, temperature calibrated only on development; held-out radial coverage at 50/80/95 percent.",
+      "pass_subset_rule": "BAS Pass within +/-25 frames of anchor; all observed players evaluated; BAS never model input."
+    },
+    "resume_command": "& \"C:\\Users\\flexadmin\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe\" train\\run_trajectory_forecasting.py --output \"C:\\Users\\flexadmin\\Downloads\\football_tactical_llm_starter_v2\\football_tactical_llm_starter_v2\\outputs\\trajectory_forecasting_20261016\" --config \"C:\\Users\\flexadmin\\Downloads\\football_tactical_llm_starter_v2\\football_tactical_llm_starter_v2\\configs\\trajectory_forecasting.json\"",
+    "git_sha": "73dd4a54658d94ddba6ae46ca3ce95e292e55fdf",
+    "code_sha256": {
+      "C:\\Users\\flexadmin\\Downloads\\football_tactical_llm_starter_v2\\football_tactical_llm_starter_v2\\train\\run_trajectory_forecasting.py": "948b476f666ff80047cfd775f13338e1ab3f1b40720a2ce6f73ddfbf5311906f",
+      "src\\trajectory_dataset.py": "21ced2cc13c89d6140c8bb610e6832e4ba882a3c4a06bf1d5b59e83a7bfbadc7",
+      "src\\models\\trajectory_forecasting.py": "568b576762b57412189bc3dbb904c27da98c2ccb47a3380f26814f2e547d9af7",
+      "configs\\trajectory_forecasting.json": "52c796b5b2ed9ec0186f608c75026a0909fcbe045b9590efc47153b94997a801"
+    },
+    "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA RTX A5000",
+    "status": "COMPLETE",
+    "pid": 2244,
+    "input_protection": "Only raw GSR and BAS evaluation subsets are read. No writes to data/ or existing results/review material.",
+    "last_started_unix": 1792125850.2943382,
+    "stage": "complete",
+    "updated_unix": 1792137028.0612137,
+    "cached_halves": {
+      "117092_1st": {
+        "observed_player_frames": 1482193,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 25,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8769410755056107,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1482193,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 67375,
+        "frames_exactly_22": 67339,
+        "frames_over_22": 0,
+        "frames_under_18": 1,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -57.75,
+          -35.36000061035156
+        ],
+        "pitch_coordinate_max": [
+          53.54999923706055,
+          36.040000915527344
+        ]
+      },
+      "117092_2nd": {
+        "observed_player_frames": 1484817,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 33,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8833305046390586,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1484817,
+        "unique_player_ids": 33,
+        "unique_player_track_pairs": 33,
+        "frames": 67549,
+        "frames_exactly_22": 67059,
+        "frames_over_22": 0,
+        "frames_under_18": 77,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          16.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -57.75,
+          -31.280000686645508
+        ],
+        "pitch_coordinate_max": [
+          54.599998474121094,
+          36.040000915527344
+        ]
+      },
+      "117093_1st": {
+        "observed_player_frames": 1487709,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 23,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8746193753251694,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1487709,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 67625,
+        "frames_exactly_22": 67584,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -57.75,
+          -39.439998626708984
+        ],
+        "pitch_coordinate_max": [
+          60.900001525878906,
+          38.7599983215332
+        ]
+      },
+      "117093_2nd": {
+        "observed_player_frames": 1550381,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 27,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8783581040201142,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1550381,
+        "unique_player_ids": 27,
+        "unique_player_track_pairs": 27,
+        "frames": 70475,
+        "frames_exactly_22": 70428,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          20.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -40.119998931884766
+        ],
+        "pitch_coordinate_max": [
+          56.70000076293945,
+          40.79999923706055
+        ]
+      },
+      "118576_1st": {
+        "observed_player_frames": 1599112,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 24,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8858067848673744,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1599157,
+        "outside_generous_pitch_bounds": 45,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 72825,
+        "frames_exactly_22": 69787,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -64.05000305175781,
+          -41.47999954223633
+        ],
+        "pitch_coordinate_max": [
+          55.650001525878906,
+          40.119998931884766
+        ]
+      },
+      "118576_2nd": {
+        "observed_player_frames": 1601050,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 28,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8926922927979752,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1601050,
+        "unique_player_ids": 28,
+        "unique_player_track_pairs": 28,
+        "frames": 72775,
+        "frames_exactly_22": 72775,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -63.0,
+          -43.52000045776367
+        ],
+        "pitch_coordinate_max": [
+          60.900001525878906,
+          40.119998931884766
+        ]
+      },
+      "118578_1st": {
+        "observed_player_frames": 1547700,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 22,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.874700034503301,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1547700,
+        "unique_player_ids": 22,
+        "unique_player_track_pairs": 22,
+        "frames": 70350,
+        "frames_exactly_22": 70350,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -38.7599983215332
+        ],
+        "pitch_coordinate_max": [
+          55.650001525878906,
+          40.79999923706055
+        ]
+      },
+      "118578_2nd": {
+        "observed_player_frames": 1561375,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 30,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8818294483282042,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1561375,
+        "unique_player_ids": 30,
+        "unique_player_track_pairs": 30,
+        "frames": 70975,
+        "frames_exactly_22": 70919,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          20.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -41.47999954223633
+        ],
+        "pitch_coordinate_max": [
+          61.95000076293945,
+          40.79999923706055
+        ]
+      },
+      "128057_1st": {
+        "observed_player_frames": 1487709,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 24,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8877511032241369,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1487750,
+        "outside_generous_pitch_bounds": 41,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 67625,
+        "frames_exactly_22": 67584,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -64.05000305175781,
+          -38.08000183105469
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          40.79999923706055
+        ]
+      },
+      "128057_2nd": {
+        "observed_player_frames": 1547700,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 23,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8925977448782918,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1547700,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 70350,
+        "frames_exactly_22": 70350,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -60.900001525878906,
+          -40.119998931884766
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          40.79999923706055
+        ]
+      },
+      "132831_1st": {
+        "observed_player_frames": 1491028,
+        "implausible_adjacent_jumps": 13,
+        "track_team_or_role_changes": 0,
+        "segment_count": 35,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.00000762939453,
+          26.250028610229492,
+          31.274011611938477
+        ],
+        "identical_adjacent_position_fraction": 0.8498255540219154,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1491028,
+        "unique_player_ids": 22,
+        "unique_player_track_pairs": 22,
+        "frames": 67775,
+        "frames_exactly_22": 67774,
+        "frames_over_22": 0,
+        "frames_under_18": 1,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "132831_2nd": {
+        "observed_player_frames": 1503674,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 28,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8744119294035964,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1503674,
+        "unique_player_ids": 28,
+        "unique_player_track_pairs": 28,
+        "frames": 68375,
+        "frames_exactly_22": 68103,
+        "frames_over_22": 0,
+        "frames_under_18": 4,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "132877_1st": {
+        "observed_player_frames": 1489136,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 22,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.890855233380386,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1489136,
+        "unique_player_ids": 22,
+        "unique_player_track_pairs": 22,
+        "frames": 67700,
+        "frames_exactly_22": 67688,
+        "frames_over_22": 0,
+        "frames_under_18": 12,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "132877_2nd": {
+        "observed_player_frames": 1525309,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 35,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8932100068577843,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1525309,
+        "unique_player_ids": 35,
+        "unique_player_track_pairs": 35,
+        "frames": 69350,
+        "frames_exactly_22": 69205,
+        "frames_over_22": 0,
+        "frames_under_18": 26,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "118577_1st": {
+        "observed_player_frames": 1588701,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 24,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8913309628074177,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1588701,
+        "unique_player_ids": 24,
+        "unique_player_track_pairs": 24,
+        "frames": 72425,
+        "frames_exactly_22": 67776,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -60.900001525878906,
+          -43.52000045776367
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          41.47999954223633
+        ]
+      },
+      "118577_2nd": {
+        "observed_player_frames": 1593824,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 30,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8918523974867517,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1593824,
+        "unique_player_ids": 30,
+        "unique_player_track_pairs": 30,
+        "frames": 72475,
+        "frames_exactly_22": 71974,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          20.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -60.900001525878906,
+          -40.79999923706055
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          40.79999923706055
+        ]
+      },
+      "128058_1st": {
+        "observed_player_frames": 1517450,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 23,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8777562281414526,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1517450,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 68975,
+        "frames_exactly_22": 68975,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -40.119998931884766
+        ],
+        "pitch_coordinate_max": [
+          56.70000076293945,
+          40.79999923706055
+        ]
+      },
+      "128058_2nd": {
+        "observed_player_frames": 1490821,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 32,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8819960437057156,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1490821,
+        "unique_player_ids": 32,
+        "unique_player_track_pairs": 32,
+        "frames": 67750,
+        "frames_exactly_22": 67374,
+        "frames_over_22": 287,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 287,
+        "player_count_percentiles": [
+          20.0,
+          22.0,
+          22.0,
+          22.0,
+          25.0
+        ],
+        "pitch_coordinate_min": [
+          -59.849998474121094,
+          -42.84000015258789
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          40.79999923706055
+        ]
+      }
+    },
+    "dataset_windows": {
+      "development": 10521,
+      "selection_fitting": 64043,
+      "final_fitting": 74564,
+      "heldout": 21605
+    },
+    "development_baselines": {
+      "persistence": {
+        "overall": {
+          "mde_m": {
+            "0.4": 0.7994417307247474,
+            "1.0": 1.8574360778642705,
+            "2.0": 3.518310127489095,
+            "3.0": 5.033693016464692
+          },
+          "ade_m": 2.802220238135701,
+          "fde_3s_m": 5.033693016464692,
+          "valid_targets": [
+            231440,
+            231427,
+            231400,
+            231372
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "goalkeeper": {
+          "mde_m": {
+            "0.4": 0.41973075279292765,
+            "1.0": 0.9460070011733602,
+            "2.0": 1.7292794250174952,
+            "3.0": 2.44475441356194
+          },
+          "ade_m": 1.3849428981364307,
+          "fde_3s_m": 2.44475441356194,
+          "valid_targets": [
+            21041,
+            21040,
+            21038,
+            21036
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "outfield": {
+          "mde_m": {
+            "0.4": 0.8374147987232461,
+            "1.0": 1.948584602539197,
+            "2.0": 3.697228474452484,
+            "3.0": 5.292616428205199
+          },
+          "ade_m": 2.943961075980032,
+          "fde_3s_m": 5.292616428205199,
+          "valid_targets": [
+            210399,
+            210387,
+            210362,
+            210336
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "match_132877": {
+          "mde_m": {
+            "0.4": 0.7994417307247474,
+            "1.0": 1.8574360778642705,
+            "2.0": 3.518310127489095,
+            "3.0": 5.033693016464692
+          },
+          "ade_m": 2.802220238135701,
+          "fde_3s_m": 5.033693016464692,
+          "valid_targets": [
+            231440,
+            231427,
+            231400,
+            231372
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "coverage": {
+          "windows": 10521,
+          "mean_observed_players": 21.999144568006844,
+          "possible_targets_by_horizon": [
+            231453,
+            231453,
+            231453,
+            231453
+          ],
+          "valid_fraction_by_horizon": [
+            0.9999438330892233,
+            0.9998876661784466,
+            0.9997710118252949,
+            0.9996500369405452
+          ]
+        }
+      },
+      "constant_velocity": {
+        "overall": {
+          "mde_m": {
+            "0.4": 0.7524140256109676,
+            "1.0": 1.5646710143390754,
+            "2.0": 3.272207906948871,
+            "3.0": 5.252135807338939
+          },
+          "ade_m": 2.7103571885594633,
+          "fde_3s_m": 5.252135807338939,
+          "valid_targets": [
+            231440,
+            231427,
+            231400,
+            231372
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "goalkeeper": {
+          "mde_m": {
+            "0.4": 0.6290627124163255,
+            "1.0": 1.2824597860923739,
+            "2.0": 2.48405973715682,
+            "3.0": 3.7677016097752625
+          },
+          "ade_m": 2.0408209613601955,
+          "fde_3s_m": 3.7677016097752625,
+          "valid_targets": [
+            21041,
+            21040,
+            21038,
+            21036
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "outfield": {
+          "mde_m": {
+            "0.4": 0.7647497966637756,
+            "1.0": 1.5928938663759376,
+            "2.0": 3.3510294658638293,
+            "3.0": 5.40059615900831
+          },
+          "ade_m": 2.7773173219779634,
+          "fde_3s_m": 5.40059615900831,
+          "valid_targets": [
+            210399,
+            210387,
+            210362,
+            210336
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "match_132877": {
+          "mde_m": {
+            "0.4": 0.7524140256109676,
+            "1.0": 1.5646710143390754,
+            "2.0": 3.272207906948871,
+            "3.0": 5.252135807338939
+          },
+          "ade_m": 2.7103571885594633,
+          "fde_3s_m": 5.252135807338939,
+          "valid_targets": [
+            231440,
+            231427,
+            231400,
+            231372
+          ],
+          "definition": "ADE = unweighted mean of four horizon MDEs; FDE = 3 s MDE"
+        },
+        "coverage": {
+          "windows": 10521,
+          "mean_observed_players": 21.999144568006844,
+          "possible_targets_by_horizon": [
+            231453,
+            231453,
+            231453,
+            231453
+          ],
+          "valid_fraction_by_horizon": [
+            0.9999438330892233,
+            0.9998876661784466,
+            0.9997710118252949,
+            0.9996500369405452
+          ]
+        }
+      }
+    }
+  },
+  "aggregate_heldout": {
+    "persistence": {
+      "runs": 1,
+      "mde_mean_m": [
+        0.8450303455715348,
+        1.966644802003695,
+        3.7216416237248504,
+        5.321329197360866
+      ],
+      "mde_seed_sd_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ade_mean_m": 2.9636614921652367,
+      "ade_seed_sd_m": 0.0,
+      "fde_3s_mean_m": 5.321329197360866,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    },
+    "constant_velocity": {
+      "runs": 1,
+      "mde_mean_m": [
+        0.7601220232205067,
+        1.5997266362046927,
+        3.374901882857022,
+        5.440284728120136
+      ],
+      "mde_seed_sd_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ade_mean_m": 2.7937588176005894,
+      "ade_seed_sd_m": 0.0,
+      "fde_3s_mean_m": 5.440284728120136,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    },
+    "social": {
+      "runs": 3,
+      "mde_mean_m": [
+        0.4898140338468869,
+        0.92528457131977,
+        1.9150201710637846,
+        3.0697229262262784
+      ],
+      "mde_seed_sd_m": [
+        0.00026142169142444875,
+        0.0035388105967410198,
+        0.011133911146256824,
+        0.017833716557694265
+      ],
+      "ade_mean_m": 1.59996042561418,
+      "ade_seed_sd_m": 0.008090743980419512,
+      "fde_3s_mean_m": 3.0697229262262784,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    },
+    "independent": {
+      "runs": 3,
+      "mde_mean_m": [
+        0.514456268964638,
+        1.0306709099518017,
+        2.2024683642730936,
+        3.5415960816084513
+      ],
+      "mde_seed_sd_m": [
+        0.003942943491821539,
+        0.002615329419860065,
+        0.004981811958728225,
+        0.007390700994711922
+      ],
+      "ade_mean_m": 1.822297906199496,
+      "ade_seed_sd_m": 0.004318293999570939,
+      "fde_3s_mean_m": 3.5415960816084513,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    },
+    "static": {
+      "runs": 3,
+      "mde_mean_m": [
+        0.8520561182568928,
+        1.850994402846993,
+        3.4726204339607585,
+        4.958228852981197
+      ],
+      "mde_seed_sd_m": [
+        0.005283446337563971,
+        0.010560370544697648,
+        0.020110288790850694,
+        0.027774512900575258
+      ],
+      "ade_mean_m": 2.7834749520114603,
+      "ade_seed_sd_m": 0.01583259430904172,
+      "fde_3s_mean_m": 4.958228852981197,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    },
+    "short_history": {
+      "runs": 3,
+      "mde_mean_m": [
+        0.5927129324285693,
+        1.1200855487050043,
+        2.2151072064145594,
+        3.425545428854726
+      ],
+      "mde_seed_sd_m": [
+        0.0026421605673609037,
+        0.00018229052433935217,
+        0.0040006833215626226,
+        0.008463482879130022
+      ],
+      "ade_mean_m": 1.8383627791007147,
+      "ade_seed_sd_m": 0.0026889067257646186,
+      "fde_3s_mean_m": 3.425545428854726,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    },
+    "probabilistic": {
+      "runs": 3,
+      "mde_mean_m": [
+        0.4738366510413788,
+        0.9185153992211115,
+        1.9038461315395223,
+        3.0525137052523292
+      ],
+      "mde_seed_sd_m": [
+        0.0022825348665632705,
+        0.00339078382846138,
+        0.006374106623041424,
+        0.008328998604726414
+      ],
+      "ade_mean_m": 1.5871779717635857,
+      "ade_seed_sd_m": 0.005033180342335796,
+      "fde_3s_mean_m": 3.0525137052523292,
+      "seed_sd_definition": "population SD across available seeds; one run has SD 0, not certainty"
+    }
+  },
+  "aggregate_by_match_role_and_PASS": {
+    "persistence": {
+      "overall": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.8450303455715348,
+          1.966644802003695,
+          3.7216416237248504,
+          5.321329197360866
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.9636614921652367,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.4320749075813885,
+          0.9627803533227872,
+          1.7339039817338628,
+          2.419395443952296
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 1.3870386716475838,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.886366546431144,
+          2.0671340317902858,
+          3.920634611162037,
+          5.611863453296132
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 3.1214996606698997,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.8034249033190978,
+          1.8628748790770016,
+          3.525528816468255,
+          5.052195695797004
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.8110060736653395,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.9088616880967155,
+          2.117639261806978,
+          4.034768812378116,
+          5.826985450189506
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 3.2220638031178286,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.8891491078436068,
+          2.076681217119536,
+          3.929592970338189,
+          5.606701876859143
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 3.1255312930401185,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    },
+    "constant_velocity": {
+      "overall": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.7601220232205067,
+          1.5997266362046927,
+          3.374901882857022,
+          5.440284728120136
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.7937588176005894,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.6170343543390134,
+          1.2949567283201318,
+          2.5254800928491488,
+          3.8253821929387817
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.065713342111769,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.7744448753741784,
+          1.630234830569897,
+          3.4599377392083084,
+          5.601964680121086
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.866645531318367,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.7637646484175216,
+          1.5903618783961693,
+          3.303385812956142,
+          5.270897068296661
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.732102352016623,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.7828482005881435,
+          1.705598446922816,
+          3.7551434644883885,
+          6.183220913705405
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 3.106702756426188,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 1,
+        "mde_mean_m": [
+          0.7562593528132555,
+          1.6096569168781016,
+          3.450735091774103,
+          5.6198930263413756
+        ],
+        "mde_seed_sd_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ade_mean_m": 2.8591360969517092,
+        "ade_seed_sd_m": 0.0,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    },
+    "social": {
+      "overall": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4898140338468869,
+          0.92528457131977,
+          1.9150201710637846,
+          3.0697229262262784
+        ],
+        "mde_seed_sd_m": [
+          0.00026142169142444875,
+          0.0035388105967410198,
+          0.011133911146256824,
+          0.017833716557694265
+        ],
+        "ade_mean_m": 1.59996042561418,
+        "ade_seed_sd_m": 0.008090743980419512,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4149099129121594,
+          0.7217916013539173,
+          1.2413026678592514,
+          1.776264051010531
+        ],
+        "mde_seed_sd_m": [
+          0.0019524233697447717,
+          0.0038867483481057306,
+          0.009262460184336864,
+          0.015586518199714862
+        ],
+        "ade_mean_m": 1.0385670582839646,
+        "ade_seed_sd_m": 0.0072648754784242625,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4973118190493276,
+          0.9456547083214847,
+          1.9824662239932065,
+          3.199220735513189
+        ],
+        "mde_seed_sd_m": [
+          0.00030677377545178334,
+          0.0035065935583090007,
+          0.01138797695962463,
+          0.018301015363719024
+        ],
+        "ade_mean_m": 1.656163371719302,
+        "ade_seed_sd_m": 0.008227102819118837,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.48445036985886886,
+          0.9008541157100086,
+          1.8312215000598044,
+          2.9075919521552875
+        ],
+        "mde_seed_sd_m": [
+          0.0005535396159884889,
+          0.003331057098934205,
+          0.011391936439528383,
+          0.018484950278921886
+        ],
+        "ade_mean_m": 1.5310294844459926,
+        "ade_seed_sd_m": 0.008165373682637376,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5265753289933839,
+          1.04563228240464,
+          2.272101399004006,
+          3.709934119452248
+        ],
+        "mde_seed_sd_m": [
+          0.0008828783358449065,
+          0.005186050683997704,
+          0.013782232477171204,
+          0.02078735943771811
+        ],
+        "ade_mean_m": 1.8885607824635695,
+        "ade_seed_sd_m": 0.010061292524772048,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4955017085959776,
+          0.9511903412188539,
+          2.0038774288066032,
+          3.2416366786095545
+        ],
+        "mde_seed_sd_m": [
+          0.0005837494232233232,
+          0.0038414689899432053,
+          0.011301616625939486,
+          0.018166414181070546
+        ],
+        "ade_mean_m": 1.6730515393077472,
+        "ade_seed_sd_m": 0.008424248606837562,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    },
+    "independent": {
+      "overall": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.514456268964638,
+          1.0306709099518017,
+          2.2024683642730936,
+          3.5415960816084513
+        ],
+        "mde_seed_sd_m": [
+          0.003942943491821539,
+          0.002615329419860065,
+          0.004981811958728225,
+          0.007390700994711922
+        ],
+        "ade_mean_m": 1.822297906199496,
+        "ade_seed_sd_m": 0.004318293999570939,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.41903283695172977,
+          0.777813026153369,
+          1.3972721230806249,
+          2.0141211282155824
+        ],
+        "mde_seed_sd_m": [
+          0.005351720883693036,
+          0.000493587470519468,
+          0.003717101112561639,
+          0.010031447701753772
+        ],
+        "ade_mean_m": 1.1520597786003266,
+        "ade_seed_sd_m": 0.0043425274864010285,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5240080079218427,
+          1.0559825876684772,
+          2.283076790194441,
+          3.6945229999947142
+        ],
+        "mde_seed_sd_m": [
+          0.004012453193941125,
+          0.002837490272154126,
+          0.005187184384474427,
+          0.007917784808154063
+        ],
+        "ade_mean_m": 1.889397596444869,
+        "ade_seed_sd_m": 0.004551140465815212,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5064900329063412,
+          0.9941734991837025,
+          2.0841938219800222,
+          3.328158346189298
+        ],
+        "mde_seed_sd_m": [
+          0.003861817989518218,
+          0.002464798269836149,
+          0.005111976516415095,
+          0.007949293678302634
+        ],
+        "ade_mean_m": 1.7282539250648405,
+        "ade_seed_sd_m": 0.004443733819274351,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5533751557229815,
+          1.1700218434815663,
+          2.6229199314509803,
+          4.288088015448999
+        ],
+        "mde_seed_sd_m": [
+          0.0037865758923053727,
+          0.0016775646892239027,
+          0.004692173174610499,
+          0.011390684589546311
+        ],
+        "ade_mean_m": 2.1586012365261316,
+        "ade_seed_sd_m": 0.005294280156543087,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5229037331622898,
+          1.0693723387462517,
+          2.327882663990769,
+          3.7679123779552195
+        ],
+        "mde_seed_sd_m": [
+          0.004073699968428061,
+          0.0027778494532472013,
+          0.004848391048603226,
+          0.006902026709822393
+        ],
+        "ade_mean_m": 1.9220177784636325,
+        "ade_seed_sd_m": 0.004224269160572215,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    },
+    "static": {
+      "overall": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.8520561182568928,
+          1.850994402846993,
+          3.4726204339607585,
+          4.958228852981197
+        ],
+        "mde_seed_sd_m": [
+          0.005283446337563971,
+          0.010560370544697648,
+          0.020110288790850694,
+          0.027774512900575258
+        ],
+        "ade_mean_m": 2.7834749520114603,
+        "ade_seed_sd_m": 0.01583259430904172,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4946240310710144,
+          0.9806972337396279,
+          1.7029059309673595,
+          2.3435080961065418
+        ],
+        "mde_seed_sd_m": [
+          0.008466343764282262,
+          0.00815417685175459,
+          0.013392307931205522,
+          0.018733576240035195
+        ],
+        "ade_mean_m": 1.3804338229711357,
+        "ade_seed_sd_m": 0.01211120058159705,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.8878345176658632,
+          1.9381132317255985,
+          3.649787073096076,
+          5.220008094316917
+        ],
+        "mde_seed_sd_m": [
+          0.0052965861552410985,
+          0.011192740546550964,
+          0.021412072486184496,
+          0.029420254961953444
+        ],
+        "ade_mean_m": 2.923935729201114,
+        "ade_seed_sd_m": 0.016756561424201042,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.8411486905843101,
+          1.8084333950966869,
+          3.379780009681878,
+          4.815064924297203
+        ],
+        "mde_seed_sd_m": [
+          0.008550919421086253,
+          0.017343868336048507,
+          0.03141799946137023,
+          0.0428402095633213
+        ],
+        "ade_mean_m": 2.71110675491502,
+        "ade_seed_sd_m": 0.024979000074394724,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.9171721192859632,
+          2.020956973054528,
+          3.8232735687223176,
+          5.497405514160527
+        ],
+        "mde_seed_sd_m": [
+          0.004839100691794347,
+          0.009280848177127191,
+          0.017814423099001882,
+          0.025217518925748736
+        ],
+        "ade_mean_m": 3.064702043805834,
+        "ade_seed_sd_m": 0.014072009103350819,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.8636224467744816,
+          1.8961255976091467,
+          3.571065259688139,
+          5.110031111310149
+        ],
+        "mde_seed_sd_m": [
+          0.001860525084712411,
+          0.005208341590671907,
+          0.011324637828962954,
+          0.014857328437155736
+        ],
+        "ade_mean_m": 2.8602111038454794,
+        "ade_seed_sd_m": 0.008129762556374532,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    },
+    "short_history": {
+      "overall": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5927129324285693,
+          1.1200855487050043,
+          2.2151072064145594,
+          3.425545428854726
+        ],
+        "mde_seed_sd_m": [
+          0.0026421605673609037,
+          0.00018229052433935217,
+          0.0040006833215626226,
+          0.008463482879130022
+        ],
+        "ade_mean_m": 1.8383627791007147,
+        "ade_seed_sd_m": 0.0026889067257646186,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.46222849690435036,
+          0.8043845761937786,
+          1.3611749088893859,
+          1.9101439551568495
+        ],
+        "mde_seed_sd_m": [
+          0.005862948803839434,
+          0.00251239191412469,
+          0.0008906902940188613,
+          0.004414104438771141
+        ],
+        "ade_mean_m": 1.134482984286091,
+        "ade_seed_sd_m": 0.0023614951719441936,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.6057742238815672,
+          1.1516879739839372,
+          2.300594608950127,
+          3.577263597453516
+        ],
+        "mde_seed_sd_m": [
+          0.0023227141879336648,
+          0.0003022170292415381,
+          0.004409312011101462,
+          0.008991757088985938
+        ],
+        "ade_mean_m": 1.908830101067287,
+        "ade_seed_sd_m": 0.003016511973256665,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5897135030083706,
+          1.0983427263701548,
+          2.142437347326649,
+          3.286464327427924
+        ],
+        "mde_seed_sd_m": [
+          0.0034428923769548557,
+          0.0017732763384365883,
+          0.004032008422996338,
+          0.007396208189304544
+        ],
+        "ade_mean_m": 1.7792394760332746,
+        "ade_seed_sd_m": 0.0035882296592759403,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.6236866504851436,
+          1.2185418021414882,
+          2.512641862126339,
+          3.9748430335028324
+        ],
+        "mde_seed_sd_m": [
+          0.0011760734063092115,
+          0.0008114842703589449,
+          0.005978847361369666,
+          0.015112666839853857
+        ],
+        "ade_mean_m": 2.0824283370639507,
+        "ade_seed_sd_m": 0.005212348102068099,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5958935529962057,
+          1.1431413833613198,
+          2.292163851111536,
+          3.5730185067850897
+        ],
+        "mde_seed_sd_m": [
+          0.001911990079797449,
+          0.00163944834254158,
+          0.00753196135495395,
+          0.014360838844348897
+        ],
+        "ade_mean_m": 1.9010543235635378,
+        "ade_seed_sd_m": 0.005343049688502598,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    },
+    "probabilistic": {
+      "overall": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4738366510413788,
+          0.9185153992211115,
+          1.9038461315395223,
+          3.0525137052523292
+        ],
+        "mde_seed_sd_m": [
+          0.0022825348665632705,
+          0.00339078382846138,
+          0.006374106623041424,
+          0.008328998604726414
+        ],
+        "ade_mean_m": 1.5871779717635854,
+        "ade_seed_sd_m": 0.005033180342335796,
+        "valid_targets_per_run": [
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ],
+          [
+            474885,
+            474868,
+            474834,
+            474803
+          ]
+        ]
+      },
+      "goalkeeper": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.3992771853177919,
+          0.7159750478977426,
+          1.2382804536896705,
+          1.779102079130604
+        ],
+        "mde_seed_sd_m": [
+          0.0009648110648741858,
+          0.003217828001039034,
+          0.009975779243777233,
+          0.017163653499237066
+        ],
+        "ade_mean_m": 1.0331586915089523,
+        "ade_seed_sd_m": 0.007828764934995451,
+        "valid_targets_per_run": [
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ],
+          [
+            43210,
+            43210,
+            43210,
+            43210
+          ]
+        ]
+      },
+      "outfield": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.48129993630409224,
+          0.9387901763842725,
+          1.970476100418854,
+          3.1800044554086306
+        ],
+        "mde_seed_sd_m": [
+          0.002416435521267726,
+          0.003418191862240375,
+          0.006034555460473897,
+          0.0074445137898096515
+        ],
+        "ade_mean_m": 1.6426426671289622,
+        "ade_seed_sd_m": 0.004756352624419537,
+        "valid_targets_per_run": [
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ],
+          [
+            431675,
+            431658,
+            431624,
+            431593
+          ]
+        ]
+      },
+      "match_118577": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.4672125733845672,
+          0.8941061938924001,
+          1.8209720941929703,
+          2.893187855771728
+        ],
+        "mde_seed_sd_m": [
+          0.002396129207272116,
+          0.004301497207212037,
+          0.008781446803344731,
+          0.0115508989058721
+        ],
+        "ade_mean_m": 1.5188696793104164,
+        "ade_seed_sd_m": 0.006714886711532073,
+        "valid_targets_per_run": [
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ],
+          [
+            244404,
+            244393,
+            244373,
+            244354
+          ]
+        ]
+      },
+      "around_PASS": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.5123879301834443,
+          1.0366854453651668,
+          2.25332808876636,
+          3.6784116407485175
+        ],
+        "mde_seed_sd_m": [
+          0.002229688110895512,
+          0.003994407990467305,
+          0.007432247319299459,
+          0.008207652488852217
+        ],
+        "ade_mean_m": 1.8702032762658722,
+        "ade_seed_sd_m": 0.005328652112543379,
+        "valid_targets_per_run": [
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ],
+          [
+            141944,
+            141944,
+            141944,
+            141944
+          ]
+        ]
+      },
+      "match_128058": {
+        "runs": 3,
+        "mde_mean_m": [
+          0.48086087932726224,
+          0.9443986353715762,
+          1.9917229408577342,
+          3.221453072476431
+        ],
+        "mde_seed_sd_m": [
+          0.0021621173994839553,
+          0.0025436346969800756,
+          0.004153069882598752,
+          0.005082193314881286
+        ],
+        "ade_mean_m": 1.6596088820082509,
+        "ade_seed_sd_m": 0.0033705918154028915,
+        "valid_targets_per_run": [
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ],
+          [
+            230481,
+            230475,
+            230461,
+            230449
+          ]
+        ]
+      }
+    }
+  },
+  "paired_comparisons": {
+    "social_seed42_minus_constant_velocity": {
+      "difference_m_left_minus_right": [
+        -0.27045736521821667,
+        -0.677318411150678,
+        -1.4684764921956164,
+        -2.3842842450445008
+      ],
+      "within_match_30s_block_95pct_ci_m": [
+        [
+          -0.2752189158993705,
+          -0.2656963393146799
+        ],
+        [
+          -0.6866983100436905,
+          -0.6673330713475522
+        ],
+        [
+          -1.488317071460489,
+          -1.4480764253831442
+        ],
+        [
+          -2.4171522942167787,
+          -2.347793033870495
+        ]
+      ],
+      "temporal_blocks": 377,
+      "caution": "Overlapping windows block-resampled within four halves; only two held-out matches. Not evidence of significance across the population of matches."
+    },
+    "social_seed42_minus_independent_seed42": {
+      "difference_m_left_minus_right": [
+        -0.030177309299542775,
+        -0.1104545100627324,
+        -0.29797164091669065,
+        -0.48786274485058484
+      ],
+      "within_match_30s_block_95pct_ci_m": [
+        [
+          -0.03129130827154371,
+          -0.029074809616438012
+        ],
+        [
+          -0.1149110068996644,
+          -0.10582041722290512
+        ],
+        [
+          -0.31125889967474624,
+          -0.2844940533188795
+        ],
+        [
+          -0.51216861661188,
+          -0.46290732001929796
+        ]
+      ],
+      "temporal_blocks": 377,
+      "caution": "Overlapping windows block-resampled within four halves; only two held-out matches. Not evidence of significance across the population of matches."
+    },
+    "social_seed7_minus_constant_velocity": {
+      "difference_m_left_minus_right": [
+        -0.26994042176845967,
+        -0.6765506808933327,
+        -1.4670098651440966,
+        -2.382026322478695
+      ],
+      "within_match_30s_block_95pct_ci_m": [
+        [
+          -0.2746641808470496,
+          -0.26507205619266977
+        ],
+        [
+          -0.6858706120680006,
+          -0.6665706052162179
+        ],
+        [
+          -1.4866515620550387,
+          -1.446504865494239
+        ],
+        [
+          -2.4151508286482732,
+          -2.3466291832169084
+        ]
+      ],
+      "temporal_blocks": 377,
+      "caution": "Overlapping windows block-resampled within four halves; only two held-out matches. Not evidence of significance across the population of matches."
+    },
+    "social_seed7_minus_independent_seed7": {
+      "difference_m_left_minus_right": [
+        -0.02283319636806128,
+        -0.10897913472222279,
+        -0.2994804020865758,
+        -0.49104031860219927
+      ],
+      "within_match_30s_block_95pct_ci_m": [
+        [
+          -0.02388107355979059,
+          -0.021762156082318986
+        ],
+        [
+          -0.11377081170453222,
+          -0.10451727968714547
+        ],
+        [
+          -0.3137208590367001,
+          -0.28580127608862477
+        ],
+        [
+          -0.5168090330263218,
+          -0.4663072649722391
+        ]
+      ],
+      "temporal_blocks": 377,
+      "caution": "Overlapping windows block-resampled within four halves; only two held-out matches. Not evidence of significance across the population of matches."
+    },
+    "social_seed123_minus_constant_velocity": {
+      "difference_m_left_minus_right": [
+        -0.2705261717053314,
+        -0.6694570990440278,
+        -1.4441587652552925,
+        -2.3453748304776116
+      ],
+      "within_match_30s_block_95pct_ci_m": [
+        [
+          -0.27523840901231894,
+          -0.2656746984007733
+        ],
+        [
+          -0.6786168190621126,
+          -0.6599311648641023
+        ],
+        [
+          -1.4630718652583312,
+          -1.424101246544491
+        ],
+        [
+          -2.377850387981436,
+          -2.309727534899813
+        ]
+      ],
+      "temporal_blocks": 377,
+      "caution": "Overlapping windows block-resampled within four halves; only two held-out matches. Not evidence of significance across the population of matches."
+    },
+    "social_seed123_minus_independent_seed123": {
+      "difference_m_left_minus_right": [
+        -0.020916200608427058,
+        -0.09672536477899049,
+        -0.264892543169153,
+        -0.4367163993655369
+      ],
+      "within_match_30s_block_95pct_ci_m": [
+        [
+          -0.021856835391466788,
+          -0.01995583527439664
+        ],
+        [
+          -0.10089056988945834,
+          -0.09257319649040864
+        ],
+        [
+          -0.27783566819582695,
+          -0.25157902163358925
+        ],
+        [
+          -0.4606616195254484,
+          -0.4120285325934478
+        ]
+      ],
+      "temporal_blocks": 377,
+      "caution": "Overlapping windows block-resampled within four halves; only two held-out matches. Not evidence of significance across the population of matches."
+    }
+  },
+  "horizons_seconds": [
+    0.4,
+    1.0,
+    2.0,
+    3.0
+  ],
+  "heldout_policy": "Once per final configuration/seed with resumable batch evaluation; no tuning on held-out.",
+  "metrics_units": "meters",
+  "report_is_provisional": false
+}

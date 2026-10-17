@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "train_matches": ["117092", "117093", "118576", "118578", "128057", "132831", "132877"],
+  "validation_matches": ["118577", "128058"],
+  "development_match": "132877",
+  "fps": 25,
+  "history_frames": 50,
+  "horizons_frames": [10, 25, 50, 75],
+  "stride_frames": 13,
+  "seeds": [42, 7, 123],
+  "batch_size": 128,
+  "max_epochs": 60,
+  "patience": 8,
+  "min_delta_m": 0.005,
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "cpu_threads": 4,
+  "loader_workers": 0,
+  "gpu_memory_fraction": 0.72,
+  "max_hours": 14,
+  "selection_candidates": [
+    {"width": 128, "layers": 3, "learning_rate": 0.001},
+    {"width": 128, "layers": 3, "learning_rate": 0.0003},
+    {"width": 192, "layers": 4, "learning_rate": 0.0003}
+  ],
+  "independent_rule": "Independent baseline also serves as no-social ablation: match selected social width, layer count, learning rate and three seeds; select its stopping epoch on development only.",
+  "experiment_order": ["social", "independent", "static", "short_history", "probabilistic"],
+  "evaluation_rule": "Select solely on 132877; refit all seven for selected best epoch; held-out evaluation once per final seed.",
+  "history_rule": "51 observed time points over 2 s; short history 11 points; no interpolation; segment break on gaps/track changes/jumps.",
+  "constant_velocity_rule": "Least squares over last 11 actual samples, require 6 samples, cap 12 m/s; no future data.",
+  "uncertainty_rule": "Optional isotropic Gaussian, temperature calibrated only on development; held-out radial coverage at 50/80/95 percent.",
+  "pass_subset_rule": "BAS Pass within +/-25 frames of anchor; all observed players evaluated; BAS never model input."
+}

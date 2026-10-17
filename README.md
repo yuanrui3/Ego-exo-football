@@ -41,7 +41,66 @@ The extractor supports the released SoccerTrack-v2 BAS format, where events are 
 - `data/` — stores extracted and prepared datasets
 - `outputs/` — stores trained adapters and evaluation artifacts
 
-## Requirements
+## Raw-player trajectory forecasting
+
+The independent movement-forecasting experiment does not use SFT prompts, receiver
+labels, ball reconstructions, or human review answers. It reads local raw GSR files,
+caches compact identity-matched tracks, and predicts metric displacements at
+0.4, 1, 2, and 3 seconds. Selection uses match 132877; final fitting and validation
+retain the frozen seven/two match split.
+
+```powershell
+py -m unittest tests.test_trajectory_forecasting -v
+py train\run_trajectory_forecasting.py --smoke
+py train\run_trajectory_forecasting.py --output outputs\trajectory_forecasting_20261016
+```
+
+Use the same output directory and configuration to resume. The single orchestrator
+retains optimizer/RNG/batch checkpoints, skips completed fits and evaluations, and
+enforces a total 14-hour wall-clock budget from its initial launch. It requires
+CUDA rather than silently falling back to CPU. It does not modify power settings.
+Run it from a terminal/process that will survive closing the editor if needed.
+
+Configuration: [configs/trajectory_forecasting.json](configs/trajectory_forecasting.json).
+Durable progress/logs/checkpoints/charts are under the ignored experiment directory.
+The orchestrator publishes provisional and final summaries to
+`results/trajectory_forecasting_report.md` and `results/trajectory_forecasting_metrics.json`.
+These files explicitly distinguish pending experiments from completed measurements.
+Local tracking is spatially quantized; results do not establish pass feasibility,
+verified interception timing, or improved tactical decision-making.
+
+## Cross-fitted forecast features for PASS receiver prediction
+
+The isolated integration queue preserves the legacy matched-frame receiver
+benchmark, generates match-excluded movement forecasts and compares base/CV/social
+features with matched development selection. It also queues independent forecasts,
+feature ablations and a separate BAS-as-of-time sensitivity. Receiver labels remain
+next-annotated-actor pseudo-labels, not verified pass intent or completion.
+
+```powershell
+py -m unittest tests.test_receiver_forecast_integration -v
+py train\run_receiver_forecast_integration.py --smoke
+py train\run_receiver_forecast_integration.py
+```
+
+Use the same command/output/configuration to resume; completed fits and forecast
+caches are reused. The default output is
+`outputs/receiver_forecast_integration_20261016`, with progress, logs, per-fold
+provenance, checkpoints, predictions and charts. The single CUDA process has a
+12-hour total wall-clock cap, four CPU threads, no loader workers and a bounded
+GPU allocator. It requires the verified local trajectory caches and association
+sidecars from the preceding audit; no new downloads or video processing occur.
+The primary timing is 20--60 ms after BAS event time and is not strictly pre-pass.
+Upstream architecture selection reused development match 132877, but every new
+OOF fit and inner stopping partition excludes its forecasted match.
+
+Configuration: [receiver integration](configs/receiver_forecast_integration.json).
+The queue publishes provisional/final
+`results/receiver_forecast_integration_report.md` and
+`results/receiver_forecast_integration_metrics.json`; their existence does not
+imply the experiment is complete.
+
+## Python dependencies
 
 Install the Python dependencies:
 
@@ -413,6 +472,31 @@ matches, not verified intended-receiver accuracy or proof of feature causality.
 The full local report is `outputs/candidate_ranker_receiver_report.md`.
 The compact archived [v2 result report](results/candidate_ranker_receiver_v2.md)
 records the frozen configuration, selection, three-seed metrics, and provenance.
+
+### Fixed v2 feature ablations
+
+```powershell
+py train\run_candidate_ranker_ablation.py 2>&1 |
+  Tee-Object -FilePath outputs\candidate_ranker_ablation_training.log
+```
+
+This separate runner leaves the full-v2 implementation/configuration unchanged.
+It reuses verified existing full-model results, then fits six ablations at
+21 epochs, alpha 0.0, seeds 42/7/123 without retuning. Removed engineered
+features also lose their validity inputs. No-distance-rank retains raw geometry
+and contextual slot identity; no-pressure retains opponent positions in context.
+No-temporal removes historical inputs from both feature MLP and scene attention
+(22 current tokens only), with current-only training scene statistics.
+Engineered-only and simple-spatial-only have no scene encoder. Entity-only
+has no engineered-feature MLP. Simple-spatial uses only current dx/dy/distance,
+rank, goalkeeper and candidate observed indicators, plus feature validity.
+
+All new fits finish before validation evaluation. Weights and predictions stay
+in `outputs/candidate_ranker_ablation`; requested aggregate/per-seed reports are
+`analysis/candidate_ranker_ablation.json` and `.md`. Existing paths are never
+overwritten. Comparisons measure conditional contributions, not additive
+causal feature importance; raw geometry and correlated features may recover
+information removed from explicit feature vectors.
 
 ## Evaluation standards
 
