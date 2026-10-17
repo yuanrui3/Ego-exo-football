@@ -13,7 +13,7 @@ from src.models.trajectory_forecasting import (
     TrajectoryForecaster, constant_velocity, masked_loss, persistence,
 )
 from src.trajectory_dataset import (
-    TRAIN_MATCHES, VALIDATION_MATCHES, build_half, causal_velocity, identity, make_window, write_json,
+    TRAIN_MATCHES, VALIDATION_MATCHES, atomic_replace, build_half, causal_velocity, identity, make_window, write_json,
     segment_tracks, validate_splits,
 )
 from train.run_trajectory_forecasting import finish_metric, metric_sums, pass_frames
@@ -37,6 +37,27 @@ def tensor_batch(row):
 
 
 class TrajectoryTests(unittest.TestCase):
+    def test_atomic_replace_retries_transient_windows_lock(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source, destination = Path(directory) / "new", Path(directory) / "old"
+            source.write_text("new", encoding="utf-8")
+            destination.write_text("old", encoding="utf-8")
+            real_replace = os.replace
+            attempts = 0
+
+            def transient_replace(src, dst):
+                nonlocal attempts
+                attempts += 1
+                if attempts < 3:
+                    raise PermissionError("simulated transient file lock")
+                real_replace(src, dst)
+
+            with patch("src.trajectory_dataset.os.replace", side_effect=transient_replace), \
+                    patch("src.trajectory_dataset.time.sleep"):
+                atomic_replace(source, destination)
+            self.assertEqual(attempts, 3)
+            self.assertEqual(destination.read_text(encoding="utf-8"), "new")
+
     def test_atomic_json_replace_retries_transient_windows_lock(self):
         with tempfile.TemporaryDirectory() as directory:
             target = Path(directory) / "progress.json"

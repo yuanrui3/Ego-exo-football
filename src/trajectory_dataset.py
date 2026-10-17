@@ -22,19 +22,24 @@ HORIZONS = (10, 25, 50, 75)
 CACHE_VERSION = 1
 
 
+def atomic_replace(source, destination, attempts=8):
+    source, destination = Path(source), Path(destination)
+    for attempt in range(attempts):
+        try:
+            os.replace(source, destination)
+            return
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(min(0.1 * (2 ** attempt), 2.0))
+
+
 def write_json(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(value, indent=2, allow_nan=False) + "\n", encoding="utf-8")
-    for attempt in range(6):
-        try:
-            os.replace(tmp, path)
-            return
-        except PermissionError:
-            if attempt == 5:
-                raise
-            time.sleep(0.1 * (2 ** attempt))
+    atomic_replace(tmp, path)
 
 
 def file_digest(path):

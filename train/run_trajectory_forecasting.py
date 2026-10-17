@@ -25,7 +25,7 @@ from src.models.trajectory_forecasting import (
     HORIZON_SECONDS, TrajectoryForecaster, constant_velocity, masked_loss, persistence,
 )
 from src.trajectory_dataset import (
-    DEVELOPMENT_MATCH, HORIZONS, TRAIN_MATCHES, VALIDATION_MATCHES,
+    DEVELOPMENT_MATCH, HORIZONS, TRAIN_MATCHES, VALIDATION_MATCHES, atomic_replace,
     BudgetExpired, TrajectoryDataset, build_half, check_deadline, feasibility,
     file_digest, source_signature, validate_splits, write_json,
 )
@@ -47,7 +47,7 @@ def save_torch(path, value):
     path = Path(path)
     tmp = path.with_suffix(".tmp.pt")
     torch.save(value, tmp)
-    tmp.replace(path)
+    atomic_replace(tmp, path)
 
 
 def seed_all(seed):
