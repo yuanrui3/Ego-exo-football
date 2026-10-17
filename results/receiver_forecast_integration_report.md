@@ -1,8 +1,8 @@
 # Social-forecast receiver integration
 
-Status: **TIME_LIMIT**. Elapsed: 12.00 hours.
-Experiment: `C:\Users\flexadmin\Downloads\football_tactical_llm_starter_v2\football_tactical_llm_starter_v2\outputs\receiver_forecast_integration_20261016`. Completed upstream forecast fit sets: 24.
-Stage: forecast_independent_199196d577ec5e56ae6e_refit.
+Status: **COMPLETE**. Elapsed: 13.88 hours.
+Experiment: `C:\Users\flexadmin\Downloads\football_tactical_llm_starter_v2\football_tactical_llm_starter_v2\outputs\receiver_forecast_integration_20261016`. Completed upstream forecast fit sets: 28.
+Stage: complete.
 
 ## Protocol and caveats
 
@@ -16,7 +16,7 @@ Primary comparison is the same 1,222 covered validation rows, including re-score
 
 ## Coverage
 
-{"legacy": {"train": 4794, "validation": 1222, "train_total": 4799, "validation_total": 1224, "base_valid_train": 4799, "base_valid_validation": 1224, "reasons": [{"id": "117093_p1_f17_0", "reason": "less_than_2s_history"}, {"id": "117093_p2_f20_1138", "reason": "less_than_2s_history"}, {"id": "132831_p2_f49_1250", "reason": "less_than_2s_history"}, {"id": "132877_p1_f31_1", "reason": "less_than_2s_history"}, {"id": "132877_p2_f25_1184", "reason": "less_than_2s_history"}, {"id": "118577_p1_f37_0", "reason": "less_than_2s_history"}, {"id": "118577_p1_f27597_324", "reason": "missing_candidate_or_candidate_history_or_target"}]}}
+{"legacy": {"train": 4794, "validation": 1222, "train_total": 4799, "validation_total": 1224, "base_valid_train": 4799, "base_valid_validation": 1224, "reasons": [{"id": "117093_p1_f17_0", "reason": "less_than_2s_history"}, {"id": "117093_p2_f20_1138", "reason": "less_than_2s_history"}, {"id": "132831_p2_f49_1250", "reason": "less_than_2s_history"}, {"id": "132877_p1_f31_1", "reason": "less_than_2s_history"}, {"id": "132877_p2_f25_1184", "reason": "less_than_2s_history"}, {"id": "118577_p1_f37_0", "reason": "less_than_2s_history"}, {"id": "118577_p1_f27597_324", "reason": "missing_candidate_or_candidate_history_or_target"}]}, "asof": {"train": 4794, "validation": 1222, "train_total": 4799, "validation_total": 1224, "base_valid_train": 4799, "base_valid_validation": 1224, "reasons": [{"id": "117093_p1_f17_0", "reason": "less_than_2s_history"}, {"id": "117093_p2_f20_1138", "reason": "less_than_2s_history"}, {"id": "132831_p2_f49_1250", "reason": "less_than_2s_history"}, {"id": "132877_p1_f31_1", "reason": "less_than_2s_history"}, {"id": "132877_p2_f25_1184", "reason": "less_than_2s_history"}, {"id": "118577_p1_f37_0", "reason": "less_than_2s_history"}, {"id": "118577_p1_f27597_324", "reason": "missing_candidate_or_candidate_history_or_target"}]}}
 
 ## Matched receiver comparison
 
@@ -27,6 +27,13 @@ Primary comparison is the same 1,222 covered validation rows, including re-score
 | legacy_D | 1222 | 66.148 +/- 0.739 | 0.9403 | 0.9850 | 0.8025 | 0.3717 | 112 | 312577 |
 | legacy_E | 1222 | 64.484 +/- 0.134 | 0.9364 | 0.9828 | 0.7914 | 0.3612 | 84 | 283905 |
 | legacy_F | 1222 | 65.712 +/- 0.468 | 0.9367 | 0.9847 | 0.7974 | 0.3777 | 80 | 279809 |
+| legacy_C | 1222 | 66.312 +/- 0.139 | 0.9394 | 0.9831 | 0.8015 | 0.3871 | 112 | 312577 |
+| asof_A | 1222 | 63.584 +/- 0.401 | 0.9253 | 0.9815 | 0.7826 | 0.3403 | 49 | 74881 |
+| asof_B | 1222 | 64.675 +/- 0.301 | 0.9310 | 0.9845 | 0.7898 | 0.3514 | 112 | 312577 |
+| asof_D | 1222 | 66.612 +/- 0.468 | 0.9378 | 0.9812 | 0.8018 | 0.3837 | 112 | 312577 |
+| asof_E | 1222 | 65.930 +/- 0.253 | 0.9313 | 0.9823 | 0.7959 | 0.3720 | 84 | 283905 |
+| asof_F | 1222 | 65.112 +/- 0.682 | 0.9288 | 0.9785 | 0.7914 | 0.3635 | 80 | 90753 |
+| asof_C | 1222 | 65.248 +/- 0.872 | 0.9381 | 0.9817 | 0.7945 | 0.3613 | 112 | 312577 |
 | historical_v2 (unchanged) | 1222 | 64.266 +/- 0.806 | 0.9255 | 0.9853 | 0.7868 | 0.3654 | historical | historical |
 | historical_engineered_only (unchanged) | 1222 | 64.184 +/- 0.343 | 0.9253 | 0.9845 | 0.7857 | 0.3691 | historical | historical |
 
@@ -37,11 +44,11 @@ Full fallback, per-rank recall, prediction distributions, per-match and subgroup
 1. D minus matched A top1: **+1.773 percentage points**. The old 64.30% score has a different model/full denominator; see separately recomputed historical-v2 common-subset results.
 Against unchanged v2 predictions rescored on the common subset: +1.882 pp (historical matched top1 64.266%). This is a contextual reference; A/B/D share the new equal-budget selection protocol.
 2. D minus CV B top1: +3.355 pp.
-3. Independent-motion comparison PENDING.
+3. D minus independent C top1: -0.164 pp.
 4. D minus ablation without explicit forecast pressure: +1.664 pp; retraining comparison, not causal feature importance.
 4. D minus ablation without explicit forecast movement: +0.436 pp; retraining comparison, not causal feature importance.
-Best measured legacy configuration so far: legacy_D; mean ranker fit 2.3 s, mean validation ranker inference 0.0081 s (excludes forecast training/inference, separately recorded).
-5. Compute cost: 12.00 wall hours so far, 24 completed fit sets. Per-fold checkpoint/epoch/parameter provenance and per-run inference cost are saved; no padded runtime.
+Best measured legacy configuration so far: legacy_C; mean ranker fit 3.0 s, mean validation ranker inference 0.0100 s (excludes forecast training/inference, separately recorded).
+5. Compute cost: 13.88 wall hours so far, 28 completed fit sets. Per-fold checkpoint/epoch/parameter provenance and per-run inference cost are saved; no padded runtime.
 6. Verdict: **INCONCLUSIVE**. A positive mean alone does not establish robust tactical value.
 7. Next-actor pseudo-label accuracy is not pass completion, intended receiver, pass feasibility or tactical value. Verified ball flight/contact, receiver control/intention, defender reach, uncertainty under missing observations and task-specific evaluation are still needed.
 
@@ -54,5 +61,3 @@ See `historical_v2_matched_subset.json` under the experiment directory. It resco
 ```powershell
 & "C:\Users\flexadmin\AppData\Local\Python\pythoncore-3.14-64\python.exe" train\run_receiver_forecast_integration.py --output "C:\Users\flexadmin\Downloads\football_tactical_llm_starter_v2\football_tactical_llm_starter_v2\outputs\receiver_forecast_integration_20261016" --config "C:\Users\flexadmin\Downloads\football_tactical_llm_starter_v2\football_tactical_llm_starter_v2\configs\receiver_forecast_integration.json"
 ```
-
-Blocker: Training budget reached; batch/optimizer/RNG saved
