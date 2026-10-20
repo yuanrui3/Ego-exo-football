@@ -19,6 +19,18 @@ Our system is designed to:
 - fine-tune a Qwen3-4B model with LoRA adapters
 - evaluate the model using task-relevant classification metrics instead of raw language loss
 
+## Action-general backbone roadmap
+
+The project target is a shared, action-agnostic exo-to-ego backbone by **October 31, 2026**, followed by an integrated prototype covering **all major football actions** by **December 31, 2026**. The existing event-classification and PASS-receiver experiments are separate evidence streams; neither defines the complete system or ranks the best action.
+
+The shared backbone should expose player/source observations, causal memory, uncertainty, ball position and possession status (`observed`, `estimated`, or `unknown`), actor/context, provenance, and an action-general output contract. The selected player is not presumed to possess the ball. Action prediction, restart context, and eventual outcome are separate. Event/action annotations may be absent; absence means unknown/unannotated, not a negative or “no action” label.
+
+The v0.4 offline prototype connects a checkpoint-backed S4 seven-class event-conditioned action classifier to the general action-output contract (`football.action-output.0.1`). It reports action type and uncalibrated class scores; target, location/direction, timing, and confidence remain unset unless independently supported. The classifier is not a continuous detector or best-action recommender. Unsupported action branches are explicit. Receiver ranking and Gaussian passing-lane geometry are optional passing-specific modules, not required backbone outputs. Do not compare different action branches' scores as if they identify the best action without a separately defined, calibrated decision layer.
+
+The v0.4 corpus, split, training, replay, and video-pilot evidence is summarized in the [backbone v0.4 handoff](results/backbone_v0_4_handoff.md). Its integration tests require the completed local corpus and pilot outputs; the source tracking caches, initial checkpoint, and match footage are not committed. The [v0.2 handoff](results/backbone_v0_2_handoff.md) documents earlier adapter boundaries. Pixel detections still do not establish camera-to-pitch projection, physical synchronization, athlete identity continuity, or measured player visibility.
+
+The v0.4 end-to-end reproduction commands and exact local prerequisites are in the handoff. Training consumes the explicitly indexed, match-split corpus and an existing six-fitting-match checkpoint; it does not download source footage. Evaluation matches were used in earlier research and are retrospective diagnostics, not a newly unseen test set.
+
 ## Why this repository exists
 
 The extractor supports the released SoccerTrack-v2 BAS format, where events are stored in an `actions` array with uppercase labels, as well as annotation-style BAS files. It also handles GSR files in SoccerNet-COCO-style format and aligns events to the BAS `frame` field with a ±1-frame tolerance.
