@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Football backbone v0.1 — offline replay</title>
+<style>
+body{font:15px system-ui,sans-serif;margin:0;background:#101923;color:#edf3fa}
+header{padding:16px 22px;background:#1e3043;position:sticky;top:0;z-index:2}
+h1{font-size:21px;margin:0 0 8px}.notice{color:#ffdc81;font-weight:700}
+main{padding:16px;max-width:1400px;margin:auto}.controls{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+select,button,input{font:inherit}button,select{padding:7px;border-radius:4px}#timeline{flex:1;min-width:180px}
+.layout{display:grid;grid-template-columns:minmax(460px,2fr) minmax(320px,1fr);gap:18px}
+canvas{width:100%;background:#143b2f;border:1px solid #8da99d;border-radius:5px}
+.panel{padding:14px;background:#1a2838;border-radius:5px;margin-bottom:12px}h2{font-size:17px;margin-top:0}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;border-bottom:1px solid #405163;padding:6px}
+.muted{color:#b3c6da}.warning{color:#ffdc81}#warnings{max-height:170px;overflow:auto}#truthNote{color:#ff9f9f}
+@media(max-width:950px){.layout{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:950px),(max-height:500px){header{position:static}}
+</style>
+<header><h1>Player-centred offline replay — backbone v0.1</h1>
+<div class="notice">Synthetic player visibility; tracking-based prototype.</div>
+<div class="muted">No raw-video perception, measured gaze, pass-success prediction or trained optimal-pass policy.</div></header>
+<main>
+<div class="controls">
+<label>Sequence <select id="sequence"></select></label>
+<label>Actor <select id="actor"></select></label>
+<button id="previous" aria-label="Previous frame">← Step</button>
+<button id="play">Play</button><button id="next" aria-label="Next frame">Step →</button>
+<input id="timeline" type="range" min="0" value="0" aria-label="Replay timeline"><output id="clock"></output>
+</div>
+<div class="controls">
+<label><input type="checkbox" id="memory" checked> Show remembered players</label>
+<label><input type="checkbox" id="occupancy"> Anonymous defender occupancy (unseen in 2s window)</label>
+<label><input type="checkbox" id="truth"> Evaluation/source overlay (not player input)</label>
+<label><input type="checkbox" id="annotations"> Recorded action annotation (evaluation-only)</label>
+<label><input type="checkbox" id="exo"> Exo receiver reference</label>
+</div>
+<div id="relation" class="warning"></div>
+<div class="layout">
+<section><canvas id="pitch" width="1000" height="680" aria-label="Player view, memory uncertainty and candidate lanes"></canvas>
+<p>Blue: visible teammates · red: visible opponents · gold/dashed: remembered entities · purple star: actor.
+Ellipses show diagonal-Gaussian 68% regions, not measured physical confidence.</p>
+<p id="truthNote"></p><div class="panel"><h2>Warnings and missing data</h2><div id="warnings"></div></div>
+<div class="panel"><h2>Observation / memory</h2><table><thead><tr><th>ID</th><th>Status / age</th><th>Backend</th><th>σx, σy (m)</th></tr></thead><tbody id="entities"></tbody></table></div></section>
+<aside>
+<div class="panel"><h2>Optional passing module</h2>
+<p class="warning">Provisional geometric ordering—not a trained optimal-pass policy.</p>
+<p class="muted">Visible and retained teammates only. Lower 3 m obstruction, then larger defender separation. A clear estimated lane is not proof of pass success.</p>
+<table><thead><tr><th>Candidate</th><th>3m risk</th><th>Pressure / status</th></tr></thead><tbody id="candidates"></tbody></table>
+<p id="coverage" class="muted"></p></div>
+<div class="panel" id="exoPanel" hidden><h2>Full-state next-event receiver proxy.</h2>
+<p class="warning">EXO REFERENCE ONLY — not the player's recommendation.</p><div id="exoValues"></div></div>
+<div class="panel"><h2>Replay / model status</h2><div id="status"></div>
+<p class="muted">Seeking uses precomputed sequential prefix states, never full-current-scene memory initialization. Actor choices are the exported configurations only.</p></div>
+<div class="panel"><h2>Action inference</h2><div id="actionStatus"></div><div id="actionScores"></div>
+<p class="muted">Event-conditioned demonstrations only. Classifier scores are uncalibrated and are not tactical value or a best-action recommendation.</p></div>
+<div class="panel" id="annotationPanel" hidden><h2>Recorded annotation — evaluation only</h2><div id="annotation"></div>
+<p class="warning">Not supplied to the player-facing model.</p></div>
+</aside></div></main>
+<script type="application/json" id="replay-data">__REPLAY_JSON__</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById("replay-data").textContent);
+document.title=`Football ${data.schema_version} — offline replay`;
+document.querySelector("h1").textContent=`Player-centred offline replay — ${data.schema_version}`;
+document.querySelector(".notice").textContent=data.notice;
+const $=id=>document.getElementById(id),ctx=$("pitch").getContext("2d");
+let seq=0,actor="",position=0,playing=false,timer=null;
+const point=xy=>[48+(xy[0]+52.5)/105*904,45+(34-xy[1])/68*590];
+function text(parent,value,tag="div"){const node=document.createElement(tag);node.textContent=value;parent.appendChild(node);return node}
+function pause(){playing=false;clearInterval(timer);$("play").textContent="Play"}
+function chooseSequence(){pause();seq=+$("sequence").value;$("actor").replaceChildren();Object.keys(data.sequences[seq].actors).forEach(name=>{const option=document.createElement("option");option.value=name;option.textContent=name;$("actor").appendChild(option)});actor=$("actor").value;position=0;draw()}
+function row(){return data.sequences[seq].actors[actor][position]}
+function line(a,b,color,dash=[]){ctx.strokeStyle=color;ctx.lineWidth=2;ctx.setLineDash(dash);ctx.beginPath();ctx.moveTo(...point(a));ctx.lineTo(...point(b));ctx.stroke();ctx.setLineDash([])}
+function draw(){
+ const sequence=data.sequences[seq],rows=sequence.actors[actor],r=row(),belief=r.belief,assessment=r.assessment;
+ $("timeline").max=rows.length-1;$("timeline").value=position;$("clock").textContent=`${r.timestamp_s.toFixed(1)} s · frame ${r.frame_index} · ${position+1}/${rows.length}`;
+ $("relation").textContent=sequence.dataset_relation;
+ ctx.clearRect(0,0,1000,680);ctx.strokeStyle="#b0ceba";ctx.lineWidth=2;ctx.strokeRect(48,45,904,590);
+ line([0,-34],[0,34],"#b0ceba");ctx.beginPath();ctx.ellipse(500,340,9.15/105*904,9.15/68*590,0,0,2*Math.PI);ctx.stroke();
+ if($("occupancy").checked&&belief.anonymous_occupancy.status==="AVAILABLE"){
+  const values=belief.anonymous_occupancy.never_seen_defender;
+  values.forEach((p,i)=>{if(p<.005)return;const x=i%21,y=Math.floor(i/21),a=point([-52.5+x*5,-34+(y+1)*68/14]);ctx.fillStyle=`rgba(200,80,240,${Math.min(.8,p*4)})`;ctx.fillRect(a[0],a[1],904/21,590/14)});
+ }
+ for(const c of (assessment?.candidates||[])){if(c.status==="AVAILABLE"&&belief.actor_xy){line(belief.actor_xy,c.xy,`hsl(${(1-c.lane_probability[1])*110},85%,65%)`)}}
+ const truth=sequence.evaluation_only?.[position];
+ if($("truth").checked&&truth){for(const p of truth.players){const xy=point(p.xy);ctx.strokeStyle="#ff99aa";ctx.beginPath();ctx.moveTo(xy[0]-5,xy[1]-5);ctx.lineTo(xy[0]+5,xy[1]+5);ctx.moveTo(xy[0]+5,xy[1]-5);ctx.lineTo(xy[0]-5,xy[1]+5);ctx.stroke()}}
+ $("truthNote").textContent=$("truth").checked?(truth?`${truth.label}; pink crosses never feed the player-facing inference path.`:"Evaluation/source overlay unavailable for this selected frame; no inferred truth substituted."):"Truth/source overlay OFF.";
+ $("entities").replaceChildren();
+ for(const e of belief.entities){
+  const tr=document.createElement("tr");[e.id,`${e.visible?"visible":"remembered"} · ${e.age_s.toFixed(1)}s`,e.backend+(e.fallback_reason?` (${e.fallback_reason})`:""),e.std_m.map(v=>v.toFixed(2)).join(", ")].forEach(v=>text(tr,v,"td"));$("entities").appendChild(tr);
+  if(!e.visible&&!$("memory").checked)continue;
+  const [x,y]=point(e.xy);ctx.fillStyle=e.actor?"#cf88ff":!e.visible?"#ffd075":e.team===0?"#b0b0b0":e.team===belief.actor_team?"#82c9ff":"#ff8080";
+  if(!e.visible){ctx.strokeStyle="#ffd075";ctx.setLineDash([6,4]);ctx.beginPath();ctx.ellipse(x,y,Math.min(900,1.5096*e.std_m[0]/105*904),Math.min(590,1.5096*e.std_m[1]/68*590),0,0,Math.PI*2);ctx.stroke();ctx.setLineDash([])}
+  ctx.beginPath();ctx.arc(x,y,e.actor?9:6,0,2*Math.PI);ctx.fill();ctx.font="13px system-ui";ctx.fillText(`${e.actor?"★ ":""}${e.id}`,x+8,y-8);
+ }
+ $("candidates").replaceChildren();
+ const order=new Map((assessment?.ordering||[]).map((id,i)=>[id,i]));
+ [...(assessment?.candidates||[])].sort((a,b)=>(order.get(a.id)??999)-(order.get(b.id)??999)).forEach(c=>{
+  const tr=document.createElement("tr");[c.id,c.status==="AVAILABLE"?`${(100*c.lane_probability[1]).toFixed(1)}%`:"Unavailable",c.status==="AVAILABLE"?`${c.expected_nearest_defender_m.toFixed(1)} m`:c.reason].forEach(v=>text(tr,v,"td"));$("candidates").appendChild(tr)
+ });
+ $("coverage").textContent=assessment?assessment.coverage+" "+belief.anonymous_occupancy.label:"Passing assessment is not configured for this replay.";
+ const inference=r.action_inference||{};
+ $("actionStatus").replaceChildren();
+ const annotations=r.recorded_annotations_evaluation_only||(r.recorded_annotation_evaluation_only?[r.recorded_annotation_evaluation_only]:[]);
+ text($("actionStatus"),`Query status: ${inference.status||"no action model"} · ${r.action_query_conditioning||(annotations.length?"Explicit annotated actor/time; event-conditioned demonstration":"no event-conditioned query scheduled")}`);
+ text($("actionStatus"),`Output: ${r.action.action_type||"none"} · ${r.action.support_status} · ${r.action.reason||"no reason supplied"}`);
+ $("actionScores").replaceChildren();
+ if(inference.scores){
+  for(const [label,value] of Object.entries(inference.scores).sort((a,b)=>b[1]-a[1]))
+   text($("actionScores"),`${label}: ${(100*value).toFixed(2)}%`);
+  text($("actionScores"),inference.score_semantics||"Score semantics unavailable");
+ }else{text($("actionScores"),inference.reason||"No action scores returned")}
+ $("annotationPanel").hidden=!$("annotations").checked;
+ $("annotation").replaceChildren();
+ if($("annotations").checked){
+  if(annotations.length){for(const annotation of annotations){
+   text($("annotation"),`${annotation.original_bas_label||"label unavailable"} → ${annotation.mapped_action_label||"unmapped"}`);
+   text($("annotation"),`Event ${annotation.event_id} · annotation index ${annotation.annotation_index}`);
+  }}else{text($("annotation"),"No recorded event annotation at this query")}
+ }
+ $("warnings").replaceChildren();[...belief.warnings,...(assessment?.warnings||[])].forEach(w=>text($("warnings"),w));
+ $("exoPanel").hidden=!$("exo").checked;$("exoValues").replaceChildren();
+ if($("exo").checked){const reference=r.modules.receiver_reference;if(reference?.status==="AVAILABLE"){reference.ranking.forEach(v=>text($("exoValues"),`${v.source_track}: ${(100*v.probability).toFixed(1)}%`))}else{text($("exoValues"),reference?.reason||"Optional P0 disabled")}}
+ $("status").replaceChildren();text($("status"),`World: ${Object.keys(data.model_provenance).join(", ")} · ${belief.model_contract_met?"11-sample contract met":"warm-up/unsupported: explicit fallback"}`);
+ text($("status"),`Inference: ${r.latency_ms.toFixed(1)} ms (offline sample, not a real-time guarantee)`);
+ text($("status"),`Source: ${r.source_id} · units: ${r.units}`);
+ text($("status"),`Action: ${r.action.action_type||"none"} · ${r.action.support_status} · ${r.action.reason||"no reason supplied"}`);
+ text($("status"),`Ball: ${r.ball_state.position_status}; possession: ${r.ball_state.possession_status}`);
+ text($("status"),`Restart: ${r.restart_context.status} · outcome: ${r.outcome.status}`);
+}
+data.sequences.forEach((s,i)=>{const option=document.createElement("option");option.value=i;option.textContent=s.id;$("sequence").appendChild(option)});
+$("sequence").onchange=chooseSequence;$("actor").onchange=()=>{pause();actor=$("actor").value;position=0;draw()};
+$("timeline").oninput=()=>{pause();position=+$("timeline").value;draw()};
+$("previous").onclick=()=>{pause();position=Math.max(0,position-1);draw()};
+$("next").onclick=()=>{pause();position=Math.min(data.sequences[seq].actors[actor].length-1,position+1);draw()};
+$("play").onclick=()=>{if(playing){pause();return}playing=true;$("play").textContent="Pause";timer=setInterval(()=>{if(position>=data.sequences[seq].actors[actor].length-1){pause();return}position++;draw()},200)};
+["memory","truth","annotations","occupancy","exo"].forEach(id=>$(id).onchange=draw);
+chooseSequence();
+</script>
+</html>

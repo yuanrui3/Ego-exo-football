@@ -1,0 +1,49 @@
+{
+  "schema_version": "backbone.0.1",
+  "source_adapter": "soccertrack_cache",
+  "experiment": "outputs/dynamic_gnn_tactical_20261019",
+  "backend": "G1",
+  "device": "cpu",
+  "exo_p0": true,
+  "seed": 42,
+  "fov": 120,
+  "expiry_s": 6.0,
+  "fallback": "last_seen",
+  "mc_samples": 128,
+  "sequences": [
+    {
+      "id": "118577_1st_f1500",
+      "match": "118577",
+      "half": "1st",
+      "start_frame": 1500,
+      "samples": 60,
+      "actors": ["track_1", "track_2"],
+      "selection": "Fixed start 60s; first two outfield slots in source order with >=95% actor coverage, >=20/60 visible-teammate frames, >=1 nonactor disappearance/reappearance. Selected using observations only, no predictions."
+    },
+    {
+      "id": "118577_1st_f3000",
+      "match": "118577",
+      "half": "1st",
+      "start_frame": 3000,
+      "samples": 60,
+      "actors": ["track_1", "track_2"],
+      "selection": "Fixed start 120s; same declared coverage/visibility/reappearance criteria, no prediction-success selection."
+    },
+    {
+      "id": "128058_1st_f1500",
+      "match": "128058",
+      "half": "1st",
+      "start_frame": 1500,
+      "samples": 60,
+      "actors": ["track_0", "track_2"],
+      "selection": "Fixed start 60s; same declared coverage/visibility/reappearance criteria, no prediction-success selection."
+    }
+  ],
+  "training_sample": {
+    "match": "117092",
+    "half": "1st",
+    "start_frame": 1500,
+    "actor": "track_1",
+    "count": 8
+  }
+}

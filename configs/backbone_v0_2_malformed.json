@@ -1,0 +1,26 @@
+{
+  "schema_version": "backbone.batch.0.2",
+  "defaults": {
+    "experiment": "outputs/dynamic_gnn_tactical_20261019",
+    "backend": "G1",
+    "source_adapter": "external_jsonl",
+    "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/118577_t60.jsonl",
+    "match": "118577",
+    "half": "1st",
+    "start_frame": 1500,
+    "samples": 100,
+    "actors": ["track_1"],
+    "intended_use": "retrospective_replay",
+    "selection": "Deliberate malformed-job acceptance check; no training."
+  },
+  "jobs": [
+    {
+      "id": "deliberately_malformed",
+      "samples": "not_an_integer"
+    },
+    {
+      "id": "forbidden_training",
+      "intended_use": "training_export"
+    }
+  ]
+}

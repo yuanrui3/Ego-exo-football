@@ -1,0 +1,5 @@
+# Experimental video perception; data, setup calibration and weights are local-only.
+-r requirements-backbone.txt
+# Upstream models and code retain their own license terms.
+ultralytics>=8.3,<9
+scipy>=1.10

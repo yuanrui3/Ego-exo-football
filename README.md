@@ -1,5 +1,93 @@
 # Football Tactical LLM System
 
+## Start here: current supported baseline
+
+The supported entry point is the **frozen tracking-based G1 + original v0.5
+S4 backbone**. Video perception is a separate **experimental** input path:
+the global video-to-pitch validation gate still fails. Overall historical
+acceptance remains **PARTIAL**. Neither path recommends the best tactical action.
+
+| Area | Entry point | Scope |
+|---|---|---|
+| Tracking release | [Baseline guide](results/tracking_backbone_release_baseline.md), [configuration](configs/backbone_release_baseline.json), [model/source manifest](configs/backbone_release_manifest.json) | Supported local tracking/external-metre observations; supplied actor/query times |
+| Video prototype | [Same-match evidence](results/overnight_video_player_continuation_handoff_20261028.md), [cross-match evidence](results/video_player_cross_match_20261028_handoff.md) | Video detections, local tracks, experimental positions/attributes and actual G1/S4 calls; not validated pitch observations |
+| Completion evidence | [Completion continuation](results/backbone_completion_20261022_handoff.md) | Full-half replay, lazy-window index and unsuccessful matched distillation |
+| Historical experiments | Remaining sections below and `results/` | Separate research protocols, not release defaults |
+
+### Local run and verification
+
+The commands below require the exact **local-only data and weights** listed in
+the baseline guide and manifest. They do not download those prerequisites or
+establish fresh-machine reproducibility.
+
+```powershell
+# Existing virtual environment, or install the baseline/test dependencies:
+.\.venv\Scripts\python.exe -m pip install -r requirements-backbone.txt
+$stamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+.\.venv\Scripts\python.exe -m src.backbone.release_baseline `
+  --output "outputs\release_demo_$stamp"
+.\.venv\Scripts\python.exe -m src.backbone.verify_release_baseline `
+  --output "outputs\release_verify_$stamp"
+```
+
+For optional detector/attribute experiments, use
+`requirements-video-player.txt`; review Ultralytics' upstream license before
+redistribution or deployment. The older `requirements.txt` remains the broader
+LLM research environment. Installing video dependencies does not provide
+footage, calibration, or trained weights. The tracked
+[video protocol](configs/video_player_cross_match_protocol.json) is an unchanged
+snapshot of the original pre-run setup, including its historical deadline and
+initial status fields; measured results are in the experiment reports, not
+those initial fields. The experimental CLI uses this protocol by default and
+retains its original local output location. Always supply a new `--output`
+directory for new work.
+
+The fixture-only video regressions can run without the private datasets or
+checkpoints (with the video dependencies installed):
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q `
+  tests\test_video_player_cross_match.py `
+  tests\test_video_player_cross_match_replay.py `
+  tests\test_regional_pitch_mapping.py `
+  tests\test_video_player_overnight.py `
+  tests\test_video_player_replay.py `
+  tests\test_video_pitch_experimental.py
+```
+
+Publication verification on October 29, 2026: 99 selected backbone/video tests
+passed locally, with one CUDA-only test skipped. The exact staged source copy
+imported all 55 backbone modules and passed 22 video fixture tests plus the
+pinned-configuration hash check without datasets or model weights. Importing
+every historical module also used SciPy and scikit-learn from the broader
+research dependencies. A fresh local baseline replay passed all four
+mixed-action queries and browser Play/Pause, seeking and annotation-toggle
+checks. These checks used installed dependencies, not a clean environment.
+Git preserves the canonical configuration's exact bytes across checkouts so
+its frozen manifest hash remains valid.
+
+### Repository layout and evidence boundaries
+
+- `src/backbone/`: observation adapters, causal memory, G1/S4 interfaces,
+  release commands, and separately named experimental/video utilities.
+- `configs/`: source-controlled configurations and model/source manifests;
+  configuration paths may point to excluded local prerequisites.
+- `tests/`: fixture-based regressions plus integration checks that require local
+  checkpoints, caches or annotation indexes. The full release verification is
+  a local-artifact check, not a clean-checkout-only test suite.
+- `results/`: compact reports; links into `outputs/` identify local-only evidence
+  and will not resolve in a source-only GitHub checkout.
+- `data/`, `outputs/`, `weights/`: local datasets, annotations, footage,
+  generated runs and model weights; excluded from publication.
+
+G1 estimates **do not feed S4**. Visibility is simulated, ball/possession and
+unsupported targets remain unknown, and the seven-class S4 model requires
+supplied actor/event-query times. Scores are uncalibrated classification scores,
+not tactical value. Experimental detector, robust and distilled checkpoints
+must not silently replace the frozen defaults. The GNN queue remains paused.
+
+## Original event-classification pipeline
+
 This repository contains our football tactical modeling pipeline for turning SoccerTrack event annotations and game-state snapshots into a supervised fine-tuning dataset for a tactical action model.
 
 Pipeline:
@@ -18,6 +106,39 @@ Our system is designed to:
 - compare against a majority baseline
 - fine-tune a Qwen3-4B model with LoRA adapters
 - evaluate the model using task-relevant classification metrics instead of raw language loss
+
+## Action-general backbone roadmap
+
+The project target is a shared, action-agnostic exo-to-ego backbone by **October 31, 2026**, followed by an integrated prototype covering **all major football actions** by **December 31, 2026**. The existing event-classification and PASS-receiver experiments are separate evidence streams; neither defines the complete system or ranks the best action.
+
+The shared backbone should expose player/source observations, causal memory, uncertainty, ball position and possession status (`observed`, `estimated`, or `unknown`), actor/context, provenance, and an action-general output contract. The selected player is not presumed to possess the ball. Action prediction, restart context, and eventual outcome are separate. Event/action annotations may be absent; absence means unknown/unannotated, not a negative or “no action” label.
+
+The v0.4 offline prototype connects a checkpoint-backed S4 seven-class event-conditioned action classifier to the general action-output contract (`football.action-output.0.1`). It reports action type and uncalibrated class scores; target, location/direction, timing, and confidence remain unset unless independently supported. The classifier is not a continuous detector or best-action recommender. Unsupported action branches are explicit. Receiver ranking and Gaussian passing-lane geometry are optional passing-specific modules, not required backbone outputs. Do not compare different action branches' scores as if they identify the best action without a separately defined, calibrated decision layer.
+
+The v0.4 corpus, split, training, replay, and video-pilot evidence is summarized in the [backbone v0.4 handoff](results/backbone_v0_4_handoff.md). Its integration tests require the completed local corpus and pilot outputs; the source tracking caches, initial checkpoint, and match footage are not committed. The [v0.2 handoff](results/backbone_v0_2_handoff.md) documents earlier adapter boundaries. Pixel detections still do not establish camera-to-pitch projection, physical synchronization, athlete identity continuity, or measured player visibility.
+
+The v0.4 end-to-end reproduction commands and exact local prerequisites are in the handoff. Training consumes the explicitly indexed, match-split corpus and an existing six-fitting-match checkpoint; it does not download source footage. Evaluation matches were used in earlier research and are retrospective diagnostics, not a newly unseen test set.
+
+The [2026-10-22 completion continuation](results/backbone_completion_20261022_handoff.md)
+adds an executed three-fold match-excluded teacher/student path, two complete
+tracking-half replays (93.45 source minutes, 112,140 actor-steps), and a compact
+100,000-window fitting-only lazy index. The original S4 remains the default:
+the matched distillation candidate degraded accuracy. The narrow video-to-pitch
+attempt also failed validation, so the overall acceptance is **PARTIAL** and
+video-based action inference remains unsupported. The handoff separates actual
+outputs, blocked requirements, fixture/local-artifact tests, and exact native
+Python commands for execution and verification from Windows PowerShell.
+
+The separately scoped [tracking-based release baseline](results/tracking_backbone_release_baseline.md)
+freezes original S4 plus G1, documents all local checkpoint/source prerequisites,
+and provides fresh-output run and verification commands. It passed its scoped
+regressions, source-only import check, and mixed-action browser demo. This does
+not change the earlier PARTIAL acceptance or unblock video-to-pitch observations.
+
+The [cross-match video-to-player experiment](results/video_player_cross_match_20261028_handoff.md)
+records video-derived detections, local tracking and experimental G1/S4 replays.
+Global pitch calibration remains blocked; the frozen release checkpoints and
+defaults are unchanged.
 
 ## Why this repository exists
 

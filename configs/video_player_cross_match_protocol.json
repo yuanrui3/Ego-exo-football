@@ -1,0 +1,163 @@
+{
+  "schema_version": "football.video-player-cross-match-protocol.1",
+  "status": "LOCKED_BEFORE_NEW_VIDEO_INFERENCE",
+  "assignment_path": "outputs/video_player_cross_match_20261028_130610/assignment.txt",
+  "assignment_sha256": "3e259fbd53041f4b1221a8dc59de766b39e199cd7e9ed704ff31d452d6e92392",
+  "deadline": {
+    "started_at_utc": "2026-10-28T17:06:10Z",
+    "hard_deadline_utc": "2026-10-29T03:06:10Z",
+    "final_verification_reserved_minutes": 60,
+    "hour_8_expansion_stop_utc": "2026-10-29T01:06:10Z",
+    "hour_9_no_long_job_utc": "2026-10-29T02:06:10Z"
+  },
+  "preservation": {
+    "release_config": "configs/backbone_release_baseline.json",
+    "release_config_sha256": "b142e777389d4601f8c09fcaf1b5073e66dedd8aeaec5fabeb82e781ab58e4a9",
+    "G1_checkpoint_sha256": "c2732e3b0d99a8fc70afda85ab1da99451d09a09b1731b343200421acc073805",
+    "original_v0_5_S4_checkpoint_sha256": "a6cbf7a0fb76f0d7a52cd34727070a80df3402a26bfa516bfea2109c4d71c69c",
+    "source_detector": "outputs/overnight_video_player_20261028/detector_training/yolo11n_footpoint/weights/best.pt",
+    "source_detector_sha256": "792db3593ee1d1b26ef4789545527a02fa64c8568010f0116ab6cfe8610dec09",
+    "no_commit_or_push": true,
+    "no_annotation_edits": true,
+    "gnn_queue_paused": true
+  },
+  "selection": {
+    "selection_basis": [
+      "Locally present first/second-half video and matching SoccerTrack annotation file.",
+      "Video opens with OpenCV and exposes native resolution/frame-rate metadata.",
+      "Per-recording calibration keypoints and intrinsics are available locally.",
+      "D and E are distinct matches; neither is the prior perception fit match 117093."
+    ],
+    "development_match": {
+      "id": "117092",
+      "half": "1st",
+      "video": "data/video_review_v1_2/videos/117092/117092_panorama_1st_half.mp4",
+      "video_sha256": "9fabe074b0c6fc5812a602dd4119f3e6cb724e2f06b8a3a1eb9358b9734c036e",
+      "annotation": "data/117092_1st.json",
+      "annotation_sha256": "a70260a403e4d3011c11faef6aeaf529367afa1410f19b5e5042884cdcd36dfb",
+      "dimensions_px": [3840, 1906],
+      "fps": 25,
+      "frames": 67375,
+      "duration_seconds": 2695,
+      "image_id_frame_zero": 3901000001,
+      "calibration_keypoints": "outputs/backbone_v0_6_20261021/stage_b/calibration_assisted/video/revision_metadata/raw/117092/117092_keypoints.json",
+      "keypoints_sha256": "910c20d8883e689e740557e96037b4681ce75b60d94e1a800c09cab0da305aa7",
+      "camera_intrinsics": "outputs/backbone_v0_6_20261021/stage_b/calibration_assisted/video/revision_metadata/raw/117092/117092_camera_intrinsics.npz",
+      "camera_intrinsics_sha256": "4f6db409ac8f5b36b62898ac279247add16cc1ff905583440ac71f45c6a167fb",
+      "reason": "Fitting-pool recording with local video, dense native image annotations and source-specific calibration assets; its 3840x1906 frame makes the resolution transfer from the 117093 detector a useful development condition.",
+      "historical_calibration_exposure": "Whole-panorama map previously failed (65 held-out field landmarks; median/p90 8.27/20.30 m); prior central-region fit also failed. Preserve these results; do not treat them as new success."
+    },
+    "evaluation_match": {
+      "id": "118576",
+      "half": "2nd",
+      "video": "data/video_review_v1_2/videos/118576/118576_panorama_2nd_half.mp4",
+      "video_sha256": "38420243e256ab69670f3893aad3b1763fa878aa98e280f0cd400394ae37e73b",
+      "annotation": "data/118576_2nd.json",
+      "annotation_sha256": "ec6d7fb48475df95d1a77c98e9b302cb5fa03825228f545e6b12151e63fcc8eb",
+      "dimensions_px": [4096, 1080],
+      "fps": 25,
+      "frames": 72775,
+      "duration_seconds": 2911,
+      "image_id_frame_zero": 3908000001,
+      "calibration_keypoints": "outputs/backbone_v0_6_20261021/stage_b/calibration_assisted/video/revision_metadata/raw/118576/118576_keypoints.json",
+      "keypoints_sha256": "c49177f5cf404afb2a7d32f7fc63d01a2ab0a605d95a48660fee693d65417820",
+      "camera_intrinsics": "outputs/backbone_v0_6_20261021/stage_b/calibration_assisted/video/revision_metadata/raw/118576/118576_camera_intrinsics.npz",
+      "camera_intrinsics_sha256": "37300115571b94737bc2771d580c5c3bfe0a5633ded30df98a39f93ef306442b",
+      "reason": "Different locally available match with a matching half-video/annotation frame count, 4096x1080 source geometry, and source-specific released setup calibration; selected before new detector inference or E player-label scoring.",
+      "historical_calibration_exposure": "No previously reported video-player projection metrics for this E source. Calibration keypoints and intrinsics are released setup assets; E player annotations remain excluded from fitting, tuning, and runtime construction.",
+      "allowed_setup_prefix_seconds": [0, 120],
+      "setup_prefix_use": "Unlabeled, causal kit grouping only; never used to fit detector/classifier."
+    },
+    "rejected_sources": [
+      {
+        "id": "117093",
+        "reason": "The original detector/appearance training and same-match held-out evaluation source; does not satisfy the additional-match transfer objective."
+      },
+      {
+        "id": "118578",
+        "reason": "Initially considered because its calibration history was documented, but its local second-half video reports 69,350 frames while v1.2 source notes list 70,975 annotated frames, a substantial incompatibility. Rejected before inference rather than risk a mislabeled evaluation clock."
+      },
+      {
+        "id": "128057",
+        "reason": "Eligible local alternative with native 4096x1080 footage, but 118576 was selected as E based on verified frame-clock and calibration assets before new detector results."
+      },
+      {
+        "id": "132831",
+        "reason": "Eligible local alternative but 3840x1504 source requires a distinct setup review; not selected."
+      },
+      {
+        "id": "132877",
+        "reason": "Locally available but used as the G1/S4 development match; not selected for an additional perception-only holdout."
+      }
+    ]
+  },
+  "split": {
+    "development_match": "117092",
+    "fitting_interval_seconds": [600, 720],
+    "development_interval_seconds": [900, 1020],
+    "final_intervals_seconds_by_match": {
+      "117092": [[300, 420], [1200, 1320], [2400, 2520]],
+      "118576": [[300, 420], [1200, 1320], [2400, 2520]]
+    },
+    "selection_rule": "Fixed 120-second windows at source times 300-420, 1200-1320, and 2400-2520 seconds, chosen by duration coverage before any new detector output or E player-label scoring; six nonoverlapping final intervals total.",
+    "sampling_hz": 5,
+    "final_source_minutes": 12,
+    "expected_final_samples": 3600,
+    "D_E_are_different_matches": true,
+    "temporal_gap_seconds_D_fit_to_dev": 180,
+    "temporal_gap_seconds_D_dev_to_nearest_final": 180,
+    "E_player_annotations_runtime_access": false,
+    "E_predictions_and_hashes_must_be_frozen_before_scoring": true,
+    "G1_and_S4_exposure": "Both 117092 and 118576 occur in the canonical G1 and S4 fit_matches lists. Any video result is perception transfer plus downstream integration, not unseen-match generalization of the entire system. Historical action/world-model splits stay unchanged."
+  },
+  "frozen_thresholds": {
+    "footpoint_tolerance_px_at_4096_width": 40,
+    "normalized_footpoint_tolerance_formula": "tolerance_px = 40 * frame_width_px / 4096",
+    "tight_sensitivity_tolerance_px_at_4096_width": 20,
+    "detection_confidence": 0.20,
+    "association_max_distance_px_at_4096_width": 180,
+    "association_max_gap_samples": 5,
+    "attribute_confidence_minimum": 0.5,
+    "track_matching_tolerance_scale": "same normalized pixel convention; report both 20px and 40px scaled thresholds."
+  },
+  "calibration_protocol": {
+    "per_recording_sources": "Released match-specific field keypoints plus camera K,D,Knew; never copy 117093 intrinsics, optical-centre pixels, or team-number mapping.",
+    "transform_audit": [
+      "Raw-native image pixel coordinates versus released rectified calibration coordinates.",
+      "Detector tile resize and source-x offset restoration.",
+      "Image origin and top-left versus centred pitch origin.",
+      "Projection direction image-pixels to pitch metres and pitch axes.",
+      "Native 25 Hz frame clock and per-half image_id_frame_zero."
+    ],
+    "fit_validation_rule": "Fit only preselected setup landmarks; freeze support to fitting-evidence hulls; validate on distinct landmark indices. Do not use any player-coordinate annotations from final intervals to fit, tune, or select support.",
+    "support_rule": "Only project points inside the fixed source-specific fit hull and image bounds; preserve all other detections as unprojected. Do not score/select a region using final player residuals."
+  },
+  "evaluation_protocol": {
+    "annotation_access": "Final match player boxes, identities, teams, roles, pitch positions, and actions may be loaded only after each candidate's video predictions are complete and hashed. Never enter runtime builders, tracker IDs, attribute estimates, external observations, or model selection.",
+    "matching": "One-to-one footpoint matching with saved pairs; report 40-pixel normalized threshold and 20-pixel sensitivity.",
+    "coverage_denominators": "Retain every scheduled sample and player annotation, including missing frames, detection failures, unprojected observations, and unsupported model inputs.",
+    "required_metrics": [
+      "Detection precision/recall, duplicates, unmatched detections and unmatched annotations.",
+      "All players, players within fixed support, within-support recall and coverage against all annotated players.",
+      "Position error count, median, p90, p95, maximum and spatial distribution.",
+      "Track purity quantiles, fragmentation, duration, identity switches and gap continuity.",
+      "Team errors/unknowns/coverage and goalkeeper positives, false positives, recall or undefined status, and abstentions.",
+      "Per-frame projected player counts, 11-step actor-history availability, G1 calls/estimates/fallbacks/block reasons, scheduled S4 attempts/support reasons."
+    ],
+    "routes": [
+      "VIDEO_ESTIMATED: autonomous video detections, tracks and causal video-estimated attributes only.",
+      "ATTRIBUTE_ASSISTED_DIAGNOSTIC: same video positions/tracks plus confidently annotation-matched attributes in a separate post-inference output."
+    ],
+    "s4_probe_schedule": "For two actors per segment selected by fixed video-only rule and frozen common visual anchors: 20/40/60/80/100 seconds each. Supplied-time diagnostic queries only; no event labels or tactical-accuracy claim."
+  },
+  "execution_status": {
+    "source_pairing_and_hashes": "RECORDED",
+    "two_match_protocol": "LOCKED",
+    "new_detector_inference": "NOT_STARTED",
+    "E_player_labels_opened": false,
+    "annotation_removal_test": "PENDING",
+    "training": "NOT_STARTED",
+    "backbone_replay": "NOT_STARTED",
+    "videos": "NOT_STARTED"
+  }
+}

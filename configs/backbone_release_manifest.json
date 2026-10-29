@@ -1,0 +1,228 @@
+{
+  "schema_version": "football.tracking-backbone-release-manifest.1",
+  "release_status": "READY",
+  "original_completion_status": "PARTIAL; preserved unchanged",
+  "video_to_pitch_status": "BLOCKED; zero accepted detector-derived pitch observations",
+  "canonical_configuration": "configs/backbone_release_baseline.json",
+  "canonical_configuration_sha256": "b142e777389d4601f8c09fcaf1b5073e66dedd8aeaec5fabeb82e781ab58e4a9",
+  "models": {
+    "default_world": {
+      "name": "G1",
+      "checkpoint": "outputs/dynamic_gnn_tactical_20261019/world/G1_2s_seed42_excludenone/final.pt",
+      "sha256": "c2732e3b0d99a8fc70afda85ab1da99451d09a09b1731b343200421acc073805",
+      "config_sha256": "ffc6eafd9e113162334b41c8c83b795cb3b54f944927cdb2f59b373586e8973d",
+      "integration_manifest_sha256": "cdfc4b2f4a53dac7306381d4270ef7550b6d0d14ba0d8ec45606591f35cbacc2",
+      "fit_matches": ["117092", "117093", "118576", "118578", "128057", "132831"],
+      "development_match": "132877",
+      "architecture": {"family": "G1", "width": 128, "layers": 3, "seed": 42, "horizon_seconds": 2},
+      "input_contract": {
+        "shape": [11, 22, 10],
+        "sampling_seconds": 0.2,
+        "causal_history_seconds": 2.0,
+        "source": "Current simulated player-view measurements plus anonymous causal memory",
+        "unsupported": "Insufficient 11-step history, missing actor, unknown team/role, or more than 22 first-sight identities",
+        "outputs": ["hidden-player mean", "uncertainty standard deviation", "anonymous occupancy"],
+        "fallback": "last_seen; entries expire after 6 seconds",
+        "does_not_feed_action_model": true
+      }
+    },
+    "default_action": {
+      "name": "Original v0.5 S4",
+      "checkpoint": "outputs/backbone_v0_5_20261020/training/model/final.pt",
+      "sha256": "a6cbf7a0fb76f0d7a52cd34727070a80df3402a26bfa516bfea2109c4d71c69c",
+      "config_sha256": "4bd79af24329a5118259213d0d17bffe440df9589bcfd60a99fd386320f37a02",
+      "fit_matches": ["117092", "117093", "118576", "118578", "128057", "132831"],
+      "development_match": "132877",
+      "classes_in_checkpoint_order": [
+        "PASS", "HIGH_PASS", "DRIVE", "CROSS", "SHOT", "HEADER", "DEFENSIVE_INTERVENTION"
+      ],
+      "output_contract": "football.action-output.0.1; optional teammate/opponent target, location/direction, timing and calibrated confidence are unset when unsupported",
+      "score_semantics": "Uncalibrated seven-way softmax; not confidence, tactical value or best-action utility",
+      "input": {
+        "shape": [11, 22, 10],
+        "sample_interval_seconds": 0.2,
+        "history_seconds": 2.0,
+        "field_of_view_degrees": 120,
+        "range_metres": 45,
+        "normalization": "Actor-relative x/52.5m,y/34m,velocity/12mps; training age/5s; adapter converts memory age/8s",
+        "visibility": "Simulated from tracking positions and causal motion heading; not measured gaze",
+        "query_semantics": "Requires caller-supplied actor and event/query time; not a continuous detector"
+      }
+    },
+    "experimental_not_default": [
+      {
+        "name": "C1 matched corruption control",
+        "checkpoint": "outputs/backbone_completion_20261022/transfer/C1/best.pt",
+        "sha256": "10a9b775e018606cd6df2d249553e0f9bc53b5469d8a360ee4f1535cafe8dac5"
+      },
+      {
+        "name": "C2 OOF distillation student; harmful in measured comparison",
+        "checkpoint": "outputs/backbone_completion_20261022/transfer/C2/best.pt",
+        "sha256": "2c28ac23a895ccad8461990f15b5b2525ea99cd21c79f12fab76a3b189f6e4ae"
+      },
+      {
+        "name": "Match-excluded scratch teacher fold 0",
+        "checkpoint": "outputs/backbone_completion_20261022/transfer/teacher_fold_0/best.pt",
+        "sha256": "c268f37ce00c80dd783d24b1ca4871189f0c33af2a19643491e3daba1e2d7373"
+      },
+      {
+        "name": "Match-excluded scratch teacher fold 1",
+        "checkpoint": "outputs/backbone_completion_20261022/transfer/teacher_fold_1/best.pt",
+        "sha256": "71f47fca40a134ff4f31d9d4b47fd86b1716315d3285eb08ae7bd026a24dff39"
+      },
+      {
+        "name": "Match-excluded scratch teacher fold 2",
+        "checkpoint": "outputs/backbone_completion_20261022/transfer/teacher_fold_2/best.pt",
+        "sha256": "df5e1583419b9dbb7adad0f219332c4f99a7e0e59f23f16e769e4d41f47bb713"
+      },
+      {
+        "name": "Six-fitting-match teacher reference",
+        "checkpoint": "outputs/backbone_completion_20261022/transfer/teacher_reference/best.pt",
+        "sha256": "1f48bbd63648cc2cf9ab6d42473fa11369fbb4c5bc5ca65a82ac17dfea340aa4"
+      },
+      {
+        "name": "v0.6 robustness-trained S4; experimental, no switching rule",
+        "checkpoint": "outputs/backbone_v0_6_20261021/stage_c/robust_training/best.pt",
+        "sha256": "7d3ea78f20bac82f6d3291e4a446ac728820dce9feef6759260c5897d4e73f84"
+      },
+      {
+        "name": "Three match-excluded scratch teacher folds and six-fit reference",
+        "directory": "outputs/backbone_completion_20261022/transfer",
+        "deployment": "Research artifacts only; not action inference defaults"
+      }
+    ]
+  },
+  "data_prerequisites": [
+    {
+      "role": "Verified 118577 first-half pitch tracking cache",
+      "path": "outputs/trajectory_forecasting_20261016/cache/118577_1st.npz",
+      "sha256": "1dc290157fd96e9a1e1613d01f48ff56bfab0ccc3a336e7c860d75ccf2ae70ff"
+    },
+    {
+      "role": "Tracking cache metadata",
+      "path": "outputs/trajectory_forecasting_20261016/cache/118577_1st.json",
+      "sha256": "f2194c8ce5c6fc71f0a2e6ddc61606bb6a0046d4ead24d00de01ee9d219867fd"
+    },
+    {
+      "role": "Track association manifest",
+      "path": "outputs/trajectory_audit_20261016/associations_118577_1st.json",
+      "sha256": "766a17ea7dfa674cd9a2dc021e3a9b3b01b3aeb2b4660db7375af23f76662c55"
+    },
+    {
+      "role": "Existing action index and stable-ID joined retrospective shard",
+      "paths": [
+        "outputs/backbone_v0_5_20261020/corpus/training_index.json",
+        "outputs/backbone_v0_5_20261020/corpus/shards/118577/1st/student_metadata.jsonl",
+        "outputs/backbone_v0_5_20261020/corpus/shards/118577/1st/optional_targets.jsonl"
+      ],
+      "sha256": [
+        "ef7d7a2cd6796511b96ec71e7a401c1fbeb1e15ed3adc557b3b7c1f34a02450a",
+        "3a78975c817d52623318f226fffd1f8610596cb0236c98103ff18d6609dde262",
+        "4883e0adf0fd7682d692b6f598b2bd01e73717b489412dfe5bc759333e002382"
+      ]
+    },
+    {
+      "role": "Optional previously validated external metre-observation fixture; annotation-backed, not video-derived",
+      "path": "outputs/backbone_completion_20261022/interoperability/128058_2nd.jsonl",
+      "sha256": "da84f8480d25a9a4af5df3b92a6b1a2a1a33c6f1914dbddc35d65854e0231163"
+    }
+  ],
+  "runtime_data_flow": [
+    "Verified tracking or schema-validated external metre observations",
+    "Simulated 120-degree/45m actor visibility for exo tracking; causal provider heading/memory",
+    "11-step actor-local memory input and G1 hidden-player estimates with explicit fallback",
+    "Separate S4 action inference receives causal observation/memory tensor; G1 predictions do not feed S4",
+    "Action query runs only at explicit event/query times; annotation join remains evaluation-only",
+    "Optional passing geometry is separate and disabled in the canonical demo"
+  ],
+  "source_inventory": {
+    "existing_training_and_export_interfaces_retained": [
+      "src/backbone/batch.py",
+      "src/backbone/corpus.py",
+      "src/backbone/export.py",
+      "src/backbone/lazy_windows.py",
+      "src/backbone/train_action.py"
+    ],
+    "existing_lazy_window_index": {
+      "path": "outputs/backbone_completion_20261022/lazy_windows/windows.npz",
+      "sha256": "982f5ce2537e1723b6f2d2ec0b2917b225f9e6a53c7c6b13b79ac617ff9e2c16",
+      "distinct_fitting_windows": 100000,
+      "role": "Existing target-free index; not rebuilt by release commands"
+    },
+    "runtime_files": [
+      "src/backbone/__init__.py",
+      "src/backbone/actions.py",
+      "src/backbone/assessment.py",
+      "src/backbone/contracts.py",
+      "src/backbone/external.py",
+      "src/backbone/memory.py",
+      "src/backbone/models.py",
+      "src/backbone/observation.py",
+      "src/backbone/pipeline.py",
+      "src/backbone/release_baseline.py",
+      "src/backbone/source.py",
+      "src/backbone/viewer.html",
+      "src/backbone/verify_release_baseline.py",
+      "src/belief_observation.py",
+      "src/extract_soccertrack_events.py",
+      "src/hidden_defender_geometry.py",
+      "src/models/__init__.py",
+      "src/models/belief_world_model.py",
+      "src/models/candidate_ranker_receiver.py",
+      "src/models/dynamic_football_gnn.py",
+      "src/models/entity_transformer_receiver.py",
+      "src/models/partial_observation_student.py",
+      "src/player_centric_dataset.py",
+      "src/player_centric_visibility.py",
+      "src/recode_primary_actions.py",
+      "src/trajectory_dataset.py"
+    ],
+    "verification_tests": [
+      "tests/test_backbone.py",
+      "tests/test_backbone_ingestion.py",
+      "tests/test_backbone_v0_3.py",
+      "tests/test_backbone_v0_4.py",
+      "tests/test_backbone_v05.py",
+      "tests/test_backbone_v06_robust_action.py",
+      "tests/test_backbone_v06_video.py",
+      "tests/test_backbone_transfer_completion.py",
+      "tests/test_backbone_streaming_completion.py",
+      "tests/test_backbone_release.py"
+    ],
+    "configuration_and_dependencies": [
+      "configs/backbone_release_baseline.json",
+      "configs/backbone_release_manifest.json",
+      "requirements.txt"
+    ],
+    "source_only_import_result": "PASS; isolated copy of exactly the inventoried 25 runtime/transitive source files imported without workspace source; no data, weights or experiment outputs copied."
+  },
+  "environment": {
+    "platform": "Windows x64",
+    "tested_python": "3.14.8",
+    "tested_torch": "2.11.0+cu128",
+    "tested_numpy": "2.5.3",
+    "tested_scipy": "1.18.1",
+    "tested_pytest": "9.1.1",
+    "inference_device": "CPU",
+    "runtime_requirements": ["torch>=2.4", "numpy>=1.26", "scipy>=1.10"],
+    "verification_requirement": "pytest available in configured interpreter",
+    "fresh_machine_reproducibility": false,
+    "note": "Source imports passed in isolation, but clean environment installation and transfer of private data/weights were not tested."
+  },
+  "limitations": [
+    "Video-to-pitch observations remain blocked; zero detector-derived pitch observations accepted.",
+    "Visibility is simulated from tracking, not measured gaze.",
+    "S4 requires supplied actor/event-query times.",
+    "Seven classes do not cover every football action.",
+    "Ball/possession and unsupported targets remain unknown.",
+    "Classifier scores are not tactical value or best-action recommendations.",
+    "Distillation did not improve this experiment; original S4 remains default.",
+    "Full-stream and event-tensor metrics use different protocols and are not directly comparable."
+  ],
+  "acceptance_scope": {
+    "standalone_tracking_baseline": "READY when the canonical command and scoped verification pass",
+    "v0_6_and_completion_program": "PARTIAL; historical acceptance preserved",
+    "video_observation_bridge": "BLOCKED",
+    "gnn_queue": "PAUSED_FOR_INTEGRATION"
+  }
+}

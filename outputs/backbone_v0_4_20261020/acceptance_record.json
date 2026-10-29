@@ -1,0 +1,103 @@
+{
+  "schema_version": "football.backbone.acceptance.0.4",
+  "status": "COMPLETE_WITH_VIDEO_PITCH_ADAPTER_BLOCKED",
+  "corpus": {
+    "status": "COMPLETE",
+    "indexed_shards": 18,
+    "raw_events": 19311,
+    "eligible_action_examples": 10595,
+    "unlabeled_arbitrary_windows": 4457,
+    "excluded": {
+      "unsupported_event_frame_alignment": 7433,
+      "unsupported_or_context_label": 1196,
+      "actor_identity_missing": 74,
+      "insufficient_causal_history": 12,
+      "actor_missing_at_query": 1
+    },
+    "resume_verified": true,
+    "duplicate_append": false,
+    "training_index": "training_index.json"
+  },
+  "split": {
+    "fitting_matches": ["117092", "117093", "118576", "118578", "128057", "132831"],
+    "development_matches": ["132877"],
+    "retrospective_evaluation_matches": ["118577", "128058"],
+    "eligible_examples": {
+      "fitting": 6850,
+      "development": 1714,
+      "retrospective_evaluation": 2031
+    },
+    "zero_eligible_fitting_match": "128057"
+  },
+  "action_model": {
+    "status": "TRAINED_AND_RELOADED",
+    "variant": "S4",
+    "classes": [
+      "PASS",
+      "HIGH_PASS",
+      "DRIVE",
+      "CROSS",
+      "SHOT",
+      "HEADER",
+      "DEFENSIVE_INTERVENTION"
+    ],
+    "best_epoch": 1,
+    "completed_epochs": 4,
+    "development_macro_f1": 0.4795886999078803,
+    "checkpoint": "training/model/final.pt",
+    "checkpoint_sha256": "5a9d46eade21ebd5019f32d4ada4e20c6909754fc0e7e06af0add0f146fcb25a",
+    "optimizer_rng_resume_state": "training/last.pt",
+    "reloaded_adapter_parity": {
+      "status": "PASS",
+      "examples": 2031,
+      "maximum_absolute_probability_difference": 4.76837158203125e-07
+    },
+    "retrospective_evaluation": {
+      "accuracy": 0.5977351058591827,
+      "macro_f1": 0.5044943090751904,
+      "caveat": "Both matches were used in earlier research; not a newly unseen test set."
+    }
+  },
+  "shared_replay": {
+    "status": "PLAYER_FACING_ACTION_REPLAY_SUPPORTED",
+    "path": "replay_verified/shared_replay.json",
+    "event_classes": ["PASS", "HIGH_PASS", "DRIVE"],
+    "unlabeled_exploratory_windows": 3,
+    "annotation_labels_in_model_inputs": false,
+    "ball_possession_default": "unknown",
+    "other_action_branches": "explicitly unsupported"
+  },
+  "video_pilot_extension": {
+    "status": "PIXEL_TRACKLET_CANDIDATES_READY_PITCH_ADAPTER_BLOCKED",
+    "path": "video_pilot_extension/manifest.json",
+    "frames": 12,
+    "detections": 25,
+    "candidate_tracklets": 17,
+    "new_downloads": false,
+    "detector_rerun": false,
+    "pitch_projection": "blocked",
+    "identity_claim": "none; image-space candidates only"
+  },
+  "focused_tests": {
+    "status": "PASS",
+    "command": "python -m pytest tests\\test_backbone_v0_4.py -q",
+    "passed": 5,
+    "failed": 0,
+    "duration_seconds": 2.27
+  },
+  "local_regression_tests": {
+    "status": "PASS",
+    "command": "python -m pytest tests\\test_backbone_v0_4.py tests\\test_backbone_v0_3.py tests\\test_backbone.py tests\\test_backbone_ingestion.py -q",
+    "passed": 47,
+    "failed": 0,
+    "duration_seconds": 15.90,
+    "note": "Includes existing v0.3/v0.2 regression files from the working environment; these historical test files depend on local research artifacts and are not part of this focused change."
+  },
+  "scope": {
+    "new_model_fits": 1,
+    "dynamic_gnn_queue_resumed": false,
+    "video_footage_downloaded": false,
+    "human_annotations_modified": false,
+    "commits_or_pushes": false
+  }
+}

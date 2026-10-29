@@ -1,0 +1,32 @@
+{
+  "schema_version": "football.action-training.0.4",
+  "seed": 42,
+  "initialization": "outputs/partial_observation_20261017/students/development/S4/width96/best.pt",
+  "initialization_sha256": "f308b679ad0104ebde27b648c6b25dcf887ab3c2697e723fa2e93a3f0b43d5c9",
+  "model": {
+    "variant": "S4",
+    "fov_index": 1,
+    "width": 96,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "belief_head_present_but_not_trained": true
+  },
+  "optimization": {
+    "loss": "action-only cross entropy",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 10,
+    "patience": 3,
+    "minimum_development_macro_f1_delta": 0.0005,
+    "gradient_clip_norm": 1.0,
+    "mixed_precision": true,
+    "seed": 42
+  },
+  "fitting_matches": ["117092", "117093", "118576", "118578", "128057", "132831"],
+  "development_matches": ["132877"],
+  "retrospective_evaluation_matches": ["118577", "128058"],
+  "teacher_targets": "ABSENT; distillation disabled. No new teacher fits.",
+  "untrained_heads": "Receiver and occupancy heads retained from initialization but not optimized in this action-only run."
+}

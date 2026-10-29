@@ -1,0 +1,57 @@
+{
+  "schema_version": "football.action-corpus.0.4",
+  "interval_policy": "Explicit full-source-half intervals, frame indices inclusive at start and exclusive at end. Each interval bound is pinned to the verified local cache length.",
+  "observation": {
+    "history_frames": 50,
+    "sample_stride_frames": 5,
+    "fov_degrees": 120,
+    "max_range_m": 45.0,
+    "visibility": "Causal motion-heading estimate with original event-builder deterministic seed; no artificial dropout or coordinate noise",
+    "actor_must_be_observed_at_every_sample": true,
+    "current_roster_compatibility": true
+  },
+  "unlabeled_windows": {
+    "enabled": true,
+    "actor_track": "track_0",
+    "first_query_frame": 250,
+    "stride_frames": 250,
+    "label_policy": "No event join, no action target, not a negative/no-action example"
+  },
+  "split_matches": {
+    "fitting": [
+      "117092",
+      "117093",
+      "118576",
+      "118578",
+      "128057",
+      "132831"
+    ],
+    "development": [
+      "132877"
+    ],
+    "retrospective_evaluation": [
+      "118577",
+      "128058"
+    ]
+  },
+  "sources": [
+    {"match": "117092", "half": "1st", "frame_start": 0, "frame_end_exclusive": 67375},
+    {"match": "117092", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 67549},
+    {"match": "117093", "half": "1st", "frame_start": 0, "frame_end_exclusive": 67625},
+    {"match": "117093", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 70475},
+    {"match": "118576", "half": "1st", "frame_start": 0, "frame_end_exclusive": 72825},
+    {"match": "118576", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 72775},
+    {"match": "118577", "half": "1st", "frame_start": 0, "frame_end_exclusive": 72425},
+    {"match": "118577", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 72475},
+    {"match": "118578", "half": "1st", "frame_start": 0, "frame_end_exclusive": 70350},
+    {"match": "118578", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 70975},
+    {"match": "128057", "half": "1st", "frame_start": 0, "frame_end_exclusive": 67625},
+    {"match": "128057", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 70350},
+    {"match": "128058", "half": "1st", "frame_start": 0, "frame_end_exclusive": 68975},
+    {"match": "128058", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 67750},
+    {"match": "132831", "half": "1st", "frame_start": 0, "frame_end_exclusive": 67775},
+    {"match": "132831", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 68375},
+    {"match": "132877", "half": "1st", "frame_start": 0, "frame_end_exclusive": 67700},
+    {"match": "132877", "half": "2nd", "frame_start": 0, "frame_end_exclusive": 69350}
+  ]
+}

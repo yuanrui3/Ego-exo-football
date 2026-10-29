@@ -1,0 +1,7 @@
+# Frozen tracking replay and its regression checks; no LLM training dependencies.
+torch>=2.4
+numpy>=1.26
+ijson>=3.3
+pytest>=8
+# Release verification also imports the video-ingestion regression fixtures.
+opencv-python-headless>=4.12,<5

@@ -1,0 +1,2 @@
+# Preserve the exact bytes pinned by the frozen release manifest on every platform.
+/configs/backbone_release_baseline.json -text whitespace=cr-at-eol
