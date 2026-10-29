@@ -3,17 +3,15 @@
 from __future__ import annotations
 
 import argparse
+from dataclasses import asdict
 import json
 import math
 from pathlib import Path
 
-import numpy as np
-
 from src.backbone.actions import ActionModelSession
 from src.backbone.batch import student_record
+from src.backbone.corpus import _feature_input
 from src.backbone.models import ModelSession
-from src.backbone.observation import SyntheticObservationProvider
-from src.backbone.pipeline import ReplayEngine
 from src.backbone.source import SoccerTrackSource
 from src.player_centric_dataset import ACTION_ALIASES, ACTION_LABELS, ROW_ID, stable_seed
 from src.recode_primary_actions import SOURCE_TO_PRIMARY_ACTION
@@ -153,56 +151,42 @@ def build_candidate(
     if actor_slot is None:
         return None
     anchor = candidate["anchor_frame"]
-    first = anchor - (HISTORY_STEPS - 1) * SAMPLE_STRIDE
-    indices = list(range(first, anchor + 1, SAMPLE_STRIDE))
-    raw = source.raw
-    if len(indices) != HISTORY_STEPS or indices[0] < 0 or indices[-1] != anchor:
-        return None
-    if not all(bool(raw["observed"][frame, actor_slot]) for frame in indices):
-        return None
-    segments = {int(raw["segments"][frame, actor_slot]) for frame in indices}
-    if len(segments) != 1:
-        return None
-    history_observed = raw["observed"][indices]
-    at_query = raw["observed"][anchor]
-    previously_observed = history_observed.any(axis=0)
-    if np.any(previously_observed & ~at_query):
-        return None
-    for slot in np.flatnonzero(at_query):
-        observed_frames = history_observed[:, slot]
-        if (len(set(raw["teams"][indices, slot][observed_frames].tolist())) > 1
-                or len(set(raw["roles"][indices, slot][observed_frames].tolist())) > 1):
-            return None
     actor_track = f"track_{actor_slot}"
-    provider = SyntheticObservationProvider(
+    slot_to_player = {slot: player for player, slot in slot_by_player.items()}
+    tensor, _ = _feature_input(
+        source,
         actor_track,
-        seed=stable_seed(candidate["event_id"], 42),
-        fov=120,
-        dropout=False,
+        anchor,
+        slot_to_player,
+        models,
+        observation_config={
+            "seed": stable_seed(candidate["event_id"], 42),
+            "fov_degrees": 120,
+            "dropout": False,
+        },
+        include_passing_assessment=True,
     )
-    engine = ReplayEngine(models, samples=16, action_model=action_model)
-    result = None
-    last_observation = None
-    for frame_index in indices:
-        frame = source.frame(frame_index)
-        observation = provider.observe(frame)
-        if observation.actor is None:
-            return None
-        last_observation = observation
-        result = engine.step(observation, include_passing_assessment=True)
-    if result is None or last_observation is None:
+    if tensor is None:
         return None
-    inference = result.get("action_inference")
-    if not inference or inference["status"] != "supported":
+    result = tensor["replay_result"]
+    if result is None:
         return None
-    student = student_record(last_observation, engine, result)
+    inference = action_model.predict(tensor["model_input"])
+    result["action"] = {
+        "schema_version": "football.action-output.0.1",
+        **asdict(inference.output),
+    }
+    result["action_inference"] = inference.to_dict()
+    if inference.status != "supported":
+        return None
+    student = student_record(tensor["observations"][-1], tensor["engine"], result)
     if student["world_input"] is None:
         return None
     return {
         "student": student,
         "replay": result,
         "actor_track": actor_track,
-        "input_frame_indices": indices,
+        "input_frame_indices": tensor["history_frames"],
         "source_provenance": source.provenance,
         "slot": actor_slot,
     }

@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
 
 # Data
 /data/**
@@ -22,6 +23,20 @@ checkpoints/
 *.bin
 *.pt
 *.pth
+/weights/
+*.npz
+*.npy
+
+# Local footage and rendered experiments
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Local credentials
+.env
+.env.*
+!.env.example
 
 # Hugging Face
 .cache/

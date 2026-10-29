@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 from collections import deque
+from functools import lru_cache
 
 import numpy as np
 
-from src.backbone.contracts import Observation, TrackingFrame
+from src.backbone.contracts import Measurement, Observation, TrackingFrame
 from src.player_centric_dataset import stable_seed
 from src.player_centric_visibility import estimate_heading, visible_players
 
@@ -22,7 +23,6 @@ class SyntheticObservationProvider:
         self.history = deque(maxlen=6)
         self.previous = None
         self.actor_segment = None
-        self.occluded_until = {}
 
     def observe(self, frame: TrackingFrame) -> Observation:
         if frame.discontinuity:
@@ -45,7 +45,10 @@ class SyntheticObservationProvider:
             self.actor_segment = actor.segment
         self.history.append(actor.xy)
         actor_history = np.asarray(self.history, np.float32)[:, None]
-        seed = stable_seed(f"{frame.source_id}:{self.actor_track}:{frame.index}", self.seed)
+        seed = stable_seed(
+            f"{frame.source_id}:{frame.half}:{actor.segment}:{self.actor_track}:{frame.index}",
+            self.seed,
+        )
         heading, reliable, _ = estimate_heading(actor_history, np.ones(actor_history.shape[:2], bool),
                                                 0, seed=seed, mode="motion_random")
         measurements = frame.measurements
@@ -56,13 +59,7 @@ class SyntheticObservationProvider:
         for i, measurement in enumerate(measurements):
             if i == actor_slot or not self.dropout:
                 continue
-            token = (measurement.track, measurement.segment)
-            rng = np.random.default_rng(stable_seed(f"{token}:{frame.index}", seed))
-            # Streaming counterpart of training's artificial hidden intervals:
-            # starts are decided NOW, never from the future length of the replay.
-            if self.occluded_until.get(token, -1) <= frame.timestamp_s and rng.random() < .04:
-                self.occluded_until[token] = frame.timestamp_s + float(rng.uniform(.6, 2.2))
-            if self.occluded_until.get(token, -1) > frame.timestamp_s:
+            if self._artificially_occluded(frame, actor, measurement):
                 visible[i] = False
         warnings = [*frame.warnings, "Synthetic player visibility; tracking-based prototype."]
         if not reliable:
@@ -72,3 +69,30 @@ class SyntheticObservationProvider:
         return Observation(*key, frame.index, frame.timestamp_s, self.actor_track,
                            tuple(m for m, allowed in zip(measurements, visible) if allowed), tuple(warnings),
                            frame.discontinuity)
+
+    def _artificially_occluded(
+        self, frame: TrackingFrame, actor: Measurement, measurement: Measurement,
+    ) -> bool:
+        """Reconstruct only past deterministic dropout starts for window consistency."""
+        for steps_ago in range(12):
+            start_frame = frame.index - steps_ago * 5
+            start_time = frame.timestamp_s - steps_ago * .2
+            if start_time < 0:
+                continue
+            token = f"{measurement.track}:{measurement.segment}"
+            seed = stable_seed(
+                f"{frame.source_id}:{frame.half}:{actor.segment}:{self.actor_track}:{token}:{start_frame}",
+                self.seed,
+            )
+            duration = self._dropout_duration(seed)
+            if duration is None:
+                continue
+            if frame.timestamp_s - start_time < duration:
+                return True
+        return False
+
+    @staticmethod
+    @lru_cache(maxsize=4096)
+    def _dropout_duration(seed: int) -> float | None:
+        rng = np.random.default_rng(seed)
+        return float(rng.uniform(.6, 2.2)) if rng.random() < .04 else None

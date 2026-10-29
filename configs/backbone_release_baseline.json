@@ -1,0 +1,73 @@
+{
+  "schema_version": "football.tracking-backbone-release.1",
+  "description": "Frozen G1 plus original v0.5 S4 tracking-based baseline; no training or video projection.",
+  "release_manifest": "configs/backbone_release_manifest.json",
+  "experiment": "outputs/dynamic_gnn_tactical_20261019",
+  "world_backend": "G1",
+  "action_checkpoint": "outputs/backbone_v0_5_20261020/training/model/final.pt",
+  "pinned_files": {
+    "outputs/dynamic_gnn_tactical_20261019/integration_manifest.json": "cdfc4b2f4a53dac7306381d4270ef7550b6d0d14ba0d8ec45606591f35cbacc2",
+    "outputs/dynamic_gnn_tactical_20261019/world/G1_2s_seed42_excludenone/final.pt": "c2732e3b0d99a8fc70afda85ab1da99451d09a09b1731b343200421acc073805",
+    "outputs/dynamic_gnn_tactical_20261019/world/G1_2s_seed42_excludenone/config.json": "ffc6eafd9e113162334b41c8c83b795cb3b54f944927cdb2f59b373586e8973d",
+    "outputs/dynamic_gnn_tactical_20261019/world/G1_2s_seed42_excludenone/result.json": "38bdf8cd7a203a3497885c07c477b0814964d788abb54b822f36a12ebe92ec70",
+    "outputs/backbone_v0_5_20261020/training/model/final.pt": "a6cbf7a0fb76f0d7a52cd34727070a80df3402a26bfa516bfea2109c4d71c69c",
+    "outputs/backbone_v0_5_20261020/training/model/config.json": "4bd79af24329a5118259213d0d17bffe440df9589bcfd60a99fd386320f37a02",
+    "outputs/trajectory_forecasting_20261016/cache/118577_1st.npz": "1dc290157fd96e9a1e1613d01f48ff56bfab0ccc3a336e7c860d75ccf2ae70ff",
+    "outputs/trajectory_forecasting_20261016/cache/118577_1st.json": "f2194c8ce5c6fc71f0a2e6ddc61606bb6a0046d4ead24d00de01ee9d219867fd",
+    "outputs/trajectory_audit_20261016/associations_118577_1st.json": "766a17ea7dfa674cd9a2dc021e3a9b3b01b3aeb2b4660db7375af23f76662c55",
+    "outputs/backbone_v0_5_20261020/corpus/training_index.json": "ef7d7a2cd6796511b96ec71e7a401c1fbeb1e15ed3adc557b3b7c1f34a02450a"
+  },
+  "source": {
+    "adapter": "soccertrack_cache",
+    "training_index": "outputs/backbone_v0_5_20261020/corpus/training_index.json",
+    "match": "118577",
+    "half": "1st",
+    "tracking_cache": "outputs/trajectory_forecasting_20261016/cache",
+    "associations": "outputs/trajectory_audit_20261016",
+    "actor": "track_10",
+    "start_frame": 535,
+    "samples": 600,
+    "stride_native_frames": 5,
+    "seed": 42,
+    "field_of_view_degrees": 120,
+    "dropout": true
+  },
+  "event_queries": [
+    {
+      "frame_index": 590,
+      "event_id": "118577_p1_f591_10",
+      "annotation_index": 10,
+      "original_bas_label": "DRIVE",
+      "mapped_action_label": "DRIVE"
+    },
+    {
+      "frame_index": 1720,
+      "event_id": "118577_p1_f1721_24",
+      "annotation_index": 24,
+      "original_bas_label": "PASS",
+      "mapped_action_label": "PASS"
+    },
+    {
+      "frame_index": 1865,
+      "event_id": "118577_p1_f1866_28",
+      "annotation_index": 28,
+      "original_bas_label": "HIGH PASS",
+      "mapped_action_label": "HIGH_PASS"
+    },
+    {
+      "frame_index": 2955,
+      "event_id": "118577_p1_f2956_51",
+      "annotation_index": 51,
+      "original_bas_label": "DRIVE",
+      "mapped_action_label": "DRIVE"
+    }
+  ],
+  "replay": {
+    "memory_expiry_seconds": 6.0,
+    "fallback": "last_seen",
+    "passing_assessment": false,
+    "ball_possession": "unknown",
+    "truth_overlay_default": false,
+    "annotation_overlay_default": false
+  }
+}

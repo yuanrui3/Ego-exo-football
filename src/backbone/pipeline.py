@@ -27,7 +27,8 @@ class ReplayEngine:
              ball_state: BallState | None = None,
              action: ActionOutput | None = None,
              restart_context: RestartContext | None = None,
-             outcome: ActionOutcome | None = None):
+             outcome: ActionOutcome | None = None,
+             action_query: bool = False):
         if not isinstance(observation, Observation):
             raise TypeError("ReplayEngine only accepts an Observation, never a privileged source frame")
         start = time.perf_counter()
@@ -37,9 +38,20 @@ class ReplayEngine:
         action_inference = None
         if action is not None:
             action_output = action
-        elif self.action_model is not None:
+        elif self.action_model is not None and action_query:
             action_inference = self.action_model.predict(self.memory.current_input)
             action_output = action_inference.output
+        elif self.action_model is not None:
+            action_output = ActionOutput(
+                support_status="unsupported",
+                reason="Action model loaded but no event-conditioned query was scheduled at this time",
+            )
+            action_inference = {
+                "status": "not_queried",
+                "reason": "Action model loaded but no event-conditioned query was scheduled at this time",
+                "scores": None,
+                "score_semantics": "No model evaluation was performed",
+            }
         else:
             action_output = ActionOutput()
         current_ball = ball_state or BallState()
@@ -63,7 +75,10 @@ class ReplayEngine:
                 "assessment": assessment,
                 "latency_ms": (time.perf_counter() - start) * 1000}
         if action_inference is not None:
-            result["action_inference"] = action_inference.to_dict()
+            result["action_inference"] = (
+                action_inference.to_dict()
+                if hasattr(action_inference, "to_dict") else action_inference
+            )
         return result
 
 

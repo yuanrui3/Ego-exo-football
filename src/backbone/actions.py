@@ -59,6 +59,8 @@ class ActionModelSession:
         self.model.load_state_dict(state, strict=True)
         self.model.eval()
         self.load_count = 1
+        self.forward_calls = 0
+        self.forward_batch_elements = 0
         self.provenance = {
             "checkpoint": str(self.checkpoint),
             "sha256": self.sha256,
@@ -110,6 +112,8 @@ class ActionModelSession:
         torch_mask = torch.from_numpy(mask[None]).to(self.device)
         torch_visible = torch.from_numpy(visible[None]).to(self.device)
         result = self.model(torch_x, torch_mask, torch_visible, memory_mode="memory")
+        self.forward_calls += 1
+        self.forward_batch_elements += int(torch_x.shape[0])
         logits = result["action"].float()[0]
         if logits.shape != (len(ACTION_LABELS),) or not torch.isfinite(logits).all():
             raise FloatingPointError("Action model returned invalid logits")

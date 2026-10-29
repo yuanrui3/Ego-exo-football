@@ -5,25 +5,22 @@ from __future__ import annotations
 import argparse
 from collections import Counter, defaultdict
 import json
-import math
 import os
 from pathlib import Path
 import traceback
 
 import numpy as np
 
-from src.backbone.contracts import Measurement, Observation
+from src.backbone.event_time import resolve_event_time
 from src.backbone.models import ModelSession
+from src.backbone.observation import SyntheticObservationProvider
 from src.backbone.pipeline import ReplayEngine
-from src.backbone.source import SoccerTrackSource
+from src.backbone.source import SoccerTrackSource, configured_path
 from src.player_centric_dataset import (
     ACTION_ALIASES,
     ACTION_LABELS,
     _anonymous_slots,
-    _entity_features,
-    stable_seed,
 )
-from src.player_centric_visibility import simulate_visibility
 from src.trajectory_dataset import file_digest, write_json
 
 
@@ -31,11 +28,6 @@ ROOT = Path(__file__).resolve().parents[2]
 VERSION = "football.action-corpus.0.4"
 AGE_INPUT_SCALE = 8.0
 AGE_TRAINING_SCALE = 5.0
-
-
-def _read_jsonl(path: Path) -> list[dict]:
-    with path.open(encoding="utf-8") as stream:
-        return [json.loads(line) for line in stream if line.strip()]
 
 
 def _write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -77,9 +69,15 @@ def _split_map(config: dict) -> dict[str, str]:
     return result
 
 
-def _source_paths(root: Path, match: str, half: str) -> tuple[Path, Path, Path]:
-    source_root = root / "outputs" / "trajectory_forecasting_20261016" / "cache"
-    association_root = root / "outputs" / "trajectory_audit_20261016"
+def _source_paths(root: Path, match: str, half: str, configured: dict | None = None) -> tuple[Path, Path, Path]:
+    configured = configured or {}
+    source_root = configured_path(
+        root, configured.get("tracking_cache"),
+        Path("outputs") / "trajectory_forecasting_20261016" / "cache",
+    )
+    association_root = configured_path(
+        root, configured.get("associations"), Path("outputs") / "trajectory_audit_20261016",
+    )
     return (
         source_root / f"{match}_{half}.npz",
         source_root / f"{match}_{half}.json",
@@ -91,168 +89,92 @@ def _feature_input(
     source: SoccerTrackSource,
     actor_track: str,
     anchor: int,
-    event_key: str,
     slot_to_player: dict[int, str],
     models: ModelSession,
     *,
+    observation_config: dict | None = None,
+    include_passing_assessment: bool = False,
     audit_legacy: bool = False,
 ) -> tuple[dict | None, dict]:
     raw = source.raw
-    history_frames = 50
-    stride = 5
-    indices = list(range(anchor - history_frames, anchor + 1, stride))
-    if len(indices) != 11 or indices[0] < 0 or indices[-1] != anchor:
+    model_indices = list(range(anchor - 50, anchor + 1, 5))
+    if len(model_indices) != 11 or model_indices[0] < 0 or model_indices[-1] != anchor:
         return None, {"reason": "insufficient_causal_history"}
     try:
         actor_slot = int(actor_track.removeprefix("track_"))
     except ValueError:
         return None, {"reason": "invalid_actor_track"}
-    if actor_slot >= raw["xy"].shape[1] or not raw["observed"][anchor, actor_slot]:
+    if actor_slot < 0 or actor_slot >= raw["xy"].shape[1] or not raw["observed"][anchor, actor_slot]:
         return None, {"reason": "actor_missing_at_query"}
+    segment = int(raw["segments"][anchor, actor_slot])
+    if not all(
+        raw["observed"][frame_index, actor_slot]
+        and int(raw["segments"][frame_index, actor_slot]) == segment
+        for frame_index in model_indices
+    ):
+        return None, {"reason": "actor_missing_or_discontinuous_inside_history"}
 
+    # Five causal warm-up samples give the heading provider the same six
+    # positions as a chronological replay at the first model-input sample.
+    observation_config = observation_config or {}
+    warmup_samples = int(observation_config.get("causal_warmup_samples", 5))
+    if warmup_samples < 0:
+        raise ValueError("causal_warmup_samples must be nonnegative")
+    first_frame = max(0, model_indices[0] - 5 * warmup_samples)
+    stream_frames = list(range(first_frame, anchor + 1, 5))
+    engine = ReplayEngine(models, samples=16)
+    provider = SyntheticObservationProvider(
+        actor_track,
+        seed=int(observation_config.get("seed", 42)),
+        fov=int(observation_config.get("fov_degrees", 120)),
+        dropout=bool(observation_config.get("dropout", False)),
+    )
+    observations = []
+    result = None
+    for frame_index in stream_frames:
+        frame = source.frame(frame_index)
+        observation = provider.observe(frame)
+        observations.append(observation)
+        result = engine.step(
+            observation,
+            include_passing_assessment=include_passing_assessment and frame_index == anchor,
+        )
+    inputs = engine.memory.current_input
+    if inputs is None or result is None:
+        unknown = any(
+            measurement.team not in (1, 2) or measurement.goalkeeper is None
+            for observation in observations[-11:] for measurement in observation.measurements
+        )
+        return None, {
+            "reason": "unknown_team_or_role_in_causal_observations"
+            if unknown else "causal_memory_contract_not_met",
+        }
     current_slots = np.flatnonzero(raw["observed"][anchor])
     if len(current_slots) > 22:
         return None, {"reason": "more_than_22_current_players"}
-    if actor_slot not in current_slots:
-        return None, {"reason": "actor_missing_from_current_roster"}
-    current_segments = raw["segments"][anchor, current_slots]
-    teams = raw["teams"][anchor, current_slots].astype(np.int64)
-    roles = raw["roles"][anchor, current_slots].astype(np.int64)
-    if np.any(~np.isin(teams, (1, 2))):
-        return None, {"reason": "unknown_team_metadata"}
-    if np.any(~np.isin(roles, (0, 1))):
-        return None, {"reason": "unknown_goalkeeper_metadata"}
+    current_teams = raw["teams"][anchor, current_slots].astype(np.int64)
+    current_roles = raw["roles"][anchor, current_slots].astype(np.int64)
+    anonymous_key = f"{source.provenance['source_id']}:{source.half}:{actor_track}:{anchor}"
+    anonymous_by_source = _anonymous_slots(current_slots.tolist(), slot_to_player, anonymous_key)
 
-    observed = np.zeros((len(indices), len(current_slots)), dtype=bool)
-    xy = np.zeros((len(indices), len(current_slots), 2), dtype=np.float32)
-    for time_index, frame_index in enumerate(indices):
-        observed[time_index] = (
-            raw["observed"][frame_index, current_slots]
-            & (raw["segments"][frame_index, current_slots] == current_segments)
-        )
-        xy[time_index, observed[time_index]] = raw["xy"][
-            frame_index, current_slots[observed[time_index]]
-        ]
-    local_actor = int(np.flatnonzero(current_slots == actor_slot)[0])
-    if not observed[:, local_actor].all():
-        return None, {"reason": "actor_missing_inside_history"}
-    if np.any(observed.any(axis=0) & ~observed[-1]):
-        return None, {"reason": "prior_seen_track_absent_at_query"}
-    for local_slot in range(len(current_slots)):
-        samples = observed[:, local_slot]
-        if not samples.any():
-            continue
-        if len(set(raw["teams"][np.asarray(indices)[samples], current_slots[local_slot]].tolist())) > 1:
-            return None, {"reason": "team_changed_inside_history"}
-        if len(set(raw["roles"][np.asarray(indices)[samples], current_slots[local_slot]].tolist())) > 1:
-            return None, {"reason": "goalkeeper_role_changed_inside_history"}
-
-    visible, _, reliable = simulate_visibility(
-        xy,
-        observed,
-        local_actor,
-        fov_degrees=120,
-        max_range_m=45.0,
-        seed=stable_seed(event_key, 42),
-        heading_mode="motion_random",
-    )
-    anonymous_by_source = _anonymous_slots(
-        current_slots.tolist(), slot_to_player, event_key,
-    )
-    observations = []
-    for time_index, frame_index in enumerate(indices):
-        members = []
-        for local_slot in np.flatnonzero(visible[time_index]):
-            source_slot = int(current_slots[local_slot])
-            members.append(Measurement(
-                track=f"track_{source_slot}",
-                segment=int(current_segments[local_slot]),
-                xy=tuple(float(value) for value in xy[time_index, local_slot]),
-                team=int(teams[local_slot]),
-                goalkeeper=bool(roles[local_slot]),
-            ))
-        observations.append(Observation(
-            source_id=source.provenance["source_id"],
-            half=source.half,
-            index=frame_index,
-            timestamp_s=frame_index / 25.0,
-            actor_track=actor_track,
-            measurements=tuple(members),
-        ))
-
-    engine = ReplayEngine(models, samples=16)
-    result = None
-    for observation in observations:
-        result = engine.step(observation, include_passing_assessment=False)
-    inputs = engine.memory.current_input
-    if inputs is None or result is None:
-        return None, {"reason": "causal_memory_contract_not_met"}
     x = inputs.x.copy()
     x[..., 6] = np.clip(x[..., 6] * (AGE_INPUT_SCALE / AGE_TRAINING_SCALE), 0.0, 1.0)
     if (x.shape != (11, 22, 10) or inputs.mask.shape != (11, 22)
             or np.any(~np.isfinite(x))):
-        raise ValueError(f"Unexpected causal action input for {event_key}")
-
-    aligned_legacy = None
-    audit = None
-    if audit_legacy:
-        anon_map = np.asarray(
-            [anonymous_by_source[int(slot)] for slot in current_slots], dtype=np.int64,
+        raise ValueError(
+            f"Unexpected causal action input for actor={actor_track}, anchor={anchor}, shape={x.shape}"
         )
-        old_x, old_mask, old_visible, _, _ = _entity_features(
-            xy, observed, teams, roles, local_actor, visible, anon_map,
-        )
-        memory_id_to_source = {
-            entry.identity: int(track.removeprefix("track_"))
-            for (track, _), entry in engine.memory.entries.items()
-        }
-        source_to_slot = {
-            source_id: model_slot
-            for model_slot, memory_id in inputs.identities.items()
-            if (source_id := memory_id_to_source.get(memory_id)) is not None
-        }
-        aligned_legacy = old_x.copy()
-        checked = 0
-        for local_slot, source_id in enumerate(current_slots):
-            model_slot = source_to_slot.get(int(source_id))
-            legacy_slot = int(anon_map[local_slot])
-            if model_slot is None:
-                if old_mask[:, legacy_slot].any():
-                    raise AssertionError("Original builder emitted a player absent from causal memory")
-                continue
-            np.testing.assert_array_equal(inputs.mask[:, model_slot], old_mask[:, legacy_slot])
-            np.testing.assert_array_equal(inputs.x[:, model_slot, 4] > .5, old_visible[:, legacy_slot])
-            np.testing.assert_allclose(
-                x[:, model_slot], old_x[:, legacy_slot], atol=2e-6, rtol=1e-6,
-            )
-            checked += 1
-        audit = {
-            "status": "PASS",
-            "compared_current_roster_tracks": checked,
-            "input_frames": indices,
-            "max_absolute_feature_error": float(np.max(np.abs(
-                np.stack([
-                    x[:, source_to_slot[int(source_id)]]
-                    - old_x[:, int(anon_map[local_slot])]
-                    for local_slot, source_id in enumerate(current_slots)
-                    if int(source_id) in source_to_slot
-                ])
-            ))),
-            "class_mapping_and_labels_not_used_by_feature_builder": True,
-        }
 
-    # Reorder privileged state by the legacy event-local anonymous slot map.
     exo_xy = np.zeros((22, 2), dtype=np.float32)
     exo_mask = np.zeros(22, dtype=bool)
     exo_team = np.zeros(22, dtype=np.int8)
     exo_goalkeeper = np.zeros(22, dtype=bool)
-    slot_to_local = {int(slot): local for local, slot in enumerate(current_slots)}
     for source_slot, anonymous_slot in anonymous_by_source.items():
-        local = slot_to_local[int(source_slot)]
         exo_xy[int(anonymous_slot)] = raw["xy"][anchor, int(source_slot)]
         exo_mask[int(anonymous_slot)] = True
-        exo_team[int(anonymous_slot)] = int(teams[local])
-        exo_goalkeeper[int(anonymous_slot)] = bool(roles[local])
+        local = int(np.flatnonzero(current_slots == source_slot)[0])
+        exo_team[int(anonymous_slot)] = int(current_teams[local])
+        exo_goalkeeper[int(anonymous_slot)] = bool(current_roles[local]) if current_roles[local] in (0, 1) else False
     return {
         "x": x,
         "mask": inputs.mask.copy(),
@@ -261,17 +183,27 @@ def _feature_input(
         "exo_mask": exo_mask,
         "exo_team": exo_team,
         "exo_goalkeeper": exo_goalkeeper,
-        "reliable_heading_samples": int(reliable.sum()),
-        "history_frames": indices,
+        "reliable_heading_samples": sum(
+            "Motion heading unreliable" not in warning for observation in observations
+            for warning in observation.warnings
+        ),
+        "history_frames": model_indices,
+        "warmup_frames": stream_frames[:max(0, len(stream_frames) - len(model_indices))],
         "actor_xy": [float(value) for value in raw["xy"][anchor, actor_slot]],
         "exo_track_slot_order": [
             int(source_slot)
             for source_slot, _ in sorted(anonymous_by_source.items(), key=lambda pair: pair[1])
         ],
-        "legacy_audit": audit,
+        "legacy_audit": {
+            "status": "NOT_COMPARABLE_CHANGED_CAUSAL_OBSERVATION",
+            "observation_builder": "SyntheticObservationProvider + CausalMemory",
+            "visibility_seed_semantics": "source/half/actor-segment/actor/frame; annotation independent",
+            "roster_policy": "first-sight memory; no query-time roster truncation",
+        } if audit_legacy else None,
         "model_input": inputs,
         "engine": engine,
-        "observations": observations,
+        "observations": observations[-11:],
+        "replay_result": result,
     }, {"reason": None}
 
 
@@ -326,9 +258,17 @@ def _build_half_shard(
     code_sha: str,
 ) -> dict:
     match, half = str(source_spec["match"]), str(source_spec["half"])
-    cache_path, cache_meta_path, association_path = _source_paths(root, match, half)
-    bas_path = root / "data" / f"{match}_12_class_events.json"
-    source = SoccerTrackSource(root, match, half)
+    source_settings = config.get("source_paths", {})
+    cache_path, cache_meta_path, association_path = _source_paths(
+        root, match, half, source_settings,
+    )
+    event_root = configured_path(root, source_settings.get("event_data"), Path("data"))
+    bas_path = event_root / f"{match}_12_class_events.json"
+    source = SoccerTrackSource(
+        root, match, half,
+        cache_root=source_settings.get("tracking_cache"),
+        association_root=source_settings.get("associations"),
+    )
     with cache_path.open("rb"):
         pass
     cache_meta = json.loads(cache_meta_path.read_text(encoding="utf-8"))
@@ -411,27 +351,24 @@ def _build_half_shard(
         supported_count += 1
         stats["supported_labeled_events"] += 1
         class_counts[f"raw:{action}"] += 1
-        if not event_file.get("clock", "").startswith("ms from the first frame"):
-            metadata["exclusion_reason"] = "unsupported_event_clock"
+        resolution = resolve_event_time(
+            event.get("position"),
+            event.get("frame"),
+            clock=event_file.get("clock"),
+            gsr_info=cache_meta.get("gsr_info", {}),
+            source_frame_count=len(source.raw["xy"]),
+        )
+        metadata["time_resolution"] = resolution.to_dict()
+        if resolution.status != "supported":
+            metadata["exclusion_reason"] = resolution.reason or "unsupported_event_time"
             exclusions[metadata["exclusion_reason"]] += 1
             metadata_rows.append(metadata)
             continue
-        try:
-            position_ms = float(event["position"])
-            stable_id_frame = int(event["frame"])
-            query_frame = int(math.floor(position_ms / 40.0))
-        except (KeyError, TypeError, ValueError, OverflowError):
-            metadata["exclusion_reason"] = "invalid_event_time"
-            exclusions[metadata["exclusion_reason"]] += 1
-            metadata_rows.append(metadata)
-            continue
+        position_ms = resolution.position_ms
+        stable_id_frame = int(event["frame"])
+        query_frame = int(resolution.native_zero_based_frame)
         metadata["position_ms"] = position_ms
         metadata["query_anchor_frame"] = query_frame
-        if abs(stable_id_frame - query_frame) > 1:
-            metadata["exclusion_reason"] = "unsupported_event_frame_alignment"
-            exclusions[metadata["exclusion_reason"]] += 1
-            metadata_rows.append(metadata)
-            continue
         if query_frame < int(source_spec["frame_start"]) or query_frame >= int(source_spec["frame_end_exclusive"]):
             metadata["exclusion_reason"] = "outside_configured_source_interval"
             exclusions[metadata["exclusion_reason"]] += 1
@@ -447,7 +384,8 @@ def _build_half_shard(
         actor_track = f"track_{actor_slot}"
         sample_id = f"{match}_{half}:{actor_track}:{query_frame}:event:{annotation_index}"
         tensor, failure = _feature_input(
-            source, actor_track, query_frame, event_id, slot_to_player, models,
+            source, actor_track, query_frame, slot_to_player, models,
+            observation_config=config["observation"],
             audit_legacy=not parity_records,
         )
         if tensor is None:
@@ -456,7 +394,6 @@ def _build_half_shard(
             exclusions[reason] += 1
             metadata_rows.append(metadata)
             continue
-        inputs = tensor["model_input"]
         student_rows.append({
             "sample_id": sample_id,
             "event_id": event_id,
@@ -495,7 +432,7 @@ def _build_half_shard(
                 "mapping_sha256": file_digest(root / "src" / "recode_primary_actions.py"),
                 "canonical_aliases_file": "src/player_centric_dataset.py",
                 "source_label_normalization": "uppercase; spaces converted to underscores",
-                "join_method": "stable match_period_frame_annotation-index into BAS actions; verified BAS frame/period and source label",
+                "join_method": "stable BAS event ID plus annotation index; frame/period and original label revalidated",
             },
             "actor": {
                 "source_player_id": actor_player,
@@ -504,13 +441,17 @@ def _build_half_shard(
                 "association_sha256": association_sha,
             },
             "timing": {
-                "position_ms": position_ms,
+                **resolution.to_dict(),
                 "stable_id_frame": stable_id_frame,
                 "query_anchor_frame": query_frame,
-                "alignment_delta_frames": stable_id_frame - query_frame,
                 "input_frame_indices": tensor["history_frames"],
                 "input_timestamps_s": [frame / 25.0 for frame in tensor["history_frames"]],
+                "warmup_frames": tensor["warmup_frames"],
                 "no_post_event_frames": True,
+                "timing_semantics": (
+                    "Causal query is floor(position_ms * native_fps / 1000); stable BAS frame is an independent "
+                    "rounded-frame/index-origin consistency check. Logical 25 Hz model grid; not certified physical contact."
+                ),
             },
             "source": {
                 "cache_path": str(cache_path.resolve()),
@@ -630,9 +571,13 @@ def _build_unlabeled_windows(
     excluded = Counter()
     for source_spec in sources:
         match, half = str(source_spec["match"]), str(source_spec["half"])
-        source = SoccerTrackSource(root, match, half)
+        source_settings = config.get("source_paths", {})
+        source = SoccerTrackSource(
+            root, match, half,
+            cache_root=source_settings.get("tracking_cache"),
+            association_root=source_settings.get("associations"),
+        )
         actor_track = str(settings["actor_track"])
-        slot = int(actor_track.removeprefix("track_"))
         for anchor in range(
             int(settings["first_query_frame"]),
             int(source_spec["frame_end_exclusive"]),
@@ -640,7 +585,9 @@ def _build_unlabeled_windows(
         ):
             sample_id = f"{match}_{half}:{actor_track}:{anchor}:unlabeled"
             tensor, failure = _feature_input(
-                source, actor_track, anchor, sample_id, {}, models, audit_legacy=False,
+                source, actor_track, anchor, {}, models,
+                observation_config=config["observation"],
+                audit_legacy=False,
             )
             if tensor is None:
                 excluded[failure["reason"]] += 1
@@ -704,15 +651,24 @@ def export_corpus(config_path: Path, output: Path, *, resume: bool = False, root
     config_sha = file_digest(config_path)
     code_files = (
         Path(__file__),
+        Path(__file__).with_name("event_time.py"),
         Path(__file__).with_name("actions.py"),
+        Path(__file__).with_name("contracts.py"),
         Path(__file__).with_name("memory.py"),
         Path(__file__).with_name("observation.py"),
+        Path(__file__).with_name("pipeline.py"),
         Path(__file__).with_name("source.py"),
         ROOT / "src" / "player_centric_dataset.py",
         ROOT / "src" / "player_centric_visibility.py",
+        ROOT / "src" / "belief_observation.py",
+        ROOT / "src" / "models" / "partial_observation_student.py",
     )
     code_sha = "|".join(file_digest(root / file.relative_to(ROOT)) for file in code_files)
-    models = ModelSession(root / "outputs" / "dynamic_gnn_tactical_20261019", backend="last_seen")
+    model_path = configured_path(
+        root, config.get("source_paths", {}).get("belief_experiment"),
+        Path("outputs") / "dynamic_gnn_tactical_20261019",
+    )
+    models = ModelSession(model_path, backend="last_seen")
     shard_records = []
     totals = Counter()
     split_class_counts = defaultdict(Counter)

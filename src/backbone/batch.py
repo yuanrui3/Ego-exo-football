@@ -13,12 +13,13 @@ import traceback
 
 import torch
 
+from src.backbone.actions import ActionModelSession
 from src.backbone.export import dataset_relation
 from src.backbone.external import ExternalObservationSource
 from src.backbone.models import ModelSession
 from src.backbone.observation import SyntheticObservationProvider
 from src.backbone.pipeline import ReplayEngine
-from src.backbone.source import EvaluationReference, SoccerTrackSource, load_source
+from src.backbone.source import EvaluationReference, SoccerTrackSource, configured_path, load_source
 from src.dynamic_football_data import FIT_MATCHES
 from src.trajectory_dataset import atomic_replace, file_digest, write_json
 
@@ -40,7 +41,10 @@ def implementation_hashes(root=ROOT):
     return {str(path.relative_to(root)): file_digest(path) for path in files}
 
 
-def model_dependencies(experiment: Path, backend: str, exo: bool):
+def model_dependencies(
+    experiment: Path, backend: str, exo: bool, action_checkpoint: str | None = None,
+    root: Path = ROOT,
+):
     manifest_path = experiment / "integration_manifest.json"
     manifest = json.loads(manifest_path.read_text())
     names = {"G1": "world_baseline", "G3": "world_gnn_alternative", "G4": "belief_gnn_alternative"}
@@ -52,6 +56,15 @@ def model_dependencies(experiment: Path, backend: str, exo: bool):
         checkpoint = experiment / manifest["selected_checkpoints"][key]["path"]
         for path in (checkpoint, checkpoint.parent / "config.json", checkpoint.parent / "result.json"):
             result[str(path)] = file_digest(path)
+    if action_checkpoint is not None:
+        checkpoint = Path(action_checkpoint)
+        if not checkpoint.is_absolute():
+            checkpoint = root / checkpoint
+        config = checkpoint.parent / "config.json"
+        if not checkpoint.is_file() or not config.is_file():
+            raise FileNotFoundError(f"Configured action checkpoint or its config is missing: {checkpoint}")
+        result[str(checkpoint.resolve())] = file_digest(checkpoint)
+        result[str(config.resolve())] = file_digest(config)
     return result
 
 
@@ -65,8 +78,16 @@ def source_dependencies(root: Path, job: dict):
         return {str(path.resolve()): file_digest(path)}
     if adapter == "soccertrack_cache":
         match, half = str(job["match"]), job["half"]
-        path = root / "outputs" / "trajectory_forecasting_20261016" / "cache" / f"{match}_{half}.npz"
-        association = root / "outputs" / "trajectory_audit_20261016" / f"associations_{match}_{half}.json"
+        paths = job.get("source_paths", {})
+        cache_root = configured_path(
+            root, paths.get("tracking_cache"),
+            Path("outputs") / "trajectory_forecasting_20261016" / "cache",
+        )
+        association_root = configured_path(
+            root, paths.get("associations"), Path("outputs") / "trajectory_audit_20261016",
+        )
+        path = cache_root / f"{match}_{half}.npz"
+        association = association_root / f"associations_{match}_{half}.json"
         return {str(p.resolve()): file_digest(p) for p in (path, path.with_suffix(".json"), association)}
     raise ValueError(f"Unsupported source adapter: {adapter}")
 
@@ -78,8 +99,17 @@ def validate_job(job: dict):
         raise ValueError("Training export is restricted to the six permitted fitting matches")
     if not isinstance(job["start_frame"], int) or isinstance(job["start_frame"], bool) or job["start_frame"] < 0:
         raise ValueError("start_frame must be a nonnegative integer")
-    if not isinstance(job["samples"], int) or isinstance(job["samples"], bool) or not 11 <= job["samples"] <= 1500:
-        raise ValueError("Each bounded segment requires 11..1500 samples at 0.2s")
+    long_sequence_mode = job.get("long_sequence_mode", False)
+    if not isinstance(long_sequence_mode, bool):
+        raise ValueError("long_sequence_mode must be a boolean")
+    if long_sequence_mode and job["intended_use"] != "retrospective_replay":
+        raise ValueError("Long-sequence mode is restricted to retrospective replay")
+    max_samples = 3000 if long_sequence_mode else 1500
+    if (not isinstance(job["samples"], int) or isinstance(job["samples"], bool)
+            or not 11 <= job["samples"] <= max_samples):
+        raise ValueError(f"Each bounded segment requires 11..{max_samples} samples at 0.2s")
+    if long_sequence_mode and job["samples"] <= 1500:
+        raise ValueError("long_sequence_mode is reserved for sequences longer than 1500 samples")
     actors = job["actors"]
     if (not isinstance(actors, list) or not 1 <= len(actors) <= 4 or len(set(actors)) != len(actors)
             or any(not isinstance(actor, str) or not actor for actor in actors)):
@@ -90,6 +120,29 @@ def validate_job(job: dict):
     if (not isinstance(destination, str) or not destination
             or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in destination)):
         raise ValueError("output_destination must be a safe single directory name within batch/jobs")
+    queries = job.get("action_queries", [])
+    if not isinstance(queries, list):
+        raise ValueError("action_queries must be a list of event-conditioned query records")
+    valid_frames = set(range(job["start_frame"], job["start_frame"] + job["samples"] * 5, 5))
+    for query in queries:
+        if not isinstance(query, dict):
+            raise ValueError("Each action query must be an object")
+        frame = query.get("frame_index")
+        actor = query.get("actor_track")
+        if isinstance(frame, bool) or not isinstance(frame, int) or frame not in valid_frames:
+            raise ValueError("Action query frame must match an exactly sampled segment frame")
+        if actor not in actors:
+            raise ValueError("Action query actor must be one of the job's configured actors")
+        if not isinstance(query.get("event_id"), str) or not query["event_id"]:
+            raise ValueError("Action query requires a stable event_id")
+        if (isinstance(query.get("annotation_index"), bool)
+                or not isinstance(query.get("annotation_index"), int)):
+            raise ValueError("Action query requires its BAS annotation_index")
+        if not query.get("conditioning", "").startswith("event-conditioned"):
+            raise ValueError("Action queries must declare event-conditioned demonstration semantics")
+    query_keys = [(query["frame_index"], query["actor_track"]) for query in queries]
+    if len(query_keys) != len(set(query_keys)):
+        raise ValueError("Action query frames must be unique per actor within a segment")
 
 
 def source_reference(source, frame):
@@ -128,8 +181,15 @@ def student_record(observation, engine, result):
     }
 
 
-def execute_job(root: Path, output: Path, job: dict, models: ModelSession):
+def execute_job(
+    root: Path, output: Path, job: dict, models: ModelSession,
+    action_model: ActionModelSession | None = None,
+):
     validate_job(job)
+    world_calls_before = models.world_forward_calls
+    world_batch_before = models.world_forward_batch_elements
+    action_calls_before = action_model.forward_calls if action_model is not None else 0
+    action_batch_before = action_model.forward_batch_elements if action_model is not None else 0
     source = load_source(root, job, job["source_adapter"])
     if str(source.match) != str(job["match"]):
         raise ValueError("Source identity mismatch")
@@ -153,17 +213,35 @@ def execute_job(root: Path, output: Path, job: dict, models: ModelSession):
             for name in ("student", "privileged_exo", "optional_targets"):
                 writers[name] = (folder / f"{name}.tmp").open("w", encoding="utf-8")
         for actor in job["actors"]:
+            query_by_frame = {
+                int(query["frame_index"]): query
+                for query in job.get("action_queries", [])
+                if query["actor_track"] == actor
+            }
             observations = job.get("observation", {})
             if set(observations) - {"seed", "fov", "dropout"}:
                 raise ValueError("Unknown observation configuration; supported: seed/fov/dropout")
             provider = SyntheticObservationProvider(actor, **observations)
             engine = ReplayEngine(models, job.get("expiry_s", 6.), job.get("fallback", "last_seen"),
-                                  job.get("mc_samples", 128))
+                                  job.get("mc_samples", 128), action_model=action_model)
             rows = []
             for number, frame in enumerate(frames):
                 obs = (source.observe(frame, provider) if isinstance(source, ExternalObservationSource)
                        else provider.observe(frame))
-                row = engine.step(obs, include_passing_assessment=job.get("passing_assessment", True))
+                query = query_by_frame.get(frame.index)
+                row = engine.step(
+                    obs,
+                    include_passing_assessment=job.get("passing_assessment", True),
+                    action_query=query is not None,
+                )
+                if query is not None:
+                    row["recorded_annotation_evaluation_only"] = {
+                        key: query[key] for key in (
+                            "event_id", "annotation_index", "original_bas_label",
+                            "mapped_action_label", "mapping_provenance",
+                        ) if key in query
+                    }
+                    row["action_query_conditioning"] = query["conditioning"]
                 row["modules"]["receiver_reference"] = row.pop("exo_reference", None)
                 if row["assessment"] is not None:
                     row["assessment"]["source_coverage"] = "PARTIAL_OR_UNKNOWN"
@@ -242,16 +320,26 @@ def execute_job(root: Path, output: Path, job: dict, models: ModelSession):
         "schema_version": VERSION, "notice": "External/source observations; visibility may be simulated, NOT measured gaze.",
         "description": "Observation ingestion -> causal memory -> frozen belief -> conditional Gaussian geometry",
         "units": "metres", "sampling_seconds": .2, "config": job, "model_provenance": models.provenance,
+        "action_model_provenance": action_model.provenance if action_model is not None else None,
         "model_load_counts": models.load_counts, "truth_overlay_default": False, "exo_reference_default": False,
         "sequences": [sequence],
     }
     write_json(output / "replay.json", bundle)
-    payload = json.dumps(bundle, allow_nan=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
-    template = Path(__file__).with_name("viewer.html").read_text(encoding="utf-8")
-    temporary = output / "viewer.tmp.html"
-    temporary.write_text(template.replace("__REPLAY_JSON__", payload), encoding="utf-8")
-    atomic_replace(temporary, output / "viewer.html")
+    if job.get("emit_viewer", True):
+        payload = json.dumps(bundle, allow_nan=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
+        template = Path(__file__).with_name("viewer.html").read_text(encoding="utf-8")
+        temporary = output / "viewer.tmp.html"
+        temporary.write_text(template.replace("__REPLAY_JSON__", payload), encoding="utf-8")
+        atomic_replace(temporary, output / "viewer.html")
     stats["requested_actor_frames"] = job["samples"] * len(job["actors"])
+    stats["world_model_forward_calls"] = models.world_forward_calls - world_calls_before
+    stats["world_model_forward_batch_elements"] = models.world_forward_batch_elements - world_batch_before
+    stats["action_model_forward_calls"] = (
+        action_model.forward_calls - action_calls_before if action_model is not None else 0
+    )
+    stats["action_model_forward_batch_elements"] = (
+        action_model.forward_batch_elements - action_batch_before if action_model is not None else 0
+    )
     stats["source_frames_not_supplied"] = (job["samples"] - len(frames)) * len(job["actors"])
     stats.setdefault("training_records", 0)
     stats.setdefault("unavailable_assessments", 0)
@@ -279,6 +367,52 @@ def completed_matches(folder: Path, fingerprint: str) -> bool:
         return False
 
 
+def _write_batch_viewer(output: Path, results: list[dict], config: dict) -> None:
+    sequences = []
+    template = Path(__file__).with_name("viewer.html").read_text(encoding="utf-8")
+    model_provenance, action_provenance = {}, None
+    viewer_job_ids = set(config.get("viewer_job_ids", []))
+    completed_ids = {
+        result.get("id") for result in results
+        if result.get("status") in ("COMPLETE", "SKIPPED_HASH_MATCH")
+    }
+    if viewer_job_ids - completed_ids:
+        raise ValueError(f"Batch viewer selection references incomplete or unknown jobs: {sorted(viewer_job_ids - completed_ids)}")
+    for result in results:
+        if result.get("status") not in ("COMPLETE", "SKIPPED_HASH_MATCH"):
+            continue
+        if viewer_job_ids and result["id"] not in viewer_job_ids:
+            continue
+        replay_path = Path(result["output"]) / "replay.json"
+        if not replay_path.is_file():
+            raise FileNotFoundError(f"Completed batch job has no replay bundle: {replay_path}")
+        replay = json.loads(replay_path.read_text(encoding="utf-8"))
+        sequences.extend(replay["sequences"])
+        model_provenance = replay.get("model_provenance", model_provenance)
+        action_provenance = replay.get("action_model_provenance", action_provenance)
+    if not sequences:
+        return
+    bundle = {
+        "schema_version": VERSION,
+        "notice": "Combined chronological batch replay; source/evaluation truth is not player input.",
+        "description": "Configured segment outputs from the standard causal replay engine.",
+        "units": "metres",
+        "sampling_seconds": 0.2,
+        "config": config,
+        "model_provenance": model_provenance,
+        "action_model_provenance": action_provenance,
+        "truth_overlay_default": False,
+        "exo_reference_default": False,
+        "sequences": sequences,
+    }
+    write_json(output / "batch_replay.json", bundle)
+    payload = json.dumps(bundle, allow_nan=False).replace(
+        "<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
+    temporary = output / "batch_viewer.tmp.html"
+    temporary.write_text(template.replace("__REPLAY_JSON__", payload), encoding="utf-8")
+    atomic_replace(temporary, output / "viewer.html")
+
+
 def run_batch(config_path: Path, output: Path, resume=False, root=ROOT, only=None):
     started = time.perf_counter()
     config = json.loads(config_path.read_text(encoding="utf-8"))
@@ -292,6 +426,9 @@ def run_batch(config_path: Path, output: Path, resume=False, root=ROOT, only=Non
             or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-" for c in name)
             for name in ids)):
         raise ValueError("Job IDs must be unique safe directory names")
+    viewer_job_ids = set(config.get("viewer_job_ids", []))
+    if viewer_job_ids - set(ids):
+        raise ValueError(f"viewer_job_ids references unknown jobs: {sorted(viewer_job_ids - set(ids))}")
     if only is not None:
         if only not in ids:
             raise ValueError(f"Unknown selected job: {only}")
@@ -304,10 +441,12 @@ def run_batch(config_path: Path, output: Path, resume=False, root=ROOT, only=Non
     torch.set_num_threads(4)
     code_hashes = implementation_hashes(root)
     results, active_key, models, loads = [], None, None, 0
+    action_model, active_action_key, action_loads = None, None, 0
     defaults = config.get("defaults", {})
     for specification in jobs:
         job_start = time.perf_counter()
         job = {**defaults, **specification}
+        job["emit_viewer"] = not viewer_job_ids or job["id"] in viewer_job_ids
         folder = output / "jobs" / job["id"]
         folder.mkdir(parents=True, exist_ok=True)
         fingerprint = None
@@ -322,7 +461,10 @@ def run_batch(config_path: Path, output: Path, resume=False, root=ROOT, only=Non
                 raise ValueError("Research queue must remain PAUSED_FOR_INTEGRATION")
             dependencies = {
                 "source": source_dependencies(root, job), "implementation": code_hashes,
-                "models": model_dependencies(experiment, job["backend"], job.get("exo_p0", False)),
+                "models": model_dependencies(
+                    experiment, job["backend"], job.get("exo_p0", False),
+                    job.get("action_checkpoint"), root,
+                ),
             }
             fingerprint = digest({"job": job, "dependencies": dependencies})
             # Keep artifact paths below legacy Windows rename limits in this workspace.
@@ -351,9 +493,24 @@ def run_batch(config_path: Path, output: Path, resume=False, root=ROOT, only=Non
             if key != active_key:
                 models = ModelSession(experiment, job["backend"], job.get("exo_p0", False), job.get("device", "cpu"))
                 active_key, loads = key, loads + 1
-            metrics = execute_job(root, folder, job, models)
+            action_checkpoint = job.get("action_checkpoint")
+            if action_checkpoint is None:
+                action_model, active_action_key = None, None
+            else:
+                action_key = (str(action_checkpoint), job.get("device", "cpu"),
+                              dependencies["models"].get(str((root / action_checkpoint).resolve())))
+                if action_key != active_action_key:
+                    action_path = Path(action_checkpoint)
+                    if not action_path.is_absolute():
+                        action_path = root / action_path
+                    action_model = ActionModelSession(action_path, device=job.get("device", "cpu"))
+                    active_action_key, action_loads = action_key, action_loads + 1
+            metrics = execute_job(root, folder, job, models, action_model)
             if (source_dependencies(root, job) != dependencies["source"] or file_digest(progress) != research_hash
-                    or model_dependencies(experiment, job["backend"], job.get("exo_p0", False)) != dependencies["models"]
+                    or model_dependencies(
+                        experiment, job["backend"], job.get("exo_p0", False),
+                        job.get("action_checkpoint"), root,
+                    ) != dependencies["models"]
                     or implementation_hashes(root) != code_hashes):
                 raise RuntimeError("Source or paused research changed during job; output not marked complete")
             artifacts = {str(path.relative_to(folder)): file_digest(path) for path in folder.rglob("*")
@@ -384,16 +541,21 @@ def run_batch(config_path: Path, output: Path, resume=False, root=ROOT, only=Non
     totals = Counter()
     for result in results:
         for name in ("frames", "usable_observations", "fallbacks", "unavailable_assessments",
-                     "available_assessments", "learned_hidden_estimates", "training_records", "output_bytes"):
+                     "available_assessments", "learned_hidden_estimates", "training_records", "output_bytes",
+                     "world_model_forward_calls", "world_model_forward_batch_elements",
+                     "action_model_forward_calls", "action_model_forward_batch_elements"):
             totals[name] += result.get("metrics", {}).get(name, 0)
     summary = {
         "schema_version": VERSION, "status": "FAILED" if any(r["status"] == "FAILED" for r in results) else "COMPLETE",
         "config_sha256": file_digest(config_path), "implementation": code_hashes,
         "created_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "execution_seconds": time.perf_counter() - started, "model_sessions_loaded": loads,
+        "action_model_sessions_loaded": action_loads,
         "jobs": results, "counts": dict(Counter(r["status"] for r in results)), "totals": dict(totals),
         "no_training": True,
     }
+    if summary["status"] == "COMPLETE":
+        _write_batch_viewer(output, results, config)
     write_json(output / "batch_summary.json", summary)
     write_json(output / "training_index.json", {
         "schema_version": VERSION, "status": summary["status"],

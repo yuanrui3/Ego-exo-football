@@ -1,0 +1,55 @@
+{
+  "schema_version": "football.backbone-integration.0.5",
+  "source_root": ".",
+  "output_directory": "outputs/backbone_v0_5_20261020",
+  "source_paths": {
+    "event_data": "data",
+    "tracking_cache": "outputs/trajectory_forecasting_20261016/cache",
+    "associations": "outputs/trajectory_audit_20261016",
+    "belief_experiment": "outputs/dynamic_gnn_tactical_20261019",
+    "s4_initialization": "outputs/partial_observation_20261017/students/development/S4/width96/best.pt",
+    "video_root": "data/video_review_v1_2/videos",
+    "video_weights": "outputs/hidden_defender_20261019/video/weights/yolo11n-pose.pt"
+  },
+  "split_manifest": {
+    "fitting": ["117092", "117093", "118576", "118578", "128057", "132831"],
+    "development": ["132877"],
+    "retrospective_evaluation": ["118577", "128058"]
+  },
+  "observation_contract": {
+    "logical_model_grid_hz": 25,
+    "samples": 11,
+    "stride_native_frames": 5,
+    "history_seconds": 2.0,
+    "max_entities": 22,
+    "field_of_view_degrees": 120,
+    "range_m": 45.0,
+    "causal_heading_warmup_samples": 5,
+    "age_scale_seconds": 5.0,
+    "dropout": false
+  },
+  "training": {
+    "seed": 42,
+    "initialization_sha256": "f308b679ad0104ebde27b648c6b25dcf887ab3c2697e723fa2e93a3f0b43d5c9",
+    "distillation": false,
+    "max_epochs": 10,
+    "batch_size": 256,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "mixed_precision": true
+  },
+  "video_ingestion": {
+    "target_fps": 5,
+    "clip_seconds": 60,
+    "clips": [
+      {"match": "117092", "half": "1st", "start_s": 60},
+      {"match": "117092", "half": "2nd", "start_s": 600},
+      {"match": "117093", "half": "1st", "start_s": 1200}
+    ],
+    "max_runtime_minutes": 90,
+    "detector_confidence": 0.15,
+    "tile_columns": 4,
+    "tile_overlap_px": 64
+  }
+}

@@ -23,6 +23,8 @@ class ModelSession:
         self.world = self.p0 = None
         self.provenance = {}
         self.load_counts = {"world": 0, "p0": 0}
+        self.world_forward_calls = 0
+        self.world_forward_batch_elements = 0
         manifest = json.loads((experiment / "integration_manifest.json").read_text())
         for name, key in ((backend, keys.get(backend)), ("P0", "receiver_baseline" if exo_p0 else None)):
             if key is None:
@@ -58,6 +60,8 @@ class ModelSession:
             raise ValueError("No learned backend selected")
         batch = {key: value.to(self.device) for key, value in inputs.tensors().items()}
         output = self.world(**batch)
+        self.world_forward_calls += 1
+        self.world_forward_batch_elements += int(batch["x"].shape[0])
         result = {key: value.float().cpu().numpy()[0] for key, value in (
             ("mean", output["mean"]), ("std", output["log_std"].exp()),
             ("occupancy", output["occupancy_logits"].sigmoid()),

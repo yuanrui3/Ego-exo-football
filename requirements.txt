@@ -6,3 +6,4 @@ accelerate>=1.0
 ijson>=3.3
 numpy>=1.26
 scikit-learn>=1.5
+scipy>=1.10

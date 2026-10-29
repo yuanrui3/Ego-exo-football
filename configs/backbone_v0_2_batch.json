@@ -1,0 +1,101 @@
+{
+  "schema_version": "backbone.batch.0.2",
+  "defaults": {
+    "experiment": "outputs/dynamic_gnn_tactical_20261019",
+    "backend": "G1",
+    "device": "cpu",
+    "exo_p0": true,
+    "source_adapter": "external_jsonl",
+    "half": "1st",
+    "samples": 100,
+    "actors": ["track_1"],
+    "intended_use": "retrospective_replay",
+    "observation": {"seed": 42, "fov": 120, "dropout": true},
+    "expiry_s": 6,
+    "fallback": "last_seen",
+    "mc_samples": 128,
+    "passing_assessment": true,
+    "selection": "Predeclared fixed starts 60/120/180/240s; 20s each, first v0.1 configured actor; no prediction-based filtering. Retrospective interoperability checks only."
+  },
+  "jobs": [
+    {
+      "id": "retro118577_t60",
+      "output_destination": "retro118577_t60",
+      "match": "118577",
+      "start_frame": 1500,
+      "passing_assessment": false,
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/118577_t60.jsonl"
+    },
+    {
+      "id": "retro118577_t120",
+      "output_destination": "retro118577_t120",
+      "match": "118577",
+      "start_frame": 3000,
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/118577_t120.jsonl"
+    },
+    {
+      "id": "retro118577_t180",
+      "output_destination": "retro118577_t180",
+      "match": "118577",
+      "start_frame": 4500,
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/118577_t180.jsonl"
+    },
+    {
+      "id": "retro118577_t240",
+      "output_destination": "retro118577_t240",
+      "match": "118577",
+      "start_frame": 6000,
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/118577_t240.jsonl"
+    },
+    {
+      "id": "retro128058_t60",
+      "output_destination": "retro128058_t60",
+      "match": "128058",
+      "start_frame": 1500,
+      "actors": ["track_0"],
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/128058_t60.jsonl"
+    },
+    {
+      "id": "retro128058_t120",
+      "output_destination": "retro128058_t120",
+      "match": "128058",
+      "start_frame": 3000,
+      "actors": ["track_0"],
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/128058_t120.jsonl"
+    },
+    {
+      "id": "retro128058_t180",
+      "output_destination": "retro128058_t180",
+      "match": "128058",
+      "start_frame": 4500,
+      "actors": ["track_0"],
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/128058_t180.jsonl"
+    },
+    {
+      "id": "retro128058_t240",
+      "output_destination": "retro128058_t240",
+      "match": "128058",
+      "start_frame": 6000,
+      "actors": ["track_0"],
+      "input_path": "outputs/backbone_v0_2_20261020_1558/inputs/128058_t240.jsonl"
+    },
+    {
+      "id": "train117092_t60",
+      "output_destination": "train117092_t60",
+      "match": "117092",
+      "source_adapter": "soccertrack_cache",
+      "start_frame": 1500,
+      "intended_use": "training_export",
+      "selection": "First fitting match at fixed 60s, 20s duration; no outcome selection; 10-frame warm-up then 90 separated records."
+    },
+    {
+      "id": "train117093_t60",
+      "output_destination": "train117093_t60",
+      "match": "117093",
+      "source_adapter": "soccertrack_cache",
+      "start_frame": 1500,
+      "intended_use": "training_export",
+      "selection": "Second fitting match at fixed 60s, 20s duration; no outcome selection; 10-frame warm-up then 90 separated records."
+    }
+  ]
+}

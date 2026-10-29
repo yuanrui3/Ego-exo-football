@@ -11,13 +11,32 @@ from src.backbone.contracts import Measurement, TrackingFrame
 from src.trajectory_dataset import file_digest
 
 
+def configured_path(root: Path, value: str | Path | None, default: str | Path) -> Path:
+    path = Path(value) if value is not None else Path(default)
+    return path if path.is_absolute() else root / path
+
+
 class SoccerTrackSource:
-    def __init__(self, root: Path, match: str, half: str):
+    def __init__(
+        self,
+        root: Path,
+        match: str,
+        half: str,
+        *,
+        cache_root: str | Path | None = None,
+        association_root: str | Path | None = None,
+    ):
         if half not in ("1st", "2nd"):
             raise ValueError("SoccerTrack half must be 1st or 2nd")
         self.match, self.half = str(match), half
-        path = root / "outputs" / "trajectory_forecasting_20261016" / "cache" / f"{match}_{half}.npz"
-        association_path = root / "outputs" / "trajectory_audit_20261016" / f"associations_{match}_{half}.json"
+        cache_directory = configured_path(
+            root, cache_root, Path("outputs") / "trajectory_forecasting_20261016" / "cache",
+        )
+        association_directory = configured_path(
+            root, association_root, Path("outputs") / "trajectory_audit_20261016",
+        )
+        path = cache_directory / f"{match}_{half}.npz"
+        association_path = association_directory / f"associations_{match}_{half}.json"
         metadata = json.loads(path.with_suffix(".json").read_text(encoding="utf-8"))
         association = json.loads(association_path.read_text(encoding="utf-8"))
         digest = file_digest(path)
@@ -42,7 +61,9 @@ class SoccerTrackSource:
         measurements = tuple(Measurement(
             f"track_{slot}", int(self.raw["segments"][index, slot]),
             tuple(float(v) for v in self.raw["xy"][index, slot]),
-            int(self.raw["teams"][index, slot]), bool(self.raw["roles"][index, slot]))
+            int(self.raw["teams"][index, slot]),
+            bool(self.raw["roles"][index, slot])
+            if int(self.raw["roles"][index, slot]) in (0, 1) else None)
             for slot in np.flatnonzero(valid))
         return TrackingFrame(self.provenance["source_id"], self.half, index, index / 25,
                              measurements, int((~valid).sum()))
@@ -83,4 +104,11 @@ def load_source(root: Path, specification: dict, adapter: str = "soccertrack_cac
         return ExternalObservationSource(root / specification["input_path"])
     if adapter != "soccertrack_cache":
         raise ValueError(f"Source adapter not implemented: {adapter}; no fabricated replacement")
-    return SoccerTrackSource(root, str(specification["match"]), specification["half"])
+    paths = specification.get("source_paths", {})
+    return SoccerTrackSource(
+        root,
+        str(specification["match"]),
+        specification["half"],
+        cache_root=paths.get("tracking_cache"),
+        association_root=paths.get("associations"),
+    )
