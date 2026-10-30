@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="600">
+<rect width="100%" height="100%" fill="white"/>
+<text x="20" y="24" font-size="18">drift: frozen visibility, pre-memory corruption</text>
+<text x="60" y="55" font-size="13">s4_availability_ratio</text>
+<path d="M60,70 v180 h400" fill="none" stroke="black"/>
+<path d="M70.0,75.0 V75.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="70.0" cy="75.0" r="3" fill="#1462a0"/>
+<path d="M95.33333333333333,75.0 V75.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="95.33333333333333" cy="75.0" r="3" fill="#1462a0"/>
+<path d="M146.0,75.0 V75.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="146.0" cy="75.0" r="3" fill="#1462a0"/>
+<path d="M247.33333333333334,75.0 V75.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="247.33333333333334" cy="75.0" r="3" fill="#1462a0"/>
+<path d="M450.0,75.0 V75.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="450.0" cy="75.0" r="3" fill="#1462a0"/>
+<polyline points="70.00,75.00 95.33,75.00 146.00,75.00 247.33,75.00 450.00,75.00" fill="none" stroke="#1462a0"/>
+<path d="M70.0,75.0 V75.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="70.0" cy="75.0" r="3" fill="#bf5420"/>
+<path d="M95.33333333333333,75.0 V75.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="95.33333333333333" cy="75.0" r="3" fill="#bf5420"/>
+<path d="M146.0,75.0 V75.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="146.0" cy="75.0" r="3" fill="#bf5420"/>
+<path d="M247.33333333333334,75.0 V75.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="247.33333333333334" cy="75.0" r="3" fill="#bf5420"/>
+<path d="M450.0,75.0 V75.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="450.0" cy="75.0" r="3" fill="#bf5420"/>
+<polyline points="70.00,75.00 95.33,75.00 146.00,75.00 247.33,75.00 450.00,75.00" fill="none" stroke="#bf5420"/>
+<path d="M70.0,75.0 V75.0" stroke="#308530" stroke-width="2"/>
+<circle cx="70.0" cy="75.0" r="3" fill="#308530"/>
+<path d="M95.33333333333333,75.0 V75.0" stroke="#308530" stroke-width="2"/>
+<circle cx="95.33333333333333" cy="75.0" r="3" fill="#308530"/>
+<path d="M146.0,75.0 V75.0" stroke="#308530" stroke-width="2"/>
+<circle cx="146.0" cy="75.0" r="3" fill="#308530"/>
+<path d="M247.33333333333334,75.0 V75.0" stroke="#308530" stroke-width="2"/>
+<circle cx="247.33333333333334" cy="75.0" r="3" fill="#308530"/>
+<path d="M450.0,75.0 V75.0" stroke="#308530" stroke-width="2"/>
+<circle cx="450.0" cy="75.0" r="3" fill="#308530"/>
+<polyline points="70.00,75.00 95.33,75.00 146.00,75.00 247.33,75.00 450.00,75.00" fill="none" stroke="#308530"/>
+<text x="60" y="270" font-size="11">severity [0.25, 0.5, 1.0, 2.0, 4.0]; y[0,1]</text>
+<text x="570" y="55" font-size="13">paired_macro_f1_delta</text>
+<path d="M570,70 v180 h400" fill="none" stroke="black"/>
+<path d="M580.0,233.18764292267747 V231.19306154383443" stroke="#1462a0" stroke-width="2"/>
+<circle cx="580.0" cy="231.94300674553847" r="3" fill="#1462a0"/>
+<path d="M605.3333333333334,233.88652775651994 V231.76655923620552" stroke="#1462a0" stroke-width="2"/>
+<circle cx="605.3333333333334" cy="233.1147025743302" r="3" fill="#1462a0"/>
+<path d="M656.0,236.80899863631103 V233.98785860655053" stroke="#1462a0" stroke-width="2"/>
+<circle cx="656.0" cy="235.56425201148753" r="3" fill="#1462a0"/>
+<path d="M757.3333333333334,245.58340623286932 V238.21790893628454" stroke="#1462a0" stroke-width="2"/>
+<circle cx="757.3333333333334" cy="241.7157751311172" r="3" fill="#1462a0"/>
+<path d="M960.0,245.8063106291479 V243.80878372243598" stroke="#1462a0" stroke-width="2"/>
+<circle cx="960.0" cy="244.7728822630309" r="3" fill="#1462a0"/>
+<polyline points="580.00,231.94 605.33,233.11 656.00,235.56 757.33,241.72 960.00,244.77" fill="none" stroke="#1462a0"/>
+<path d="M580.0,231.89319695042047 V225.72893698390513" stroke="#bf5420" stroke-width="2"/>
+<circle cx="580.0" cy="229.0520099789786" r="3" fill="#bf5420"/>
+<path d="M605.3333333333334,231.8064963411928 V226.75776005550188" stroke="#bf5420" stroke-width="2"/>
+<circle cx="605.3333333333334" cy="230.04324042067142" r="3" fill="#bf5420"/>
+<path d="M656.0,231.16311190506698 V227.75418310879945" stroke="#bf5420" stroke-width="2"/>
+<circle cx="656.0" cy="229.07782441246226" r="3" fill="#bf5420"/>
+<path d="M757.3333333333334,244.52802275851147 V223.20115441201497" stroke="#bf5420" stroke-width="2"/>
+<circle cx="757.3333333333334" cy="236.56567431252063" r="3" fill="#bf5420"/>
+<path d="M960.0,250.0 V224.29712364287715" stroke="#bf5420" stroke-width="2"/>
+<circle cx="960.0" cy="239.33526574796994" r="3" fill="#bf5420"/>
+<polyline points="580.00,229.05 605.33,230.04 656.00,229.08 757.33,236.57 960.00,239.34" fill="none" stroke="#bf5420"/>
+<path d="M580.0,231.02273889586988 V230.3403423245268" stroke="#308530" stroke-width="2"/>
+<circle cx="580.0" cy="230.58539473237187" r="3" fill="#308530"/>
+<path d="M605.3333333333334,231.53895190460398 V230.24115633886512" stroke="#308530" stroke-width="2"/>
+<circle cx="605.3333333333334" cy="230.6776333536157" r="3" fill="#308530"/>
+<path d="M656.0,231.35347826697515 V229.90653787836632" stroke="#308530" stroke-width="2"/>
+<circle cx="656.0" cy="230.4665912836728" r="3" fill="#308530"/>
+<path d="M757.3333333333334,234.56832179038943 V231.32189785406123" stroke="#308530" stroke-width="2"/>
+<circle cx="757.3333333333334" cy="233.42953421079022" r="3" fill="#308530"/>
+<path d="M960.0,237.65459882995106 V235.11249320965766" stroke="#308530" stroke-width="2"/>
+<circle cx="960.0" cy="236.3362588125075" r="3" fill="#308530"/>
+<polyline points="580.00,230.59 605.33,230.68 656.00,230.47 757.33,233.43 960.00,236.34" fill="none" stroke="#308530"/>
+<text x="570" y="270" font-size="11">severity [0.25, 0.5, 1.0, 2.0, 4.0]; y[-0.122,1]</text>
+<text x="60" y="315" font-size="13">g1_availability_ratio</text>
+<path d="M60,330 v180 h400" fill="none" stroke="black"/>
+<path d="M70.0,335.0 V335.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="70.0" cy="335.0" r="3" fill="#1462a0"/>
+<path d="M95.33333333333333,335.0 V335.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="95.33333333333333" cy="335.0" r="3" fill="#1462a0"/>
+<path d="M146.0,335.0 V335.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="146.0" cy="335.0" r="3" fill="#1462a0"/>
+<path d="M247.33333333333334,335.0 V335.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="247.33333333333334" cy="335.0" r="3" fill="#1462a0"/>
+<path d="M450.0,335.0 V335.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="450.0" cy="335.0" r="3" fill="#1462a0"/>
+<polyline points="70.00,335.00 95.33,335.00 146.00,335.00 247.33,335.00 450.00,335.00" fill="none" stroke="#1462a0"/>
+<path d="M70.0,335.0 V335.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="70.0" cy="335.0" r="3" fill="#bf5420"/>
+<path d="M95.33333333333333,335.0 V335.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="95.33333333333333" cy="335.0" r="3" fill="#bf5420"/>
+<path d="M146.0,335.0 V335.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="146.0" cy="335.0" r="3" fill="#bf5420"/>
+<path d="M247.33333333333334,335.0 V335.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="247.33333333333334" cy="335.0" r="3" fill="#bf5420"/>
+<path d="M450.0,335.0 V335.0" stroke="#bf5420" stroke-width="2"/>
+<circle cx="450.0" cy="335.0" r="3" fill="#bf5420"/>
+<polyline points="70.00,335.00 95.33,335.00 146.00,335.00 247.33,335.00 450.00,335.00" fill="none" stroke="#bf5420"/>
+<path d="M70.0,335.0 V335.0" stroke="#308530" stroke-width="2"/>
+<circle cx="70.0" cy="335.0" r="3" fill="#308530"/>
+<path d="M95.33333333333333,335.0 V335.0" stroke="#308530" stroke-width="2"/>
+<circle cx="95.33333333333333" cy="335.0" r="3" fill="#308530"/>
+<path d="M146.0,335.0 V335.0" stroke="#308530" stroke-width="2"/>
+<circle cx="146.0" cy="335.0" r="3" fill="#308530"/>
+<path d="M247.33333333333334,335.0 V335.0" stroke="#308530" stroke-width="2"/>
+<circle cx="247.33333333333334" cy="335.0" r="3" fill="#308530"/>
+<path d="M450.0,335.0 V335.0" stroke="#308530" stroke-width="2"/>
+<circle cx="450.0" cy="335.0" r="3" fill="#308530"/>
+<polyline points="70.00,335.00 95.33,335.00 146.00,335.00 247.33,335.00 450.00,335.00" fill="none" stroke="#308530"/>
+<text x="60" y="530" font-size="11">severity [0.25, 0.5, 1.0, 2.0, 4.0]; y[0,1]</text>
+<text x="570" y="315" font-size="13">g1_paired_error_ratio</text>
+<path d="M570,330 v180 h400" fill="none" stroke="black"/>
+<path d="M580.0,456.65072002059355 V456.3987810089217" stroke="#1462a0" stroke-width="2"/>
+<circle cx="580.0" cy="456.49142173012416" r="3" fill="#1462a0"/>
+<path d="M605.3333333333334,453.4706908361219 V452.81716469445826" stroke="#1462a0" stroke-width="2"/>
+<circle cx="605.3333333333334" cy="453.0797895163332" r="3" fill="#1462a0"/>
+<path d="M656.0,443.0676168374048 V441.55120719016406" stroke="#1462a0" stroke-width="2"/>
+<circle cx="656.0" cy="442.1903271744537" r="3" fill="#1462a0"/>
+<path d="M757.3333333333334,413.25480700239194 V409.855224952211" stroke="#1462a0" stroke-width="2"/>
+<circle cx="757.3333333333334" cy="411.40618308273434" r="3" fill="#1462a0"/>
+<path d="M960.0,342.09751899717014 V335.0" stroke="#1462a0" stroke-width="2"/>
+<circle cx="960.0" cy="338.0138190719538" r="3" fill="#1462a0"/>
+<polyline points="580.00,456.49 605.33,453.08 656.00,442.19 757.33,411.41 960.00,338.01" fill="none" stroke="#1462a0"/>
+<path d="M580.0,456.8649719395271 V456.58456757431327" stroke="#bf5420" stroke-width="2"/>
+<circle cx="580.0" cy="456.6899457955933" r="3" fill="#bf5420"/>
+<path d="M605.3333333333334,453.97734752845037 V453.43257439796594" stroke="#bf5420" stroke-width="2"/>
+<circle cx="605.3333333333334" cy="453.63640038448057" r="3" fill="#bf5420"/>
+<path d="M656.0,444.1539020800442 V443.29417192646446" stroke="#bf5420" stroke-width="2"/>
+<circle cx="656.0" cy="443.6051206424163" r="3" fill="#bf5420"/>
+<path d="M757.3333333333334,415.5656364393416 V413.67403058933104" stroke="#bf5420" stroke-width="2"/>
+<circle cx="757.3333333333334" cy="414.616019075603" r="3" fill="#bf5420"/>
+<path d="M960.0,346.7979805854055 V342.557816550816" stroke="#bf5420" stroke-width="2"/>
+<circle cx="960.0" cy="344.7089030074897" r="3" fill="#bf5420"/>
+<polyline points="580.00,456.69 605.33,453.64 656.00,443.61 757.33,414.62 960.00,344.71" fill="none" stroke="#bf5420"/>
+<path d="M580.0,456.7775684052791 V456.59332333807447" stroke="#308530" stroke-width="2"/>
+<circle cx="580.0" cy="456.71168543750656" r="3" fill="#308530"/>
+<path d="M605.3333333333334,453.936983426773 V453.54259631436844" stroke="#308530" stroke-width="2"/>
+<circle cx="605.3333333333334" cy="453.7957384258626" r="3" fill="#308530"/>
+<path d="M656.0,444.57935707125864 V443.80811375276835" stroke="#308530" stroke-width="2"/>
+<circle cx="656.0" cy="444.2767349944258" r="3" fill="#308530"/>
+<path d="M757.3333333333334,418.04112494739763 V416.09248797989665" stroke="#308530" stroke-width="2"/>
+<circle cx="757.3333333333334" cy="417.05467542185863" r="3" fill="#308530"/>
+<path d="M960.0,353.1370911483415 V348.8631039939695" stroke="#308530" stroke-width="2"/>
+<circle cx="960.0" cy="350.8577149006685" r="3" fill="#308530"/>
+<polyline points="580.00,456.71 605.33,453.80 656.00,444.28 757.33,417.05 960.00,350.86" fill="none" stroke="#308530"/>
+<text x="570" y="530" font-size="11">severity [0.25, 0.5, 1.0, 2.0, 4.0]; y[0,3.36]</text>
+<text x="20" y="575" font-size="12">Blue132877(dev), orange118577, green128058(retrospective). Bars=3-seed range; block CIs in JSON. No camera-to-ego certification.</text>
+</svg>

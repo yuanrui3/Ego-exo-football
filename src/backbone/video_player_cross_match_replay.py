@@ -48,6 +48,13 @@ VISUAL_ANCHOR_SAMPLES = 100
 S4_QUERY_SECONDS = (20, 40, 60, 80, 100)
 
 
+def external_frames(source: ExternalObservationSource, start: int, count: int):
+    """Batch adapter reads without resetting replay engines or runtime IDs."""
+    for offset in range(0, count, 1500):
+        yield from source.frames(start + offset * SAMPLE_STRIDE,
+                                 min(1500, count - offset), stride=SAMPLE_STRIDE)
+
+
 def _read_predictions(path: Path, expected_count: int) -> tuple[list[dict], dict]:
     metadata_path = path.with_suffix(".meta.json")
     if not path.is_file() or not metadata_path.is_file():
@@ -439,9 +446,7 @@ def build_external_observations(
             stream.write(json.dumps(row, allow_nan=False, separators=(",", ":")) + "\n")
 
     adapter = ExternalObservationSource(external_path)
-    adapted_frames = list(adapter.frames(
-        start_s * NATIVE_FPS, count, stride=SAMPLE_STRIDE,
-    ))
+    adapted_frames = list(external_frames(adapter, start_s * NATIVE_FPS, count))
     if len(adapted_frames) != count:
         raise ValueError(f"External adapter returned {len(adapted_frames)}/{count} frames")
     result = {
@@ -582,9 +587,7 @@ def replay_route(
         f"{detector_route}_{match_id}_{source['half']}_{interval_name}.jsonl"
     )
     source_adapter = ExternalObservationSource(external_path)
-    tracking_frames = list(source_adapter.frames(
-        start_s * NATIVE_FPS, count, stride=SAMPLE_STRIDE,
-    ))
+    tracking_frames = list(external_frames(source_adapter, start_s * NATIVE_FPS, count))
     if len(tracking_frames) != count:
         raise ValueError("External input failed continuous 5Hz frame validation")
 
@@ -644,9 +647,7 @@ def replay_route(
         != candidate_meta["prediction_jsonl_sha256"]
     ):
         raise ValueError("Actor-selection stream is not tied to the requested video predictions")
-    selection_frames = list(selection_source.frames(
-        start_s * NATIVE_FPS, count, stride=SAMPLE_STRIDE,
-    ))
+    selection_frames = list(external_frames(selection_source, start_s * NATIVE_FPS, count))
     if len(selection_frames) != count:
         raise ValueError("Video-only actor-selection stream is not continuous")
     actors = _pair_frozen_actors(

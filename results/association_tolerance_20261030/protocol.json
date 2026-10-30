@@ -1,0 +1,65 @@
+{
+  "schema": "football.association-tolerance.1",
+  "started_utc": "2026-10-30T16:42:11.941+00:00",
+  "association_cutoff_utc": "2026-10-30T18:42:11.941+00:00",
+  "reserve_utc": "2026-10-30T23:57:11.941+00:00",
+  "deadline_utc": "2026-10-31T00:42:11.941+00:00",
+  "authorization_sha256": "c0f4f4829f1e05443c7d7f14577cb08bf531c685d9399390338aa42a09194179",
+  "training": "NONE; all detector/appearance/G1/S4 checkpoints frozen",
+  "association": {
+    "development": ["117092", "117093"],
+    "retrospective_intervals": [
+      {"source": "118576_2nd", "start_frame": 15000, "end_frame_exclusive": 30000},
+      {"source": "128057_1st", "start_frame": 15000, "end_frame_exclusive": 30000}
+    ],
+    "interval_choice": "Second cached 10-minute chunk on each source, chosen by availability before new scores",
+    "feature_lifetime_s": 0.8,
+    "track_lifetime_s": 1.0,
+    "representations": ["motion", "hsv", "R1", "R2"],
+    "distance_settings": "Two settings per representation: development positive-distance quantiles 0.90 and 0.97, clipped [0.02,1.8]. HSV uses half L1; R1/R2 cosine. Shared normalized appearance cost30 and gap-distance ratio3/7.",
+    "selection": "Lower mean switch rate, <=1pp per-source consistent-history loss, <=5%+1 fragmentation, no increase pooled false scorable gap relinks. Production baseline unchanged.",
+    "repair": "Only last valid feature and its own timestamp retained; finite0.8s expiry, no missing-crop timestamp refresh. Original cosine/gap/motion/margins unchanged for repair ablation."
+  },
+  "development_match": "132877",
+  "retrospective_matches": ["118577", "128058"],
+  "population": "All stable-key indexed seven-class labeled queries if measured throughput permits. Otherwise deterministic per-match/half/class hash-ranked sample fixed before full predictions; record inclusion weights. No prediction-based selection.",
+  "seeds": [42, 137, 901],
+  "history": {
+    "initialization": "Identical bounded causal prefix up to8s,41samples at0.2s, native query grid offset preserved; empty memory/provider at prefix start. Not full-half continuous memory.",
+    "visibility": "Existing SyntheticObservationProvider seed42, FOV120, range45m, dropout enabled; generate clean once, hold schedule fixed across corruptions.",
+    "injection": "Released Observation measurements before CausalMemory; labels and target positions stored only in separate scorer context.",
+    "focal_query": "Original runtime actor token always retained; no relink of fragmented actor or substitution.",
+    "g1_targets": "Fixed clean hidden, seen-in-last2s memory targets with available annotation-derived query position; immutable track+segment. Model output scored via original runtime token, never nearest-neighbor or new-ID oracle repair.",
+    "attributes": "Team/role stay with physical measurement during ID swaps; no oracle history correction. Slot overflow and unknown contracts explicitly counted.",
+    "models": "Release default G1 and original S4; no G1 estimates in S4 input."
+  },
+  "conditions": {
+    "focal_gap_durations_s": [0.2, 0.4, 1.0, 2.0],
+    "focal_gap_rate_per_eligible_player_second": 0.1,
+    "focal_fragment_rates_per_eligible_player_second": [0.02, 0.1, 0.25],
+    "nonfocal_same_team_swap_rates_per_eligible_pair_second": [0.02, 0.1, 0.25],
+    "nonfocal_opposing_team_swap_rates_per_eligible_pair_second": [0.02, 0.1, 0.25],
+    "nonfocal_fragment_rates_per_eligible_player_second": [0.02, 0.1, 0.25],
+    "swap_duration_s": 1.0,
+    "pairing": "Current visible nonfocal observations, deterministic disjoint eligible pair matching; active swaps reserve endpoints. Same seeded opportunities across rates; starts independent of event labels/model outputs.",
+    "gap_recovery": "Same original runtime ID returns after duration; preserve required11sample warmup.",
+    "fragment_recovery": "None within prefix; new runtime ID is not a repaired original actor.",
+    "position_magnitudes_m": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "independent_noise": "Radial RMS metres; independent XY Gaussian sigma=magnitude/sqrt2 per observed player-time.",
+    "common_translation": "Fixed shared vector of norm magnitude for entire prefix, seeded direction, visibility held fixed; absolute vs actor-relative errors reported separately.",
+    "shared_drift": "Causal OU shared displacement, time constant5s, stationary radial RMS magnitude, initialized0 at bounded prefix start. Not a calibrated real camera error model.",
+    "combined": "None; single-factor study prioritized",
+    "optional_source_level": "Only if core complete with time; otherwise explicitly NOT_RUN, no full-camera robustness claim."
+  },
+  "controls": ["zero_equals_clean", "consistent_rename_with_focal_token", "measurement_order_permutation", "prefix_consistency", "target_isolation", "focal_fragment_unavailable", "one_to_one_dynamic_swaps", "cpu_gpu_sequential_batch_parity"],
+  "tolerance": {
+    "availability_ratio_min": 0.9,
+    "s4_paired_macro_f1_drop_max": 0.03,
+    "g1_paired_mean_error_ratio_max": 1.2,
+    "interpretation": "Provisional engineering criteria, not scientific standards or source certification. Missing availability criterion or inadequate clean quality cannot be hidden by survivor accuracy.",
+    "uncertainty": "Paired60s temporal-block bootstrap within half,200resamples; per-match/seed curves. Overlapping windows are not independent; two retrospective matches not population certification."
+  },
+  "batch_size": 128,
+  "parity_absolute_tolerance": 0.0002,
+  "new_download_bytes": 0
+}

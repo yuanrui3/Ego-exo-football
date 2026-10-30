@@ -1,0 +1,263 @@
+{
+  "priority": "focal continuity / detection coverage",
+  "tested_levels_passing_all_three_seeds": {
+    "drift": {
+      "132877": {
+        "s4": [
+          0.25,
+          0.5
+        ],
+        "g1": [
+          0.25,
+          0.5
+        ]
+      },
+      "118577": {
+        "s4": [
+          0.25,
+          0.5,
+          1.0
+        ],
+        "g1": [
+          0.25,
+          0.5
+        ]
+      },
+      "128058": {
+        "s4": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "g1": [
+          0.25,
+          0.5
+        ]
+      }
+    },
+    "focal_fragment": {
+      "132877": {
+        "s4": [],
+        "g1": []
+      },
+      "118577": {
+        "s4": [],
+        "g1": []
+      },
+      "128058": {
+        "s4": [],
+        "g1": []
+      }
+    },
+    "focal_gap": {
+      "132877": {
+        "s4": [],
+        "g1": []
+      },
+      "118577": {
+        "s4": [],
+        "g1": []
+      },
+      "128058": {
+        "s4": [],
+        "g1": []
+      }
+    },
+    "noise": {
+      "132877": {
+        "s4": [
+          0.25
+        ],
+        "g1": [
+          0.25
+        ]
+      },
+      "118577": {
+        "s4": [
+          0.25
+        ],
+        "g1": [
+          0.25
+        ]
+      },
+      "128058": {
+        "s4": [
+          0.25,
+          0.5
+        ],
+        "g1": [
+          0.25
+        ]
+      }
+    },
+    "nonfocal_fragment": {
+      "132877": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      },
+      "118577": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      },
+      "128058": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      }
+    },
+    "opposing_team_swap": {
+      "132877": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      },
+      "118577": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      },
+      "128058": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      }
+    },
+    "same_team_swap": {
+      "132877": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      },
+      "118577": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      },
+      "128058": {
+        "s4": [
+          0.02,
+          0.1,
+          0.25
+        ],
+        "g1": [
+          0.02
+        ]
+      }
+    },
+    "translation": {
+      "132877": {
+        "s4": [
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          4.0
+        ],
+        "g1": [
+          0.25,
+          0.5
+        ]
+      },
+      "118577": {
+        "s4": [
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          4.0
+        ],
+        "g1": [
+          0.25,
+          0.5
+        ]
+      },
+      "128058": {
+        "s4": [
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          4.0
+        ],
+        "g1": [
+          0.25,
+          0.5
+        ]
+      }
+    }
+  },
+  "basis": "Prioritize original-focal serviceability if tested focal losses violate the predeclared availability/F1 envelope; otherwise small-position-error G1 sensitivity, otherwise clean downstream quality. No automatic release change.",
+  "clean": {
+    "132877/clean": {
+      "S4_supported": 2158,
+      "S4_scheduled": 2158,
+      "S4_conditional_accuracy": 0.5959221501390176,
+      "S4_conditional_macro_f1": 0.454652015262012,
+      "G1_mean_error_m": 1.276071856811524,
+      "last_seen_mean_m": 1.716797218504917,
+      "constant_velocity_mean_m": 2.0066934237723237
+    },
+    "118577/clean": {
+      "S4_supported": 1773,
+      "S4_scheduled": 1773,
+      "S4_conditional_accuracy": 0.5690919345741681,
+      "S4_conditional_macro_f1": 0.4241807106907554,
+      "G1_mean_error_m": 1.369730344744882,
+      "last_seen_mean_m": 1.8355650545653877,
+      "constant_velocity_mean_m": 2.181480693457315
+    },
+    "128058/clean": {
+      "S4_supported": 2023,
+      "S4_scheduled": 2023,
+      "S4_conditional_accuracy": 0.59268413247652,
+      "S4_conditional_macro_f1": 0.5017259662170125,
+      "G1_mean_error_m": 1.4016363255682718,
+      "last_seen_mean_m": 1.8780838433492717,
+      "constant_velocity_mean_m": 2.1471702672480824
+    }
+  },
+  "caution": "Retaining inadequate clean performance is not coaching adequacy. Same-kit retrieval gains alone did not establish tracking improvement. No G1-to-S4 link or tactical-value claim."
+}
