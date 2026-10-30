@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "inputs": 8,
+  "maximum_absolute_difference": 1.9073486328125e-06,
+  "tolerance": 0.0002,
+  "gpu": "NVIDIA RTX A5000",
+  "precision": "FP32 inference_mode, no autocast, frozen eval models"
+}

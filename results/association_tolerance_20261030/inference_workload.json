@@ -1,0 +1,174 @@
+{
+  "status": "INFERENCE_COMPLETE",
+  "query_count": 5954,
+  "conditions": [
+    {
+      "family": "clean",
+      "severity": 0.0
+    },
+    {
+      "family": "focal_gap",
+      "severity": 0.2,
+      "rate": 0.1
+    },
+    {
+      "family": "focal_gap",
+      "severity": 0.4,
+      "rate": 0.1
+    },
+    {
+      "family": "focal_gap",
+      "severity": 1.0,
+      "rate": 0.1
+    },
+    {
+      "family": "focal_gap",
+      "severity": 2.0,
+      "rate": 0.1
+    },
+    {
+      "family": "focal_fragment",
+      "severity": 0.02,
+      "rate": 0.02
+    },
+    {
+      "family": "focal_fragment",
+      "severity": 0.1,
+      "rate": 0.1
+    },
+    {
+      "family": "focal_fragment",
+      "severity": 0.25,
+      "rate": 0.25
+    },
+    {
+      "family": "same_team_swap",
+      "severity": 0.02,
+      "rate": 0.02
+    },
+    {
+      "family": "same_team_swap",
+      "severity": 0.1,
+      "rate": 0.1
+    },
+    {
+      "family": "same_team_swap",
+      "severity": 0.25,
+      "rate": 0.25
+    },
+    {
+      "family": "opposing_team_swap",
+      "severity": 0.02,
+      "rate": 0.02
+    },
+    {
+      "family": "opposing_team_swap",
+      "severity": 0.1,
+      "rate": 0.1
+    },
+    {
+      "family": "opposing_team_swap",
+      "severity": 0.25,
+      "rate": 0.25
+    },
+    {
+      "family": "nonfocal_fragment",
+      "severity": 0.02,
+      "rate": 0.02
+    },
+    {
+      "family": "nonfocal_fragment",
+      "severity": 0.1,
+      "rate": 0.1
+    },
+    {
+      "family": "nonfocal_fragment",
+      "severity": 0.25,
+      "rate": 0.25
+    },
+    {
+      "family": "noise",
+      "severity": 0.25
+    },
+    {
+      "family": "noise",
+      "severity": 0.5
+    },
+    {
+      "family": "noise",
+      "severity": 1.0
+    },
+    {
+      "family": "noise",
+      "severity": 2.0
+    },
+    {
+      "family": "noise",
+      "severity": 4.0
+    },
+    {
+      "family": "translation",
+      "severity": 0.25
+    },
+    {
+      "family": "translation",
+      "severity": 0.5
+    },
+    {
+      "family": "translation",
+      "severity": 1.0
+    },
+    {
+      "family": "translation",
+      "severity": 2.0
+    },
+    {
+      "family": "translation",
+      "severity": 4.0
+    },
+    {
+      "family": "drift",
+      "severity": 0.25
+    },
+    {
+      "family": "drift",
+      "severity": 0.5
+    },
+    {
+      "family": "drift",
+      "severity": 1.0
+    },
+    {
+      "family": "drift",
+      "severity": 2.0
+    },
+    {
+      "family": "drift",
+      "severity": 4.0
+    }
+  ],
+  "seeds": [
+    42,
+    137,
+    901
+  ],
+  "actual_gpu_batch_elements": {
+    "G1": 512058,
+    "S4": 512058
+  },
+  "actual_gpu_forward_calls": {
+    "G1": 4704,
+    "S4": 4704
+  },
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A5000",
+  "initial_parity": {
+    "status": "PASS",
+    "inputs": 8,
+    "maximum_absolute_difference": 1.9073486328125e-06,
+    "tolerance": 0.0002,
+    "gpu": "NVIDIA RTX A5000",
+    "precision": "FP32 inference_mode, no autocast, frozen eval models"
+  },
+  "index_sha256": "ef7d7a2cd6796511b96ec71e7a401c1fbeb1e15ed3adc557b3b7c1f34a02450a"
+}

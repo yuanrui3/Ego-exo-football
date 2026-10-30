@@ -1,0 +1,54 @@
+{
+  "status": "REPRODUCED_AND_REPAIRED_SYNTHETIC",
+  "results": {
+    "original_missing_False": {
+      "ids": [
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001"
+      ],
+      "survives_gap": true
+    },
+    "retained_missing_False": {
+      "ids": [
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001"
+      ],
+      "survives_gap": true
+    },
+    "original_missing_True": {
+      "ids": [
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000002"
+      ],
+      "survives_gap": false
+    },
+    "retained_missing_True": {
+      "ids": [
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001",
+        "appearance-session-000001"
+      ],
+      "survives_gap": true
+    }
+  },
+  "warning": "Synthetic correctness alone does not establish real-video improvement"
+}

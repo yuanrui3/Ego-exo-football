@@ -12,6 +12,7 @@ acceptance remains **PARTIAL**. Neither path recommends the best tactical action
 | Tracking release | [Baseline guide](results/tracking_backbone_release_baseline.md), [configuration](configs/backbone_release_baseline.json), [model/source manifest](configs/backbone_release_manifest.json) | Supported local tracking/external-metre observations; supplied actor/query times |
 | Video prototype | [Same-match evidence](results/overnight_video_player_continuation_handoff_20261028.md), [cross-match evidence](results/video_player_cross_match_20261028_handoff.md) | Video detections, local tracks, experimental positions/attributes and actual G1/S4 calls; not validated pitch observations |
 | Completion evidence | [Completion continuation](results/backbone_completion_20261022_handoff.md) | Full-half replay, lazy-window index and unsuccessful matched distillation |
+| Perception and tolerance research | [October 30 research update](results/perception_identity_tolerance_20261030.md) | Stable GPU perception, negative identity-learning results, matched association audit and frozen-model sensitivity; no release-default changes |
 | Historical experiments | Remaining sections below and `results/` | Separate research protocols, not release defaults |
 
 ### Local run and verification
@@ -85,6 +86,26 @@ unsupported targets remain unknown, and the seven-class S4 model requires
 supplied actor/event-query times. Scores are uncalibrated classification scores,
 not tactical value. Experimental detector, robust and distilled checkpoints
 must not silently replace the frozen defaults. The GNN queue remains paused.
+
+### Latest perception and tolerance findings
+
+The [research update](results/perception_identity_tolerance_20261030.md)
+records the GPU numerical safeguards and detector continuation, fixed-actor
+versus cohort replay, unsuccessful appearance-learning candidates, and the
+subsequent controlled tolerance study. The production tracker was retained:
+better same-kit crop retrieval did not translate into better online identity
+continuity. Last-valid-feature retention fixed a synthetic edge case but
+worsened real development tracking, so it remains experimental.
+
+The frozen G1/original S4 study evaluated all 5,954 indexed queries across
+three matches with 31 nonzero single-factor conditions and three seeds.
+It reports availability separately from survivor accuracy. Focal continuity
+was the next priority; these bounded-prefix, simulated-visibility results
+do not certify real-video position accuracy or tactical usefulness.
+Compact curves, the locked protocol and measured decision table are in
+[the tolerance evidence directory](results/association_tolerance_20261030/).
+Data, weights and dense predictions remain local-only. Historical run
+deadlines are not reusable authorizations for new training.
 
 ## Original event-classification pipeline
 

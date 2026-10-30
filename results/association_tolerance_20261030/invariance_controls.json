@@ -1,0 +1,10 @@
+{
+  "max_S4_probability_difference": {
+    "rename": 0.0,
+    "permutation": 2.384185791015625e-07,
+    "translation": 2.980232238769531e-07
+  },
+  "meaning": "Renaming required invariant. Slot-order and relative-translation differences measured, not silently equated to temporal swaps.",
+  "absolute_translation_m": 1.0,
+  "relative_translation_error_m": 0.0
+}
