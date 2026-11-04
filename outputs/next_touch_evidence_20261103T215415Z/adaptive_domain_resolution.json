@@ -1,0 +1,296 @@
+{
+  "geometry_1s": {
+    "models": {
+      "native": {
+        "rows": 69476,
+        "positives": 3158,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.68248499437198,
+        "AUC": 0.9645270262204706,
+        "brier": 0.02289529547706743,
+        "NLL": 0.0824626089798991,
+        "AP_over_prevalence": 15.014669876183559,
+        "recall_at_annotation_precision": {
+          "0.5": 0.7710576314122862,
+          "0.8": 0.39328689043698545
+        },
+        "scene": {
+          "positive_scenes": 3158,
+          "top1": 0.6725775807473084,
+          "top3": 0.8708043065231159,
+          "mrr": 0.7842015328764667
+        }
+      },
+      "players_only": {
+        "rows": 69476,
+        "positives": 3158,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.6701926409775811,
+        "AUC": 0.9635314870617535,
+        "brier": 0.023404030395837393,
+        "NLL": 0.08393170549766021,
+        "AP_over_prevalence": 14.744238101506784,
+        "recall_at_annotation_precision": {
+          "0.5": 0.7640911969601013,
+          "0.8": 0.3809373020899303
+        },
+        "scene": {
+          "positive_scenes": 3158,
+          "top1": 0.6668777707409753,
+          "top3": 0.8670044331855605,
+          "mrr": 0.7806108957612609
+        }
+      },
+      "ball_only": {
+        "rows": 69476,
+        "positives": 3158,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.6664045118689702,
+        "AUC": 0.9631949724990772,
+        "brier": 0.02360578588313096,
+        "NLL": 0.08441034711079208,
+        "AP_over_prevalence": 14.660899261117343,
+        "recall_at_annotation_precision": {
+          "0.5": 0.7574414186193793,
+          "0.8": 0.3651044965167828
+        },
+        "scene": {
+          "positive_scenes": 3158,
+          "top1": 0.6595946801773275,
+          "top3": 0.8676377454084864,
+          "mrr": 0.7770869376547717
+        }
+      },
+      "both": {
+        "rows": 69476,
+        "positives": 3158,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.6661998464043486,
+        "AUC": 0.962779757065488,
+        "brier": 0.02362577116931474,
+        "NLL": 0.08469181456702955,
+        "AP_over_prevalence": 14.656396620895668,
+        "recall_at_annotation_precision": {
+          "0.5": 0.7580747308423053,
+          "0.8": 0.3663711209626346
+        },
+        "scene": {
+          "positive_scenes": 3158,
+          "top1": 0.6573780873970868,
+          "top3": 0.8647878404053199,
+          "mrr": 0.775132962697458
+        }
+      }
+    },
+    "paired_input_interventions_minus_native": {
+      "players_only": {
+        "top1": {
+          "delta": -0.005699810006333122,
+          "ci95": [
+            -0.013429316638038726,
+            0.0015709526587016683
+          ],
+          "time_blocks": 173,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        },
+        "MRR": {
+          "delta": -0.0035906371152059045,
+          "ci95": [
+            -0.007801453207977859,
+            0.00036602426069449096
+          ],
+          "time_blocks": 173,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        }
+      },
+      "ball_only": {
+        "top1": {
+          "delta": -0.012982900569981,
+          "ci95": [
+            -0.021116787534935025,
+            -0.0050467375032711885
+          ],
+          "time_blocks": 173,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        },
+        "MRR": {
+          "delta": -0.007114595221695084,
+          "ci95": [
+            -0.011602959814364957,
+            -0.0028373470962334657
+          ],
+          "time_blocks": 173,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        }
+      },
+      "both": {
+        "top1": {
+          "delta": -0.015199493350221659,
+          "ci95": [
+            -0.024639662231866602,
+            -0.0070617003282361784
+          ],
+          "time_blocks": 173,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        },
+        "MRR": {
+          "delta": -0.009068570179008657,
+          "ci95": [
+            -0.014397006300771268,
+            -0.004507508236091932
+          ],
+          "time_blocks": 173,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        }
+      }
+    },
+    "invariant_target_and_roster_checks": "PASS"
+  },
+  "geometry_2s": {
+    "models": {
+      "native": {
+        "rows": 67320,
+        "positives": 3060,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.39934760433318073,
+        "AUC": 0.8946517415971473,
+        "brier": 0.03384226464291906,
+        "NLL": 0.126333327892334,
+        "AP_over_prevalence": 8.785647295329976,
+        "recall_at_annotation_precision": {
+          "0.5": 0.3519607843137255,
+          "0.8": 0.07222222222222222
+        },
+        "scene": {
+          "positive_scenes": 3060,
+          "top1": 0.44901960784313727,
+          "top3": 0.6683006535947712,
+          "mrr": 0.5960665496225199
+        }
+      },
+      "players_only": {
+        "rows": 67320,
+        "positives": 3060,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.3898702308240802,
+        "AUC": 0.8934373251842495,
+        "brier": 0.03412444746894885,
+        "NLL": 0.12720555659706884,
+        "AP_over_prevalence": 8.577145078129764,
+        "recall_at_annotation_precision": {
+          "0.5": 0.3300653594771242,
+          "0.8": 0.06372549019607843
+        },
+        "scene": {
+          "positive_scenes": 3060,
+          "top1": 0.4388888888888889,
+          "top3": 0.6633986928104575,
+          "mrr": 0.5894449054287881
+        }
+      },
+      "ball_only": {
+        "rows": 67320,
+        "positives": 3060,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.3911098803718879,
+        "AUC": 0.8928584828993326,
+        "brier": 0.03412329608814401,
+        "NLL": 0.12731461702410873,
+        "AP_over_prevalence": 8.604417368181533,
+        "recall_at_annotation_precision": {
+          "0.5": 0.32745098039215687,
+          "0.8": 0.07745098039215687
+        },
+        "scene": {
+          "positive_scenes": 3060,
+          "top1": 0.4339869281045752,
+          "top3": 0.6692810457516339,
+          "mrr": 0.5881469676292643
+        }
+      },
+      "both": {
+        "rows": 67320,
+        "positives": 3060,
+        "prevalence": 0.045454545454545456,
+        "AP": 0.3840899128382469,
+        "AUC": 0.8918690537217067,
+        "brier": 0.03432468274795336,
+        "NLL": 0.12796846632452272,
+        "AP_over_prevalence": 8.449978082441431,
+        "recall_at_annotation_precision": {
+          "0.5": 0.3254901960784314,
+          "0.8": 0.06013071895424837
+        },
+        "scene": {
+          "positive_scenes": 3060,
+          "top1": 0.4294117647058823,
+          "top3": 0.6555555555555556,
+          "mrr": 0.5828034908002506
+        }
+      }
+    },
+    "paired_input_interventions_minus_native": {
+      "players_only": {
+        "top1": {
+          "delta": -0.010130718954248366,
+          "ci95": [
+            -0.018819908716644226,
+            -0.0013990614949262233
+          ],
+          "time_blocks": 168,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        },
+        "MRR": {
+          "delta": -0.006621644193731852,
+          "ci95": [
+            -0.011857360732629448,
+            -0.0013652812638742767
+          ],
+          "time_blocks": 168,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        }
+      },
+      "ball_only": {
+        "top1": {
+          "delta": -0.015032679738562092,
+          "ci95": [
+            -0.022245254479435733,
+            -0.007497127566523127
+          ],
+          "time_blocks": 168,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        },
+        "MRR": {
+          "delta": -0.00791958199325558,
+          "ci95": [
+            -0.012298053386301905,
+            -0.0033564998271984883
+          ],
+          "time_blocks": 168,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        }
+      },
+      "both": {
+        "top1": {
+          "delta": -0.0196078431372549,
+          "ci95": [
+            -0.028962606172429937,
+            -0.010150373100995943
+          ],
+          "time_blocks": 168,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        },
+        "MRR": {
+          "delta": -0.01326305882226935,
+          "ci95": [
+            -0.019051164940456743,
+            -0.007431523317530517
+          ],
+          "time_blocks": 168,
+          "scope": "30s temporal block bootstrap within one match; not across-domain population uncertainty."
+        }
+      }
+    },
+    "invariant_target_and_roster_checks": "PASS"
+  }
+}

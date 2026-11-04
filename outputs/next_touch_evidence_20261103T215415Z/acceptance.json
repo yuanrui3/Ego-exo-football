@@ -1,0 +1,27 @@
+{
+  "overall_status": "PARTIAL_WITH_NEW_FINDINGS",
+  "executed_scientific_stages": true,
+  "protected_hashes": 1117,
+  "protected_unchanged": true,
+  "physical_sync": "UNVERIFIED",
+  "physical_touch_ground_truth": "BLOCKED",
+  "new_human_labels": 0,
+  "historical_human_judgments": 60,
+  "two_reviewer_workflow": "READY_PAUSED",
+  "external_domain_matches": 2,
+  "soccertrack_sealed_evaluation": "NO_SEALED_EVALUATION",
+  "adaptive_branches": 7,
+  "targeted_tests": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "figures": {
+    "diagnostics": 17,
+    "anonymous_case_diagrams": 8
+  },
+  "causal_scheduler_revision": 2,
+  "archive_verification_record": "../return_next_touch_evidence_20261103T215415Z.zip.verification.json",
+  "archive_policy": "No raw data, private event mappings, human label rows, video/image footage or model weights."
+}

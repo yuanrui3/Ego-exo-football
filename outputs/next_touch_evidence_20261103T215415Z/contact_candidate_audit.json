@@ -1,0 +1,5263 @@
+{
+  "status": "COMPLETE",
+  "claim": "PROXY_ONLY",
+  "halves": {
+    "117092_1st": {
+      "frames": 67375,
+      "valid_ball_frames": 65998,
+      "candidate_frames": {
+        "proximity": 25548,
+        "intercept": 28943,
+        "changepoint": 29546
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.6959539371304078,
+        "proximity__changepoint": 0.4543582704186685,
+        "intercept__changepoint": 0.48891377949749254
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 442,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 385,
+            "association_fraction": 0.8710407239819005,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.28639999999999877,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.2943639278411867,
+              "p99": 9.119481396675015,
+              "max": 22.10504150390625
+            }
+          },
+          "intercept": {
+            "annotated_events": 442,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 409,
+            "association_fraction": 0.9253393665158371,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.16,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.2943639278411867,
+              "p99": 9.119481396675015,
+              "max": 22.10504150390625
+            }
+          },
+          "changepoint": {
+            "annotated_events": 442,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 426,
+            "association_fraction": 0.9638009049773756,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.33999999999999997,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.2943639278411867,
+              "p99": 9.119481396675015,
+              "max": 22.10504150390625
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 74,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 68,
+            "association_fraction": 0.918918918918919,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.1595999999999998,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.1504799127578735,
+              "p90": 2.4396540164947518,
+              "p99": 14.052450633048856,
+              "max": 42.42514419555664
+            }
+          },
+          "intercept": {
+            "annotated_events": 74,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 70,
+            "association_fraction": 0.9459459459459459,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.04400000000000006,
+              "p99": 0.08,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.1504799127578735,
+              "p90": 2.4396540164947518,
+              "p99": 14.052450633048856,
+              "max": 42.42514419555664
+            }
+          },
+          "changepoint": {
+            "annotated_events": 74,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 73,
+            "association_fraction": 0.9864864864864865,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.15360000000000013,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.1504799127578735,
+              "p90": 2.4396540164947518,
+              "p99": 14.052450633048856,
+              "max": 42.42514419555664
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 381,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 337,
+            "association_fraction": 0.884514435695538,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.34559999999999946,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.5019214153289795,
+              "p99": 6.9934167861938175,
+              "max": 23.731908798217773
+            }
+          },
+          "intercept": {
+            "annotated_events": 381,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 361,
+            "association_fraction": 0.94750656167979,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.4159999999999991,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.5019214153289795,
+              "p99": 6.9934167861938175,
+              "max": 23.731908798217773
+            }
+          },
+          "changepoint": {
+            "annotated_events": 381,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 367,
+            "association_fraction": 0.963254593175853,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.22719999999999801,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.5019214153289795,
+              "p99": 6.9934167861938175,
+              "max": 23.731908798217773
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 23,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.43478260869565216,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.003999999999999986,
+              "p99": 0.03640000000000001,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 5.707895278930664,
+              "p90": 10.174929237365722,
+              "p99": 11.415796279907227,
+              "max": 11.415796279907227
+            }
+          },
+          "intercept": {
+            "annotated_events": 23,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 13,
+            "association_fraction": 0.5652173913043478,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.232,
+              "p99": 0.2752,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 5.707895278930664,
+              "p90": 10.174929237365722,
+              "p99": 11.415796279907227,
+              "max": 11.415796279907227
+            }
+          },
+          "changepoint": {
+            "annotated_events": 23,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 14,
+            "association_fraction": 0.6086956521739131,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.26800000000000007,
+              "p99": 0.31479999999999997,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 5.707895278930664,
+              "p90": 10.174929237365722,
+              "p99": 11.415796279907227,
+              "max": 11.415796279907227
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 8,
+            "association_fraction": 0.6153846153846154,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509605884552002,
+              "p90": 1.718168067932129,
+              "p99": 5.670469551086422,
+              "max": 6.2094197273254395
+            }
+          },
+          "intercept": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.6923076923076923,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.02400000000000002,
+              "p99": 0.11039999999999998,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509605884552002,
+              "p90": 1.718168067932129,
+              "p99": 5.670469551086422,
+              "max": 6.2094197273254395
+            }
+          },
+          "changepoint": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.7692307692307693,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.04799999999999997,
+              "p99": 0.11280000000000001,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509605884552002,
+              "p90": 1.718168067932129,
+              "p99": 5.670469551086422,
+              "max": 6.2094197273254395
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 1,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": {
+              "p0": 1.7181695699691772,
+              "p50": 1.7181695699691772,
+              "p90": 1.7181695699691772,
+              "p99": 1.7181695699691772,
+              "max": 1.7181695699691772
+            }
+          },
+          "intercept": {
+            "annotated_events": 1,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.16,
+              "p50": 0.16,
+              "p90": 0.16,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.7181695699691772,
+              "p50": 1.7181695699691772,
+              "p90": 1.7181695699691772,
+              "p99": 1.7181695699691772,
+              "max": 1.7181695699691772
+            }
+          },
+          "changepoint": {
+            "annotated_events": 1,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.16,
+              "p50": 0.16,
+              "p90": 0.16,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.7181695699691772,
+              "p50": 1.7181695699691772,
+              "p90": 1.7181695699691772,
+              "p99": 1.7181695699691772,
+              "max": 1.7181695699691772
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.6129032258064516,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.12,
+              "p90": 0.2719999999999999,
+              "p99": 0.4656,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.719999313354492,
+              "p99": 9.553311538696285,
+              "max": 11.607587814331055
+            }
+          },
+          "intercept": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 25,
+            "association_fraction": 0.8064516129032258,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.1520000000000002,
+              "p99": 0.35039999999999993,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.719999313354492,
+              "p99": 9.553311538696285,
+              "max": 11.607587814331055
+            }
+          },
+          "changepoint": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 28,
+            "association_fraction": 0.9032258064516129,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.2240000000000001,
+              "p99": 0.3492,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.719999313354492,
+              "p99": 9.553311538696285,
+              "max": 11.607587814331055
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 67375,
+      "near_goalkeeper_candidate_frames": 3787
+    },
+    "117092_2nd": {
+      "frames": 67549,
+      "valid_ball_frames": 66323,
+      "candidate_frames": {
+        "proximity": 25768,
+        "intercept": 29489,
+        "changepoint": 27851
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.7018910927682641,
+        "proximity__changepoint": 0.43993877057765124,
+        "intercept__changepoint": 0.4798183132032621
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 451,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 388,
+            "association_fraction": 0.8603104212860311,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.32,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.2943628072738647,
+              "p99": 9.13853931427002,
+              "max": 13.918365478515625
+            }
+          },
+          "intercept": {
+            "annotated_events": 451,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 415,
+            "association_fraction": 0.9201773835920177,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.2943628072738647,
+              "p99": 9.13853931427002,
+              "max": 13.918365478515625
+            }
+          },
+          "changepoint": {
+            "annotated_events": 451,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 424,
+            "association_fraction": 0.9401330376940134,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.2,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.2943628072738647,
+              "p99": 9.13853931427002,
+              "max": 13.918365478515625
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 50,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 43,
+            "association_fraction": 0.86,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.023199999999999932,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589791297913,
+              "p90": 2.3369275808334358,
+              "p99": 13.61490242958067,
+              "max": 17.966190338134766
+            }
+          },
+          "intercept": {
+            "annotated_events": 50,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 45,
+            "association_fraction": 0.9,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.04,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589791297913,
+              "p90": 2.3369275808334358,
+              "p99": 13.61490242958067,
+              "max": 17.966190338134766
+            }
+          },
+          "changepoint": {
+            "annotated_events": 50,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 48,
+            "association_fraction": 0.96,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.10120000000000004,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589791297913,
+              "p90": 2.3369275808334358,
+              "p99": 13.61490242958067,
+              "max": 17.966190338134766
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 400,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 340,
+            "association_fraction": 0.85,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.42440000000000055,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.720000076293945,
+              "p99": 10.702359561920142,
+              "max": 24.971031188964844
+            }
+          },
+          "intercept": {
+            "annotated_events": 400,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 366,
+            "association_fraction": 0.915,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.4,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.720000076293945,
+              "p99": 10.702359561920142,
+              "max": 24.971031188964844
+            }
+          },
+          "changepoint": {
+            "annotated_events": 400,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 376,
+            "association_fraction": 0.94,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.29000000000000004,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.720000076293945,
+              "p99": 10.702359561920142,
+              "max": 24.971031188964844
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 23,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 0.6521739130434783,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.2,
+              "p99": 0.3031999999999999,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.501918315887451,
+              "p90": 7.961312007904053,
+              "p99": 12.13138326644898,
+              "max": 13.129998207092285
+            }
+          },
+          "intercept": {
+            "annotated_events": 23,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 0.6521739130434783,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.16799999999999998,
+              "p99": 0.3031999999999999,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.501918315887451,
+              "p90": 7.961312007904053,
+              "p99": 12.13138326644898,
+              "max": 13.129998207092285
+            }
+          },
+          "changepoint": {
+            "annotated_events": 23,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 18,
+            "association_fraction": 0.782608695652174,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.1960000000000001,
+              "p99": 0.3463999999999999,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.501918315887451,
+              "p90": 7.961312007904053,
+              "p99": 12.13138326644898,
+              "max": 13.129998207092285
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 8,
+            "association_fraction": 0.6666666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.539083480834961,
+              "p90": 2.864394330978394,
+              "p99": 8.11552745342255,
+              "max": 8.756715774536133
+            }
+          },
+          "intercept": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.043999999999999984,
+              "p99": 0.07640000000000001,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.539083480834961,
+              "p90": 2.864394330978394,
+              "p99": 8.11552745342255,
+              "max": 8.756715774536133
+            }
+          },
+          "changepoint": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 11,
+            "association_fraction": 0.9166666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.07600000000000001,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.539083480834961,
+              "p90": 2.864394330978394,
+              "p99": 8.11552745342255,
+              "max": 8.756715774536133
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.06,
+              "p90": 0.108,
+              "p99": 0.11879999999999999,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.3599998950958252,
+              "p50": 1.5390833616256714,
+              "p90": 1.6823501348495484,
+              "p99": 1.7145851588249206,
+              "max": 1.7181668281555176
+            }
+          },
+          "intercept": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": -0.04,
+              "p90": -0.007999999999999998,
+              "p99": -0.0008000000000000007,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.3599998950958252,
+              "p50": 1.5390833616256714,
+              "p90": 1.6823501348495484,
+              "p99": 1.7145851588249206,
+              "max": 1.7181668281555176
+            }
+          },
+          "changepoint": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.3599998950958252,
+              "p50": 1.5390833616256714,
+              "p90": 1.6823501348495484,
+              "p99": 1.7145851588249206,
+              "max": 1.7181668281555176
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 38,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 23,
+            "association_fraction": 0.6052631578947368,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.04,
+              "p90": 0.3360000000000001,
+              "p99": 0.4,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509596347808838,
+              "p90": 3.07184216976166,
+              "p99": 5.992835688591013,
+              "max": 7.42255973815918
+            }
+          },
+          "intercept": {
+            "annotated_events": 38,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 32,
+            "association_fraction": 0.8421052631578947,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.3040000000000003,
+              "p99": 0.42760000000000004,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509596347808838,
+              "p90": 3.07184216976166,
+              "p99": 5.992835688591013,
+              "max": 7.42255973815918
+            }
+          },
+          "changepoint": {
+            "annotated_events": 38,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 31,
+            "association_fraction": 0.8157894736842105,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.4039999999999999,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509596347808838,
+              "p90": 3.07184216976166,
+              "p99": 5.992835688591013,
+              "max": 7.42255973815918
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 67549,
+      "near_goalkeeper_candidate_frames": 2636
+    },
+    "117093_1st": {
+      "frames": 67625,
+      "valid_ball_frames": 64698,
+      "candidate_frames": {
+        "proximity": 26604,
+        "intercept": 30014,
+        "changepoint": 28087
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.7172060295411119,
+        "proximity__changepoint": 0.46244351151161855,
+        "intercept__changepoint": 0.4920647149460709
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 469,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 423,
+            "association_fraction": 0.9019189765458422,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2311999999999989,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509580850601196,
+              "p90": 2.294361400604248,
+              "p99": 4.41470272064209,
+              "max": 6.254796504974365
+            }
+          },
+          "intercept": {
+            "annotated_events": 469,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 441,
+            "association_fraction": 0.9402985074626866,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.16,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509580850601196,
+              "p90": 2.294361400604248,
+              "p99": 4.41470272064209,
+              "max": 6.254796504974365
+            }
+          },
+          "changepoint": {
+            "annotated_events": 469,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 446,
+            "association_fraction": 0.9509594882729211,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.24,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509580850601196,
+              "p90": 2.294361400604248,
+              "p99": 4.41470272064209,
+              "max": 6.254796504974365
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 77,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 63,
+            "association_fraction": 0.8181818181818182,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.1408000000000004,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.0500030517578125,
+              "p90": 2.9204702854156497,
+              "p99": 3.67114286422729,
+              "max": 4.414703845977783
+            }
+          },
+          "intercept": {
+            "annotated_events": 77,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 72,
+            "association_fraction": 0.935064935064935,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.16120000000000173,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.0500030517578125,
+              "p90": 2.9204702854156497,
+              "p99": 3.67114286422729,
+              "max": 4.414703845977783
+            }
+          },
+          "changepoint": {
+            "annotated_events": 77,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 70,
+            "association_fraction": 0.9090909090909091,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.12400000000000005,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.0500030517578125,
+              "p90": 2.9204702854156497,
+              "p99": 3.67114286422729,
+              "max": 4.414703845977783
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 442,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 402,
+            "association_fraction": 0.9095022624434389,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.3996000000000004,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509597539901733,
+              "p90": 2.294363498687744,
+              "p99": 4.413702554702748,
+              "max": 5.403703689575195
+            }
+          },
+          "intercept": {
+            "annotated_events": 442,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 427,
+            "association_fraction": 0.9660633484162896,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.28,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509597539901733,
+              "p90": 2.294363498687744,
+              "p99": 4.413702554702748,
+              "max": 5.403703689575195
+            }
+          },
+          "changepoint": {
+            "annotated_events": 442,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 425,
+            "association_fraction": 0.9615384615384616,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.24,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509597539901733,
+              "p90": 2.294363498687744,
+              "p99": 4.413702554702748,
+              "max": 5.403703689575195
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7916666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.03280000000000001,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599328041077,
+              "p90": 3.3722023248672484,
+              "p99": 5.8901156282424925,
+              "max": 6.254798889160156
+            }
+          },
+          "intercept": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7916666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.03280000000000001,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599328041077,
+              "p90": 3.3722023248672484,
+              "p99": 5.8901156282424925,
+              "max": 6.254798889160156
+            }
+          },
+          "changepoint": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 20,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.15239999999999995,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599328041077,
+              "p90": 3.3722023248672484,
+              "p99": 5.8901156282424925,
+              "max": 6.254798889160156
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 15,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 12,
+            "association_fraction": 0.8,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.07200000000000004,
+              "p99": 0.2224000000000001,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6799993515014648,
+              "p50": 1.2509617805480957,
+              "p90": 2.2943633079528807,
+              "p99": 3.5486878395080557,
+              "max": 3.752880096435547
+            }
+          },
+          "intercept": {
+            "annotated_events": 15,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 14,
+            "association_fraction": 0.9333333333333333,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.17399999999999985,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6799993515014648,
+              "p50": 1.2509617805480957,
+              "p90": 2.2943633079528807,
+              "p99": 3.5486878395080557,
+              "max": 3.752880096435547
+            }
+          },
+          "changepoint": {
+            "annotated_events": 15,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.16799999999999998,
+              "p99": 0.3375999999999999,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6799993515014648,
+              "p50": 1.2509617805480957,
+              "p90": 2.2943633079528807,
+              "p99": 3.5486878395080557,
+              "max": 3.752880096435547
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 0.5,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.24,
+              "p50": 0.24,
+              "p90": 0.24,
+              "p99": 0.24,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0500030517578125,
+              "p50": 1.54500150680542,
+              "p90": 1.941000270843506,
+              "p99": 2.030099992752075,
+              "max": 2.0399999618530273
+            }
+          },
+          "intercept": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.04,
+              "p50": 0.06,
+              "p90": 0.076,
+              "p99": 0.0796,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0500030517578125,
+              "p50": 1.54500150680542,
+              "p90": 1.941000270843506,
+              "p99": 2.030099992752075,
+              "max": 2.0399999618530273
+            }
+          },
+          "changepoint": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.08,
+              "p50": 0.08,
+              "p90": 0.08,
+              "p99": 0.08,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0500030517578125,
+              "p50": 1.54500150680542,
+              "p90": 1.941000270843506,
+              "p99": 2.030099992752075,
+              "max": 2.0399999618530273
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 22,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 18,
+            "association_fraction": 0.8181818181818182,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.06,
+              "p90": 0.2,
+              "p99": 0.36599999999999966,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509580850601196,
+              "p90": 2.66873438358307,
+              "p99": 3.3295270061492914,
+              "max": 3.436333656311035
+            }
+          },
+          "intercept": {
+            "annotated_events": 22,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 20,
+            "association_fraction": 0.9090909090909091,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.20800000000000013,
+              "p99": 0.3447999999999999,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509580850601196,
+              "p90": 2.66873438358307,
+              "p99": 3.3295270061492914,
+              "max": 3.436333656311035
+            }
+          },
+          "changepoint": {
+            "annotated_events": 22,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 21,
+            "association_fraction": 0.9545454545454546,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.3040000000000002,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509580850601196,
+              "p90": 2.66873438358307,
+              "p99": 3.3295270061492914,
+              "max": 3.436333656311035
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 67625,
+      "near_goalkeeper_candidate_frames": 1654
+    },
+    "117093_2nd": {
+      "frames": 70475,
+      "valid_ball_frames": 68894,
+      "candidate_frames": {
+        "proximity": 27771,
+        "intercept": 30968,
+        "changepoint": 29617
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.7268557989122446,
+        "proximity__changepoint": 0.4766744718626972,
+        "intercept__changepoint": 0.4955935717988595
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 478,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 430,
+            "association_fraction": 0.899581589958159,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.32,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509586811065674,
+              "p90": 2.356629872322085,
+              "p99": 4.350033750534065,
+              "max": 5.2026543617248535
+            }
+          },
+          "intercept": {
+            "annotated_events": 478,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 452,
+            "association_fraction": 0.9456066945606695,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.24,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509586811065674,
+              "p90": 2.356629872322085,
+              "p99": 4.350033750534065,
+              "max": 5.2026543617248535
+            }
+          },
+          "changepoint": {
+            "annotated_events": 478,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 461,
+            "association_fraction": 0.9644351464435147,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.2559999999999991,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509586811065674,
+              "p90": 2.356629872322085,
+              "p99": 4.350033750534065,
+              "max": 5.2026543617248535
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 73,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 66,
+            "association_fraction": 0.9041095890410958,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.17399999999999977,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.250959038734436,
+              "p90": 2.039999008178711,
+              "p99": 4.3482191848754885,
+              "max": 4.588726043701172
+            }
+          },
+          "intercept": {
+            "annotated_events": 73,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 65,
+            "association_fraction": 0.8904109589041096,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.14879999999999996,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.250959038734436,
+              "p90": 2.039999008178711,
+              "p99": 4.3482191848754885,
+              "max": 4.588726043701172
+            }
+          },
+          "changepoint": {
+            "annotated_events": 73,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 70,
+            "association_fraction": 0.958904109589041,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.250959038734436,
+              "p90": 2.039999008178711,
+              "p99": 4.3482191848754885,
+              "max": 4.588726043701172
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 445,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 407,
+            "association_fraction": 0.9146067415730337,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.3575999999999999,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3599987030029297,
+              "p90": 2.5019182443618773,
+              "p99": 3.996247801780701,
+              "max": 6.8830885887146
+            }
+          },
+          "intercept": {
+            "annotated_events": 445,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 427,
+            "association_fraction": 0.9595505617977528,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.18960000000000038,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3599987030029297,
+              "p90": 2.5019182443618773,
+              "p99": 3.996247801780701,
+              "max": 6.8830885887146
+            }
+          },
+          "changepoint": {
+            "annotated_events": 445,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 429,
+            "association_fraction": 0.9640449438202248,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.18879999999999883,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3599987030029297,
+              "p90": 2.5019182443618773,
+              "p99": 3.996247801780701,
+              "max": 6.8830885887146
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 21,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 16,
+            "association_fraction": 0.7619047619047619,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.02,
+              "p99": 0.10799999999999997,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.3054805397987366,
+              "p90": 2.2943615436553957,
+              "p99": 5.656477649211878,
+              "max": 6.445121765136719
+            }
+          },
+          "intercept": {
+            "annotated_events": 21,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 17,
+            "association_fraction": 0.8095238095238095,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.04800000000000004,
+              "p99": 0.1872,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.3054805397987366,
+              "p90": 2.2943615436553957,
+              "p99": 5.656477649211878,
+              "max": 6.445121765136719
+            }
+          },
+          "changepoint": {
+            "annotated_events": 21,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 19,
+            "association_fraction": 0.9047619047619048,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.22560000000000002,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.3054805397987366,
+              "p90": 2.2943615436553957,
+              "p99": 5.656477649211878,
+              "max": 6.445121765136719
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 8,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 6,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.08,
+              "p90": 0.18,
+              "p99": 0.198,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 2.380000114440918,
+              "p90": 3.825889825820923,
+              "p99": 3.9792117595672605,
+              "max": 3.9962475299835205
+            }
+          },
+          "intercept": {
+            "annotated_events": 8,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 7,
+            "association_fraction": 0.875,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.12,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 2.380000114440918,
+              "p90": 3.825889825820923,
+              "p99": 3.9792117595672605,
+              "max": 3.9962475299835205
+            }
+          },
+          "changepoint": {
+            "annotated_events": 8,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 7,
+            "association_fraction": 0.875,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.09600000000000002,
+              "p99": 0.11759999999999998,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 2.380000114440918,
+              "p90": 3.825889825820923,
+              "p99": 3.9792117595672605,
+              "max": 3.9962475299835205
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 1,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": {
+              "p0": 2.2943644523620605,
+              "p50": 2.2943644523620605,
+              "p90": 2.2943644523620605,
+              "p99": 2.2943644523620605,
+              "max": 2.2943644523620605
+            }
+          },
+          "intercept": {
+            "annotated_events": 1,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": -0.12,
+              "p90": -0.12,
+              "p99": -0.12,
+              "max": -0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.2943644523620605,
+              "p50": 2.2943644523620605,
+              "p90": 2.2943644523620605,
+              "p99": 2.2943644523620605,
+              "max": 2.2943644523620605
+            }
+          },
+          "changepoint": {
+            "annotated_events": 1,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.2943644523620605,
+              "p50": 2.2943644523620605,
+              "p90": 2.2943644523620605,
+              "p99": 2.2943644523620605,
+              "max": 2.2943644523620605
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 28,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 16,
+            "association_fraction": 0.5714285714285714,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.06,
+              "p90": 0.30000000000000004,
+              "p99": 0.422,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.718168020248413,
+              "p90": 3.3080722332000736,
+              "p99": 5.063959598541259,
+              "max": 5.202653408050537
+            }
+          },
+          "intercept": {
+            "annotated_events": 28,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 20,
+            "association_fraction": 0.7142857142857143,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.13200000000000017,
+              "p99": 0.2724,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.718168020248413,
+              "p90": 3.3080722332000736,
+              "p99": 5.063959598541259,
+              "max": 5.202653408050537
+            }
+          },
+          "changepoint": {
+            "annotated_events": 28,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 21,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.04,
+              "p90": 0.12,
+              "p99": 0.272,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.718168020248413,
+              "p90": 3.3080722332000736,
+              "p99": 5.063959598541259,
+              "max": 5.202653408050537
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 70475,
+      "near_goalkeeper_candidate_frames": 1788
+    },
+    "118576_1st": {
+      "frames": 72825,
+      "valid_ball_frames": 70286,
+      "candidate_frames": {
+        "proximity": 28317,
+        "intercept": 31551,
+        "changepoint": 30374
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.7026819487500355,
+        "proximity__changepoint": 0.45321514348676556,
+        "intercept__changepoint": 0.4822749359695526
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 481,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 428,
+            "association_fraction": 0.8898128898128899,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.32,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.294363284111023,
+              "p99": 4.161836547851562,
+              "max": 35.682804107666016
+            }
+          },
+          "intercept": {
+            "annotated_events": 481,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 458,
+            "association_fraction": 0.9521829521829522,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.3372000000000003,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.294363284111023,
+              "p99": 4.161836547851562,
+              "max": 35.682804107666016
+            }
+          },
+          "changepoint": {
+            "annotated_events": 481,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 463,
+            "association_fraction": 0.9625779625779626,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.11200000000000045,
+              "p99": 0.29519999999999985,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.294363284111023,
+              "p99": 4.161836547851562,
+              "max": 35.682804107666016
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 64,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 57,
+            "association_fraction": 0.890625,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.23519999999999983,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 0.6800003051757812,
+              "p90": 2.175145125389099,
+              "p99": 3.2330346250534037,
+              "max": 3.752880334854126
+            }
+          },
+          "intercept": {
+            "annotated_events": 64,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 62,
+            "association_fraction": 0.96875,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.12680000000000008,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 0.6800003051757812,
+              "p90": 2.175145125389099,
+              "p99": 3.2330346250534037,
+              "max": 3.752880334854126
+            }
+          },
+          "changepoint": {
+            "annotated_events": 64,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 61,
+            "association_fraction": 0.953125,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 0.6800003051757812,
+              "p90": 2.175145125389099,
+              "p99": 3.2330346250534037,
+              "max": 3.752880334854126
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 424,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 395,
+            "association_fraction": 0.9316037735849056,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.3648000000000002,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3600001335144043,
+              "p90": 2.4604076385498073,
+              "p99": 3.435171694755554,
+              "max": 5.154501438140869
+            }
+          },
+          "intercept": {
+            "annotated_events": 424,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 413,
+            "association_fraction": 0.9740566037735849,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.27519999999999983,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3600001335144043,
+              "p90": 2.4604076385498073,
+              "p99": 3.435171694755554,
+              "max": 5.154501438140869
+            }
+          },
+          "changepoint": {
+            "annotated_events": 424,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 418,
+            "association_fraction": 0.9858490566037735,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.24,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3600001335144043,
+              "p90": 2.4604076385498073,
+              "p99": 3.435171694755554,
+              "max": 5.154501438140869
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 26,
+            "association_fraction": 0.8387096774193549,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.2,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181662321090698,
+              "p90": 2.9277305603027344,
+              "p99": 3.436334323883057,
+              "max": 3.4363346099853516
+            }
+          },
+          "intercept": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 31,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181662321090698,
+              "p90": 2.9277305603027344,
+              "p99": 3.436334323883057,
+              "max": 3.4363346099853516
+            }
+          },
+          "changepoint": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 31,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181662321090698,
+              "p90": 2.9277305603027344,
+              "p99": 3.436334323883057,
+              "max": 3.4363346099853516
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 16,
+            "association_fraction": 0.6666666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.14,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.718167245388031,
+              "p90": 3.9235320806503293,
+              "p99": 5.591692805290222,
+              "max": 5.70789909362793
+            }
+          },
+          "intercept": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7916666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.07280000000000002,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.718167245388031,
+              "p90": 3.9235320806503293,
+              "p99": 5.591692805290222,
+              "max": 5.70789909362793
+            }
+          },
+          "changepoint": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7916666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.04799999999999997,
+              "p99": 0.11280000000000001,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.718167245388031,
+              "p90": 3.9235320806503293,
+              "p99": 5.591692805290222,
+              "max": 5.70789909362793
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "intercept": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "changepoint": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 20,
+            "association_fraction": 0.7407407407407407,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.18,
+              "p90": 0.28,
+              "p99": 0.31239999999999996,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 2.2943615913391113,
+              "p90": 3.916463279724122,
+              "p99": 4.491022014617919,
+              "max": 4.5887250900268555
+            }
+          },
+          "intercept": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 25,
+            "association_fraction": 0.9259259259259259,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.24000000000000027,
+              "p99": 0.4,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 2.2943615913391113,
+              "p90": 3.916463279724122,
+              "p99": 4.491022014617919,
+              "max": 4.5887250900268555
+            }
+          },
+          "changepoint": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 26,
+            "association_fraction": 0.9629629629629629,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.04,
+              "p90": 0.12,
+              "p99": 0.4,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 2.2943615913391113,
+              "p90": 3.916463279724122,
+              "p99": 4.491022014617919,
+              "max": 4.5887250900268555
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 72825,
+      "near_goalkeeper_candidate_frames": 1285
+    },
+    "118576_2nd": {
+      "frames": 72775,
+      "valid_ball_frames": 70610,
+      "candidate_frames": {
+        "proximity": 24966,
+        "intercept": 27536,
+        "changepoint": 26642
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.6935036449261338,
+        "proximity__changepoint": 0.431845295896568,
+        "intercept__changepoint": 0.44447703095422186
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 433,
+            "ball_missing_at_event": 2,
+            "candidate_association_count": 362,
+            "association_fraction": 0.836027713625866,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.28,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.501918077468872,
+              "p99": 5.2520497798919665,
+              "max": 19.094722747802734
+            }
+          },
+          "intercept": {
+            "annotated_events": 433,
+            "ball_missing_at_event": 2,
+            "candidate_association_count": 390,
+            "association_fraction": 0.9006928406466512,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.501918077468872,
+              "p99": 5.2520497798919665,
+              "max": 19.094722747802734
+            }
+          },
+          "changepoint": {
+            "annotated_events": 433,
+            "ball_missing_at_event": 2,
+            "candidate_association_count": 400,
+            "association_fraction": 0.9237875288683602,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.24079999999999926,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.501918077468872,
+              "p99": 5.2520497798919665,
+              "max": 19.094722747802734
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 39,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 36,
+            "association_fraction": 0.9230769230769231,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.06599999999999995,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.1388741016387947,
+              "p99": 3.5902117061614964,
+              "max": 3.996248245239258
+            }
+          },
+          "intercept": {
+            "annotated_events": 39,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 37,
+            "association_fraction": 0.9487179487179487,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.015999999999999945,
+              "p99": 0.09120000000000004,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.1388741016387947,
+              "p99": 3.5902117061614964,
+              "max": 3.996248245239258
+            }
+          },
+          "changepoint": {
+            "annotated_events": 39,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 38,
+            "association_fraction": 0.9743589743589743,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.05200000000000017,
+              "p99": 0.1052000000000001,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 2.1388741016387947,
+              "p99": 3.5902117061614964,
+              "max": 3.996248245239258
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 389,
+            "ball_missing_at_event": 3,
+            "candidate_association_count": 346,
+            "association_fraction": 0.8894601542416453,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.34200000000000047,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599924087524,
+              "p90": 2.294363260269165,
+              "p99": 4.270382928848256,
+              "max": 60.1920280456543
+            }
+          },
+          "intercept": {
+            "annotated_events": 389,
+            "ball_missing_at_event": 3,
+            "candidate_association_count": 368,
+            "association_fraction": 0.9460154241645244,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.21319999999999936,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599924087524,
+              "p90": 2.294363260269165,
+              "p99": 4.270382928848256,
+              "max": 60.1920280456543
+            }
+          },
+          "changepoint": {
+            "annotated_events": 389,
+            "ball_missing_at_event": 3,
+            "candidate_association_count": 364,
+            "association_fraction": 0.9357326478149101,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.027999999999999546,
+              "p99": 0.14960000000000037,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599924087524,
+              "p90": 2.294363260269165,
+              "p99": 4.270382928848256,
+              "max": 60.1920280456543
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7037037037037037,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.17599999999999993,
+              "p99": 0.27280000000000004,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181676626205444,
+              "p90": 3.9317286491394055,
+              "p99": 23.269731445312463,
+              "max": 29.540102005004883
+            }
+          },
+          "intercept": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 24,
+            "association_fraction": 0.8888888888888888,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.10159999999999997,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181676626205444,
+              "p90": 3.9317286491394055,
+              "p99": 23.269731445312463,
+              "max": 29.540102005004883
+            }
+          },
+          "changepoint": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 22,
+            "association_fraction": 0.8148148148148148,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.07200000000000017,
+              "p99": 0.22319999999999993,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181676626205444,
+              "p90": 3.9317286491394055,
+              "p99": 23.269731445312463,
+              "max": 29.540102005004883
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 14,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.6428571428571429,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509597539901733,
+              "p90": 3.656330227851868,
+              "p99": 4.108672275543213,
+              "max": 4.161836624145508
+            }
+          },
+          "intercept": {
+            "annotated_events": 14,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 12,
+            "association_fraction": 0.8571428571428571,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.17800000000000013,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509597539901733,
+              "p90": 3.656330227851868,
+              "p99": 4.108672275543213,
+              "max": 4.161836624145508
+            }
+          },
+          "changepoint": {
+            "annotated_events": 14,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 13,
+            "association_fraction": 0.9285714285714286,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.06400000000000006,
+              "p99": 0.18559999999999988,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509597539901733,
+              "p90": 3.656330227851868,
+              "p99": 4.108672275543213,
+              "max": 4.161836624145508
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 0.5,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.24,
+              "p50": 0.24,
+              "p90": 0.24,
+              "p99": 0.24,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.2943623065948486,
+              "p50": 2.758462429046631,
+              "p90": 3.1297425270080566,
+              "p99": 3.2132805490493777,
+              "max": 3.222562551498413
+            }
+          },
+          "intercept": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 0.5,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.04,
+              "p50": 0.04,
+              "p90": 0.04,
+              "p99": 0.04,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.2943623065948486,
+              "p50": 2.758462429046631,
+              "p90": 3.1297425270080566,
+              "p99": 3.2132805490493777,
+              "max": 3.222562551498413
+            }
+          },
+          "changepoint": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 0.5,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.04,
+              "p50": 0.04,
+              "p90": 0.04,
+              "p99": 0.04,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.2943623065948486,
+              "p50": 2.758462429046631,
+              "p90": 3.1297425270080566,
+              "p99": 3.2132805490493777,
+              "max": 3.222562551498413
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 28,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 16,
+            "association_fraction": 0.5714285714285714,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.02,
+              "p90": 0.38,
+              "p99": 0.474,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.8790844678878784,
+              "p90": 3.558440613746643,
+              "p99": 4.988210048675538,
+              "max": 5.2938551902771
+            }
+          },
+          "intercept": {
+            "annotated_events": 28,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 21,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.272,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.8790844678878784,
+              "p90": 3.558440613746643,
+              "p99": 4.988210048675538,
+              "max": 5.2938551902771
+            }
+          },
+          "changepoint": {
+            "annotated_events": 28,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.6785714285714286,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.12799999999999997,
+              "p99": 0.22560000000000002,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.8790844678878784,
+              "p90": 3.558440613746643,
+              "p99": 4.988210048675538,
+              "max": 5.2938551902771
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 72775,
+      "near_goalkeeper_candidate_frames": 916
+    },
+    "118578_1st": {
+      "frames": 70350,
+      "valid_ball_frames": 69365,
+      "candidate_frames": {
+        "proximity": 25988,
+        "intercept": 29119,
+        "changepoint": 30016
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.6984743411927878,
+        "proximity__changepoint": 0.4553675840024947,
+        "intercept__changepoint": 0.4814490066888794
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 469,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 408,
+            "association_fraction": 0.8699360341151386,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.35440000000000055,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.501918077468872,
+              "p99": 4.067757532596585,
+              "max": 7.505756855010986
+            }
+          },
+          "intercept": {
+            "annotated_events": 469,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 434,
+            "association_fraction": 0.9253731343283582,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.2,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.501918077468872,
+              "p99": 4.067757532596585,
+              "max": 7.505756855010986
+            }
+          },
+          "changepoint": {
+            "annotated_events": 469,
+            "ball_missing_at_event": 1,
+            "candidate_association_count": 453,
+            "association_fraction": 0.9658848614072495,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.2,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.501918077468872,
+              "p99": 4.067757532596585,
+              "max": 7.505756855010986
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 73,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 64,
+            "association_fraction": 0.8767123287671232,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2947999999999999,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.4430049896240225,
+              "p99": 3.5584400367736815,
+              "max": 3.5584402084350586
+            }
+          },
+          "intercept": {
+            "annotated_events": 73,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 65,
+            "association_fraction": 0.8904109589041096,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2944,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.4430049896240225,
+              "p99": 3.5584400367736815,
+              "max": 3.5584402084350586
+            }
+          },
+          "changepoint": {
+            "annotated_events": 73,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 67,
+            "association_fraction": 0.9178082191780822,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.14720000000000028,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.4430049896240225,
+              "p99": 3.5584400367736815,
+              "max": 3.5584402084350586
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 448,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 398,
+            "association_fraction": 0.8883928571428571,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.28,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599328041077,
+              "p90": 2.567344784736636,
+              "p99": 4.23507119655609,
+              "max": 10.486796379089355
+            }
+          },
+          "intercept": {
+            "annotated_events": 448,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 425,
+            "association_fraction": 0.9486607142857143,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.2,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599328041077,
+              "p90": 2.567344784736636,
+              "p99": 4.23507119655609,
+              "max": 10.486796379089355
+            }
+          },
+          "changepoint": {
+            "annotated_events": 448,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 433,
+            "association_fraction": 0.9665178571428571,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.28,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509599328041077,
+              "p90": 2.567344784736636,
+              "p99": 4.23507119655609,
+              "max": 10.486796379089355
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 17,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 14,
+            "association_fraction": 0.8235294117647058,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.07479999999999998,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.67224555015564,
+              "p99": 3.114438362121582,
+              "max": 3.1500015258789062
+            }
+          },
+          "intercept": {
+            "annotated_events": 17,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 0.8823529411764706,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.07199999999999995,
+              "p99": 0.12,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.67224555015564,
+              "p99": 3.114438362121582,
+              "max": 3.1500015258789062
+            }
+          },
+          "changepoint": {
+            "annotated_events": 17,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 16,
+            "association_fraction": 0.9411764705882353,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.1,
+              "p99": 0.12,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509591579437256,
+              "p90": 2.67224555015564,
+              "p99": 3.114438362121582,
+              "max": 3.1500015258789062
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 6,
+            "association_fraction": 0.46153846153846156,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.30400000000000005,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509586811065674,
+              "p50": 2.0400002002716064,
+              "p90": 3.332195568084717,
+              "p99": 3.9290597057342525,
+              "max": 3.996249198913574
+            }
+          },
+          "intercept": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.6923076923076923,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.08,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509586811065674,
+              "p50": 2.0400002002716064,
+              "p90": 3.332195568084717,
+              "p99": 3.9290597057342525,
+              "max": 3.996249198913574
+            }
+          },
+          "changepoint": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.7692307692307693,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.04799999999999997,
+              "p99": 0.11280000000000001,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509586811065674,
+              "p50": 2.0400002002716064,
+              "p90": 3.332195568084717,
+              "p99": 3.9290597057342525,
+              "max": 3.996249198913574
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "intercept": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "changepoint": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 22,
+            "association_fraction": 0.7096774193548387,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.12,
+              "p90": 0.3160000000000001,
+              "p99": 0.4147999999999999,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181682586669922,
+              "p90": 2.9277284145355225,
+              "p99": 4.394316887855529,
+              "max": 4.669219493865967
+            }
+          },
+          "intercept": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 27,
+            "association_fraction": 0.8709677419354839,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.22959999999999994,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181682586669922,
+              "p90": 2.9277284145355225,
+              "p99": 4.394316887855529,
+              "max": 4.669219493865967
+            }
+          },
+          "changepoint": {
+            "annotated_events": 31,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 28,
+            "association_fraction": 0.9032258064516129,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.1280000000000001,
+              "p99": 0.35680000000000006,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181682586669922,
+              "p90": 2.9277284145355225,
+              "p99": 4.394316887855529,
+              "max": 4.669219493865967
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 70350,
+      "near_goalkeeper_candidate_frames": 1719
+    },
+    "118578_2nd": {
+      "frames": 70975,
+      "valid_ball_frames": 69781,
+      "candidate_frames": {
+        "proximity": 24187,
+        "intercept": 26909,
+        "changepoint": 26586
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.6812872231910763,
+        "proximity__changepoint": 0.415906745865752,
+        "intercept__changepoint": 0.45327356696549853
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 383,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 302,
+            "association_fraction": 0.7885117493472585,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.35960000000000036,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 3.1055443763732935,
+              "p99": 5.485018472671512,
+              "max": 30.53746795654297
+            }
+          },
+          "intercept": {
+            "annotated_events": 383,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 337,
+            "association_fraction": 0.8798955613577023,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.28,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 3.1055443763732935,
+              "p99": 5.485018472671512,
+              "max": 30.53746795654297
+            }
+          },
+          "changepoint": {
+            "annotated_events": 383,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 352,
+            "association_fraction": 0.9190600522193212,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.36,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509607076644897,
+              "p90": 3.1055443763732935,
+              "p99": 5.485018472671512,
+              "max": 30.53746795654297
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 54,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 42,
+            "association_fraction": 0.7777777777777778,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.03599999999999994,
+              "p99": 0.06359999999999985,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3054797053337097,
+              "p90": 3.368501806259156,
+              "p99": 5.23551300048828,
+              "max": 5.912774085998535
+            }
+          },
+          "intercept": {
+            "annotated_events": 54,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 44,
+            "association_fraction": 0.8148148148148148,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.12560000000000002,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3054797053337097,
+              "p90": 3.368501806259156,
+              "p99": 5.23551300048828,
+              "max": 5.912774085998535
+            }
+          },
+          "changepoint": {
+            "annotated_events": 54,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 43,
+            "association_fraction": 0.7962962962962963,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.03200000000000017,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3054797053337097,
+              "p90": 3.368501806259156,
+              "p99": 5.23551300048828,
+              "max": 5.912774085998535
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 388,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 309,
+            "association_fraction": 0.7963917525773195,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.43360000000000126,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.0399999618530273,
+              "p90": 3.472967696189882,
+              "p99": 6.883089542388916,
+              "max": 39.565589904785156
+            }
+          },
+          "intercept": {
+            "annotated_events": 388,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 352,
+            "association_fraction": 0.9072164948453608,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.07600000000000137,
+              "p99": 0.44,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.0399999618530273,
+              "p90": 3.472967696189882,
+              "p99": 6.883089542388916,
+              "max": 39.565589904785156
+            }
+          },
+          "changepoint": {
+            "annotated_events": 388,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 360,
+            "association_fraction": 0.9278350515463918,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.45640000000000097,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.0399999618530273,
+              "p90": 3.472967696189882,
+              "p99": 6.883089542388916,
+              "max": 39.565589904785156
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 0.5555555555555556,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.0,
+              "p90": 0.18399999999999994,
+              "p99": 0.34879999999999994,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.71816885471344,
+              "p90": 5.644517803192144,
+              "p99": 23.44000820159909,
+              "max": 29.038528442382812
+            }
+          },
+          "intercept": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 16,
+            "association_fraction": 0.5925925925925926,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.06,
+              "p99": 0.3859999999999999,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.71816885471344,
+              "p90": 5.644517803192144,
+              "p99": 23.44000820159909,
+              "max": 29.038528442382812
+            }
+          },
+          "changepoint": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7037037037037037,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.2,
+              "p99": 0.33120000000000005,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.71816885471344,
+              "p90": 5.644517803192144,
+              "p99": 23.44000820159909,
+              "max": 29.038528442382812
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.14400000000000002,
+              "p99": 0.2304,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 2.207351803779602,
+              "p90": 3.88818576335907,
+              "p99": 25.515840718746198,
+              "max": 28.175565719604492
+            }
+          },
+          "intercept": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": -0.02,
+              "p90": 0.051999999999999956,
+              "p99": 0.14920000000000003,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 2.207351803779602,
+              "p90": 3.88818576335907,
+              "p99": 25.515840718746198,
+              "max": 28.175565719604492
+            }
+          },
+          "changepoint": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.04,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 2.207351803779602,
+              "p90": 3.88818576335907,
+              "p99": 25.515840718746198,
+              "max": 28.175565719604492
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 5,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 0.2,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.2,
+              "p50": 0.2,
+              "p90": 0.2,
+              "p99": 0.2,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.5019211769104004,
+              "p50": 4.254688739776611,
+              "p90": 5.33424711227417,
+              "p99": 5.781559753417969,
+              "max": 5.831261157989502
+            }
+          },
+          "intercept": {
+            "annotated_events": 5,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 0.4,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.08,
+              "p90": 0.14400000000000002,
+              "p99": 0.1584,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.5019211769104004,
+              "p50": 4.254688739776611,
+              "p90": 5.33424711227417,
+              "p99": 5.781559753417969,
+              "max": 5.831261157989502
+            }
+          },
+          "changepoint": {
+            "annotated_events": 5,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 0.4,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.04,
+              "p50": 0.1,
+              "p90": 0.14800000000000002,
+              "p99": 0.1588,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 2.5019211769104004,
+              "p50": 4.254688739776611,
+              "p90": 5.33424711227417,
+              "p99": 5.781559753417969,
+              "max": 5.831261157989502
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 32,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 20,
+            "association_fraction": 0.625,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.16,
+              "p90": 0.36400000000000005,
+              "p99": 0.43239999999999995,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.207350730895996,
+              "p90": 3.733435487747193,
+              "p99": 5.100217828750611,
+              "max": 5.2938551902771
+            }
+          },
+          "intercept": {
+            "annotated_events": 32,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 26,
+            "association_fraction": 0.8125,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.04,
+              "p90": 0.30000000000000004,
+              "p99": 0.36,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.207350730895996,
+              "p90": 3.733435487747193,
+              "p99": 5.100217828750611,
+              "max": 5.2938551902771
+            }
+          },
+          "changepoint": {
+            "annotated_events": 32,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 29,
+            "association_fraction": 0.90625,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.08,
+              "p90": 0.25599999999999995,
+              "p99": 0.36,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.207350730895996,
+              "p90": 3.733435487747193,
+              "p99": 5.100217828750611,
+              "max": 5.2938551902771
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 70975,
+      "near_goalkeeper_candidate_frames": 1053
+    },
+    "128057_1st": {
+      "frames": 67625,
+      "valid_ball_frames": 65455,
+      "candidate_frames": {
+        "proximity": 25996,
+        "intercept": 28971,
+        "changepoint": 26309
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.7213227695487426,
+        "proximity__changepoint": 0.44257818964090684,
+        "intercept__changepoint": 0.4703300795276219
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 418,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 378,
+            "association_fraction": 0.9043062200956937,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.24,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509586215019226,
+              "p90": 2.0400009155273438,
+              "p99": 4.446632273197161,
+              "max": 6.883087635040283
+            }
+          },
+          "intercept": {
+            "annotated_events": 418,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 396,
+            "association_fraction": 0.9473684210526315,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.16,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509586215019226,
+              "p90": 2.0400009155273438,
+              "p99": 4.446632273197161,
+              "max": 6.883087635040283
+            }
+          },
+          "changepoint": {
+            "annotated_events": 418,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 396,
+            "association_fraction": 0.9473684210526315,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.2,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509586215019226,
+              "p90": 2.0400009155273438,
+              "p99": 4.446632273197161,
+              "max": 6.883087635040283
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 52,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 42,
+            "association_fraction": 0.8076923076923077,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.10359999999999986,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509596347808838,
+              "p90": 2.501919388771057,
+              "p99": 5.3488284540176405,
+              "max": 5.70789909362793
+            }
+          },
+          "intercept": {
+            "annotated_events": 52,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 46,
+            "association_fraction": 0.8846153846153846,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.12,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509596347808838,
+              "p90": 2.501919388771057,
+              "p99": 5.3488284540176405,
+              "max": 5.70789909362793
+            }
+          },
+          "changepoint": {
+            "annotated_events": 52,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 45,
+            "association_fraction": 0.8653846153846154,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.14240000000000008,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509596347808838,
+              "p90": 2.501919388771057,
+              "p99": 5.3488284540176405,
+              "max": 5.70789909362793
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 362,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 318,
+            "association_fraction": 0.8784530386740331,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.3931999999999994,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509605884552002,
+              "p90": 2.5019182920455934,
+              "p99": 4.8375588703155445,
+              "max": 7.42255973815918
+            }
+          },
+          "intercept": {
+            "annotated_events": 362,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 338,
+            "association_fraction": 0.9337016574585635,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.24,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509605884552002,
+              "p90": 2.5019182920455934,
+              "p99": 4.8375588703155445,
+              "max": 7.42255973815918
+            }
+          },
+          "changepoint": {
+            "annotated_events": 362,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 343,
+            "association_fraction": 0.9475138121546961,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2631999999999994,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509605884552002,
+              "p90": 2.5019182920455934,
+              "p99": 4.8375588703155445,
+              "max": 7.42255973815918
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.011999999999999957,
+              "p99": 0.10920000000000002,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.5390824675559998,
+              "p90": 2.844803309440613,
+              "p99": 4.249805839061738,
+              "max": 4.414703845977783
+            }
+          },
+          "intercept": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.02400000000000002,
+              "p99": 0.11039999999999998,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.5390824675559998,
+              "p90": 2.844803309440613,
+              "p99": 4.249805839061738,
+              "max": 4.414703845977783
+            }
+          },
+          "changepoint": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.08399999999999999,
+              "p99": 0.1164,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.5390824675559998,
+              "p90": 2.844803309440613,
+              "p99": 4.249805839061738,
+              "max": 4.414703845977783
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 10,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 6,
+            "association_fraction": 0.6,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.02,
+              "p90": 0.2,
+              "p99": 0.23600000000000002,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3054812550544739,
+              "p90": 2.916839933395386,
+              "p99": 2.9266395664215086,
+              "max": 2.9277284145355225
+            }
+          },
+          "intercept": {
+            "annotated_events": 10,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.9,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.016000000000000014,
+              "p99": 0.0736,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3054812550544739,
+              "p90": 2.916839933395386,
+              "p99": 2.9266395664215086,
+              "max": 2.9277284145355225
+            }
+          },
+          "changepoint": {
+            "annotated_events": 10,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.04799999999999997,
+              "p99": 0.11280000000000001,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.3054812550544739,
+              "p90": 2.916839933395386,
+              "p99": 2.9266395664215086,
+              "max": 2.9277284145355225
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "intercept": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "changepoint": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 20,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 13,
+            "association_fraction": 0.65,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.04,
+              "p90": 0.232,
+              "p99": 0.2752,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.8790836334228516,
+              "p90": 2.9168400287628176,
+              "p99": 3.5960993337631213,
+              "max": 3.7528774738311768
+            }
+          },
+          "intercept": {
+            "annotated_events": 20,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 17,
+            "association_fraction": 0.85,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.23200000000000004,
+              "p99": 0.4144,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.8790836334228516,
+              "p90": 2.9168400287628176,
+              "p99": 3.5960993337631213,
+              "max": 3.7528774738311768
+            }
+          },
+          "changepoint": {
+            "annotated_events": 20,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 18,
+            "association_fraction": 0.9,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.28,
+              "p99": 0.3131999999999999,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.8790836334228516,
+              "p90": 2.9168400287628176,
+              "p99": 3.5960993337631213,
+              "max": 3.7528774738311768
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 67625,
+      "near_goalkeeper_candidate_frames": 2905
+    },
+    "128057_2nd": {
+      "frames": 70350,
+      "valid_ball_frames": 68507,
+      "candidate_frames": {
+        "proximity": 26693,
+        "intercept": 29715,
+        "changepoint": 27869
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.717138508371385,
+        "proximity__changepoint": 0.4455807545570157,
+        "intercept__changepoint": 0.4793577392421323
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 425,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 391,
+            "association_fraction": 0.92,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.4,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.501920700073242,
+              "p99": 4.546959400177,
+              "max": 5.540406703948975
+            }
+          },
+          "intercept": {
+            "annotated_events": 425,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 407,
+            "association_fraction": 0.9576470588235294,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.24,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.501920700073242,
+              "p99": 4.546959400177,
+              "max": 5.540406703948975
+            }
+          },
+          "changepoint": {
+            "annotated_events": 425,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 414,
+            "association_fraction": 0.9741176470588235,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.28,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.501920700073242,
+              "p99": 4.546959400177,
+              "max": 5.540406703948975
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 48,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 43,
+            "association_fraction": 0.8958333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.12639999999999987,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.233453989028931,
+              "p99": 3.083988485336304,
+              "max": 3.2225587368011475
+            }
+          },
+          "intercept": {
+            "annotated_events": 48,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 46,
+            "association_fraction": 0.9583333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.10999999999999943,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.233453989028931,
+              "p99": 3.083988485336304,
+              "max": 3.2225587368011475
+            }
+          },
+          "changepoint": {
+            "annotated_events": 48,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 46,
+            "association_fraction": 0.9583333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.24,
+              "p99": 0.28,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509589195251465,
+              "p90": 2.233453989028931,
+              "p99": 3.083988485336304,
+              "max": 3.2225587368011475
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 388,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 363,
+            "association_fraction": 0.9355670103092784,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.04,
+              "p90": 0.2,
+              "p99": 0.3751999999999998,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.0999984741210938,
+              "p90": 3.431047201156616,
+              "p99": 4.712718372344969,
+              "max": 5.831261157989502
+            }
+          },
+          "intercept": {
+            "annotated_events": 388,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 374,
+            "association_fraction": 0.9639175257731959,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.2723999999999978,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.0999984741210938,
+              "p90": 3.431047201156616,
+              "p99": 4.712718372344969,
+              "max": 5.831261157989502
+            }
+          },
+          "changepoint": {
+            "annotated_events": 388,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 378,
+            "association_fraction": 0.9742268041237113,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.24,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.0999984741210938,
+              "p90": 3.431047201156616,
+              "p99": 4.712718372344969,
+              "max": 5.831261157989502
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 17,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 14,
+            "association_fraction": 0.8235294117647058,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.2991999999999999,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.3599987030029297,
+              "p90": 2.6674037456512454,
+              "p99": 4.3886450767517085,
+              "max": 4.669219493865967
+            }
+          },
+          "intercept": {
+            "annotated_events": 17,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 16,
+            "association_fraction": 0.9411764705882353,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.04,
+              "p99": 0.11399999999999998,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.3599987030029297,
+              "p90": 2.6674037456512454,
+              "p99": 4.3886450767517085,
+              "max": 4.669219493865967
+            }
+          },
+          "changepoint": {
+            "annotated_events": 17,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 0.8823529411764706,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.22319999999999993,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 1.3599987030029297,
+              "p90": 2.6674037456512454,
+              "p99": 4.3886450767517085,
+              "max": 4.669219493865967
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.75,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.0,
+              "p90": 0.03200000000000003,
+              "p99": 0.1472,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509604692459106,
+              "p90": 2.207349991798401,
+              "p99": 3.301146304607392,
+              "max": 3.4363346099853516
+            }
+          },
+          "intercept": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.003999999999999986,
+              "p99": 0.03640000000000001,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509604692459106,
+              "p90": 2.207349991798401,
+              "p99": 3.301146304607392,
+              "max": 3.4363346099853516
+            }
+          },
+          "changepoint": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 10,
+            "association_fraction": 0.8333333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.2509604692459106,
+              "p90": 2.207349991798401,
+              "p99": 3.301146304607392,
+              "max": 3.4363346099853516
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "intercept": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          },
+          "changepoint": {
+            "annotated_events": 0,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": null
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 19,
+            "association_fraction": 0.7037037037037037,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.12,
+              "p90": 0.32,
+              "p99": 0.32,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181692123413086,
+              "p90": 3.89396781921387,
+              "p99": 5.028328342437743,
+              "max": 5.1545023918151855
+            }
+          },
+          "intercept": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 23,
+            "association_fraction": 0.8518518518518519,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.04,
+              "p90": 0.15200000000000002,
+              "p99": 0.3336000000000001,
+              "max": 0.36
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181692123413086,
+              "p90": 3.89396781921387,
+              "p99": 5.028328342437743,
+              "max": 5.1545023918151855
+            }
+          },
+          "changepoint": {
+            "annotated_events": 27,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 23,
+            "association_fraction": 0.8518518518518519,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.04,
+              "p90": 0.12,
+              "p99": 0.2224000000000001,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 1.7181692123413086,
+              "p90": 3.89396781921387,
+              "p99": 5.028328342437743,
+              "max": 5.1545023918151855
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 70350,
+      "near_goalkeeper_candidate_frames": 2627
+    },
+    "132831_1st": {
+      "frames": 67775,
+      "valid_ball_frames": 67774,
+      "candidate_frames": {
+        "proximity": 11489,
+        "intercept": 13891,
+        "changepoint": 18471
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.5808159451884148,
+        "proximity__changepoint": 0.34355800708551953,
+        "intercept__changepoint": 0.36842995475495793
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 554,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 175,
+            "association_fraction": 0.315884476534296,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.2,
+              "p99": 0.41039999999999965,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.5584404468536377,
+              "p90": 12.934373092651361,
+              "p99": 24.73701183319096,
+              "max": 37.92690658569336
+            }
+          },
+          "intercept": {
+            "annotated_events": 554,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 225,
+            "association_fraction": 0.40613718411552346,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.18399999999999977,
+              "p99": 0.3503999999999996,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.5584404468536377,
+              "p90": 12.934373092651361,
+              "p99": 24.73701183319096,
+              "max": 37.92690658569336
+            }
+          },
+          "changepoint": {
+            "annotated_events": 554,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 283,
+            "association_fraction": 0.5108303249097473,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.2,
+              "p99": 0.44,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.5584404468536377,
+              "p90": 12.934373092651361,
+              "p99": 24.73701183319096,
+              "max": 37.92690658569336
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 65,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 22,
+            "association_fraction": 0.3384615384615385,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.15600000000000008,
+              "p99": 0.16,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.679999828338623,
+              "p50": 3.752878427505493,
+              "p90": 10.761314010620119,
+              "p99": 20.925266342163084,
+              "max": 24.16774559020996
+            }
+          },
+          "intercept": {
+            "annotated_events": 65,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 31,
+            "association_fraction": 0.47692307692307695,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.45599999999999996,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.679999828338623,
+              "p50": 3.752878427505493,
+              "p90": 10.761314010620119,
+              "p99": 20.925266342163084,
+              "max": 24.16774559020996
+            }
+          },
+          "changepoint": {
+            "annotated_events": 65,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 36,
+            "association_fraction": 0.5538461538461539,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.42599999999999993,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.679999828338623,
+              "p50": 3.752878427505493,
+              "p90": 10.761314010620119,
+              "p99": 20.925266342163084,
+              "max": 24.16774559020996
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 485,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 192,
+            "association_fraction": 0.3958762886597938,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.36720000000000025,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.558441162109375,
+              "p90": 14.565234184265142,
+              "p99": 30.29992919921869,
+              "max": 40.3447265625
+            }
+          },
+          "intercept": {
+            "annotated_events": 485,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 255,
+            "association_fraction": 0.5257731958762887,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.4184000000000003,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.558441162109375,
+              "p90": 14.565234184265142,
+              "p99": 30.29992919921869,
+              "max": 40.3447265625
+            }
+          },
+          "changepoint": {
+            "annotated_events": 485,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 269,
+            "association_fraction": 0.554639175257732,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.44,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.37279999999999974,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.558441162109375,
+              "p90": 14.565234184265142,
+              "p99": 30.29992919921869,
+              "max": 40.3447265625
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 1,
+            "association_fraction": 0.08333333333333333,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.44,
+              "p50": 0.44,
+              "p90": 0.44,
+              "p99": 0.44,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.7181662321090698,
+              "p50": 16.8320050239563,
+              "p90": 27.50339870452881,
+              "p99": 33.71329200744629,
+              "max": 34.42252731323242
+            }
+          },
+          "intercept": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 0.16666666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.08,
+              "p90": 0.17600000000000002,
+              "p99": 0.1976,
+              "max": 0.2
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.7181662321090698,
+              "p50": 16.8320050239563,
+              "p90": 27.50339870452881,
+              "p99": 33.71329200744629,
+              "max": 34.42252731323242
+            }
+          },
+          "changepoint": {
+            "annotated_events": 12,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 0.16666666666666666,
+            "nearest_candidate_lag_seconds": {
+              "p0": 0.0,
+              "p50": 0.16,
+              "p90": 0.28800000000000003,
+              "p99": 0.3168,
+              "max": 0.32
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.7181662321090698,
+              "p50": 16.8320050239563,
+              "p90": 27.50339870452881,
+              "p99": 33.71329200744629,
+              "max": 34.42252731323242
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 22,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 3,
+            "association_fraction": 0.13636363636363635,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": 0.0,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 6.479299783706665,
+              "p90": 21.145083427429203,
+              "p99": 28.545408363342275,
+              "max": 30.480358123779297
+            }
+          },
+          "intercept": {
+            "annotated_events": 22,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 7,
+            "association_fraction": 0.3181818181818182,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": -0.16,
+              "p90": 0.016000000000000014,
+              "p99": 0.03759999999999998,
+              "max": 0.04
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 6.479299783706665,
+              "p90": 21.145083427429203,
+              "p99": 28.545408363342275,
+              "max": 30.480358123779297
+            }
+          },
+          "changepoint": {
+            "annotated_events": 22,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 8,
+            "association_fraction": 0.36363636363636365,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": -0.12,
+              "p90": 0.0,
+              "p99": 0.0,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 6.479299783706665,
+              "p90": 21.145083427429203,
+              "p99": 28.545408363342275,
+              "max": 30.480358123779297
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": {
+              "p0": 10.982172966003418,
+              "p50": 31.796077251434326,
+              "p90": 48.44720067977905,
+              "p99": 52.193703451156615,
+              "max": 52.609981536865234
+            }
+          },
+          "intercept": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": {
+              "p0": 10.982172966003418,
+              "p50": 31.796077251434326,
+              "p90": 48.44720067977905,
+              "p99": 52.193703451156615,
+              "max": 52.609981536865234
+            }
+          },
+          "changepoint": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 0,
+            "association_fraction": 0.0,
+            "nearest_candidate_lag_seconds": null,
+            "actor_ball_distance_m": {
+              "p0": 10.982172966003418,
+              "p50": 31.796077251434326,
+              "p90": 48.44720067977905,
+              "p99": 52.193703451156615,
+              "max": 52.609981536865234
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 5,
+            "association_fraction": 0.20833333333333334,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": 0.0,
+              "p90": 0.28,
+              "p99": 0.424,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 4.818118572235107,
+              "p90": 9.13853998184204,
+              "p99": 11.12476777076721,
+              "max": 11.5600004196167
+            }
+          },
+          "intercept": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 7,
+            "association_fraction": 0.2916666666666667,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.04,
+              "p90": 0.09600000000000002,
+              "p99": 0.11759999999999998,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 4.818118572235107,
+              "p90": 9.13853998184204,
+              "p99": 11.12476777076721,
+              "max": 11.5600004196167
+            }
+          },
+          "changepoint": {
+            "annotated_events": 24,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 7,
+            "association_fraction": 0.2916666666666667,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.04,
+              "p50": 0.0,
+              "p90": 0.1360000000000001,
+              "p99": 0.2655999999999999,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.0499992370605469,
+              "p50": 4.818118572235107,
+              "p90": 9.13853998184204,
+              "p99": 11.12476777076721,
+              "max": 11.5600004196167
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 67775,
+      "near_goalkeeper_candidate_frames": 2916
+    },
+    "132831_2nd": {
+      "frames": 68375,
+      "valid_ball_frames": 68371,
+      "candidate_frames": {
+        "proximity": 11760,
+        "intercept": 14250,
+        "changepoint": 17936
+      },
+      "algorithm_jaccard": {
+        "proximity__intercept": 0.5970772442588727,
+        "proximity__changepoint": 0.3263656259770423,
+        "intercept__changepoint": 0.37078364565587735
+      },
+      "event_association": {
+        "PASS": {
+          "proximity": {
+            "annotated_events": 522,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 167,
+            "association_fraction": 0.31992337164750956,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.32,
+              "p99": 0.44,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.874563694000244,
+              "p90": 8.563224983215337,
+              "p99": 17.002321929931593,
+              "max": 39.45073318481445
+            }
+          },
+          "intercept": {
+            "annotated_events": 522,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 239,
+            "association_fraction": 0.4578544061302682,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.24,
+              "p99": 0.4248000000000002,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.874563694000244,
+              "p90": 8.563224983215337,
+              "p99": 17.002321929931593,
+              "max": 39.45073318481445
+            }
+          },
+          "changepoint": {
+            "annotated_events": 522,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 279,
+            "association_fraction": 0.5344827586206896,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.2480000000000007,
+              "p99": 0.4487999999999988,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.874563694000244,
+              "p90": 8.563224983215337,
+              "p99": 17.002321929931593,
+              "max": 39.45073318481445
+            }
+          }
+        },
+        "HIGH_PASS": {
+          "proximity": {
+            "annotated_events": 61,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 29,
+            "association_fraction": 0.47540983606557374,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.32,
+              "p50": 0.0,
+              "p90": 0.24,
+              "p99": 0.2688,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.915630578994751,
+              "p90": 6.209421157836914,
+              "p99": 10.898723411560056,
+              "max": 11.86595630645752
+            }
+          },
+          "intercept": {
+            "annotated_events": 61,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 35,
+            "association_fraction": 0.5737704918032787,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.16,
+              "p50": 0.0,
+              "p90": 0.26400000000000007,
+              "p99": 0.44,
+              "max": 0.44
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.915630578994751,
+              "p90": 6.209421157836914,
+              "p99": 10.898723411560056,
+              "max": 11.86595630645752
+            }
+          },
+          "changepoint": {
+            "annotated_events": 61,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 39,
+            "association_fraction": 0.639344262295082,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.3543999999999997,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 2.915630578994751,
+              "p90": 6.209421157836914,
+              "p99": 10.898723411560056,
+              "max": 11.86595630645752
+            }
+          }
+        },
+        "DRIVE": {
+          "proximity": {
+            "annotated_events": 467,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 175,
+            "association_fraction": 0.3747323340471092,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.14399999999999977,
+              "p99": 0.44,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.558440685272217,
+              "p90": 8.902140617370605,
+              "p99": 17.02803422927847,
+              "max": 31.908123016357422
+            }
+          },
+          "intercept": {
+            "annotated_events": 467,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 255,
+            "association_fraction": 0.5460385438972163,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.12,
+              "p99": 0.39680000000000065,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.558440685272217,
+              "p90": 8.902140617370605,
+              "p99": 17.02803422927847,
+              "max": 31.908123016357422
+            }
+          },
+          "changepoint": {
+            "annotated_events": 467,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 285,
+            "association_fraction": 0.6102783725910065,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.16,
+              "p99": 0.48,
+              "max": 0.48
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.0,
+              "p50": 3.558440685272217,
+              "p90": 8.902140617370605,
+              "p99": 17.02803422927847,
+              "max": 31.908123016357422
+            }
+          }
+        },
+        "CROSS": {
+          "proximity": {
+            "annotated_events": 15,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 7,
+            "association_fraction": 0.4666666666666667,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.09600000000000002,
+              "p99": 0.11759999999999998,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 3.222562551498413,
+              "p90": 8.203841018676757,
+              "p99": 9.131185207366944,
+              "max": 9.13853931427002
+            }
+          },
+          "intercept": {
+            "annotated_events": 15,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 8,
+            "association_fraction": 0.5333333333333333,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": 0.0,
+              "p90": 0.023999999999999987,
+              "p99": 0.07439999999999998,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 3.222562551498413,
+              "p90": 8.203841018676757,
+              "p99": 9.131185207366944,
+              "max": 9.13853931427002
+            }
+          },
+          "changepoint": {
+            "annotated_events": 15,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 9,
+            "association_fraction": 0.6,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.0,
+              "p90": 0.20800000000000005,
+              "p99": 0.3808,
+              "max": 0.4
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6800003051757812,
+              "p50": 3.222562551498413,
+              "p90": 8.203841018676757,
+              "p99": 9.131185207366944,
+              "max": 9.13853931427002
+            }
+          }
+        },
+        "SHOT": {
+          "proximity": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 3,
+            "association_fraction": 0.23076923076923078,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.36,
+              "p50": 0.0,
+              "p90": 0.192,
+              "p99": 0.2352,
+              "max": 0.24
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509617805480957,
+              "p50": 3.2225589752197266,
+              "p90": 6.342468547821046,
+              "p99": 8.191214809417723,
+              "max": 8.425889015197754
+            }
+          },
+          "intercept": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 6,
+            "association_fraction": 0.46153846153846156,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.24,
+              "p50": 0.02,
+              "p90": 0.08,
+              "p99": 0.08,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509617805480957,
+              "p50": 3.2225589752197266,
+              "p90": 6.342468547821046,
+              "p99": 8.191214809417723,
+              "max": 8.425889015197754
+            }
+          },
+          "changepoint": {
+            "annotated_events": 13,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 8,
+            "association_fraction": 0.6153846153846154,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.2,
+              "p50": 0.0,
+              "p90": 0.10399999999999998,
+              "p99": 0.15439999999999998,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509617805480957,
+              "p50": 3.2225589752197266,
+              "p90": 6.342468547821046,
+              "p99": 8.191214809417723,
+              "max": 8.425889015197754
+            }
+          }
+        },
+        "HEADER": {
+          "proximity": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.12,
+              "p50": 0.0,
+              "p90": 0.096,
+              "p99": 0.1176,
+              "max": 0.12
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509589195251465,
+              "p50": 1.7726606130599976,
+              "p90": 2.1900219678878785,
+              "p99": 2.2839282727241517,
+              "max": 2.2943623065948486
+            }
+          },
+          "intercept": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": -0.04,
+              "p90": -0.007999999999999998,
+              "p99": -0.0008000000000000007,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509589195251465,
+              "p50": 1.7726606130599976,
+              "p90": 2.1900219678878785,
+              "p99": 2.2839282727241517,
+              "max": 2.2943623065948486
+            }
+          },
+          "changepoint": {
+            "annotated_events": 2,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 2,
+            "association_fraction": 1.0,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.08,
+              "p50": -0.04,
+              "p90": -0.007999999999999998,
+              "p99": -0.0008000000000000007,
+              "max": 0.0
+            },
+            "actor_ball_distance_m": {
+              "p0": 1.2509589195251465,
+              "p50": 1.7726606130599976,
+              "p90": 2.1900219678878785,
+              "p99": 2.2839282727241517,
+              "max": 2.2943623065948486
+            }
+          }
+        },
+        "DEFENSIVE_INTERVENTION": {
+          "proximity": {
+            "annotated_events": 34,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 13,
+            "association_fraction": 0.38235294117647056,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.48,
+              "p50": -0.04,
+              "p90": 0.22400000000000023,
+              "p99": 0.28,
+              "max": 0.28
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6799983978271484,
+              "p50": 4.120918035507202,
+              "p90": 9.191767024993895,
+              "p99": 11.765450057983399,
+              "max": 11.981490135192871
+            }
+          },
+          "intercept": {
+            "annotated_events": 34,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 15,
+            "association_fraction": 0.4411764705882353,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.28,
+              "p50": -0.04,
+              "p90": 0.06399999999999999,
+              "p99": 0.08,
+              "max": 0.08
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6799983978271484,
+              "p50": 4.120918035507202,
+              "p90": 9.191767024993895,
+              "p99": 11.765450057983399,
+              "max": 11.981490135192871
+            }
+          },
+          "changepoint": {
+            "annotated_events": 34,
+            "ball_missing_at_event": 0,
+            "candidate_association_count": 18,
+            "association_fraction": 0.5294117647058824,
+            "nearest_candidate_lag_seconds": {
+              "p0": -0.4,
+              "p50": 0.0,
+              "p90": 0.08,
+              "p99": 0.14639999999999986,
+              "max": 0.16
+            },
+            "actor_ball_distance_m": {
+              "p0": 0.6799983978271484,
+              "p50": 4.120918035507202,
+              "p90": 9.191767024993895,
+              "p99": 11.765450057983399,
+              "max": 11.981490135192871
+            }
+          }
+        }
+      },
+      "insufficient_ball_height_frames": 68375,
+      "near_goalkeeper_candidate_frames": 2222
+    }
+  },
+  "algorithms": {
+    "proximity": "nearest <=2m, same nearest 0.2s ago",
+    "intercept": "nearest <=5m, relative constant-velocity closest approach <=1.5m within0.4s; continuous actor and ball",
+    "changepoint": "nearest<=3m and smoothed backward ball acceleration>15m/s2 or direction change>60deg at speed>2; suppress >45m/s and invalid samples"
+  },
+  "limitations": "2D ball only; no verified height, airborne/rolling regimes are not identifiable. Quantization can induce apparent acceleration. Association with BAS is not independent physical truth.",
+  "disputed_cases": 120
+}

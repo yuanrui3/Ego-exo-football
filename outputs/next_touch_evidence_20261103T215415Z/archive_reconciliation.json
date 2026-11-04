@@ -1,0 +1,17 @@
+{
+  "artifacts": [
+    {
+      "path": "outputs\\return_ball_centric_action_autonomy_20261102T222620Z.zip",
+      "sha256": "66f9ddd113b3dcb0d871d477b381a6123ff2b6f5bc8a8aab7f5c61bba47b8d1a",
+      "bytes": 906446,
+      "crc": "PASS"
+    },
+    {
+      "path": "outputs\\return_ball_anticipation_20261103T000141Z.zip",
+      "sha256": "a903e7b35bd6fa6c55bed7c521d538f106c09076ccf805e91f0031a3da1d4ebb",
+      "bytes": 741036,
+      "crc": "PASS"
+    }
+  ],
+  "conclusion": "66f9... refers to the older ball-centric archive; a903... refers to the later ball-anticipation archive. Different filenames/runs, not the same bytes. Actual current hashes above were recomputed."
+}

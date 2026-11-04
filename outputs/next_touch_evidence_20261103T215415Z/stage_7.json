@@ -1,0 +1,2202 @@
+{
+  "status": "COMPLETE",
+  "horizons": {
+    "lead_0_1s": {
+      "scheduler_revision": 2,
+      "scheduling_contract": "All current causal queries scored before target-validity filtering; unknown selected outcomes separate. Target masks affect evaluation only.",
+      "scenes": 33264,
+      "eligible_scenes": 33262,
+      "positive_scenes": 11401,
+      "prevalence": 0.3427635139197883,
+      "scene_metrics": {
+        "interpretable": {
+          "pooled": {
+            "rows": 33262,
+            "positives": 11401,
+            "prevalence": 0.3427635139197883,
+            "AP": 0.6312206226729419,
+            "AUC": 0.758049160634934,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.8415630516048938,
+            "recall_at_annotation_precision": {
+              "0.5": 0.7906324006666082,
+              "0.8": 0.1727041487588808
+            }
+          },
+          "per_match": {
+            "117092": {
+              "rows": 5375,
+              "positives": 1859,
+              "prevalence": 0.34586046511627905,
+              "AP": 0.6397390828064664,
+              "AUC": 0.7656787292518455,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.849702834903043,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8047337278106509,
+                "0.8": 0.19795589026358257
+              }
+            },
+            "117093": {
+              "rows": 5512,
+              "positives": 1977,
+              "prevalence": 0.3586719883889695,
+              "AP": 0.668474252646627,
+              "AUC": 0.7855837177040921,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.8637481439495234,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8937784522003035,
+                "0.8": 0.2205361659079413
+              }
+            },
+            "118576": {
+              "rows": 5801,
+              "positives": 1882,
+              "prevalence": 0.32442682296155834,
+              "AP": 0.6710893169573346,
+              "AUC": 0.8161939747474021,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 2.0685383250103606,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8740701381509033,
+                "0.8": 0.19394261424017004
+              }
+            },
+            "118578": {
+              "rows": 5641,
+              "positives": 1838,
+              "prevalence": 0.32582875376706255,
+              "AP": 0.6318254010532955,
+              "AUC": 0.7839575708656789,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.939133344581959,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8144722524483133,
+                "0.8": 0.1648531011969532
+              }
+            },
+            "128057": {
+              "rows": 5504,
+              "positives": 1708,
+              "prevalence": 0.31031976744186046,
+              "AP": 0.6526762034454145,
+              "AUC": 0.8075092294859867,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 2.103237601735106,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8413348946135831,
+                "0.8": 0.2107728337236534
+              }
+            },
+            "132831": {
+              "rows": 5429,
+              "positives": 2137,
+              "prevalence": 0.39362681893534723,
+              "AP": 0.5622997798286948,
+              "AUC": 0.6473588359011595,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.4285098290547422,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6092653252222742,
+                "0.8": 0.056621431913897985
+              }
+            }
+          }
+        },
+        "compact_kinematic": {
+          "pooled": {
+            "rows": 33262,
+            "positives": 11401,
+            "prevalence": 0.3427635139197883,
+            "AP": 0.6133010734572123,
+            "AUC": 0.7452199031347885,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.7892834229746335,
+            "recall_at_annotation_precision": {
+              "0.5": 0.7538812384878519,
+              "0.8": 0.15928427330935882
+            }
+          },
+          "per_match": {
+            "117092": {
+              "rows": 5375,
+              "positives": 1859,
+              "prevalence": 0.34586046511627905,
+              "AP": 0.6279635558984377,
+              "AUC": 0.7510522098012254,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.8156557896471774,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7525551371705218,
+                "0.8": 0.19903173749327596
+              }
+            },
+            "117093": {
+              "rows": 5512,
+              "positives": 1977,
+              "prevalence": 0.3586719883889695,
+              "AP": 0.6503473816252834,
+              "AUC": 0.7700144304480308,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.8132092906011947,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8528072837632777,
+                "0.8": 0.19979767324228628
+              }
+            },
+            "118576": {
+              "rows": 5801,
+              "positives": 1882,
+              "prevalence": 0.32442682296155834,
+              "AP": 0.6527707617798226,
+              "AUC": 0.7985775449125341,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 2.0120739580684117,
+              "recall_at_annotation_precision": {
+                "0.5": 0.8358129649309245,
+                "0.8": 0.21944739638682254
+              }
+            },
+            "118578": {
+              "rows": 5641,
+              "positives": 1838,
+              "prevalence": 0.32582875376706255,
+              "AP": 0.6127680487877489,
+              "AUC": 0.7718761632832678,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.8806444848812252,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7600652883569097,
+                "0.8": 0.13710554951033732
+              }
+            },
+            "128057": {
+              "rows": 5504,
+              "positives": 1708,
+              "prevalence": 0.31031976744186046,
+              "AP": 0.6180289886634942,
+              "AUC": 0.7881381825562714,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.9915875606580047,
+              "recall_at_annotation_precision": {
+                "0.5": 0.794496487119438,
+                "0.8": 0.1832552693208431
+              }
+            },
+            "132831": {
+              "rows": 5429,
+              "positives": 2137,
+              "prevalence": 0.39362681893534723,
+              "AP": 0.5567624846244504,
+              "AUC": 0.6466208121558992,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.414442456259308,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5900795507721104,
+                "0.8": 0.06738418343472158
+              }
+            }
+          }
+        },
+        "nearest": {
+          "pooled": {
+            "rows": 33262,
+            "positives": 11401,
+            "prevalence": 0.3427635139197883,
+            "AP": 0.39275239718522453,
+            "AUC": 0.5735845131117855,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.1458407363542618,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "per_match": {
+            "117092": {
+              "rows": 5375,
+              "positives": 1859,
+              "prevalence": 0.34586046511627905,
+              "AP": 0.4050921132664012,
+              "AUC": 0.5879730775044506,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.1712587997885457,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "117093": {
+              "rows": 5512,
+              "positives": 1977,
+              "prevalence": 0.3586719883889695,
+              "AP": 0.4113399118840702,
+              "AUC": 0.5777485639307481,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.1468414741047015,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "118576": {
+              "rows": 5801,
+              "positives": 1882,
+              "prevalence": 0.32442682296155834,
+              "AP": 0.3871410294101851,
+              "AUC": 0.5952072372015785,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.1933077107377703,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "118578": {
+              "rows": 5641,
+              "positives": 1838,
+              "prevalence": 0.32582875376706255,
+              "AP": 0.385552447792272,
+              "AUC": 0.5834087515239815,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.1832978008684474,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "128057": {
+              "rows": 5504,
+              "positives": 1708,
+              "prevalence": 0.31031976744186046,
+              "AP": 0.370737344160865,
+              "AUC": 0.5911214319029275,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.194694579778338,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "132831": {
+              "rows": 5429,
+              "positives": 2137,
+              "prevalence": 0.39362681893534723,
+              "AP": 0.42302020141176705,
+              "AUC": 0.5471792908717608,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.074673221087732,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            }
+          }
+        }
+      },
+      "workload": {
+        "interpretable": {
+          "5_top1": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 43,
+            "unique_events_recalled": 41,
+            "unique_supported_events": 11707,
+            "event_recall": 0.003502178183992483,
+            "unique_events_per_reviewed_scene": 0.9534883720930233,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.48,
+            "false_review_scenes_annotation_relative": 2,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 8
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9534883720930233,
+            "suppressed": 1
+          },
+          "5_top3": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 129,
+            "unique_events_recalled": 41,
+            "unique_supported_events": 11707,
+            "event_recall": 0.003502178183992483,
+            "unique_events_per_reviewed_scene": 0.9534883720930233,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.48,
+            "false_review_scenes_annotation_relative": 2,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 8
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9534883720930233,
+            "suppressed": 1
+          },
+          "10_top1": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 90,
+            "unique_events_recalled": 87,
+            "unique_supported_events": 11707,
+            "event_recall": 0.0074314512684718545,
+            "unique_events_per_reviewed_scene": 0.9666666666666667,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.44,
+            "false_review_scenes_annotation_relative": 3,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 12
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 16
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9666666666666667,
+            "suppressed": 1
+          },
+          "10_top3": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 270,
+            "unique_events_recalled": 87,
+            "unique_supported_events": 11707,
+            "event_recall": 0.0074314512684718545,
+            "unique_events_per_reviewed_scene": 0.9666666666666667,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.44,
+            "false_review_scenes_annotation_relative": 3,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 12
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 16
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9666666666666667,
+            "suppressed": 1
+          },
+          "20_top1": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 182,
+            "unique_events_recalled": 175,
+            "unique_supported_events": 11707,
+            "event_recall": 0.014948321517041086,
+            "unique_events_per_reviewed_scene": 0.9615384615384616,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 7,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 26
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 30
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 31
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 30
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 28
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 30
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9615384615384616,
+            "suppressed": 4
+          },
+          "20_top3": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 546,
+            "unique_events_recalled": 175,
+            "unique_supported_events": 11707,
+            "event_recall": 0.014948321517041086,
+            "unique_events_per_reviewed_scene": 0.9615384615384616,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 7,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 26
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 30
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 31
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 30
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 28
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 30
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9615384615384616,
+            "suppressed": 4
+          }
+        },
+        "compact_kinematic": {
+          "5_top1": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 43,
+            "unique_events_recalled": 41,
+            "unique_supported_events": 11707,
+            "event_recall": 0.003502178183992483,
+            "unique_events_per_reviewed_scene": 0.9534883720930233,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.44,
+            "false_review_scenes_annotation_relative": 2,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 8
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9534883720930233,
+            "suppressed": 0
+          },
+          "5_top3": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 129,
+            "unique_events_recalled": 41,
+            "unique_supported_events": 11707,
+            "event_recall": 0.003502178183992483,
+            "unique_events_per_reviewed_scene": 0.9534883720930233,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.44,
+            "false_review_scenes_annotation_relative": 2,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 8
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9534883720930233,
+            "suppressed": 0
+          },
+          "10_top1": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 90,
+            "unique_events_recalled": 86,
+            "unique_supported_events": 11707,
+            "event_recall": 0.007346032288374477,
+            "unique_events_per_reviewed_scene": 0.9555555555555556,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 4,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 14
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 16
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 13
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9555555555555556,
+            "suppressed": 2
+          },
+          "10_top3": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 270,
+            "unique_events_recalled": 87,
+            "unique_supported_events": 11707,
+            "event_recall": 0.0074314512684718545,
+            "unique_events_per_reviewed_scene": 0.9666666666666667,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 3,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 14
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 16
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 13
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9666666666666667,
+            "suppressed": 2
+          },
+          "20_top1": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 182,
+            "unique_events_recalled": 168,
+            "unique_supported_events": 11707,
+            "event_recall": 0.014350388656359443,
+            "unique_events_per_reviewed_scene": 0.9230769230769231,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 14,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 28
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 28
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 30
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 28
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 28
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 26
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9230769230769231,
+            "suppressed": 5
+          },
+          "20_top3": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 546,
+            "unique_events_recalled": 169,
+            "unique_supported_events": 11707,
+            "event_recall": 0.014435807636456821,
+            "unique_events_per_reviewed_scene": 0.9285714285714286,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 13,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 28
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 29
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 30
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 28
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 28
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 26
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.9285714285714286,
+            "suppressed": 5
+          }
+        },
+        "nearest": {
+          "5_top1": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 43,
+            "unique_events_recalled": 18,
+            "unique_supported_events": 11707,
+            "event_recall": 0.0015375416417527975,
+            "unique_events_per_reviewed_scene": 0.4186046511627907,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.28,
+            "false_review_scenes_annotation_relative": 25,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 3
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 4
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 3
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 4
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.4186046511627907,
+            "suppressed": 18
+          },
+          "5_top3": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 129,
+            "unique_events_recalled": 23,
+            "unique_supported_events": 11707,
+            "event_recall": 0.0019646365422396855,
+            "unique_events_per_reviewed_scene": 0.5348837209302325,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.4,
+            "false_review_scenes_annotation_relative": 21,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 3
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 5
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.5116279069767442,
+            "suppressed": 18
+          },
+          "10_top1": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 90,
+            "unique_events_recalled": 25,
+            "unique_supported_events": 11707,
+            "event_recall": 0.002135474502434441,
+            "unique_events_per_reviewed_scene": 0.2777777777777778,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.44,
+            "false_review_scenes_annotation_relative": 65,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 4
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 6
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 4
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 3
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 5
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 3
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.2777777777777778,
+            "suppressed": 31
+          },
+          "10_top3": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 270,
+            "unique_events_recalled": 31,
+            "unique_supported_events": 11707,
+            "event_recall": 0.0026479883830187066,
+            "unique_events_per_reviewed_scene": 0.34444444444444444,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.48,
+            "false_review_scenes_annotation_relative": 60,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 4
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 8
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 6
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 3
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 6
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 3
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.3333333333333333,
+            "suppressed": 31
+          },
+          "20_top1": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 182,
+            "unique_events_recalled": 58,
+            "unique_supported_events": 11707,
+            "event_recall": 0.004954300845647903,
+            "unique_events_per_reviewed_scene": 0.31868131868131866,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.44,
+            "false_review_scenes_annotation_relative": 124,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 12
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 10
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 13
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 6
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 10
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 7
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.31868131868131866,
+            "suppressed": 50
+          },
+          "20_top3": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 546,
+            "unique_events_recalled": 69,
+            "unique_supported_events": 11707,
+            "event_recall": 0.005893909626719057,
+            "unique_events_per_reviewed_scene": 0.3791208791208791,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 0.48,
+            "false_review_scenes_annotation_relative": 115,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 12
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 12
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 15
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 10
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 11
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 7
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.36813186813186816,
+            "suppressed": 50
+          }
+        }
+      }
+    },
+    "lead_1_2s": {
+      "scheduler_revision": 2,
+      "scheduling_contract": "All current causal queries scored before target-validity filtering; unknown selected outcomes separate. Target masks affect evaluation only.",
+      "scenes": 33264,
+      "eligible_scenes": 33182,
+      "positive_scenes": 11374,
+      "prevalence": 0.34277620396600567,
+      "scene_metrics": {
+        "kinematic": {
+          "pooled": {
+            "rows": 33182,
+            "positives": 11374,
+            "prevalence": 0.34277620396600567,
+            "AP": 0.4667079078409428,
+            "AUC": 0.6554520373530859,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.3615528220483704,
+            "recall_at_annotation_precision": {
+              "0.5": 0.16739933180938985,
+              "0.8": 0.0038684719535783366
+            }
+          },
+          "per_match": {
+            "117092": {
+              "rows": 5357,
+              "positives": 1855,
+              "prevalence": 0.3462759006906851,
+              "AP": 0.4469049155422807,
+              "AUC": 0.6288039487639716,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.2906035755040417,
+              "recall_at_annotation_precision": {
+                "0.5": 0.09110512129380054,
+                "0.8": 0.00646900269541779
+              }
+            },
+            "117093": {
+              "rows": 5504,
+              "positives": 1971,
+              "prevalence": 0.3581031976744186,
+              "AP": 0.4746176226467285,
+              "AUC": 0.6558790546708766,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.3253654972336852,
+              "recall_at_annotation_precision": {
+                "0.5": 0.1506849315068493,
+                "0.8": 0.0060882800608828
+              }
+            },
+            "118576": {
+              "rows": 5780,
+              "positives": 1876,
+              "prevalence": 0.3245674740484429,
+              "AP": 0.47915410102800177,
+              "AUC": 0.6978971188043972,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.4762850234231613,
+              "recall_at_annotation_precision": {
+                "0.5": 0.3406183368869936,
+                "0.8": 0.0010660980810234541
+              }
+            },
+            "118578": {
+              "rows": 5632,
+              "positives": 1834,
+              "prevalence": 0.32563920454545453,
+              "AP": 0.4729482083311607,
+              "AUC": 0.680671555309774,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.45236876189809,
+              "recall_at_annotation_precision": {
+                "0.5": 0.19956379498364232,
+                "0.8": 0.024536532170119956
+              }
+            },
+            "128057": {
+              "rows": 5492,
+              "positives": 1705,
+              "prevalence": 0.3104515659140568,
+              "AP": 0.45963719367920125,
+              "AUC": 0.6899854185525881,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.4805439693174036,
+              "recall_at_annotation_precision": {
+                "0.5": 0.26217008797653957,
+                "0.8": 0.0011730205278592375
+              }
+            },
+            "132831": {
+              "rows": 5417,
+              "positives": 2133,
+              "prevalence": 0.3937603839763707,
+              "AP": 0.4864404338729317,
+              "AUC": 0.6048902805116284,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.2353716972759825,
+              "recall_at_annotation_precision": {
+                "0.5": 0.3764650726676043,
+                "0.8": 0.0032817627754336614
+              }
+            }
+          }
+        },
+        "full_context": {
+          "pooled": {
+            "rows": 33182,
+            "positives": 11374,
+            "prevalence": 0.34277620396600567,
+            "AP": 0.4789064916500949,
+            "AUC": 0.663402626657753,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.3971404260535827,
+            "recall_at_annotation_precision": {
+              "0.5": 0.19825918762088976,
+              "0.8": 0.00931950061543872
+            }
+          },
+          "per_match": {
+            "117092": {
+              "rows": 5357,
+              "positives": 1855,
+              "prevalence": 0.3462759006906851,
+              "AP": 0.4652894366370948,
+              "AUC": 0.6428121166033733,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.3436956938355347,
+              "recall_at_annotation_precision": {
+                "0.5": 0.21617250673854446,
+                "0.8": 0.0026954177897574125
+              }
+            },
+            "117093": {
+              "rows": 5504,
+              "positives": 1971,
+              "prevalence": 0.3581031976744186,
+              "AP": 0.5028381506295102,
+              "AUC": 0.672510674523012,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.404171071062823,
+              "recall_at_annotation_precision": {
+                "0.5": 0.39320142059868085,
+                "0.8": 0.022323693556570268
+              }
+            },
+            "118576": {
+              "rows": 5780,
+              "positives": 1876,
+              "prevalence": 0.3245674740484429,
+              "AP": 0.4963213063094094,
+              "AUC": 0.7056901619682617,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.5291775855375196,
+              "recall_at_annotation_precision": {
+                "0.5": 0.40458422174840086,
+                "0.8": 0.0255863539445629
+              }
+            },
+            "118578": {
+              "rows": 5632,
+              "positives": 1834,
+              "prevalence": 0.32563920454545453,
+              "AP": 0.48097628118904384,
+              "AUC": 0.6857939924760952,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.4770220368902371,
+              "recall_at_annotation_precision": {
+                "0.5": 0.2050163576881134,
+                "0.8": 0.03544165757906216
+              }
+            },
+            "128057": {
+              "rows": 5492,
+              "positives": 1705,
+              "prevalence": 0.3104515659140568,
+              "AP": 0.4685186596855976,
+              "AUC": 0.6999619782757341,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.5091521870928457,
+              "recall_at_annotation_precision": {
+                "0.5": 0.1624633431085044,
+                "0.8": 0.00469208211143695
+              }
+            },
+            "132831": {
+              "rows": 5417,
+              "positives": 2133,
+              "prevalence": 0.3937603839763707,
+              "AP": 0.4787827326465439,
+              "AUC": 0.598815064930022,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.2159240800498492,
+              "recall_at_annotation_precision": {
+                "0.5": 0.25972808251289264,
+                "0.8": 0.02062822315986873
+              }
+            }
+          }
+        },
+        "distance": {
+          "pooled": {
+            "rows": 33182,
+            "positives": 11374,
+            "prevalence": 0.34277620396600567,
+            "AP": 0.392556114032366,
+            "AUC": 0.5765145651948987,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.1452256880448364,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "per_match": {
+            "117092": {
+              "rows": 5357,
+              "positives": 1855,
+              "prevalence": 0.3462759006906851,
+              "AP": 0.40213871556893177,
+              "AUC": 0.5949481312950167,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.161324581834376,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "117093": {
+              "rows": 5504,
+              "positives": 1971,
+              "prevalence": 0.3581031976744186,
+              "AP": 0.4195792194410648,
+              "AUC": 0.5861131323523099,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.171671244953638,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "118576": {
+              "rows": 5780,
+              "positives": 1876,
+              "prevalence": 0.3245674740484429,
+              "AP": 0.4034756148074549,
+              "AUC": 0.6165900044566396,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.2431178324024998,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "118578": {
+              "rows": 5632,
+              "positives": 1834,
+              "prevalence": 0.32563920454545453,
+              "AP": 0.37168763796462845,
+              "AUC": 0.5751057492808876,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.1414093658761109,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "128057": {
+              "rows": 5492,
+              "positives": 1705,
+              "prevalence": 0.3104515659140568,
+              "AP": 0.3720289572741682,
+              "AUC": 0.6061963794955268,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.1983478201464701,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            },
+            "132831": {
+              "rows": 5417,
+              "positives": 2133,
+              "prevalence": 0.3937603839763707,
+              "AP": 0.42383734604412526,
+              "AUC": 0.5463950860927379,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 1.0763839210131394,
+              "recall_at_annotation_precision": {
+                "0.5": 0.0,
+                "0.8": 0.0
+              }
+            }
+          }
+        }
+      },
+      "workload": {
+        "kinematic": {
+          "5_top1": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 43,
+            "unique_events_recalled": 31,
+            "unique_supported_events": 11680,
+            "event_recall": 0.002654109589041096,
+            "unique_events_per_reviewed_scene": 0.7209302325581395,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 12,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 4
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 4
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7209302325581395,
+            "suppressed": 0
+          },
+          "5_top3": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 129,
+            "unique_events_recalled": 32,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0027397260273972603,
+            "unique_events_per_reviewed_scene": 0.7441860465116279,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.4,
+            "false_review_scenes_annotation_relative": 11,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 4
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 4
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7441860465116279,
+            "suppressed": 0
+          },
+          "10_top1": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 90,
+            "unique_events_recalled": 59,
+            "unique_supported_events": 11680,
+            "event_recall": 0.005051369863013699,
+            "unique_events_per_reviewed_scene": 0.6555555555555556,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 31,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 11
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 10
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 8
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 12
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 10
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 8
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.6555555555555556,
+            "suppressed": 1
+          },
+          "10_top3": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 270,
+            "unique_events_recalled": 65,
+            "unique_supported_events": 11680,
+            "event_recall": 0.005565068493150685,
+            "unique_events_per_reviewed_scene": 0.7222222222222222,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 25,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 12
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 11
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 9
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 15
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 10
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 8
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7222222222222222,
+            "suppressed": 1
+          },
+          "20_top1": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 182,
+            "unique_events_recalled": 120,
+            "unique_supported_events": 11680,
+            "event_recall": 0.010273972602739725,
+            "unique_events_per_reviewed_scene": 0.6593406593406593,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.32,
+            "false_review_scenes_annotation_relative": 62,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 18
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 17
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 21
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 24
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 20
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 20
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.6593406593406593,
+            "suppressed": 6
+          },
+          "20_top3": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 546,
+            "unique_events_recalled": 132,
+            "unique_supported_events": 11680,
+            "event_recall": 0.011301369863013699,
+            "unique_events_per_reviewed_scene": 0.7252747252747253,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.32,
+            "false_review_scenes_annotation_relative": 50,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 20
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 19
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 23
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 29
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 21
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 20
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7252747252747253,
+            "suppressed": 6
+          }
+        },
+        "full_context": {
+          "5_top1": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 43,
+            "unique_events_recalled": 34,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0029109589041095892,
+            "unique_events_per_reviewed_scene": 0.7906976744186046,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.38,
+            "false_review_scenes_annotation_relative": 9,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 5
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7906976744186046,
+            "suppressed": 1
+          },
+          "5_top3": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 129,
+            "unique_events_recalled": 34,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0029109589041095892,
+            "unique_events_per_reviewed_scene": 0.7906976744186046,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.38,
+            "false_review_scenes_annotation_relative": 9,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 5
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 6
+              },
+              "128057": {
+                "reviewed": 7,
+                "hit_scenes": 7
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 5
+              }
+            },
+            "supported_review_scenes": 43,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7906976744186046,
+            "suppressed": 1
+          },
+          "10_top1": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 90,
+            "unique_events_recalled": 66,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0056506849315068495,
+            "unique_events_per_reviewed_scene": 0.7333333333333333,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 24,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 7
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 12
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 10
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 9
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7333333333333333,
+            "suppressed": 5
+          },
+          "10_top3": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 270,
+            "unique_events_recalled": 68,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0058219178082191785,
+            "unique_events_per_reviewed_scene": 0.7555555555555555,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 22,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 7
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 12
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 14
+              },
+              "128057": {
+                "reviewed": 15,
+                "hit_scenes": 11
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 10
+              }
+            },
+            "supported_review_scenes": 90,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7555555555555555,
+            "suppressed": 5
+          },
+          "20_top1": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 182,
+            "unique_events_recalled": 132,
+            "unique_supported_events": 11680,
+            "event_recall": 0.011301369863013699,
+            "unique_events_per_reviewed_scene": 0.7252747252747253,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 50,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 20
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 22
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 25
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 27
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 19
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 19
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7252747252747253,
+            "suppressed": 10
+          },
+          "20_top3": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 546,
+            "unique_events_recalled": 138,
+            "unique_supported_events": 11680,
+            "event_recall": 0.011815068493150685,
+            "unique_events_per_reviewed_scene": 0.7582417582417582,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.36,
+            "false_review_scenes_annotation_relative": 44,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 20
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 23
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 26
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 28
+              },
+              "128057": {
+                "reviewed": 30,
+                "hit_scenes": 20
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 21
+              }
+            },
+            "supported_review_scenes": 182,
+            "unverifiable_review_scenes": 0,
+            "actor_hit_at_k_per_supported_review": 0.7582417582417582,
+            "suppressed": 10
+          }
+        },
+        "distance": {
+          "5_top1": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 43,
+            "unique_events_recalled": 6,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0005136986301369863,
+            "unique_events_per_reviewed_scene": 0.13953488372093023,
+            "matches_with_recovered_event": 3,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 0.5,
+            "median_event_lead_seconds": 1.62,
+            "false_review_scenes_annotation_relative": 36,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 0
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 0
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              },
+              "128057": {
+                "reviewed": 6,
+                "hit_scenes": 0
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              }
+            },
+            "supported_review_scenes": 42,
+            "unverifiable_review_scenes": 1,
+            "actor_hit_at_k_per_supported_review": 0.14285714285714285,
+            "suppressed": 24
+          },
+          "5_top3": {
+            "reviewed_scenes": 43,
+            "reviewed_actor_candidates": 129,
+            "unique_events_recalled": 10,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0008561643835616438,
+            "unique_events_per_reviewed_scene": 0.23255813953488372,
+            "matches_with_recovered_event": 4,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 0.6666666666666666,
+            "median_event_lead_seconds": 1.62,
+            "false_review_scenes_annotation_relative": 32,
+            "per_match": {
+              "117092": {
+                "reviewed": 7,
+                "hit_scenes": 3
+              },
+              "117093": {
+                "reviewed": 7,
+                "hit_scenes": 0
+              },
+              "118576": {
+                "reviewed": 8,
+                "hit_scenes": 2
+              },
+              "118578": {
+                "reviewed": 7,
+                "hit_scenes": 3
+              },
+              "128057": {
+                "reviewed": 6,
+                "hit_scenes": 0
+              },
+              "132831": {
+                "reviewed": 7,
+                "hit_scenes": 2
+              }
+            },
+            "supported_review_scenes": 42,
+            "unverifiable_review_scenes": 1,
+            "actor_hit_at_k_per_supported_review": 0.23809523809523808,
+            "suppressed": 24
+          },
+          "10_top1": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 90,
+            "unique_events_recalled": 13,
+            "unique_supported_events": 11680,
+            "event_recall": 0.001113013698630137,
+            "unique_events_per_reviewed_scene": 0.14444444444444443,
+            "matches_with_recovered_event": 4,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 0.6666666666666666,
+            "median_event_lead_seconds": 1.6,
+            "false_review_scenes_annotation_relative": 76,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 3
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 3
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 0
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 3
+              },
+              "128057": {
+                "reviewed": 14,
+                "hit_scenes": 0
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 4
+              }
+            },
+            "supported_review_scenes": 89,
+            "unverifiable_review_scenes": 1,
+            "actor_hit_at_k_per_supported_review": 0.14606741573033707,
+            "suppressed": 64
+          },
+          "10_top3": {
+            "reviewed_scenes": 90,
+            "reviewed_actor_candidates": 270,
+            "unique_events_recalled": 21,
+            "unique_supported_events": 11680,
+            "event_recall": 0.001797945205479452,
+            "unique_events_per_reviewed_scene": 0.23333333333333334,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.56,
+            "false_review_scenes_annotation_relative": 68,
+            "per_match": {
+              "117092": {
+                "reviewed": 14,
+                "hit_scenes": 4
+              },
+              "117093": {
+                "reviewed": 15,
+                "hit_scenes": 5
+              },
+              "118576": {
+                "reviewed": 16,
+                "hit_scenes": 2
+              },
+              "118578": {
+                "reviewed": 15,
+                "hit_scenes": 4
+              },
+              "128057": {
+                "reviewed": 14,
+                "hit_scenes": 1
+              },
+              "132831": {
+                "reviewed": 15,
+                "hit_scenes": 5
+              }
+            },
+            "supported_review_scenes": 89,
+            "unverifiable_review_scenes": 1,
+            "actor_hit_at_k_per_supported_review": 0.23595505617977527,
+            "suppressed": 64
+          },
+          "20_top1": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 182,
+            "unique_events_recalled": 32,
+            "unique_supported_events": 11680,
+            "event_recall": 0.0027397260273972603,
+            "unique_events_per_reviewed_scene": 0.17582417582417584,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.52,
+            "false_review_scenes_annotation_relative": 149,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 5
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 3
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 5
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 9
+              },
+              "128057": {
+                "reviewed": 29,
+                "hit_scenes": 2
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 8
+              }
+            },
+            "supported_review_scenes": 181,
+            "unverifiable_review_scenes": 1,
+            "actor_hit_at_k_per_supported_review": 0.17679558011049723,
+            "suppressed": 107
+          },
+          "20_top3": {
+            "reviewed_scenes": 182,
+            "reviewed_actor_candidates": 546,
+            "unique_events_recalled": 48,
+            "unique_supported_events": 11680,
+            "event_recall": 0.00410958904109589,
+            "unique_events_per_reviewed_scene": 0.26373626373626374,
+            "matches_with_recovered_event": 6,
+            "evaluated_matches": 6,
+            "fraction_matches_with_event_recovered": 1.0,
+            "median_event_lead_seconds": 1.54,
+            "false_review_scenes_annotation_relative": 134,
+            "per_match": {
+              "117092": {
+                "reviewed": 29,
+                "hit_scenes": 7
+              },
+              "117093": {
+                "reviewed": 30,
+                "hit_scenes": 6
+              },
+              "118576": {
+                "reviewed": 32,
+                "hit_scenes": 9
+              },
+              "118578": {
+                "reviewed": 31,
+                "hit_scenes": 11
+              },
+              "128057": {
+                "reviewed": 29,
+                "hit_scenes": 3
+              },
+              "132831": {
+                "reviewed": 30,
+                "hit_scenes": 11
+              }
+            },
+            "supported_review_scenes": 181,
+            "unverifiable_review_scenes": 1,
+            "actor_hit_at_k_per_supported_review": 0.2596685082872928,
+            "suppressed": 107
+          }
+        }
+      }
+    }
+  },
+  "scope": "Offline label-relative retrieval, not operational alerts"
+}

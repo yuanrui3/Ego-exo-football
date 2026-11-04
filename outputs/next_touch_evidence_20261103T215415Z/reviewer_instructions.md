@@ -1,0 +1,3 @@
+# Two-reviewer workflow (paused, not requested now)
+
+Use review.html to load review_local/queue.json plus local evidence files. Source-clock-only clips may be viewed but are not independently synchronized. NO_EVENT_VERIFIED is disabled without independently verified synchronization. Record EVENT_PRESENT, UNCERTAIN, NO_PLAYER_VISIBLE, BAD_SYNCHRONIZATION or OTHER as appropriate; never infer negatives from the schematic. Predictions remain hidden until an immutable first judgment. Independent reviewers export separate JSON/CSV; arbitration imports both without overriding originals. Report agreement only if real paired labels exist. Historical 60-case pass judgments remain a separate enriched single-reviewer dataset, not new exact-contact ground truth.

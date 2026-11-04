@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-03T22:46:42.842422+00:00",
+  "reason": "Initial offline quota filtered out future-label-unsupported scenes (2 imminent,82 early), contrary to causal scheduling. This is repaired by scoring ALL held-match current queries and applying quotas without future target masks. Unknown selected outcomes are separately unverifiable, not false reviews.",
+  "old_result_sha256": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+  "preserved_as": "scene_prioritization_invalid_future_mask.json",
+  "effect_on_other_results": "None: target-defined evaluation and all model-training comparisons remain unchanged; only scheduling eligibility was invalid.",
+  "adaptive_lock_resolution": "Earlier adaptive evidence hash for scene_prioritization.json resolves to the preserved invalid version; do not rewrite lock timestamps."
+}

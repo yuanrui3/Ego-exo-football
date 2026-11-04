@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "core_checks": 7,
+  "execution": "Integrated browser, in-memory synthetic cases only",
+  "checks": ["reveal requires first judgment", "unsynchronized negative rejected", "prediction reveal after save", "immutable first judgment", "JSON roundtrip and quoted CSV", "arbitration requires two reviewer records", "arbitration preserves both originals"],
+  "actual_private_queue_loaded": 134,
+  "actual_video_loaded": {"case": "S001", "duration_seconds": 4, "width": 1920, "height": 954, "browser_error": null},
+  "verified_negative_option_DOM_disabled": true,
+  "real_new_labels_created": 0,
+  "human_review_state": "PAUSED_BY_USER",
+  "limits": "Independent reviewers and arbitration are a prepared local workflow, not executed human adjudication. Exports must be saved by reviewer; no fabricated agreement statistics."
+}

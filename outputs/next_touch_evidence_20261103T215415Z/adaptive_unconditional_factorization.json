@@ -1,0 +1,1168 @@
+{
+  "pooled": {
+    "original_HGB": {
+      "rows": 730635,
+      "positives": 6609,
+      "prevalence": 0.009045556262702991,
+      "AP": 0.1630998363943519,
+      "AUC": 0.9280001868404576,
+      "brier": 0.008105653960437442,
+      "NLL": 0.035344900338145496,
+      "AP_over_prevalence": 18.030934931757802,
+      "recall_at_annotation_precision": {
+        "0.5": 0.0007565441065214102,
+        "0.8": 0.0006052352852171282
+      },
+      "scene": {
+        "positive_scenes": 6609,
+        "top1": 0.5957028294749583,
+        "top3": 0.7967922529883492,
+        "mrr": 0.7181262729694611
+      }
+    },
+    "scene_calibrated_HGB_allocation": {
+      "rows": 730635,
+      "positives": 6609,
+      "prevalence": 0.009045556262702991,
+      "AP": 0.165905064906583,
+      "AUC": 0.9278986385477497,
+      "brier": 0.00809152659479031,
+      "NLL": 0.03533559990846989,
+      "AP_over_prevalence": 18.341057209565935,
+      "recall_at_annotation_precision": {
+        "0.5": 0.0012104705704342564,
+        "0.8": 0.0006052352852171282
+      },
+      "scene": {
+        "positive_scenes": 6609,
+        "top1": 0.5957028294749583,
+        "top3": 0.7967922529883492,
+        "mrr": 0.7181262729694611
+      }
+    },
+    "scene_calibrated_listwise_allocation": {
+      "rows": 730635,
+      "positives": 6609,
+      "prevalence": 0.009045556262702991,
+      "AP": 0.1660425405853998,
+      "AUC": 0.925559302909966,
+      "brier": 0.008095960685184155,
+      "NLL": 0.03556439413103371,
+      "AP_over_prevalence": 18.356255354912026,
+      "recall_at_annotation_precision": {
+        "0.5": 0.0012104705704342564,
+        "0.8": 0.0009078529278256923
+      },
+      "scene": {
+        "positive_scenes": 6609,
+        "top1": 0.6031169617188682,
+        "top3": 0.7946739294900893,
+        "mrr": 0.7213571523859774
+      }
+    }
+  },
+  "macro_match": {
+    "original_HGB": {
+      "AP": 0.16595817528489018,
+      "brier": 0.008115305477340328,
+      "NLL": 0.035395380391884286
+    },
+    "scene_calibrated_HGB_allocation": {
+      "AP": 0.167754537815722,
+      "brier": 0.008100739360886055,
+      "NLL": 0.03537759306188052
+    },
+    "scene_calibrated_listwise_allocation": {
+      "AP": 0.1678261741308096,
+      "brier": 0.008105162458298414,
+      "NLL": 0.03560860806273279
+    }
+  },
+  "macro_scene": {
+    "original_HGB": {
+      "top1": 0.5984939075422675,
+      "top3": 0.7989230085961303,
+      "mrr": 0.7203576090561823
+    },
+    "scene_calibrated_HGB_allocation": {
+      "top1": 0.5984939075422675,
+      "top3": 0.7989230085961303,
+      "mrr": 0.7203576090561823
+    },
+    "scene_calibrated_listwise_allocation": {
+      "top1": 0.6059469093409845,
+      "top3": 0.796646384234486,
+      "mrr": 0.723516592149268
+    }
+  },
+  "per_match": {
+    "117092": {
+      "original_HGB": {
+        "rows": 118043,
+        "positives": 1080,
+        "prevalence": 0.009149208339333971,
+        "AP": 0.17187502740561011,
+        "AUC": 0.9424108637077695,
+        "brier": 0.008118400034468164,
+        "NLL": 0.03427827581717496,
+        "AP_over_prevalence": 18.78578135188929,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        },
+        "scene": {
+          "positive_scenes": 1080,
+          "top1": 0.6277777777777778,
+          "top3": 0.8333333333333334,
+          "mrr": 0.7467552114733487
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 118043,
+        "positives": 1080,
+        "prevalence": 0.009149208339333971,
+        "AP": 0.17060382836846155,
+        "AUC": 0.9396903927516174,
+        "brier": 0.00814163748210917,
+        "NLL": 0.03467847516768081,
+        "AP_over_prevalence": 18.6468404741651,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        },
+        "scene": {
+          "positive_scenes": 1080,
+          "top1": 0.6277777777777778,
+          "top3": 0.8333333333333334,
+          "mrr": 0.7467552114733487
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 118043,
+        "positives": 1080,
+        "prevalence": 0.009149208339333971,
+        "AP": 0.1667602342067176,
+        "AUC": 0.9351621167947699,
+        "brier": 0.008173370761257357,
+        "NLL": 0.035045371396076754,
+        "AP_over_prevalence": 18.22673919116997,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        },
+        "scene": {
+          "positive_scenes": 1080,
+          "top1": 0.6324074074074074,
+          "top3": 0.8240740740740741,
+          "mrr": 0.7463884884330146
+        }
+      }
+    },
+    "117093": {
+      "original_HGB": {
+        "rows": 121150,
+        "positives": 1154,
+        "prevalence": 0.009525381758151052,
+        "AP": 0.178733580485641,
+        "AUC": 0.9363336157999027,
+        "brier": 0.008443749943174886,
+        "NLL": 0.035968090494643175,
+        "AP_over_prevalence": 18.763928315281984,
+        "recall_at_annotation_precision": {
+          "0.5": 0.00779896013864818,
+          "0.8": 0.0017331022530329288
+        },
+        "scene": {
+          "positive_scenes": 1154,
+          "top1": 0.6126516464471404,
+          "top3": 0.8119584055459272,
+          "mrr": 0.7310378131428952
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 121150,
+        "positives": 1154,
+        "prevalence": 0.009525381758151052,
+        "AP": 0.18316587519154448,
+        "AUC": 0.9335212675777811,
+        "brier": 0.008424747301839258,
+        "NLL": 0.036166926430905126,
+        "AP_over_prevalence": 19.22924244320244,
+        "recall_at_annotation_precision": {
+          "0.5": 0.005199306759098787,
+          "0.8": 0.004332755632582322
+        },
+        "scene": {
+          "positive_scenes": 1154,
+          "top1": 0.6126516464471404,
+          "top3": 0.8119584055459272,
+          "mrr": 0.7310378131428952
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 121150,
+        "positives": 1154,
+        "prevalence": 0.009525381758151052,
+        "AP": 0.1814170213446986,
+        "AUC": 0.929323445674648,
+        "brier": 0.00844036786396351,
+        "NLL": 0.036515383313307954,
+        "AP_over_prevalence": 19.045643098709043,
+        "recall_at_annotation_precision": {
+          "0.5": 0.006932409012131715,
+          "0.8": 0.004332755632582322
+        },
+        "scene": {
+          "positive_scenes": 1154,
+          "top1": 0.6135181975736569,
+          "top3": 0.8076256499133448,
+          "mrr": 0.7300778446370437
+        }
+      }
+    },
+    "118576": {
+      "original_HGB": {
+        "rows": 127234,
+        "positives": 1104,
+        "prevalence": 0.00867692597890501,
+        "AP": 0.1752164427608718,
+        "AUC": 0.9338591954815425,
+        "brier": 0.00770422054667954,
+        "NLL": 0.03333600110362951,
+        "AP_over_prevalence": 20.19337760709852,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0009057971014492754,
+          "0.8": 0.0009057971014492754
+        },
+        "scene": {
+          "positive_scenes": 1104,
+          "top1": 0.6023550724637681,
+          "top3": 0.792572463768116,
+          "mrr": 0.7199401224202678
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 127234,
+        "positives": 1104,
+        "prevalence": 0.00867692597890501,
+        "AP": 0.16796448082047385,
+        "AUC": 0.9286876491588503,
+        "brier": 0.00774367971857766,
+        "NLL": 0.03391424792021806,
+        "AP_over_prevalence": 19.357602131079865,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0009057971014492754,
+          "0.8": 0.0009057971014492754
+        },
+        "scene": {
+          "positive_scenes": 1104,
+          "top1": 0.6023550724637681,
+          "top3": 0.792572463768116,
+          "mrr": 0.7199401224202678
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 127234,
+        "positives": 1104,
+        "prevalence": 0.00867692597890501,
+        "AP": 0.16767672060666017,
+        "AUC": 0.9271868001670694,
+        "brier": 0.007753836983065075,
+        "NLL": 0.03410052045817688,
+        "AP_over_prevalence": 19.324438287742574,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0018115942028985507,
+          "0.8": 0.0009057971014492754
+        },
+        "scene": {
+          "positive_scenes": 1104,
+          "top1": 0.6114130434782609,
+          "top3": 0.7898550724637681,
+          "mrr": 0.7237656249460706
+        }
+      }
+    },
+    "118578": {
+      "original_HGB": {
+        "rows": 123967,
+        "positives": 1037,
+        "prevalence": 0.008365129429606266,
+        "AP": 0.16713672752167744,
+        "AUC": 0.9415476157884304,
+        "brier": 0.007480018008678769,
+        "NLL": 0.03204385133217035,
+        "AP_over_prevalence": 19.980172324667105,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0019286403085824494,
+          "0.8": 0.0
+        },
+        "scene": {
+          "positive_scenes": 1037,
+          "top1": 0.6171648987463838,
+          "top3": 0.8148505303760849,
+          "mrr": 0.7355367964908986
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 123967,
+        "positives": 1037,
+        "prevalence": 0.008365129429606266,
+        "AP": 0.16969203014329537,
+        "AUC": 0.9379245473802191,
+        "brier": 0.007454438245098164,
+        "NLL": 0.032254327421267506,
+        "AP_over_prevalence": 20.285643105857183,
+        "recall_at_annotation_precision": {
+          "0.5": 0.003857280617164899,
+          "0.8": 0.0009643201542912247
+        },
+        "scene": {
+          "positive_scenes": 1037,
+          "top1": 0.6171648987463838,
+          "top3": 0.8148505303760849,
+          "mrr": 0.7355367964908986
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 123967,
+        "positives": 1037,
+        "prevalence": 0.008365129429606266,
+        "AP": 0.17117280393886194,
+        "AUC": 0.9384984014155809,
+        "brier": 0.007452370121379191,
+        "NLL": 0.03221890919740853,
+        "AP_over_prevalence": 20.46266054569807,
+        "recall_at_annotation_precision": {
+          "0.5": 0.003857280617164899,
+          "0.8": 0.0009643201542912247
+        },
+        "scene": {
+          "positive_scenes": 1037,
+          "top1": 0.6316297010607522,
+          "top3": 0.8090646094503375,
+          "mrr": 0.7438261524870089
+        }
+      }
+    },
+    "128057": {
+      "original_HGB": {
+        "rows": 120953,
+        "positives": 985,
+        "prevalence": 0.008143659107256538,
+        "AP": 0.1737328281270724,
+        "AUC": 0.9447167806508132,
+        "brier": 0.007262178751092179,
+        "NLL": 0.03101457367992003,
+        "AP_over_prevalence": 21.333509401475926,
+        "recall_at_annotation_precision": {
+          "0.5": 0.005076142131979695,
+          "0.8": 0.0010152284263959391
+        },
+        "scene": {
+          "positive_scenes": 985,
+          "top1": 0.6274111675126903,
+          "top3": 0.8162436548223351,
+          "mrr": 0.7435153129442469
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 120953,
+        "positives": 985,
+        "prevalence": 0.008143659107256538,
+        "AP": 0.1747284287265035,
+        "AUC": 0.9412602286159559,
+        "brier": 0.007246496031791333,
+        "NLL": 0.031305336169687885,
+        "AP_over_prevalence": 21.455764101275914,
+        "recall_at_annotation_precision": {
+          "0.5": 0.006091370558375634,
+          "0.8": 0.0010152284263959391
+        },
+        "scene": {
+          "positive_scenes": 985,
+          "top1": 0.6274111675126903,
+          "top3": 0.8162436548223351,
+          "mrr": 0.7435153129442469
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 120953,
+        "positives": 985,
+        "prevalence": 0.008143659107256538,
+        "AP": 0.1753761981270522,
+        "AUC": 0.9392626612443521,
+        "brier": 0.007254517979708983,
+        "NLL": 0.03149435817873144,
+        "AP_over_prevalence": 21.53530689549375,
+        "recall_at_annotation_precision": {
+          "0.5": 0.007106598984771574,
+          "0.8": 0.0010152284263959391
+        },
+        "scene": {
+          "positive_scenes": 985,
+          "top1": 0.6335025380710659,
+          "top3": 0.8182741116751269,
+          "mrr": 0.7441276958998667
+        }
+      }
+    },
+    "132831": {
+      "original_HGB": {
+        "rows": 119288,
+        "positives": 1249,
+        "prevalence": 0.010470458051103212,
+        "AP": 0.1290544454084684,
+        "AUC": 0.8906153243743089,
+        "brier": 0.009683265579948438,
+        "NLL": 0.045731489923767715,
+        "AP_over_prevalence": 12.325577809355787,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0016012810248198558,
+          "0.8": 0.0016012810248198558
+        },
+        "scene": {
+          "positive_scenes": 1249,
+          "top1": 0.5036028823058447,
+          "top3": 0.7245796637309848,
+          "mrr": 0.645360397865436
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 119288,
+        "positives": 1249,
+        "prevalence": 0.010470458051103212,
+        "AP": 0.14037258364405308,
+        "AUC": 0.8975727418149669,
+        "brier": 0.009593437385900749,
+        "NLL": 0.04394624526152373,
+        "AP_over_prevalence": 13.406537035814095,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0008006405124099279,
+          "0.8": 0.0008006405124099279
+        },
+        "scene": {
+          "positive_scenes": 1249,
+          "top1": 0.5036028823058447,
+          "top3": 0.7245796637309848,
+          "mrr": 0.645360397865436
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 119288,
+        "positives": 1249,
+        "prevalence": 0.010470458051103212,
+        "AP": 0.14455406656086722,
+        "AUC": 0.897134084905824,
+        "brier": 0.009556511040416367,
+        "NLL": 0.044277105832695174,
+        "AP_over_prevalence": 13.805897111219158,
+        "recall_at_annotation_precision": {
+          "0.5": 0.009607686148919135,
+          "0.8": 0.0008006405124099279
+        },
+        "scene": {
+          "positive_scenes": 1249,
+          "top1": 0.5132105684547638,
+          "top3": 0.7309847878302642,
+          "mrr": 0.6529137464926034
+        }
+      }
+    }
+  },
+  "censored_rows": 968,
+  "per_half": {
+    "117092_1": {
+      "original_HGB": {
+        "rows": 58981,
+        "positives": 549,
+        "prevalence": 0.009308082263779861,
+        "AP": 0.1669700798312428,
+        "AUC": 0.9432890061238496,
+        "brier": 0.008296912924527463,
+        "NLL": 0.034761845025788274,
+        "AP_over_prevalence": 17.938182656696778,
+        "recall_at_annotation_precision": {
+          "0.5": 0.007285974499089253,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 58981,
+        "positives": 549,
+        "prevalence": 0.009308082263779861,
+        "AP": 0.16707734288440262,
+        "AUC": 0.9415501050401307,
+        "brier": 0.008292236202414502,
+        "NLL": 0.034989217136097116,
+        "AP_over_prevalence": 17.949706303579145,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 58981,
+        "positives": 549,
+        "prevalence": 0.009308082263779861,
+        "AP": 0.16105282347808242,
+        "AUC": 0.9349720666072138,
+        "brier": 0.008326947505788556,
+        "NLL": 0.035480786165246164,
+        "AP_over_prevalence": 17.302471004664444,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      }
+    },
+    "117092_2": {
+      "original_HGB": {
+        "rows": 59062,
+        "positives": 531,
+        "prevalence": 0.008990552300971861,
+        "AP": 0.17936799779130916,
+        "AUC": 0.9414574715843433,
+        "brier": 0.007940131964159209,
+        "NLL": 0.03379536979480487,
+        "AP_over_prevalence": 19.950720688418645,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 59062,
+        "positives": 531,
+        "prevalence": 0.008990552300971861,
+        "AP": 0.17651815313606808,
+        "AUC": 0.9377146258323811,
+        "brier": 0.00799124529894015,
+        "NLL": 0.03436815936328608,
+        "AP_over_prevalence": 19.63373853205735,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 59062,
+        "positives": 531,
+        "prevalence": 0.008990552300971861,
+        "AP": 0.17454330106144195,
+        "AUC": 0.9353630784800533,
+        "brier": 0.008020004638044555,
+        "NLL": 0.0346105537722174,
+        "AP_over_prevalence": 19.41407993840091,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      }
+    },
+    "117093_1": {
+      "original_HGB": {
+        "rows": 59311,
+        "positives": 581,
+        "prevalence": 0.009795822022896259,
+        "AP": 0.17716320567107238,
+        "AUC": 0.934898642024985,
+        "brier": 0.008719572682466748,
+        "NLL": 0.03715727167634459,
+        "AP_over_prevalence": 18.08558845362646,
+        "recall_at_annotation_precision": {
+          "0.5": 0.013769363166953529,
+          "0.8": 0.0034423407917383822
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 59311,
+        "positives": 581,
+        "prevalence": 0.009795822022896259,
+        "AP": 0.18110238035381693,
+        "AUC": 0.9317070036366428,
+        "brier": 0.008706784657128737,
+        "NLL": 0.03737861590686346,
+        "AP_over_prevalence": 18.487716490817963,
+        "recall_at_annotation_precision": {
+          "0.5": 0.01549053356282272,
+          "0.8": 0.0068846815834767644
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 59311,
+        "positives": 581,
+        "prevalence": 0.009795822022896259,
+        "AP": 0.1760659262319967,
+        "AUC": 0.9254443523894902,
+        "brier": 0.008744939220090344,
+        "NLL": 0.0380294052656059,
+        "AP_over_prevalence": 17.973573409201304,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0189328743545611,
+          "0.8": 0.0068846815834767644
+        }
+      }
+    },
+    "117093_2": {
+      "original_HGB": {
+        "rows": 61839,
+        "positives": 573,
+        "prevalence": 0.009265997186241692,
+        "AP": 0.18207210121503695,
+        "AUC": 0.9377457775890891,
+        "brier": 0.008179202934165367,
+        "NLL": 0.03482752345656215,
+        "AP_over_prevalence": 19.649488075107627,
+        "recall_at_annotation_precision": {
+          "0.5": 0.006980802792321117,
+          "0.8": 0.0017452006980802793
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 61839,
+        "positives": 573,
+        "prevalence": 0.009265997186241692,
+        "AP": 0.18672713653979037,
+        "AUC": 0.9353781088719695,
+        "brier": 0.008154239732512872,
+        "NLL": 0.035004771245527526,
+        "AP_over_prevalence": 20.15186631149057,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0034904013961605585,
+          "0.8": 0.0017452006980802793
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 61839,
+        "positives": 573,
+        "prevalence": 0.009265997186241692,
+        "AP": 0.18837614938671338,
+        "AUC": 0.9332458881418249,
+        "brier": 0.008148247491654152,
+        "NLL": 0.035063255109217595,
+        "AP_over_prevalence": 20.32983019533153,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0034904013961605585,
+          "0.8": 0.0034904013961605585
+        }
+      }
+    },
+    "118576_1": {
+      "original_HGB": {
+        "rows": 63588,
+        "positives": 594,
+        "prevalence": 0.009341385167012644,
+        "AP": 0.18439849175972903,
+        "AUC": 0.9290604235837114,
+        "brier": 0.00823326290044884,
+        "NLL": 0.03551215675319579,
+        "AP_over_prevalence": 19.739951673430387,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 63588,
+        "positives": 594,
+        "prevalence": 0.009341385167012644,
+        "AP": 0.18344645806885695,
+        "AUC": 0.9247861268172726,
+        "brier": 0.008241601633742017,
+        "NLL": 0.03589085238840798,
+        "AP_over_prevalence": 19.638035985997433,
+        "recall_at_annotation_precision": {
+          "0.5": 0.021885521885521887,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 63588,
+        "positives": 594,
+        "prevalence": 0.009341385167012644,
+        "AP": 0.1814177809297274,
+        "AUC": 0.922029170326627,
+        "brier": 0.008254453867218398,
+        "NLL": 0.036210990147076016,
+        "AP_over_prevalence": 19.4208650736692,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0016835016835016834,
+          "0.8": 0.0
+        }
+      }
+    },
+    "118576_2": {
+      "original_HGB": {
+        "rows": 63646,
+        "positives": 510,
+        "prevalence": 0.008013072306193634,
+        "AP": 0.16529784746647538,
+        "AUC": 0.9392086675014658,
+        "brier": 0.007175660304221534,
+        "NLL": 0.0311618285641986,
+        "AP_over_prevalence": 20.628523136963317,
+        "recall_at_annotation_precision": {
+          "0.5": 0.00196078431372549,
+          "0.8": 0.00196078431372549
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 63646,
+        "positives": 510,
+        "prevalence": 0.008013072306193634,
+        "AP": 0.15204325282109818,
+        "AUC": 0.9332758321904534,
+        "brier": 0.007246211554962175,
+        "NLL": 0.03193944471305247,
+        "AP_over_prevalence": 18.97440170402277,
+        "recall_at_annotation_precision": {
+          "0.5": 0.00196078431372549,
+          "0.8": 0.00196078431372549
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 63646,
+        "positives": 510,
+        "prevalence": 0.008013072306193634,
+        "AP": 0.15287348528486774,
+        "AUC": 0.9334048875505602,
+        "brier": 0.007253676306360467,
+        "NLL": 0.03199197402041617,
+        "AP_over_prevalence": 19.07801145968763,
+        "recall_at_annotation_precision": {
+          "0.5": 0.00392156862745098,
+          "0.8": 0.00196078431372549
+        }
+      }
+    },
+    "118578_1": {
+      "original_HGB": {
+        "rows": 61710,
+        "positives": 563,
+        "prevalence": 0.009123318748987199,
+        "AP": 0.19324319794462952,
+        "AUC": 0.9506184482022053,
+        "brier": 0.008001235329697714,
+        "NLL": 0.0330498829754749,
+        "AP_over_prevalence": 21.181239334215075,
+        "recall_at_annotation_precision": {
+          "0.5": 0.035523978685612786,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 61710,
+        "positives": 563,
+        "prevalence": 0.009123318748987199,
+        "AP": 0.19313690627514007,
+        "AUC": 0.9482018712672757,
+        "brier": 0.007970967397135417,
+        "NLL": 0.033168723794241864,
+        "AP_over_prevalence": 21.16958878550425,
+        "recall_at_annotation_precision": {
+          "0.5": 0.019538188277087035,
+          "0.8": 0.0017761989342806395
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 61710,
+        "positives": 563,
+        "prevalence": 0.009123318748987199,
+        "AP": 0.19720487550211802,
+        "AUC": 0.949778626534937,
+        "brier": 0.007959655382707485,
+        "NLL": 0.03296431434293805,
+        "AP_over_prevalence": 21.61547578549858,
+        "recall_at_annotation_precision": {
+          "0.5": 0.019538188277087035,
+          "0.8": 0.0017761989342806395
+        }
+      }
+    },
+    "118578_2": {
+      "original_HGB": {
+        "rows": 62257,
+        "positives": 474,
+        "prevalence": 0.0076136016833448445,
+        "AP": 0.13783108438383526,
+        "AUC": 0.9304303697759089,
+        "brier": 0.00696338018674583,
+        "NLL": 0.031046658844444908,
+        "AP_over_prevalence": 18.103269663469266,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 62257,
+        "positives": 474,
+        "prevalence": 0.0076136016833448445,
+        "AP": 0.1435582438310937,
+        "AUC": 0.9252540076466078,
+        "brier": 0.006942447401141355,
+        "NLL": 0.03134796508167119,
+        "AP_over_prevalence": 18.855497017283547,
+        "recall_at_annotation_precision": {
+          "0.5": 0.002109704641350211,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 62257,
+        "positives": 474,
+        "prevalence": 0.0076136016833448445,
+        "AP": 0.14241510379040073,
+        "AUC": 0.924777827609646,
+        "brier": 0.006949541949823076,
+        "NLL": 0.03148005330119402,
+        "AP_over_prevalence": 18.705352566833287,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      }
+    },
+    "128057_1": {
+      "original_HGB": {
+        "rows": 59243,
+        "positives": 487,
+        "prevalence": 0.008220380466890604,
+        "AP": 0.1673047412841768,
+        "AUC": 0.9428313529393756,
+        "brier": 0.007347489152168582,
+        "NLL": 0.03145943867582265,
+        "AP_over_prevalence": 20.35243282936034,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 59243,
+        "positives": 487,
+        "prevalence": 0.008220380466890604,
+        "AP": 0.167386838153761,
+        "AUC": 0.938868404090113,
+        "brier": 0.007360284246803923,
+        "NLL": 0.03186466574135204,
+        "AP_over_prevalence": 20.362419820828052,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 59243,
+        "positives": 487,
+        "prevalence": 0.008220380466890604,
+        "AP": 0.16963833645232781,
+        "AUC": 0.9377401519778381,
+        "brier": 0.0073638879784756915,
+        "NLL": 0.03200972730990679,
+        "AP_over_prevalence": 20.636312046088822,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0,
+          "0.8": 0.0
+        }
+      }
+    },
+    "128057_2": {
+      "original_HGB": {
+        "rows": 61710,
+        "positives": 498,
+        "prevalence": 0.008070004861448711,
+        "AP": 0.18185460246114674,
+        "AUC": 0.9466912772963382,
+        "brier": 0.0071802788306421835,
+        "NLL": 0.030587493191307834,
+        "AP_over_prevalence": 22.53463357003487,
+        "recall_at_annotation_precision": {
+          "0.5": 0.020080321285140562,
+          "0.8": 0.002008032128514056
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 61710,
+        "positives": 498,
+        "prevalence": 0.008070004861448711,
+        "AP": 0.18541954100781785,
+        "AUC": 0.9437508906435387,
+        "brier": 0.007137256763893247,
+        "NLL": 0.03076836709151416,
+        "AP_over_prevalence": 22.976385292354298,
+        "recall_at_annotation_precision": {
+          "0.5": 0.010040160642570281,
+          "0.8": 0.010040160642570281
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 61710,
+        "positives": 498,
+        "prevalence": 0.008070004861448711,
+        "AP": 0.18378151258551917,
+        "AUC": 0.9410719070492254,
+        "brier": 0.0071495202996419574,
+        "NLL": 0.030999592120746985,
+        "AP_over_prevalence": 22.773407914964636,
+        "recall_at_annotation_precision": {
+          "0.5": 0.010040160642570281,
+          "0.8": 0.002008032128514056
+        }
+      }
+    },
+    "132831_1": {
+      "original_HGB": {
+        "rows": 59400,
+        "positives": 644,
+        "prevalence": 0.010841750841750842,
+        "AP": 0.1325326010418588,
+        "AUC": 0.883454191436614,
+        "brier": 0.010001120019252715,
+        "NLL": 0.047768270040725716,
+        "AP_over_prevalence": 12.224280282432318,
+        "recall_at_annotation_precision": {
+          "0.5": 0.003105590062111801,
+          "0.8": 0.003105590062111801
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 59400,
+        "positives": 644,
+        "prevalence": 0.010841750841750842,
+        "AP": 0.14445314608595347,
+        "AUC": 0.8891351759397429,
+        "brier": 0.009907189946336159,
+        "NLL": 0.0460557786964787,
+        "AP_over_prevalence": 13.323783971282044,
+        "recall_at_annotation_precision": {
+          "0.5": 0.003105590062111801,
+          "0.8": 0.0015527950310559005
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 59400,
+        "positives": 644,
+        "prevalence": 0.010841750841750842,
+        "AP": 0.14871415109632777,
+        "AUC": 0.8875606307842645,
+        "brier": 0.009864171946081602,
+        "NLL": 0.04657534162336169,
+        "AP_over_prevalence": 13.716802135282407,
+        "recall_at_annotation_precision": {
+          "0.5": 0.0015527950310559005,
+          "0.8": 0.0015527950310559005
+        }
+      }
+    },
+    "132831_2": {
+      "original_HGB": {
+        "rows": 59888,
+        "positives": 605,
+        "prevalence": 0.010102190756078011,
+        "AP": 0.12677299580339127,
+        "AUC": 0.8983792407422975,
+        "brier": 0.009368001191512121,
+        "NLL": 0.04371130659910659,
+        "AP_over_prevalence": 12.54905978954297,
+        "recall_at_annotation_precision": {
+          "0.5": 0.019834710743801654,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_HGB_allocation": {
+        "rows": 59888,
+        "positives": 605,
+        "prevalence": 0.010102190756078011,
+        "AP": 0.1376155184137644,
+        "AUC": 0.9068140867387318,
+        "brier": 0.009282241451993063,
+        "NLL": 0.04185390145247475,
+        "AP_over_prevalence": 13.62234407729508,
+        "recall_at_annotation_precision": {
+          "0.5": 0.01652892561983471,
+          "0.8": 0.0
+        }
+      },
+      "scene_calibrated_listwise_allocation": {
+        "rows": 59888,
+        "positives": 605,
+        "prevalence": 0.010102190756078011,
+        "AP": 0.14200946966618758,
+        "AUC": 0.9075033426303835,
+        "brier": 0.009251357123162248,
+        "NLL": 0.04199759731737338,
+        "AP_over_prevalence": 14.057294412179575,
+        "recall_at_annotation_precision": {
+          "0.5": 0.01652892561983471,
+          "0.8": 0.0
+        }
+      }
+    }
+  },
+  "paired_AP": {
+    "mean_delta": 7.163631508765034e-05,
+    "ci95": [
+      -0.0019097555853850867,
+      0.002015188950782329
+    ],
+    "per_match_delta": [
+      -0.0038435941617439573,
+      -0.0017488538468458936,
+      -0.000287760213813687,
+      0.0014807737955665756,
+      0.0006477694005487256,
+      0.004181482916814139
+    ],
+    "clusters": 6,
+    "interpretation": "Descriptive match-bootstrap, not population significance."
+  },
+  "paired_NLL": {
+    "mean_delta": 0.00023101500085226956,
+    "ci95": [
+      0.00010597789450737903,
+      0.0003281713579676114
+    ],
+    "per_match_delta": [
+      0.0003668962283959465,
+      0.00034845688240282835,
+      0.0001862725379588176,
+      -3.541822385897536e-05,
+      0.0001890220090435546,
+      0.00033086057117144574
+    ],
+    "clusters": 6,
+    "interpretation": "Descriptive match-bootstrap, not population significance."
+  },
+  "scene_occurrence_metrics": {
+    "117092": {
+      "rows": 5368,
+      "positives": 1080,
+      "prevalence": 0.20119225037257824,
+      "AP": 0.2631523135083884,
+      "AUC": 0.5950646075179657,
+      "brier": 0.15749683753984403,
+      "NLL": 0.4907629595008999,
+      "AP_over_prevalence": 1.3079644619565083,
+      "recall_at_annotation_precision": {
+        "0.5": 0.0,
+        "0.8": 0.0
+      }
+    },
+    "117093": {
+      "rows": 5507,
+      "positives": 1154,
+      "prevalence": 0.20955147993462866,
+      "AP": 0.28832022808972746,
+      "AUC": 0.6202638790515197,
+      "brier": 0.16061237710410656,
+      "NLL": 0.4961053202957497,
+      "AP_over_prevalence": 1.3758921109966455,
+      "recall_at_annotation_precision": {
+        "0.5": 0.00779896013864818,
+        "0.8": 0.0017331022530329288
+      }
+    },
+    "118576": {
+      "rows": 5789,
+      "positives": 1104,
+      "prevalence": 0.19070651235101055,
+      "AP": 0.28679046012020715,
+      "AUC": 0.6550567065720075,
+      "brier": 0.14793990459003983,
+      "NLL": 0.46510383102671005,
+      "AP_over_prevalence": 1.503831497858586,
+      "recall_at_annotation_precision": {
+        "0.5": 0.0009057971014492754,
+        "0.8": 0.0009057971014492754
+      }
+    },
+    "118578": {
+      "rows": 5635,
+      "positives": 1037,
+      "prevalence": 0.18402839396628218,
+      "AP": 0.267822626039752,
+      "AUC": 0.6391970346421214,
+      "brier": 0.1455068799623773,
+      "NLL": 0.4602015401139758,
+      "AP_over_prevalence": 1.4553331704281605,
+      "recall_at_annotation_precision": {
+        "0.5": 0.027965284474445518,
+        "0.8": 0.0
+      }
+    },
+    "128057": {
+      "rows": 5498,
+      "positives": 985,
+      "prevalence": 0.17915605674790833,
+      "AP": 0.27121745554114407,
+      "AUC": 0.644336440356736,
+      "brier": 0.14206166249111526,
+      "NLL": 0.4515915406261992,
+      "AP_over_prevalence": 1.5138614929596041,
+      "recall_at_annotation_precision": {
+        "0.5": 0.005076142131979695,
+        "0.8": 0.0010152284263959391
+      }
+    },
+    "132831": {
+      "rows": 5423,
+      "positives": 1249,
+      "prevalence": 0.23031532362161167,
+      "AP": 0.28226848495582757,
+      "AUC": 0.561561563577647,
+      "brier": 0.1786845428342838,
+      "NLL": 0.5503926071963784,
+      "AP_over_prevalence": 1.2255740543758629,
+      "recall_at_annotation_precision": {
+        "0.5": 0.016813450760608487,
+        "0.8": 0.0016012810248198558
+      }
+    }
+  },
+  "calibration": {
+    "117092": {
+      "slope": 0.4869364177109425,
+      "intercept": -0.22475802385349816,
+      "development_scenes": 5469,
+      "test_scenes": 5368,
+      "scene_score_identical_between_allocations": true
+    },
+    "117093": {
+      "slope": 0.5141809288605754,
+      "intercept": -0.18501075868032352,
+      "development_scenes": 5469,
+      "test_scenes": 5507,
+      "scene_score_identical_between_allocations": true
+    },
+    "118576": {
+      "slope": 0.5076643298383674,
+      "intercept": -0.19697575807340614,
+      "development_scenes": 5469,
+      "test_scenes": 5789,
+      "scene_score_identical_between_allocations": true
+    },
+    "118578": {
+      "slope": 0.5052272489465038,
+      "intercept": -0.20955093479144798,
+      "development_scenes": 5469,
+      "test_scenes": 5635,
+      "scene_score_identical_between_allocations": true
+    },
+    "128057": {
+      "slope": 0.48737756565623636,
+      "intercept": -0.24252230613633255,
+      "development_scenes": 5469,
+      "test_scenes": 5498,
+      "scene_score_identical_between_allocations": true
+    },
+    "132831": {
+      "slope": 0.4929659156300387,
+      "intercept": -0.2078003382557096,
+      "development_scenes": 5469,
+      "test_scenes": 5423,
+      "scene_score_identical_between_allocations": true
+    }
+  },
+  "scope": "Unconditional annotation-relative forecast: no future occurrence supplied at scoring. Scene occurrence is identical by construction; any gain is actor-probability allocation. This is the single fresh factorization justified by B, not another scene detector."
+}

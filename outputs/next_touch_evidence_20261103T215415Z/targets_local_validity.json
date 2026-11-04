@@ -1,0 +1,51 @@
+{
+  "claim": {
+    "geometry": "PROXY_ONLY",
+    "next_BAS": "INTERNAL_OOF_ANNOTATION; not physical touch"
+  },
+  "audits": {
+    "geometry_1s": {
+      "eligible_scenes": 30660,
+      "tie_le_0p2m": 1855,
+      "missing_ball": 715,
+      "future_label_continuity": 33,
+      "winner_not_current_candidate": 1
+    },
+    "geometry_2s": {
+      "eligible_scenes": 30615,
+      "tie_le_0p2m": 1855,
+      "missing_ball": 715,
+      "future_label_continuity": 67,
+      "truncated": 12
+    },
+    "next_BAS_0_1s": {
+      "no_supported_annotation": 26642,
+      "annotated_scene_opportunities": 6622,
+      "event_candidate_recalled": 6618,
+      "actor_not_current_candidate": 4
+    },
+    "next_BAS_1_2s": {
+      "annotated_scene_opportunities": 6641,
+      "event_candidate_recalled": 6609,
+      "no_supported_annotation": 26611,
+      "unknown_event_actor": 32,
+      "truncated": 12
+    }
+  },
+  "tie_threshold_m": 0.2,
+  "future_labels": "Future trajectory validity is target-only censoring, candidate roster and features remain fixed at current query; no future availability input.",
+  "BAS_semantics": {
+    "included": [
+      "PASS",
+      "HIGH_PASS",
+      "CROSS",
+      "SHOT",
+      "HEADER"
+    ],
+    "excluded": {
+      "DRIVE": "interval of motion/control, not unique touch",
+      "DEFENSIVE_INTERVENTION": "mixed block/tackle may not uniquely indicate touch"
+    },
+    "physical_contact_certified": false
+  }
+}

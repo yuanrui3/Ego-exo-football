@@ -1,0 +1,23 @@
+{
+  "columns": [
+    "same_nearest",
+    "same_count3m",
+    "same_count5m",
+    "same_count10m",
+    "same_nearest_closing",
+    "opponent_nearest",
+    "opponent_count3m",
+    "opponent_count5m",
+    "opponent_count10m",
+    "opponent_nearest_closing",
+    "same_corridor_min",
+    "same_corridor_count2m",
+    "opponent_corridor_min",
+    "opponent_corridor_count2m",
+    "team_known",
+    "abs_field_x",
+    "abs_field_y",
+    "scene_team_known_fraction"
+  ],
+  "scope": "Full causal eligible exocentric roster, not simulated human-visible subset. No possession team or attacking-direction assumption; geometry normalized to metric pitch. Same/opponent are actor-relative source metadata."
+}

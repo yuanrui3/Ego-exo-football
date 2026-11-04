@@ -1,0 +1,174 @@
+{
+  "status": "COMPLETE",
+  "claim": "HISTORICAL_HUMAN_TEAM_ASSOCIATION_PILOT_NOT_NEW_TOUCH_GROUND_TRUTH",
+  "n": 36,
+  "human_target_counts": {
+    "OPPONENT": 15,
+    "TEAMMATE": 21
+  },
+  "excluded": {
+    "target_pass_not_visible_yes": 21,
+    "human_touch_team_uncertain": 2,
+    "unmapped_actor": 1
+  },
+  "methods": {
+    "always_passer_team": {
+      "n": 36,
+      "covered": 36,
+      "coverage": 1.0,
+      "correct": 21,
+      "accuracy_on_covered": 0.5833333333333334,
+      "matched_always_passer_team_correct": 21,
+      "per_match": {
+        "117092": {
+          "n": 4,
+          "correct": 3
+        },
+        "117093": {
+          "n": 5,
+          "correct": 3
+        },
+        "118576": {
+          "n": 5,
+          "correct": 3
+        },
+        "118578": {
+          "n": 7,
+          "correct": 4
+        },
+        "128057": {
+          "n": 4,
+          "correct": 2
+        },
+        "132831": {
+          "n": 5,
+          "correct": 3
+        },
+        "132877": {
+          "n": 6,
+          "correct": 3
+        }
+      }
+    },
+    "causal_current_nearest": {
+      "n": 36,
+      "covered": 36,
+      "coverage": 1.0,
+      "correct": 21,
+      "accuracy_on_covered": 0.5833333333333334,
+      "matched_always_passer_team_correct": 21,
+      "per_match": {
+        "117092": {
+          "n": 4,
+          "correct": 3
+        },
+        "117093": {
+          "n": 5,
+          "correct": 3
+        },
+        "118576": {
+          "n": 5,
+          "correct": 3
+        },
+        "118578": {
+          "n": 7,
+          "correct": 5
+        },
+        "128057": {
+          "n": 4,
+          "correct": 1
+        },
+        "132831": {
+          "n": 5,
+          "correct": 3
+        },
+        "132877": {
+          "n": 6,
+          "correct": 3
+        }
+      }
+    },
+    "causal_2s_projection": {
+      "n": 36,
+      "covered": 36,
+      "coverage": 1.0,
+      "correct": 18,
+      "accuracy_on_covered": 0.5,
+      "matched_always_passer_team_correct": 21,
+      "per_match": {
+        "117092": {
+          "n": 4,
+          "correct": 1
+        },
+        "117093": {
+          "n": 5,
+          "correct": 3
+        },
+        "118576": {
+          "n": 5,
+          "correct": 3
+        },
+        "118578": {
+          "n": 7,
+          "correct": 3
+        },
+        "128057": {
+          "n": 4,
+          "correct": 2
+        },
+        "132831": {
+          "n": 5,
+          "correct": 3
+        },
+        "132877": {
+          "n": 6,
+          "correct": 3
+        }
+      }
+    },
+    "retrospective_first_stable_nonpasser_near_ball": {
+      "n": 36,
+      "covered": 35,
+      "coverage": 0.9722222222222222,
+      "correct": 27,
+      "accuracy_on_covered": 0.7714285714285715,
+      "matched_always_passer_team_correct": 20,
+      "per_match": {
+        "117092": {
+          "n": 4,
+          "correct": 4
+        },
+        "117093": {
+          "n": 5,
+          "correct": 5
+        },
+        "118576": {
+          "n": 5,
+          "correct": 5
+        },
+        "118578": {
+          "n": 7,
+          "correct": 3
+        },
+        "128057": {
+          "n": 4,
+          "correct": 3
+        },
+        "132831": {
+          "n": 4,
+          "correct": 3
+        },
+        "132877": {
+          "n": 6,
+          "correct": 4
+        }
+      }
+    }
+  },
+  "limits": [
+    "One reviewer, enriched historical pass sample already exposed; no representative test or inter-reviewer agreement.",
+    "No precise first-touch timestamp/player; only reported touch team.",
+    "Retrospective geometric association is not a forecast and does not verify physical contact.",
+    "Source clocks remain independently unverified; unresolved disagreement must not overwrite human judgments."
+  ]
+}

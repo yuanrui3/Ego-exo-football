@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-03T22:40:11.889479+00:00",
+  "commit": "e706dd506b360d69d9d123d5b8026e7294b13996",
+  "files": {
+    "Sample_Game_2_RawEventsData.csv": [
+      153897,
+      "decccd47c1d53960d290cb6679337eec83a8a97f"
+    ],
+    "Sample_Game_2_RawTrackingData_Away_Team.csv": [
+      29627711,
+      "e7334d8d762954a215c49e55f211855000243fdc"
+    ],
+    "Sample_Game_2_RawTrackingData_Home_Team.csv": [
+      31890338,
+      "8b4d3648888cc8b033e7142919ebaea04f6328e0"
+    ]
+  },
+  "external_parser_sha256": "d221567d8c850e7246beca009fd9106147343a0387266e770aaedfac3cc7fcc0",
+  "source_features_sha256": "dc5e87c116f063a4a5ef15d053f09ec2a269989cb1f83f2483aa4947917ba2e0",
+  "source_labels_sha256": "7100234bf0322c59964d528a84bac8db91107c84fc096f417e6a67e23bb82e45",
+  "rule": "Exactly same revision2 mapping as Game1; Game2 not inspected/scored before this lock. No external fitting or threshold/feature changes permitted.",
+  "claim": "Frozen second-domain-match replication, not a new SoccerTrack sealed test."
+}

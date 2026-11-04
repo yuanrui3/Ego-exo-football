@@ -1,0 +1,124 @@
+{
+  "status": "COMPLETE",
+  "claim": "INDEPENDENT_SOURCE_ANNOTATION_ASSOCIATION_NOT_VIDEO_TOUCH_CERTIFICATION",
+  "frames": 145006,
+  "valid_ball_frames": 85828,
+  "event_types": {
+    "SET PIECE": 77,
+    "PASS": 799,
+    "BALL LOST": 257,
+    "RECOVERY": 278,
+    "CHALLENGE": 233,
+    "BALL OUT": 51,
+    "SHOT": 24,
+    "FAULT RECEIVED": 22,
+    "CARD": 4
+  },
+  "candidate_frames": {
+    "proximity": 52624,
+    "intercept": 57881,
+    "changepoint": 11422
+  },
+  "fraction_of_valid_frames": {
+    "proximity": 0.6131332432306473,
+    "intercept": 0.6743836510229761,
+    "changepoint": 0.1330801137158037
+  },
+  "associations": {
+    "PASS": {
+      "counts": {
+        "source_events": 799,
+        "eligible": 768,
+        "proximity_same_actor_within_0p48s": 726,
+        "intercept_same_actor_within_0p48s": 715,
+        "changepoint_same_actor_within_0p48s": 698,
+        "missing_ball_or_actor": 31
+      },
+      "actor_ball_distance_at_source_start_m": {
+        "p0": 0.0,
+        "p50": 0.08797211572527885,
+        "p90": 0.22766211777925502,
+        "p99": 3.281463000774393,
+        "max": 24.847652435302734
+      },
+      "same_actor_detection_rates": {
+        "proximity": 0.9453125,
+        "intercept": 0.9309895833333334,
+        "changepoint": 0.9088541666666666
+      },
+      "candidate_time_lag_s": {
+        "proximity": {
+          "p0": -0.44,
+          "p50": 0.0,
+          "p90": 0.0,
+          "p99": 0.2,
+          "max": 0.32
+        },
+        "intercept": {
+          "p0": -0.44,
+          "p50": 0.0,
+          "p90": 0.0,
+          "p99": 0.08,
+          "max": 0.24
+        },
+        "changepoint": {
+          "p0": -0.48,
+          "p50": 0.08,
+          "p90": 0.12,
+          "p99": 0.2,
+          "max": 0.32
+        }
+      }
+    },
+    "SHOT": {
+      "counts": {
+        "source_events": 24,
+        "eligible": 24,
+        "intercept_same_actor_within_0p48s": 23,
+        "proximity_same_actor_within_0p48s": 21,
+        "changepoint_same_actor_within_0p48s": 20
+      },
+      "actor_ball_distance_at_source_start_m": {
+        "p0": 0.0,
+        "p50": 0.12805360555648804,
+        "p90": 0.3969839841127395,
+        "p99": 0.6215685668587684,
+        "max": 0.6714282631874084
+      },
+      "same_actor_detection_rates": {
+        "proximity": 0.875,
+        "intercept": 0.9583333333333334,
+        "changepoint": 0.8333333333333334
+      },
+      "candidate_time_lag_s": {
+        "proximity": {
+          "p0": 0.0,
+          "p50": 0.0,
+          "p90": 0.16,
+          "p99": 0.2,
+          "max": 0.2
+        },
+        "intercept": {
+          "p0": 0.0,
+          "p50": 0.0,
+          "p90": 0.0,
+          "p99": 0.0,
+          "max": 0.0
+        },
+        "changepoint": {
+          "p0": 0.0,
+          "p50": 0.08,
+          "p90": 0.12,
+          "p99": 0.15239999999999995,
+          "max": 0.16
+        }
+      }
+    }
+  },
+  "limits": [
+    "Exact same three frozen algorithms as SoccerTrack; no parameter tuning on Metrica.",
+    "25Hz synchronization supplied by source, not a new independent video check.",
+    "Candidate frames are states and repeated bursts, not counts of distinct physical touches.",
+    "Sparse source actions do not certify every other frame as negative."
+  ]
+}

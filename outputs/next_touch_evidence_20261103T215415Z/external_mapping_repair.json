@@ -1,0 +1,8 @@
+{
+  "reason": "Runtime code comparison against immutable aligned_state revealed external ball-velocity denominator0.2s versus source native0.04s and missing pitch-bounds mask. Repair source semantics, not tune outcomes.",
+  "mapping_revision": 2,
+  "training_feature_contract": "Actor backward5frames/0.2s, ball backward1frame/0.04s, present pitch-bounds validity; dynamics historical relative derivative0.4s.",
+  "external_outcomes_already_seen": true,
+  "claim": "Domain pilot, never sealed evaluation",
+  "outside_pitch_finite_frames": 2423
+}

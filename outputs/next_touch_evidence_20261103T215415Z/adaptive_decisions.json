@@ -1,0 +1,135 @@
+{
+  "A_quantization": {
+    "locked_utc": "2026-11-03T22:30:36.551708+00:00",
+    "hypothesis": "Coarse1.05m/0.68m coordinate steps and>85% repeated native player positions make0.2s velocity unstable; longer strictly backward velocity may improve transferable anticipation without more capacity.",
+    "endpoint": "Macro six-match AP and switch-only conditional top1 on geometry2s and nextBAS1-2s; same35-channel capacity",
+    "compute_plan": "12 HGB fits;1s actor/ball finite differences and0.8s relative approach, fixed endpoint and no threshold tuning",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  },
+  "B_conditional_ranking": {
+    "locked_utc": "2026-11-03T22:31:45.587953+00:00",
+    "hypothesis": "External constant-velocity switch top1 outperforms its AP ranking, and HGB classification is not optimized for conditional actor choice; a shared permutation-equivariant candidate scorer with scene softmax may improve choice.",
+    "endpoint": "Conditional occurrence-known scene top1/MRR/NLL on geometry2s and nextBAS1-2s, including current-nearest switches; never an unconditional event detector.",
+    "compute_plan": "Two targets, six held-match folds, matched seeds11/29/47,25 epochs,512 scenes/batch, AdamW0.001; epoch selection only on132877 positive scenes",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  },
+  "D_domain_resolution": {
+    "locked_utc": "2026-11-03T22:33:37.526190+00:00",
+    "hypothesis": "A's1s causal smoothing improved geometry AP only0.0048 and next-BAS AP0.0040, while SoccerTrack positions lie on a metre-scale grid and Metrica pass-start actor-ball median distance is0.088m. Resolution-domain mismatch may alter frozen model reliability independently of useful football information.",
+    "endpoint": "Fixed Metrica native geometric1/2s labels, candidates and eligibility; compare native/player-rounded/ball-rounded/both-rounded causal inputs. AP and paired switch/top1 differences.",
+    "compute_plan": "Two frozen all-six-match35-feature HGB models; no external fitting or threshold changes; four input-resolution arms,30s temporal-block intervals. Future target coordinates never rounded.",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  },
+  "C_calibrated_abstention": {
+    "locked_utc": "2026-11-03T22:34:06.809143+00:00",
+    "hypothesis": "One external match does not establish operational reliability; incomplete labels and current sparse positives make raw probability calibration and evidence-conditioned coverage essential.",
+    "endpoint": "NextBAS1-2s six-match NLL/Brier/ECE before/after development-only Platt calibration; coverage and retained annotated positives under evidence-only abstention",
+    "compute_plan": "Six35-feature HGB folds with independent132877 predictions; one monotone scalar calibration per fold, no test thresholds or external tuning",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  },
+  "E_unconditional_factorization": {
+    "locked_utc": "2026-11-03T22:38:17.803448+00:00",
+    "hypothesis": "B improves next-BAS switch top1 from0.2158 to0.2466 but worsens conditional NLL from1.4042 to1.4293. Determine whether the better conditional choice survives an unconditional upcoming-action test, rather than assuming occurrence is given.",
+    "endpoint": "NextBAS1-2s all eligible actor rows: AP/NLL and paired six-match differences against equal scene-probability HGB allocation; positive scenes never supplied to scoring.",
+    "compute_plan": "Reuse18 existing conditional CUDA checkpoints (3seeds x6folds), no neural retraining. Calibrate HGB maximum to scene occurrence using132877 only; allocate that SAME scene probability with normalized HGB versus learned scene-softmax. Infer all current scenes before target filtering.",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  },
+  "F_frozen_external_replication": {
+    "locked_utc": "2026-11-03T22:40:11.887746+00:00",
+    "hypothesis": "E's conditional-choice benefit vanished in unconditional AP, while Game1 physics transfer is stronger than naive proximity. Replicate the fixed source-only decoder on a second previously unscored anonymous match rather than further tuning known matches.",
+    "endpoint": "Metrica Game2 geometric1/2s AP, top1 and switch ranking plus separately named PASS actor target; exact Game1 mapping revision2 and no external selection.",
+    "compute_plan": "Download only61.7MB official pinned Game2 sample with Git blob SHAs. Six frozen all-six-SoccerTrack HGB models reconstructed with identical settings; no Metrica fitting/calibration, no new neural training.",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  },
+  "G_matched_objective_control": {
+    "locked_utc": "2026-11-03T22:42:37.600137+00:00",
+    "hypothesis": "B versus HGB confounds architecture, ensemble and training objective, and E found essentially no unconditional AP gain. Isolate softmax versus independent binary loss with the EXACT same candidate MLP, train scenes, seeds, initialization, batch schedule and conditional-development-NLL selection.",
+    "endpoint": "Paired conditional top1/MRR/NLL and switch ranking for geometry2s and nextBAS1-2s; compare against B with three matched seeds. This is not a new unconditional forecast.",
+    "compute_plan": "36 CUDA fits,25 epochs,512 scenes/batch, same AdamW; binary logits trained with unweighted candidate BCE, normalized sigmoid for categorical development/test NLL. No external data or threshold tuning.",
+    "evidence_sha256": {
+      "next_interactor_results.json": "a7d4d2c119a487dcec8c8c3c9e96380159cce32a5aa1624a071148bac9201d2a",
+      "tactical_context_results.json": "81fbcb9deea895631f193a4e3d67e1e447e041c3d85193085cec64a9641c043a",
+      "scene_prioritization.json": "b91b07f6d8e28ef502d0bbf70e2ff3adf28ec32be5159c8f74367014215b34b7",
+      "external_results.json": "8bd1ffe92f4758e72434d00320e4f51217d564ddde2a9f11554cf7df9e57d25d",
+      "clock_and_sync_audit.json": "b9dd0d01ee7b1b1a7c3a4a4bec96e98c1e7b6c6c74d6862ecaeb0e62be7e49dc"
+    },
+    "data": "six known fitting matches,132877 development only; no exposed retrospective data",
+    "expected_failure_modes": [
+      "Noisy/incomplete annotation negatives",
+      "Six-match uncertainty",
+      "Proxy predictability is not physical-touch validity"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Football evidence review - paused preparation</title>
+<style>body{font:16px system-ui;max-width:1100px;margin:2em auto;background:#eef2f4;color:#142536}label{display:inline-block;margin:.5em}button,input,select{font:inherit;padding:.35em}video,img{max-width:100%;max-height:440px;background:#17282e}#warning,#error{background:#ffdfbd;padding:1em}pre{white-space:pre-wrap}fieldset{margin:1em 0}</style>
+<h1>Football evidence review</h1>
+<p>Preparation only. New human review remains paused. Do not treat source-clock-only clips as independently synchronized or static diagrams as evidence of no event.</p>
+<label>Load private queue JSON <input id="queue" type="file" accept=".json"></label>
+<label>Local evidence folder <input id="files" type="file" webkitdirectory multiple></label>
+<label>Reviewer <input id="reviewer" autocomplete="off"></label>
+<select id="cases"><option>Load queue first</option></select>
+<p id="warning">No evidence loaded</p><p id="error" role="alert"></p>
+<video id="video" controls hidden></video><img id="image" alt="Anonymous causal pitch schematic" hidden>
+<fieldset><legend>First independent judgment (immutable after saving)</legend>
+<label>Status <select id="status"></select></label>
+<label>Actor (unknown allowed) <input id="actor" value="UNKNOWN"></label>
+<label>Event type <input id="event_type" value="UNKNOWN"></label>
+<label>Time window in clip seconds <input id="time_window" placeholder="e.g. 1.8-2.2 or UNKNOWN"></label>
+<label>Confidence <select id="confidence"><option>LOW</option><option>MEDIUM</option><option>HIGH</option></select></label>
+<label>Notes <input id="notes" size="55"></label>
+<button id="save">Save first judgment</button><button id="reveal">Reveal predictions</button>
+</fieldset><pre id="prediction">Predictions hidden</pre>
+<p id="count">0 saved judgments</p>
+<button id="json">Export JSON</button><button id="csv">Export CSV</button>
+<label>Import separate reviewer JSON <input id="import" type="file" accept=".json"></label>
+<fieldset><legend>Separate arbitration (requires two reviewer records; originals never overwritten)</legend>
+<input id="arbitration" placeholder="Arbitrated conclusion"><button id="arbitrate">Record arbitration</button><button id="arbitration_export">Export arbitration JSON</button>
+</fieldset>
+<script src="review_core.js"></script><script>
+"use strict";
+const $=id=>document.getElementById(id);
+let queue=[],labels=[],arbitrations=[],files=new Map(),urls=[];
+const current=()=>queue[Number($("cases").value)];
+function safe(fn){return async()=>{try{$("error").textContent="";await fn();}catch(e){$("error").textContent=e.message;}}}
+function redraw(){
+  const item=current();if(!item)return;
+  urls.forEach(URL.revokeObjectURL);urls=[];
+  $("warning").textContent=item.case_id+" | "+item.evidence_kind+" | "+(item.sync_verified?"Independent synchronization verified":"PHYSICAL SYNC UNVERIFIED - verified negative disabled");
+  $("status").replaceChildren(...ReviewCore.statuses.map(s=>{const o=new Option(s,s);o.disabled=s==="NO_EVENT_VERIFIED"&&!item.sync_verified;return o;}));
+  $("video").hidden=true;$("image").hidden=true;$("prediction").textContent="Predictions hidden";
+  const path=item.clip||item.schematic;
+  if(path){const name=path.replace(/\\/g,"/").split("/").pop();const file=files.get(name);if(file){const url=URL.createObjectURL(file);urls.push(url);const el=$(item.clip?"video":"image");el.src=url;el.hidden=false;}else $("warning").textContent+=" | Select evidence folder containing "+name;}
+}
+function download(name,text,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);}
+$("queue").onchange=safe(async()=>{queue=JSON.parse(await $("queue").files[0].text());if(!Array.isArray(queue)||!queue.every(x=>x.case_id&&x.evidence_kind))throw Error("Invalid queue");$("cases").replaceChildren(...queue.map((x,i)=>new Option(x.case_id,String(i))));redraw();});
+$("files").onchange=safe(()=>{files=new Map();for(const f of $("files").files){if(files.has(f.name))throw Error("Duplicate evidence basename; select a narrower folder");files.set(f.name,f);}redraw();});
+$("cases").onchange=redraw;
+$("save").onclick=safe(()=>{const row={case_id:current().case_id,reviewer:$("reviewer").value.trim()};for(const k of ["status","actor","event_type","time_window","confidence","notes"])row[k]=$(k).value;labels=ReviewCore.record(labels,current(),row);$("count").textContent=labels.length+" saved judgments";});
+$("reveal").onclick=safe(()=>{$("prediction").textContent=JSON.stringify(ReviewCore.reveal(labels,current(),$("reviewer").value.trim()),null,2);});
+$("json").onclick=()=>download("first_judgments.json",JSON.stringify(labels,null,2),"application/json");
+$("csv").onclick=()=>download("first_judgments.csv",ReviewCore.csv(labels),"text/csv");
+$("import").onchange=safe(async()=>{labels=ReviewCore.merge(labels,JSON.parse(await $("import").files[0].text()),queue);$("count").textContent=labels.length+" saved judgments";});
+$("arbitrate").onclick=safe(()=>{arbitrations=ReviewCore.arbitrate(arbitrations,labels,current().case_id,$("reviewer").value.trim(),$("arbitration").value,$("notes").value);$("count").textContent=labels.length+" judgments; "+arbitrations.length+" arbitrations";});
+$("arbitration_export").onclick=()=>download("arbitration.json",JSON.stringify(arbitrations,null,2),"application/json");
+</script></html>

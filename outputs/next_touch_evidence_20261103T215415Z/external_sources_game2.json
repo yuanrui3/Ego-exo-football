@@ -1,0 +1,27 @@
+{
+  "commit": "e706dd506b360d69d9d123d5b8026e7294b13996",
+  "files": [
+    {
+      "name": "Sample_Game_2_RawEventsData.csv",
+      "bytes": 153897,
+      "sha256": "edf31a18599265b77a8baf150f2ce6d89456fb0324b62ea7a391229657a619ba",
+      "official_git_blob_sha1": "decccd47c1d53960d290cb6679337eec83a8a97f",
+      "url": "https://raw.githubusercontent.com/metrica-sports/sample-data/e706dd506b360d69d9d123d5b8026e7294b13996/data/Sample_Game_2/Sample_Game_2_RawEventsData.csv"
+    },
+    {
+      "name": "Sample_Game_2_RawTrackingData_Away_Team.csv",
+      "bytes": 29627711,
+      "sha256": "aa639f40762eade46c389020fe4458266b5ba14027b1e96e22e75db62803718b",
+      "official_git_blob_sha1": "e7334d8d762954a215c49e55f211855000243fdc",
+      "url": "https://raw.githubusercontent.com/metrica-sports/sample-data/e706dd506b360d69d9d123d5b8026e7294b13996/data/Sample_Game_2/Sample_Game_2_RawTrackingData_Away_Team.csv"
+    },
+    {
+      "name": "Sample_Game_2_RawTrackingData_Home_Team.csv",
+      "bytes": 31890338,
+      "sha256": "3f9990ac204b07133e4202441d6fcbb386897c7c7f81e1bc3ce4d35bc8644694",
+      "official_git_blob_sha1": "8b4d3648888cc8b033e7142919ebaea04f6328e0",
+      "url": "https://raw.githubusercontent.com/metrica-sports/sample-data/e706dd506b360d69d9d123d5b8026e7294b13996/data/Sample_Game_2/Sample_Game_2_RawTrackingData_Home_Team.csv"
+    }
+  ],
+  "scope": "Anonymous public synchronized sample; README community sample permission, no general sublicensing assertion; private raw data excluded from package."
+}

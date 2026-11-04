@@ -1,0 +1,2087 @@
+{
+  "status": "PARTIAL",
+  "claim": "PHYSICAL_SYNC_UNVERIFIED",
+  "halves": {
+    "117092_1st": {
+      "frames": 67375,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "901",
+        "num_tracklets": "23",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 44:55",
+        "clip_start": "0",
+        "clip_stop": "2695000",
+        "name": "CLPD-117092-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 67375,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 3840,
+        "height": 1906,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "0.000000",
+        "duration": "2695.000000",
+        "nb_frames": "67375"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 67375,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.020437847866419296,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 12.509594917297363,
+        "p99": 21.064720153808594,
+        "max": 263.2914733886719
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274015426635742,
+        "p99": 80.56405639648438,
+        "max": 2598.972412109375
+      },
+      "ball_speed_gt45_fraction": 0.0014697415073184035,
+      "actor_repeated_position_fraction": 0.8769410755056107,
+      "actor_native_grid": {
+        "observed_player_frames": 1482193,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 25,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8769410755056107,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1482193,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 67375,
+        "frames_exactly_22": 67339,
+        "frames_over_22": 0,
+        "frames_under_18": 1,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -57.75,
+          -35.36000061035156
+        ],
+        "pitch_coordinate_max": [
+          53.54999923706055,
+          36.040000915527344
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.002003787630895572,
+      "source_segment_changes": 0,
+      "supported_event_rows": 972,
+      "known_actor_event_rows": 965,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 965,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.718169927597046,
+            "p90": 3.9962475299835205,
+            "p99": 11.415796279907227,
+            "max": 42.42514419555664
+          }
+        },
+        "-1": {
+          "n": 965,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.7200008392333985,
+            "p99": 11.415796279907227,
+            "max": 42.42514419555664
+          }
+        },
+        "0": {
+          "n": 965,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.719999313354492,
+            "p99": 11.415796279907227,
+            "max": 42.42514419555664
+          }
+        },
+        "1": {
+          "n": 965,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.719999313354492,
+            "p99": 10.767204284667972,
+            "max": 23.89695167541504
+          }
+        },
+        "5": {
+          "n": 965,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600001335144043,
+            "p90": 3.3290247917175333,
+            "p99": 10.346778526306153,
+            "max": 23.971515655517578
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "117092_2nd": {
+      "frames": 67549,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "902",
+        "num_tracklets": "33",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 45:01",
+        "clip_start": "0",
+        "clip_stop": "2701960",
+        "name": "CLPD-117092-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 67549,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 3840,
+        "height": 1906,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2702.000000",
+        "nb_frames": "67550"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 67549,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.018149787561621934,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 11.471816062927246,
+        "p99": 20.40000343322754,
+        "max": 263.90545654296875
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274005889892578,
+        "p99": 80.56405639648438,
+        "max": 2575.250732421875
+      },
+      "ball_speed_gt45_fraction": 0.0015077725675859052,
+      "actor_repeated_position_fraction": 0.8833305046390586,
+      "actor_native_grid": {
+        "observed_player_frames": 1484817,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 33,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8833305046390586,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1484817,
+        "unique_player_ids": 33,
+        "unique_player_track_pairs": 33,
+        "frames": 67549,
+        "frames_exactly_22": 67059,
+        "frames_over_22": 0,
+        "frames_under_18": 77,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          16.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -57.75,
+          -31.280000686645508
+        ],
+        "pitch_coordinate_max": [
+          54.599998474121094,
+          36.040000915527344
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.00305761585434434,
+      "source_segment_changes": 0,
+      "supported_event_rows": 985,
+      "known_actor_event_rows": 976,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 975,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.7181692123413086,
+            "p90": 4.161838054656982,
+            "p99": 10.969618206024169,
+            "max": 24.10418128967285
+          }
+        },
+        "-1": {
+          "n": 974,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.8569409370422454,
+            "p99": 10.965268125534038,
+            "max": 24.971031188964844
+          }
+        },
+        "0": {
+          "n": 974,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.7200002670288086,
+            "p99": 10.965268125534038,
+            "max": 24.971031188964844
+          }
+        },
+        "1": {
+          "n": 973,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.250959038734436,
+            "p90": 2.7200000286102295,
+            "p99": 10.574693984985299,
+            "max": 24.971031188964844
+          }
+        },
+        "5": {
+          "n": 976,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600000739097595,
+            "p90": 3.4000000953674316,
+            "p99": 10.973113536834717,
+            "max": 26.21073341369629
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "117093_1st": {
+      "frames": 67625,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "903",
+        "num_tracklets": "23",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 45:05",
+        "clip_start": "0",
+        "clip_stop": "2705000",
+        "name": "CLPD-117093-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 67625,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2705.000000",
+        "nb_frames": "67625"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 67625,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.043282809611829946,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 13.599996566772461,
+        "p99": 22.073499908447264,
+        "max": 263.0498962402344
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274017333984375,
+        "p99": 85.77622985839844,
+        "max": 2281.45849609375
+      },
+      "ball_speed_gt45_fraction": 0.002612136387523571,
+      "actor_repeated_position_fraction": 0.8746193753251694,
+      "actor_native_grid": {
+        "observed_player_frames": 1487709,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 23,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8746193753251694,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1487709,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 67625,
+        "frames_exactly_22": 67584,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -57.75,
+          -39.439998626708984
+        ],
+        "pitch_coordinate_max": [
+          60.900001525878906,
+          38.7599983215332
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.013356778778645556,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1055,
+      "known_actor_event_rows": 1051,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.0399999618530273,
+            "p90": 4.161839962005615,
+            "p99": 6.16471004486084,
+            "max": 7.896049499511719
+          }
+        },
+        "-1": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.719999313354492,
+            "p99": 4.5017149448394775,
+            "max": 6.254798889160156
+          }
+        },
+        "0": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.294363260269165,
+            "p99": 4.5017149448394775,
+            "max": 6.254798889160156
+          }
+        },
+        "1": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.0500001907348633,
+            "p90": 2.2943618297576904,
+            "p99": 4.588724136352539,
+            "max": 7.158909797668457
+          }
+        },
+        "5": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509607076644897,
+            "p90": 2.720001220703125,
+            "p99": 5.781678915023804,
+            "max": 7.992496013641357
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "117093_2nd": {
+      "frames": 70475,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "904",
+        "num_tracklets": "27",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 46:59",
+        "clip_start": "0",
+        "clip_stop": "2819000",
+        "name": "CLPD-117093-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 70475,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "0.000000",
+        "duration": "2819.000000",
+        "nb_frames": "70475"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 70475,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.02243348705214615,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 12.509599685668945,
+        "p99": 20.399999618530273,
+        "max": 273.9005126953125
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274015426635742,
+        "p99": 80.56397247314453,
+        "max": 2628.520751953125
+      },
+      "ball_speed_gt45_fraction": 0.0019014718262838563,
+      "actor_repeated_position_fraction": 0.8783581040201142,
+      "actor_native_grid": {
+        "observed_player_frames": 1550381,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 27,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8783581040201142,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1550381,
+        "unique_player_ids": 27,
+        "unique_player_track_pairs": 27,
+        "frames": 70475,
+        "frames_exactly_22": 70428,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          20.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -40.119998931884766
+        ],
+        "pitch_coordinate_max": [
+          56.70000076293945,
+          40.79999923706055
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.013456692258225558,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1056,
+      "known_actor_event_rows": 1054,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1053,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.0999984741210938,
+            "p90": 4.588725566864014,
+            "p99": 7.015482997894292,
+            "max": 8.902141571044922
+          }
+        },
+        "-1": {
+          "n": 1052,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3599987030029297,
+            "p90": 2.9156310319900514,
+            "p99": 4.669219493865967,
+            "max": 7.494164943695068
+          }
+        },
+        "0": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.501918315887451,
+            "p99": 4.6118245124816895,
+            "max": 6.8830885887146
+          }
+        },
+        "1": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.250959038734436,
+            "p90": 2.294363021850586,
+            "p99": 4.33469820022583,
+            "max": 6.8830885887146
+          }
+        },
+        "5": {
+          "n": 1052,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.294363021850586,
+            "p99": 4.66921854019165,
+            "max": 7.896049499511719
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "118576_1st": {
+      "frames": 72825,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "907",
+        "num_tracklets": "23",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 48:33",
+        "clip_start": "0",
+        "clip_stop": "2913000",
+        "name": "CLPD-118576-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 72825,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2913.000000",
+        "nb_frames": "72825"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 72825,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.034864400961208374,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 12.509596824645996,
+        "p99": 20.99999866485596,
+        "max": 312.7398986816406
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.27401351928711,
+        "p99": 85.77625274658203,
+        "max": 2628.520751953125
+      },
+      "ball_speed_gt45_fraction": 0.001735765301767066,
+      "actor_repeated_position_fraction": 0.8858067848673744,
+      "actor_native_grid": {
+        "observed_player_frames": 1599112,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 24,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8858067848673744,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1599157,
+        "outside_generous_pitch_bounds": 45,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 72825,
+        "frames_exactly_22": 69787,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -64.05000305175781,
+          -41.47999954223633
+        ],
+        "pitch_coordinate_max": [
+          55.650001525878906,
+          40.119998931884766
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.014483038086137807,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1060,
+      "known_actor_event_rows": 1051,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1049,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.2073512077331543,
+            "p90": 4.634921360015869,
+            "p99": 7.81762985229491,
+            "max": 36.60098648071289
+          }
+        },
+        "-1": {
+          "n": 1049,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.359999656677246,
+            "p90": 2.9156301021575928,
+            "p99": 4.699962005615232,
+            "max": 36.34404373168945
+          }
+        },
+        "0": {
+          "n": 1049,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509602308273315,
+            "p90": 2.501919078826904,
+            "p99": 4.1618385505676265,
+            "max": 35.682804107666016
+          }
+        },
+        "1": {
+          "n": 1049,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.2943628311157225,
+            "p99": 3.7528769969940186,
+            "max": 35.682804107666016
+          }
+        },
+        "5": {
+          "n": 1047,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509595155715942,
+            "p90": 2.2943633556365968,
+            "p99": 4.085666518211359,
+            "max": 34.785377502441406
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "118576_2nd": {
+      "frames": 72775,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "908",
+        "num_tracklets": "28",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 48:31",
+        "clip_start": "0",
+        "clip_stop": "2911000",
+        "name": "CLPD-118576-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 72775,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2911.000000",
+        "nb_frames": "72775"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 72775,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.029749227069735484,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 11.471813201904297,
+        "p99": 20.399999618530273,
+        "max": 263.2914733886719
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.000001907348633,
+        "p90": 31.273998260498047,
+        "p99": 80.56401824951172,
+        "max": 2599.25048828125
+      },
+      "ball_speed_gt45_fraction": 0.002067695793796913,
+      "actor_repeated_position_fraction": 0.8926922927979752,
+      "actor_native_grid": {
+        "observed_player_frames": 1601050,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 28,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8926922927979752,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1601050,
+        "unique_player_ids": 28,
+        "unique_player_track_pairs": 28,
+        "frames": 72775,
+        "frames_exactly_22": 72775,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -63.0,
+          -43.52000045776367
+        ],
+        "pitch_coordinate_max": [
+          60.900001525878906,
+          40.119998931884766
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.02087442615783392,
+      "source_segment_changes": 0,
+      "supported_event_rows": 940,
+      "known_actor_event_rows": 932,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 928,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.0399999618530273,
+            "p90": 4.02137491703034,
+            "p99": 6.185276370048524,
+            "max": 59.64000701904297
+          }
+        },
+        "-1": {
+          "n": 928,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.359999656677246,
+            "p90": 2.9156301021575928,
+            "p99": 5.078884840011602,
+            "max": 60.1920280456543
+          }
+        },
+        "0": {
+          "n": 927,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509607076644897,
+            "p90": 2.719999313354492,
+            "p99": 5.257623834609987,
+            "max": 60.1920280456543
+          }
+        },
+        "1": {
+          "n": 924,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509599924087524,
+            "p90": 2.5019214153289795,
+            "p99": 5.063767995834343,
+            "max": 60.49349594116211
+          }
+        },
+        "5": {
+          "n": 925,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600006103515625,
+            "p90": 3.43633394241333,
+            "p99": 6.20942045211792,
+            "max": 60.49349594116211
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "118578_1st": {
+      "frames": 70350,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "911",
+        "num_tracklets": "22",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 46:54",
+        "clip_start": "0",
+        "clip_stop": "2814000",
+        "name": "CLPD-118578-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 70350,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2814.000000",
+        "nb_frames": "70350"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 70350,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.014001421464108032,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 12.509593963623047,
+        "p99": 19.98124122619629,
+        "max": 263.90545654296875
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.27401351928711,
+        "p99": 73.1932601928711,
+        "max": 2626.98095703125
+      },
+      "ball_speed_gt45_fraction": 0.0011244864124558495,
+      "actor_repeated_position_fraction": 0.874700034503301,
+      "actor_native_grid": {
+        "observed_player_frames": 1547700,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 22,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.874700034503301,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1547700,
+        "unique_player_ids": 22,
+        "unique_player_track_pairs": 22,
+        "frames": 70350,
+        "frames_exactly_22": 70350,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -38.7599983215332
+        ],
+        "pitch_coordinate_max": [
+          55.650001525878906,
+          40.79999923706055
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.012209730567939524,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1054,
+      "known_actor_event_rows": 1051,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1050,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.0999999046325684,
+            "p90": 4.199999809265137,
+            "p99": 6.4420985889434785,
+            "max": 12.94017505645752
+          }
+        },
+        "-1": {
+          "n": 1050,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509607076644897,
+            "p90": 2.9156298637390137,
+            "p99": 4.234236011505127,
+            "max": 10.486796379089355
+          }
+        },
+        "0": {
+          "n": 1050,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509595155715942,
+            "p90": 2.5019211769104004,
+            "p99": 4.2129447507858275,
+            "max": 10.486796379089355
+          }
+        },
+        "1": {
+          "n": 1051,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.501918077468872,
+            "p99": 4.161839485168457,
+            "max": 10.486796379089355
+          }
+        },
+        "5": {
+          "n": 1050,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509618997573853,
+            "p90": 2.9277284145355225,
+            "p99": 4.818360981941222,
+            "max": 36.106529235839844
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "118578_2nd": {
+      "frames": 70975,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "912",
+        "num_tracklets": "30",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 47:19",
+        "clip_start": "0",
+        "clip_stop": "2839000",
+        "name": "CLPD-118578-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 70975,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "0.000000",
+        "duration": "2839.000000",
+        "nb_frames": "70975"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 70975,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.01682282493835858,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 11.471824645996094,
+        "p99": 19.98124122619629,
+        "max": 263.57672119140625
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.273998260498047,
+        "p99": 78.74993896484375,
+        "max": 2604.304443359375
+      },
+      "ball_speed_gt45_fraction": 0.0017913185537610525,
+      "actor_repeated_position_fraction": 0.8818294483282042,
+      "actor_native_grid": {
+        "observed_player_frames": 1561375,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 30,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8818294483282042,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1561375,
+        "unique_player_ids": 30,
+        "unique_player_track_pairs": 30,
+        "frames": 70975,
+        "frames_exactly_22": 70919,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          20.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -58.79999923706055,
+          -41.47999954223633
+        ],
+        "pitch_coordinate_max": [
+          61.95000076293945,
+          40.79999923706055
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.018956368585381474,
+      "source_segment_changes": 0,
+      "supported_event_rows": 904,
+      "known_actor_event_rows": 901,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 901,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.2943649291992188,
+            "p90": 5.423292636871338,
+            "p99": 8.1162109375,
+            "max": 40.24346923828125
+          }
+        },
+        "-1": {
+          "n": 901,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.7181679010391235,
+            "p90": 3.752880334854126,
+            "p99": 6.872671604156494,
+            "max": 39.565589904785156
+          }
+        },
+        "0": {
+          "n": 901,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.7181673049926758,
+            "p90": 3.436335802078247,
+            "p99": 6.883089542388916,
+            "max": 39.565589904785156
+          }
+        },
+        "1": {
+          "n": 901,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600001335144043,
+            "p90": 3.4310505390167236,
+            "p99": 6.470272064208984,
+            "max": 39.78788757324219
+          }
+        },
+        "5": {
+          "n": 900,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.250960648059845,
+            "p90": 3.4310476064682005,
+            "p99": 6.872669243812561,
+            "max": 40.33924102783203
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "128057_1st": {
+      "frames": 67625,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "913",
+        "num_tracklets": "23",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 45:05",
+        "clip_start": "0",
+        "clip_stop": "2705000",
+        "name": "CLPD-128057-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 67625,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2705.000000",
+        "nb_frames": "67625"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 67625,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.032088724584103515,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 11.471816062927246,
+        "p99": 20.809200134277344,
+        "max": 278.424560546875
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274003982543945,
+        "p99": 73.19328308105469,
+        "max": 2711.720458984375
+      },
+      "ball_speed_gt45_fraction": 0.0016347108700634023,
+      "actor_repeated_position_fraction": 0.8877511032241369,
+      "actor_native_grid": {
+        "observed_player_frames": 1487709,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 24,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8877511032241369,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1487750,
+        "outside_generous_pitch_bounds": 41,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 67625,
+        "frames_exactly_22": 67584,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          21.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -64.05000305175781,
+          -38.08000183105469
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          40.79999923706055
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.013935520992344606,
+      "source_segment_changes": 0,
+      "supported_event_rows": 879,
+      "known_actor_event_rows": 874,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 874,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.039999008178711,
+            "p90": 4.161838054656982,
+            "p99": 6.3028837251663195,
+            "max": 8.82940673828125
+          }
+        },
+        "-1": {
+          "n": 874,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509599924087524,
+            "p90": 2.654575943946848,
+            "p99": 5.003839144706726,
+            "max": 7.08661413192749
+          }
+        },
+        "0": {
+          "n": 874,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509591579437256,
+            "p90": 2.294363260269165,
+            "p99": 5.00383692741394,
+            "max": 7.42255973815918
+          }
+        },
+        "1": {
+          "n": 873,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509589195251465,
+            "p90": 2.2943623065948486,
+            "p99": 4.738219013214101,
+            "max": 7.5601654052734375
+          }
+        },
+        "5": {
+          "n": 873,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509605884552002,
+            "p90": 2.9156309604644775,
+            "p99": 5.855459690093994,
+            "max": 7.5601654052734375
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "128057_2nd": {
+      "frames": 70350,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "914",
+        "num_tracklets": "23",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 46:54",
+        "clip_start": "0",
+        "clip_stop": "2814000",
+        "name": "CLPD-128057-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 70350,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1080,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2814.000000",
+        "nb_frames": "70350"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 70350,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.026197583511016347,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 11.471813201904297,
+        "p99": 18.764400482177734,
+        "max": 264.27752685546875
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.273998260498047,
+        "p99": 78.74997619628907,
+        "max": 2600.1396484375
+      },
+      "ball_speed_gt45_fraction": 0.001926810398937335,
+      "actor_repeated_position_fraction": 0.8925977448782918,
+      "actor_native_grid": {
+        "observed_player_frames": 1547700,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 23,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8925977448782918,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1547700,
+        "unique_player_ids": 23,
+        "unique_player_track_pairs": 23,
+        "frames": 70350,
+        "frames_exactly_22": 70350,
+        "frames_over_22": 0,
+        "frames_under_18": 0,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          22.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -60.900001525878906,
+          -40.119998931884766
+        ],
+        "pitch_coordinate_max": [
+          59.849998474121094,
+          40.79999923706055
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.014230147961491245,
+      "source_segment_changes": 0,
+      "supported_event_rows": 921,
+      "known_actor_event_rows": 917,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 917,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.2943623065948486,
+            "p90": 5.267542076110839,
+            "p99": 7.417503147125256,
+            "max": 11.415797233581543
+          }
+        },
+        "-1": {
+          "n": 917,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.7181673049926758,
+            "p90": 3.4310500621795654,
+            "p99": 5.3802858734130945,
+            "max": 7.422560691833496
+          }
+        },
+        "0": {
+          "n": 917,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.359999656677246,
+            "p90": 2.927730178833008,
+            "p99": 4.669217510223389,
+            "max": 5.831261157989502
+          }
+        },
+        "1": {
+          "n": 917,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509599924087524,
+            "p90": 2.9156293869018555,
+            "p99": 4.560881137847906,
+            "max": 5.423292636871338
+          }
+        },
+        "5": {
+          "n": 917,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.0500001907348633,
+            "p90": 2.207353448867798,
+            "p99": 4.135342636108404,
+            "max": 8.098301887512207
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "132831_1st": {
+      "frames": 67775,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "917",
+        "num_tracklets": "22",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 45:11",
+        "clip_start": "0",
+        "clip_stop": "2711000",
+        "name": "CLPD-132831-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 67775,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 3840,
+        "height": 1504,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2711.000000",
+        "nb_frames": "67775"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 67775,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 1.4754703061600886e-05,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 14.57814884185791,
+        "p99": 39.18573760986328,
+        "max": 625.4797973632812
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274059295654297,
+        "p99": 964.549035644549,
+        "max": 4691.0986328125
+      },
+      "ball_speed_gt45_fraction": 0.009295600082627557,
+      "actor_repeated_position_fraction": 0.8498255540219154,
+      "actor_native_grid": {
+        "observed_player_frames": 1491028,
+        "implausible_adjacent_jumps": 13,
+        "track_team_or_role_changes": 0,
+        "segment_count": 35,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.00000762939453,
+          26.250028610229492,
+          31.274011611938477
+        ],
+        "identical_adjacent_position_fraction": 0.8498255540219154,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1491028,
+        "unique_player_ids": 22,
+        "unique_player_track_pairs": 22,
+        "frames": 67775,
+        "frames_exactly_22": 67774,
+        "frames_over_22": 0,
+        "frames_under_18": 1,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.0,
+      "source_segment_changes": 13,
+      "supported_event_rows": 1169,
+      "known_actor_event_rows": 1164,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1164,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 4.1209187507629395,
+            "p90": 14.277259254455567,
+            "p99": 30.3229294776916,
+            "max": 52.609981536865234
+          }
+        },
+        "-1": {
+          "n": 1164,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.752878427505493,
+            "p90": 14.309364223480227,
+            "p99": 30.429337959289537,
+            "max": 52.609981536865234
+          }
+        },
+        "0": {
+          "n": 1164,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.752878189086914,
+            "p90": 14.233762741088867,
+            "p99": 29.786173877716042,
+            "max": 52.609981536865234
+          }
+        },
+        "1": {
+          "n": 1164,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.558441162109375,
+            "p90": 13.955801010131836,
+            "p99": 29.11307403564451,
+            "max": 39.528141021728516
+          }
+        },
+        "5": {
+          "n": 1164,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 4.161837577819824,
+            "p90": 14.184008884429947,
+            "p99": 29.79298851013181,
+            "max": 45.837642669677734
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "132831_2nd": {
+      "frames": 68375,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "918",
+        "num_tracklets": "28",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 45:35",
+        "clip_start": "0",
+        "clip_stop": "2735000",
+        "name": "CLPD-132831-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 68375,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 3840,
+        "height": 1504,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2735.000000",
+        "nb_frames": "68375"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 68375,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 5.850091407678245e-05,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 12.509607315063477,
+        "p99": 31.273990631103516,
+        "max": 552.8947143554688
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274032592773438,
+        "p99": 911.4707275390723,
+        "max": 5383.04296875
+      },
+      "ball_speed_gt45_fraction": 0.00767869418320633,
+      "actor_repeated_position_fraction": 0.8744119294035964,
+      "actor_native_grid": {
+        "observed_player_frames": 1503674,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 28,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          17.0,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8744119294035964,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1503674,
+        "unique_player_ids": 28,
+        "unique_player_track_pairs": 28,
+        "frames": 68375,
+        "frames_exactly_22": 68103,
+        "frames_over_22": 0,
+        "frames_under_18": 4,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.0,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1118,
+      "known_actor_event_rows": 1114,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1114,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 4.161839485168457,
+            "p90": 8.902140617370605,
+            "p99": 16.66805648803711,
+            "max": 38.115386962890625
+          }
+        },
+        "-1": {
+          "n": 1114,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.7528785467147827,
+            "p90": 8.425889015197754,
+            "p99": 16.599551639556868,
+            "max": 39.45073318481445
+          }
+        },
+        "0": {
+          "n": 1114,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.655659317970276,
+            "p90": 8.761544132232677,
+            "p99": 15.954061508178711,
+            "max": 39.45073318481445
+          }
+        },
+        "1": {
+          "n": 1114,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.5584405660629272,
+            "p90": 8.84000015258789,
+            "p99": 16.534487419128347,
+            "max": 40.11902618408203
+          }
+        },
+        "5": {
+          "n": 1114,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 3.558440923690796,
+            "p90": 8.902141284942626,
+            "p99": 21.63822639465325,
+            "max": 49.03599548339844
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "132877_1st": {
+      "frames": 67700,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "919",
+        "num_tracklets": "22",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "1 - 00:00",
+        "game_time_stop": "1 - 45:08",
+        "clip_start": "0",
+        "clip_stop": "2708000",
+        "name": "CLPD-132877-1st",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 67700,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1084,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2708.000000",
+        "nb_frames": "67700"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 67700,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 0.00017725258493353027,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 5.249996185302734,
+        "p90": 11.471816062927246,
+        "p99": 21.273455410003663,
+        "max": 566.5146484375
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274017333984375,
+        "p99": 239.10888671875,
+        "max": 4388.8759765625
+      },
+      "ball_speed_gt45_fraction": 0.006204940314383642,
+      "actor_repeated_position_fraction": 0.890855233380386,
+      "actor_native_grid": {
+        "observed_player_frames": 1489136,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 22,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999996185302734,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.890855233380386,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1489136,
+        "unique_player_ids": 22,
+        "unique_player_track_pairs": 22,
+        "frames": 67700,
+        "frames_exactly_22": 67688,
+        "frames_over_22": 0,
+        "frames_under_18": 12,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.0,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1130,
+      "known_actor_event_rows": 1129,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1129,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.207350015640259,
+            "p90": 4.634921550750732,
+            "p99": 6.75771377563477,
+            "max": 15.792099952697754
+          }
+        },
+        "-1": {
+          "n": 1129,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600001335144043,
+            "p90": 2.9277291774749754,
+            "p99": 4.621987705230715,
+            "max": 14.141714096069336
+          }
+        },
+        "0": {
+          "n": 1129,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509607076644897,
+            "p90": 2.719999313354492,
+            "p99": 4.58872543334961,
+            "max": 14.141714096069336
+          }
+        },
+        "1": {
+          "n": 1129,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.2943630695343016,
+            "p99": 4.483506393432627,
+            "max": 13.760555267333984
+          }
+        },
+        "5": {
+          "n": 1129,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509597539901733,
+            "p90": 2.294362783432007,
+            "p99": 6.2732402610778975,
+            "max": 48.06982421875
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    },
+    "132877_2nd": {
+      "frames": 69350,
+      "gsr": {
+        "version": "1.3",
+        "game_id": "7",
+        "id": "920",
+        "num_tracklets": "35",
+        "action_position": "0",
+        "action_class": "Unknown",
+        "visibility": "visible",
+        "game_time_start": "2 - 00:00",
+        "game_time_stop": "2 - 46:14",
+        "clip_start": "0",
+        "clip_stop": "2774000",
+        "name": "CLPD-132877-2nd",
+        "im_dir": "img1",
+        "frame_rate": 25,
+        "seq_length": 69350,
+        "im_ext": ".jpg"
+      },
+      "video_probe": {
+        "width": 4096,
+        "height": 1084,
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/90000",
+        "start_time": "1.000000",
+        "duration": "2774.000000",
+        "nb_frames": "69350"
+      },
+      "ball_first_frame": 1,
+      "ball_last_frame": 69350,
+      "ball_nonunit_gaps": 0,
+      "ball_missing_fraction": 1.4419610670511897e-05,
+      "ball_speed_mps": {
+        "p0": 0.0,
+        "p50": 3.4000015258789062,
+        "p90": 11.471817016601562,
+        "p99": 23.174606323242188,
+        "max": 621.0797729492188
+      },
+      "ball_acceleration_mps2": {
+        "p0": 0.0,
+        "p50": 17.00000762939453,
+        "p90": 31.274017333984375,
+        "p99": 833.8542968750219,
+        "max": 4669.0869140625
+      },
+      "ball_speed_gt45_fraction": 0.006344720183420092,
+      "actor_repeated_position_fraction": 0.8932100068577843,
+      "actor_native_grid": {
+        "observed_player_frames": 1525309,
+        "implausible_adjacent_jumps": 0,
+        "track_team_or_role_changes": 0,
+        "segment_count": 35,
+        "adjacent_speed_mps_percentiles": [
+          0.0,
+          16.999984741210938,
+          26.250028610229492,
+          31.27400016784668
+        ],
+        "identical_adjacent_position_fraction": 0.8932100068577843,
+        "coordinates_on_centimeter_grid_fraction": 1.0,
+        "coordinates_on_1_05m_x_grid_fraction": 1.0,
+        "coordinates_on_0_68m_y_grid_fraction": 1.0,
+        "player_annotations": 1525309,
+        "unique_player_ids": 35,
+        "unique_player_track_pairs": 35,
+        "frames": 69350,
+        "frames_exactly_22": 69205,
+        "frames_over_22": 0,
+        "frames_under_18": 26,
+        "frames_more_than_11_on_either_team": 0,
+        "player_count_percentiles": [
+          0.0,
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "pitch_coordinate_min": [
+          -52.5,
+          -34.0
+        ],
+        "pitch_coordinate_max": [
+          52.5,
+          34.0
+        ]
+      },
+      "out_of_pitch_actor_fraction": 0.0,
+      "source_segment_changes": 0,
+      "supported_event_rows": 1036,
+      "known_actor_event_rows": 1033,
+      "offset_diagnostics": {
+        "-5": {
+          "n": 1033,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 2.2073516845703125,
+            "p90": 4.5887250900268555,
+            "p99": 7.458076324462885,
+            "max": 45.765411376953125
+          }
+        },
+        "-1": {
+          "n": 1033,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600006103515625,
+            "p90": 3.431050682067871,
+            "p99": 6.180805397033687,
+            "max": 46.91509246826172
+          }
+        },
+        "0": {
+          "n": 1033,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600000143051147,
+            "p90": 2.927729845046997,
+            "p99": 6.2750666046142465,
+            "max": 46.91509246826172
+          }
+        },
+        "1": {
+          "n": 1033,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.2509623765945435,
+            "p90": 2.927730417251587,
+            "p99": 6.6944860839843585,
+            "max": 46.91509246826172
+          }
+        },
+        "5": {
+          "n": 1033,
+          "actor_ball_distance_m": {
+            "p0": 0.0,
+            "p50": 1.3600006103515625,
+            "p90": 3.436335897445679,
+            "p99": 24.188690185546857,
+            "max": 52.58780288696289
+          }
+        }
+      },
+      "offset_choice": "NONE: diagnostic distances are not physical synchronization evidence.",
+      "physical_sync": "PHYSICAL_SYNC_UNVERIFIED"
+    }
+  },
+  "private_sample_clips": 14,
+  "conventions": {
+    "GSR": "zero-based source frame",
+    "ball": "one-based file labels preserved in asof; no silent -1 correction",
+    "BAS": "floor(position_ms*25/1000); stable frame separately checked by existing resolver",
+    "video": "ordinal zero-based, PTS and native FPS probed; metadata agreement is not physical contact evidence"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "0": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T21:59:26.522303+00:00",
+    "seconds": 17.795596299984027,
+    "reason": "Original source hashes, prior archives, causal cohort and protocol pinned.",
+    "evidence": "stage_0.json"
+  },
+  "1": {
+    "status": "PARTIAL",
+    "utc": "2026-11-03T22:00:10.785384+00:00",
+    "seconds": 21.28116630000295,
+    "reason": "Source clocks, metadata and private clips audited; independent physical synchronization remains unverified.",
+    "evidence": "stage_1.json"
+  },
+  "2": {
+    "status": "PARTIAL",
+    "utc": "2026-11-03T22:04:09.357399+00:00",
+    "seconds": 0.3653012000140734,
+    "reason": "Historical labels audited and two-reviewer tool verified; new human review remains paused with zero new labels.",
+    "evidence": "stage_2.json"
+  },
+  "3": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:00:16.547257+00:00",
+    "seconds": 2.463443099986762,
+    "reason": "Three contact-candidate algorithms executed; candidate states are not certified physical touches.",
+    "evidence": "stage_3.json"
+  },
+  "4": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:14:47.478696+00:00",
+    "seconds": 862.4431513000163,
+    "reason": "Two target families executed with six match-excluded folds and target-validity masks.",
+    "evidence": "stage_4.json"
+  },
+  "8": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:14:46.670916+00:00",
+    "seconds": 57.846781499974895,
+    "reason": "Pinned Game1 transfer pilot executed with repaired shared mapping; sealed SoccerTrack evaluation unavailable.",
+    "evidence": "stage_8.json"
+  },
+  "5": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:21:43.730014+00:00",
+    "seconds": 414.5445974000031,
+    "reason": "Three action lead windows and fully joint-stale challenge executed.",
+    "evidence": "stage_5.json"
+  },
+  "6": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:29:42.740836+00:00",
+    "seconds": 477.2224884000025,
+    "reason": "Matched spatial-context ablations executed; exploratory known-match evidence only.",
+    "evidence": "stage_6.json"
+  },
+  "7": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:49:58.044269+00:00",
+    "seconds": 195.21212280000327,
+    "reason": "Fixed quotas executed using revision2 causal scheduling, without future validity filtering.",
+    "evidence": "stage_7.json"
+  },
+  "9": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:35:02.497173+00:00",
+    "seconds": 265.98858180001844,
+    "reason": "Seven adaptive branches executed, including second external match and matched CUDA objective control.",
+    "evidence": "stage_9.json"
+  },
+  "10": {
+    "status": "COMPLETE",
+    "utc": "2026-11-03T22:56:03.846255+00:00",
+    "overall_status": "PARTIAL_WITH_NEW_FINDINGS",
+    "tests": 26,
+    "protected_unchanged": 1117,
+    "reason": "Tests, figures and protected-source verification passed; physical and operational questions remain partial.",
+    "evidence": "acceptance.json"
+  }
+}

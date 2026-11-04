@@ -1,2 +1,12 @@
 # Preserve the exact bytes pinned by the frozen release manifest on every platform.
 /configs/backbone_release_baseline.json -text whitespace=cr-at-eol
+
+# Preserve byte-pinned research provenance and external parser locks.
+/outputs/next_touch_evidence_20261103T215415Z/** -text whitespace=cr-at-eol
+/outputs/ball_anticipation_20261103T000141Z/mission.py -text whitespace=cr-at-eol
+/outputs/ball_anticipation_20261103T000141Z/adaptive.py -text whitespace=cr-at-eol
+/outputs/ball_centric_action_autonomy_20261102T222620Z/run_research.py -text whitespace=cr-at-eol
+/outputs/action_opportunity_research_20261102_144500/build_cohort.py -text whitespace=cr-at-eol
+/action_opportunity_followup_20261102/followup_common.py -text whitespace=cr-at-eol
+/action_opportunity_followup_20261102/possession_features.py -text whitespace=cr-at-eol
+/src/backbone/event_time.py text eol=crlf

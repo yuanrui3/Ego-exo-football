@@ -1,0 +1,25 @@
+# Independent evidence and access decision
+
+The SoccerTrack fitting cohort is six already-known matches; development match132877 is reserved for selection.118577/128058 are exposed retrospective data and are not renamed sealed tests. NO_SEALED_EVALUATION applies to SoccerTrack.
+
+| Official source | Verified content | Access and limits | Executed decision |
+|---|---|---|---|
+| SoccerTrack v1.2 local mirror | Ball/player XY, BAS actions, panorama; original release hashes in earlier audit | Authorized existing local data; public README fetch returned401, no bypass attempted. Local BAS matches official local mirror byte-for-byte. Source clock is not physical touch confirmation. | Reuse immutable six-fit/development cohort; fourteen private four-second clips and native clock audit |
+| Metrica Sports sample-data | Official README: synchronized tracking/events; anonymous105x68m normalized XY; three CSVs per game | Public sample expressly offered for community analytics; attribution requested. No formal blanket redistribution license asserted. Local analysis only, raw files excluded from ZIP. | Pinned commit e706dd506b360d69d9d123d5b8026e7294b13996; Game1 65,704,480 bytes and Game2 61,671,946 bytes; SHA-256 recorded per file. Game2 official Git blob SHAs also verified. Frozen SoccerTrack models, no Metrica fitting |
+| SkillCorner opendata | Ten A-League matches:10Hz ball/player tracking, detected/extrapolated flag, possession and dynamic events. Two29-joint body-pose matches separately documented | Official repository open data; previous pinned body-pose audit verified MIT-tagged source and two archive hashes. Generated tracking/pose are not measured gaze or exact manual contact labels. | Reused prior orientation conclusions; no unnecessary redownload. Promising next source for event definitions/possession, not a head-direction truth substitute |
+| SoccerNet GSR | Game-state pitch positions, identities, roles; official task evaluates GS-HOTA | Prior official HF audit: public SN-GSR-2025, GPL-3.0 metadata. That does not grant every video unrestricted reuse. No torso joints or exact touch timestamp established. | No large download. Useful camera/game-state research, not a new physical-touch benchmark |
+| SoccerNet GAR | Requested task page returned404 | No usable official task-specific ball+player+touch schema verified in this bounded investigation | BLOCKED for direct task comparability; no invented annotation fields |
+| Ego-Exo4D | Official site confirms synchronized ego plus multiple exo views, skilled soccer among activities | Prior official audit requires signed agreement and issued AWS credentials; no anonymous authorized pilot established | No gated download; appropriate future human-view evidence after permission and task alignment |
+| Wide Open Gazes | arXiv2602.18519, pose-enhanced positional-data soccer analysis | Paper/abstract is verified, but a licensed downloadable contact dataset is not. Guessed web hosts failed and are not evidence of availability | Research lead only; no data acquired or claims of U.S. Soccer provenance |
+
+## Frozen domain pilot
+
+Before any external scores, the mission protocol fixed Metrica Game1, repository commit, no external fitting and geometric +1/+2s targets. The source schema was then inspected, player names mapped without personal identity, and clocks/duplicated ball streams checked. Each current observed roster is fixed. Ties within0.2m, unavailable future ball and out-of-roster future winners are censored as target-only availability. Relative kinematics use only q or earlier; the parser maps source normalized positions to pitch-centred metres.
+
+SoccerTrack's earliest PASS/HIGH_PASS/CROSS/SHOT/HEADER actor and Metrica's earliest PASS actor are **different annotation tasks**. The report retains separate names and does not pool their AP. One anonymous external match is a domain-shift pilot, not a sealed population test or proof of physical foot-ball contact. The official synchronization claim is useful independent source documentation, not an independent visual audit by this mission.
+
+Sources checked: https://github.com/metrica-sports/sample-data ; https://github.com/SkillCorner/opendata ; https://www.soccer-net.org/tasks/game-state-reconstruction ; https://ego-exo4d-data.org/ ; https://arxiv.org/abs/2602.18519 . Prior pinned access metadata and orientation experiments: visibility_grounding_20261101_234554.
+
+## Second-match frozen replication
+
+After the Game1 pilot and unconditional-factorization negative result, a second minimal public sample was justified. Before downloading or scoring Game2, the mission recorded the parser hash, source feature/label hashes and the official GitHub blob identifiers for all three files. The unchanged revision2 mapping and identical six-SoccerTrack-match source-only models were then applied once. Game2 had no mapping repairs or model/threshold selection. Both external cohorts explicitly condition on available current ball and observed current roster; they are not full-game missing-ball deployment evaluations.

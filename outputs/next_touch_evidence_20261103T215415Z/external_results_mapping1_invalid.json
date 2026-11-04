@@ -1,0 +1,676 @@
+{
+  "status": "COMPLETE",
+  "claim": "INDEPENDENT_DOMAIN_PILOT_NOT_SEALED",
+  "sample": "Metrica Game1, frozen pretrained SoccerTrack six-match models, no Metrica fitting/selection",
+  "source_rows": 145006,
+  "player_slots": 28,
+  "event_count": 1745,
+  "censoring": {
+    "missing_ball": 2258,
+    "missing_future": 313,
+    "target_not_current_roster": 0,
+    "tie": 314
+  },
+  "results": {
+    "geometry_1s": {
+      "external_target": "geometry_1s",
+      "rows": 71852,
+      "scenes": 3266,
+      "positive_rows": 3266,
+      "models": {
+        "state": {
+          "all": {
+            "rows": 71852,
+            "positives": 3266,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.5483372256080451,
+            "AUC": 0.9492670543527054,
+            "brier": 0.0285268479750673,
+            "NLL": 0.09964021111840535,
+            "AP_over_prevalence": 12.063418963376991,
+            "recall_at_annotation_precision": {
+              "0.5": 0.5658297611757501,
+              "0.8": 0.16870789957134108
+            },
+            "scene": {
+              "positive_scenes": 3266,
+              "top1": 0.6194121249234538,
+              "top3": 0.8303735456215554,
+              "mrr": 0.7425946077874591
+            }
+          },
+          "switch_only": {
+            "rows": 32912,
+            "positives": 1496,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16511951271260344,
+            "AUC": 0.8737069861367007,
+            "brier": 0.045000418292364674,
+            "NLL": 0.1538341878249433,
+            "AP_over_prevalence": 3.6326292796772757,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1496,
+              "top1": 0.19719251336898397,
+              "top3": 0.6303475935828877,
+              "mrr": 0.45258288037021527
+            }
+          }
+        },
+        "kinematic": {
+          "all": {
+            "rows": 71852,
+            "positives": 3266,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.6865703741479495,
+            "AUC": 0.9652669560678144,
+            "brier": 0.022684948496166632,
+            "NLL": 0.0817046660484228,
+            "AP_over_prevalence": 15.104548231254888,
+            "recall_at_annotation_precision": {
+              "0.5": 0.7780159216166564,
+              "0.8": 0.40202082057562766
+            },
+            "scene": {
+              "positive_scenes": 3266,
+              "top1": 0.6769748928352725,
+              "top3": 0.8732394366197183,
+              "mrr": 0.7870196859642485
+            }
+          },
+          "switch_only": {
+            "rows": 32912,
+            "positives": 1496,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2633012618175382,
+            "AUC": 0.9088543794401572,
+            "brier": 0.04109389862020094,
+            "NLL": 0.14044008637724167,
+            "AP_over_prevalence": 5.792627759985841,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1496,
+              "top1": 0.31885026737967914,
+              "top3": 0.7252673796791443,
+              "mrr": 0.5484556334843375
+            }
+          }
+        },
+        "nearest": {
+          "all": {
+            "rows": 71852,
+            "positives": 3266,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.4850552607562167,
+            "AUC": 0.9265145908867299,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 10.671215736636768,
+            "recall_at_annotation_precision": {
+              "0.5": 0.47611757501530927,
+              "0.8": 0.03459889773423148
+            },
+            "scene": {
+              "positive_scenes": 3266,
+              "top1": 0.5419473361910594,
+              "top3": 0.7492345376607471,
+              "mrr": 0.6751822549989445
+            }
+          },
+          "switch_only": {
+            "rows": 32912,
+            "positives": 1496,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11621421975567833,
+            "AUC": 0.8221687146540679,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.556712834624923,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1496,
+              "top1": 0.0,
+              "top3": 0.45254010695187163,
+              "mrr": 0.29087248985732145
+            }
+          }
+        },
+        "closest_approach": {
+          "all": {
+            "rows": 71852,
+            "positives": 3266,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.30642599433026213,
+            "AUC": 0.9342456667639694,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 6.7413718752657665,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3266,
+              "top1": 0.6282914880587875,
+              "top3": 0.8113900796080833,
+              "mrr": 0.7407003261078056
+            }
+          },
+          "switch_only": {
+            "rows": 32912,
+            "positives": 1496,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16683395591312636,
+            "AUC": 0.8742989858194129,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.67034703008878,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1496,
+              "top1": 0.3422459893048128,
+              "top3": 0.6731283422459893,
+              "mrr": 0.5433948102920885
+            }
+          }
+        },
+        "constant_velocity": {
+          "all": {
+            "rows": 71852,
+            "positives": 3266,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.5156122615101958,
+            "AUC": 0.9454934564923019,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 11.343469753224307,
+            "recall_at_annotation_precision": {
+              "0.5": 0.5603184323331292,
+              "0.8": 0.010716472749540722
+            },
+            "scene": {
+              "positive_scenes": 3266,
+              "top1": 0.666564605021433,
+              "top3": 0.8619105939987752,
+              "mrr": 0.7781842680399962
+            }
+          },
+          "switch_only": {
+            "rows": 32912,
+            "positives": 1496,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.24909658700654985,
+            "AUC": 0.9040364641846045,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.480124914144096,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1496,
+              "top1": 0.4217914438502674,
+              "top3": 0.7386363636363636,
+              "mrr": 0.6071373830523616
+            }
+          }
+        }
+      }
+    },
+    "geometry_2s": {
+      "external_target": "geometry_2s",
+      "rows": 69850,
+      "scenes": 3175,
+      "positive_rows": 3175,
+      "models": {
+        "state": {
+          "all": {
+            "rows": 69850,
+            "positives": 3175,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.31375215557903535,
+            "AUC": 0.8720018777180412,
+            "brier": 0.03675497373630743,
+            "NLL": 0.13729393988296812,
+            "AP_over_prevalence": 6.9025474227387775,
+            "recall_at_annotation_precision": {
+              "0.5": 0.1662992125984252,
+              "0.8": 0.05291338582677165
+            },
+            "scene": {
+              "positive_scenes": 3175,
+              "top1": 0.40283464566929134,
+              "top3": 0.6251968503937008,
+              "mrr": 0.5537510884950245
+            }
+          },
+          "switch_only": {
+            "rows": 44924,
+            "positives": 2042,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.1064514622945895,
+            "AUC": 0.7872119324236279,
+            "brier": 0.04394838292408958,
+            "NLL": 0.1689800472943893,
+            "AP_over_prevalence": 2.341932170480969,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2042,
+              "top1": 0.11704211557296768,
+              "top3": 0.4226248775710088,
+              "mrr": 0.3328646944033804
+            }
+          }
+        },
+        "kinematic": {
+          "all": {
+            "rows": 69850,
+            "positives": 3175,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.41805748908068513,
+            "AUC": 0.8983305291562964,
+            "brier": 0.03329592037076832,
+            "NLL": 0.12437050309189857,
+            "AP_over_prevalence": 9.197264759775072,
+            "recall_at_annotation_precision": {
+              "0.5": 0.37480314960629924,
+              "0.8": 0.10047244094488189
+            },
+            "scene": {
+              "positive_scenes": 3175,
+              "top1": 0.4617322834645669,
+              "top3": 0.6749606299212598,
+              "mrr": 0.6048133899868743
+            }
+          },
+          "switch_only": {
+            "rows": 44924,
+            "positives": 2042,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.15724010527934074,
+            "AUC": 0.8280031412991695,
+            "brier": 0.04294381296552372,
+            "NLL": 0.1595321684320717,
+            "AP_over_prevalence": 3.459282316145496,
+            "recall_at_annotation_precision": {
+              "0.5": 0.002448579823702253,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2042,
+              "top1": 0.18707149853085211,
+              "top3": 0.5004897159647405,
+              "mrr": 0.4000921002761418
+            }
+          }
+        },
+        "nearest": {
+          "all": {
+            "rows": 69850,
+            "positives": 3175,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.262280428722039,
+            "AUC": 0.8404244800108648,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.770169431884858,
+            "recall_at_annotation_precision": {
+              "0.5": 0.13070866141732285,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3175,
+              "top1": 0.3568503937007874,
+              "top3": 0.5426771653543307,
+              "mrr": 0.5025992053933352
+            }
+          },
+          "switch_only": {
+            "rows": 44924,
+            "positives": 2042,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.08010364794794365,
+            "AUC": 0.7347143284710735,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.7622802548547603,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2042,
+              "top1": 0.0,
+              "top3": 0.2889324191968658,
+              "mrr": 0.2266172757707343
+            }
+          }
+        },
+        "closest_approach": {
+          "all": {
+            "rows": 69850,
+            "positives": 3175,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.18601851909972328,
+            "AUC": 0.8606406821194594,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.092407420193912,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3175,
+              "top1": 0.4261417322834646,
+              "top3": 0.6053543307086614,
+              "mrr": 0.5633847089449829
+            }
+          },
+          "switch_only": {
+            "rows": 44924,
+            "positives": 2042,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.10602717952548507,
+            "AUC": 0.7867762562878401,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.3325979495606717,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2042,
+              "top1": 0.1958863858961802,
+              "top3": 0.44515181194906955,
+              "mrr": 0.3877940898833993
+            }
+          }
+        },
+        "constant_velocity": {
+          "all": {
+            "rows": 69850,
+            "positives": 3175,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2552238181591575,
+            "AUC": 0.8389241951055331,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.614923999501465,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0784251968503937,
+              "0.8": 0.012913385826771654
+            },
+            "scene": {
+              "positive_scenes": 3175,
+              "top1": 0.39559055118110237,
+              "top3": 0.6245669291338583,
+              "mrr": 0.551989851481819
+            }
+          },
+          "switch_only": {
+            "rows": 44924,
+            "positives": 2042,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11452960960070707,
+            "AUC": 0.7869039213867122,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.5196514112155555,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2042,
+              "top1": 0.19245837414299707,
+              "top3": 0.46767874632713025,
+              "mrr": 0.391774432441136
+            }
+          }
+        }
+      }
+    },
+    "next_BAS_0_1s": {
+      "external_target": "next_pass_actor_0_1s",
+      "rows": 77748,
+      "scenes": 3534,
+      "positive_rows": 717,
+      "models": {
+        "state": {
+          "all": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.22150259185384613,
+            "AUC": 0.9734939529769997,
+            "brier": 0.007821193716973693,
+            "NLL": 0.02888197294177954,
+            "AP_over_prevalence": 24.01866598528986,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.810320781032078,
+              "top3": 0.9428172942817294,
+              "mrr": 0.8817900312147173
+            }
+          },
+          "switch_only": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.22150259185384613,
+            "AUC": 0.9734939529769997,
+            "brier": 0.007821193716973693,
+            "NLL": 0.02888197294177954,
+            "AP_over_prevalence": 24.01866598528986,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.810320781032078,
+              "top3": 0.9428172942817294,
+              "mrr": 0.8817900312147173
+            }
+          }
+        },
+        "kinematic": {
+          "all": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.26627122220183036,
+            "AUC": 0.979021722620792,
+            "brier": 0.007581779406327935,
+            "NLL": 0.026726049575054277,
+            "AP_over_prevalence": 28.873158973149103,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0041841004184100415,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.8688981868898187,
+              "top3": 0.9693165969316597,
+              "mrr": 0.9203804627383264
+            }
+          },
+          "switch_only": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.26627122220183036,
+            "AUC": 0.979021722620792,
+            "brier": 0.007581779406327935,
+            "NLL": 0.026726049575054277,
+            "AP_over_prevalence": 28.873158973149103,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0041841004184100415,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.8688981868898187,
+              "top3": 0.9693165969316597,
+              "mrr": 0.9203804627383264
+            }
+          }
+        },
+        "nearest": {
+          "all": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.23494044926807803,
+            "AUC": 0.9695807590876081,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 25.475802021889166,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.8214783821478382,
+              "top3": 0.9205020920502092,
+              "mrr": 0.87877164733244
+            }
+          },
+          "switch_only": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.23494044926807803,
+            "AUC": 0.9695807590876081,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 25.475802021889166,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.8214783821478382,
+              "top3": 0.9205020920502092,
+              "mrr": 0.87877164733244
+            }
+          }
+        },
+        "closest_approach": {
+          "all": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.10695257941463514,
+            "AUC": 0.9579445338051245,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 11.597418611337591,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.8423988842398884,
+              "top3": 0.9679218967921897,
+              "mrr": 0.9050049710091551
+            }
+          },
+          "switch_only": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.10695257941463514,
+            "AUC": 0.9579445338051245,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 11.597418611337591,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.8423988842398884,
+              "top3": 0.9679218967921897,
+              "mrr": 0.9050049710091551
+            }
+          }
+        },
+        "constant_velocity": {
+          "all": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.2184014378093495,
+            "AUC": 0.9589152165676131,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 23.682391892330973,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.7754532775453278,
+              "top3": 0.9316596931659693,
+              "mrr": 0.8585112682916031
+            }
+          },
+          "switch_only": {
+            "rows": 77748,
+            "positives": 717,
+            "prevalence": 0.009222102176261768,
+            "AP": 0.2184014378093495,
+            "AUC": 0.9589152165676131,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 23.682391892330973,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 717,
+              "top1": 0.7754532775453278,
+              "top3": 0.9316596931659693,
+              "mrr": 0.8585112682916031
+            }
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "One anonymous match, not a population generalization guarantee.",
+    "Source PASS differs from SoccerTrack contact-like BAS taxonomy; task names separate.",
+    "Provided events synchronized by source; no independent visual physical-contact adjudication.",
+    "Unknown velocity channels are explicitly zeroed, no future imputation."
+  ]
+}

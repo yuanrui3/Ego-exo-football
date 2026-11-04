@@ -1,0 +1,11 @@
+{
+  "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "torch": "2.11.0+cu128",
+  "cuda": true,
+  "gpu": "NVIDIA RTX A5000",
+  "rows": 731603,
+  "scenes": 33264,
+  "positive_rows": 11707,
+  "hashes_verified": 1117
+}

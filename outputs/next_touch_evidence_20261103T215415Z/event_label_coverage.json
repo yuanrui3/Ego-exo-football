@@ -1,0 +1,120 @@
+{
+  "status": "PARTIAL",
+  "historical_human_reviews": 60,
+  "historical_counts": {
+    "visible_YES": 39,
+    "touch_team_OPPONENT": 22,
+    "control_team_OPPONENT": 28,
+    "touch_team_TEAMMATE": 22,
+    "control_team_TEAMMATE": 18,
+    "visible_NO": 20,
+    "visible_UNCERTAIN": 1,
+    "touch_team_UNCERTAIN": 4,
+    "control_team_UNCERTAIN": 2,
+    "touch_team_NOT APPLICABLE": 12,
+    "control_team_NOT APPLICABLE": 12
+  },
+  "historical_clip_paths_found": 60,
+  "historical_scope": "One reviewer, enriched pass clips; team-of-first-touch/control and pass visibility, not actor/time contact labels or verified event-negative windows. No inter-annotator kappa can be computed.",
+  "new_120_case_labels": 0,
+  "new_cases": 134,
+  "new_review_status": "PAUSED_BY_USER; preparation only; zero new labels",
+  "source_revision": {
+    "117092": {
+      "local_sha256": "a14e98f80b07774484485fef90b0efde788b2f429c39c62817c036a150a74d9f",
+      "local_actions": 2085,
+      "official_candidate_exists": true,
+      "official_sha256": "a14e98f80b07774484485fef90b0efde788b2f429c39c62817c036a150a74d9f",
+      "official_actions": 2085,
+      "same_bytes": true,
+      "alternate_sha256": null,
+      "alternate_actions": null
+    },
+    "117093": {
+      "local_sha256": "3af71f3c1c30184a3deddb9485299dc2d4e6faa8c629e5966ca500e7eddf768f",
+      "local_actions": 2252,
+      "official_candidate_exists": true,
+      "official_sha256": "3af71f3c1c30184a3deddb9485299dc2d4e6faa8c629e5966ca500e7eddf768f",
+      "official_actions": 2252,
+      "same_bytes": true,
+      "alternate_sha256": "3af71f3c1c30184a3deddb9485299dc2d4e6faa8c629e5966ca500e7eddf768f",
+      "alternate_actions": 2252
+    },
+    "118576": {
+      "local_sha256": "8204d846538217bb11b2522e338b1831cff56e282067e5260d6b0344bbf698b3",
+      "local_actions": 2129,
+      "official_candidate_exists": true,
+      "official_sha256": "8204d846538217bb11b2522e338b1831cff56e282067e5260d6b0344bbf698b3",
+      "official_actions": 2129,
+      "same_bytes": true,
+      "alternate_sha256": null,
+      "alternate_actions": null
+    },
+    "118578": {
+      "local_sha256": "f4d8ab569d273b52a830b7c3101a55946aa896295d20d14cf29695c4de83da92",
+      "local_actions": 2106,
+      "official_candidate_exists": true,
+      "official_sha256": "f4d8ab569d273b52a830b7c3101a55946aa896295d20d14cf29695c4de83da92",
+      "official_actions": 2106,
+      "same_bytes": true,
+      "alternate_sha256": null,
+      "alternate_actions": null
+    },
+    "128057": {
+      "local_sha256": "03bb79bdf9404ad9e8bb1c8c569676ec82614ea3e2360238d10ff8fd78c9f577",
+      "local_actions": 1932,
+      "official_candidate_exists": true,
+      "official_sha256": "03bb79bdf9404ad9e8bb1c8c569676ec82614ea3e2360238d10ff8fd78c9f577",
+      "official_actions": 1932,
+      "same_bytes": true,
+      "alternate_sha256": null,
+      "alternate_actions": null
+    },
+    "132831": {
+      "local_sha256": "dd14428b3a0495969ce3a6ca68cb0c73509672c12b82c685c9bcb5d68ee4e3c7",
+      "local_actions": 2440,
+      "official_candidate_exists": true,
+      "official_sha256": "dd14428b3a0495969ce3a6ca68cb0c73509672c12b82c685c9bcb5d68ee4e3c7",
+      "official_actions": 2440,
+      "same_bytes": true,
+      "alternate_sha256": null,
+      "alternate_actions": null
+    },
+    "132877": {
+      "local_sha256": "8ce694545512fad2bb305e16ebf956d30d08db3240b9d5c12208bb5098716f03",
+      "local_actions": 2278,
+      "official_candidate_exists": true,
+      "official_sha256": "8ce694545512fad2bb305e16ebf956d30d08db3240b9d5c12208bb5098716f03",
+      "official_actions": 2278,
+      "same_bytes": true,
+      "alternate_sha256": null,
+      "alternate_actions": null
+    }
+  },
+  "upstream_audit_summary_keys": [
+    "schema",
+    "verdict",
+    "repository",
+    "canonical_v1_2_commit",
+    "main_commit",
+    "main_differs_from_v1_2",
+    "remote_access",
+    "remote_tree_file_count",
+    "remote_category_counts",
+    "local_candidate_files",
+    "integrity_file_status_counts",
+    "integrity_remote_bytes_by_status",
+    "integrity_remote_bytes_by_category",
+    "official_mirror",
+    "research_readiness",
+    "counts",
+    "specific_findings",
+    "docs_integrity",
+    "git_snapshot",
+    "disk_space",
+    "created_at_utc",
+    "output_directory"
+  ],
+  "exact_touch_ground_truth": "BLOCKED",
+  "claim_correction": "Prior zero-human statement applies only to the 120-case queue, not the pre-existing 60-case pass review."
+}

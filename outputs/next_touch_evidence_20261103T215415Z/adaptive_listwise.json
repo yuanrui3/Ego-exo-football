@@ -1,0 +1,5574 @@
+{
+  "geometry_2s": {
+    "pooled": {
+      "hgb": {
+        "rows": 673353,
+        "positives": 30615,
+        "prevalence": 0.0454664938004286,
+        "AP": 0.4625408606495223,
+        "AUC": 0.9108449606721818,
+        "brier": null,
+        "NLL": null,
+        "AP_over_prevalence": 10.173224763708568,
+        "recall_at_annotation_precision": {
+          "0.5": 0.4227012902172138,
+          "0.8": 0.12268495835374817
+        },
+        "scene": {
+          "positive_scenes": 30615,
+          "top1": 0.46261636452719257,
+          "top3": 0.7208231259186674,
+          "mrr": 0.6213355090611505
+        }
+      },
+      "listwise_ensemble": {
+        "rows": 673353,
+        "positives": 30615,
+        "prevalence": 0.0454664938004286,
+        "AP": 0.49860571982176305,
+        "AUC": 0.9152487249338295,
+        "brier": null,
+        "NLL": null,
+        "AP_over_prevalence": 10.966443157247872,
+        "recall_at_annotation_precision": {
+          "0.5": 0.4795035113506451,
+          "0.8": 0.18294953454189122
+        },
+        "scene": {
+          "positive_scenes": 30615,
+          "top1": 0.4713049158909032,
+          "top3": 0.7282051282051282,
+          "mrr": 0.6280598990033258
+        }
+      }
+    },
+    "macro_match": {
+      "hgb": {
+        "AP": 0.4632338448445385,
+        "brier": null,
+        "NLL": null
+      },
+      "listwise_ensemble": {
+        "AP": 0.5016282684135674,
+        "brier": null,
+        "NLL": null
+      }
+    },
+    "macro_scene": {
+      "hgb": {
+        "top1": 0.46250644822735265,
+        "top3": 0.7207342553746373,
+        "mrr": 0.62125207570387
+      },
+      "listwise_ensemble": {
+        "top1": 0.47124580611438316,
+        "top3": 0.7281170331563191,
+        "mrr": 0.6279949070390105
+      }
+    },
+    "per_match": {
+      "117092": {
+        "hgb": {
+          "rows": 108569,
+          "positives": 4937,
+          "prevalence": 0.04547338558888817,
+          "AP": 0.4894623612065515,
+          "AUC": 0.9194209739568964,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.763710571973686,
+          "recall_at_annotation_precision": {
+            "0.5": 0.43568969009519953,
+            "0.8": 0.1960704881506988
+          },
+          "scene": {
+            "positive_scenes": 4937,
+            "top1": 0.4624265748430221,
+            "top3": 0.7162244277901559,
+            "mrr": 0.6210159329224488
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 108569,
+          "positives": 4937,
+          "prevalence": 0.04547338558888817,
+          "AP": 0.5303542548278042,
+          "AUC": 0.9249357179526414,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.662959508284358,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4994936196070488,
+            "0.8": 0.25865910471946524
+          },
+          "scene": {
+            "positive_scenes": 4937,
+            "top1": 0.4796435082033624,
+            "top3": 0.7297954223212477,
+            "mrr": 0.6337575432840163
+          }
+        }
+      },
+      "117093": {
+        "hgb": {
+          "rows": 111118,
+          "positives": 5051,
+          "prevalence": 0.04545618171673356,
+          "AP": 0.46121778824119253,
+          "AUC": 0.9154962290535638,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.146426092612321,
+          "recall_at_annotation_precision": {
+            "0.5": 0.41833300336567014,
+            "0.8": 0.13007325282122353
+          },
+          "scene": {
+            "positive_scenes": 5051,
+            "top1": 0.4581271035438527,
+            "top3": 0.7129281330429618,
+            "mrr": 0.6163013557995578
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 111118,
+          "positives": 5051,
+          "prevalence": 0.04545618171673356,
+          "AP": 0.5007818104042003,
+          "AUC": 0.9209670102824423,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.01680324856344,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4624826766976836,
+            "0.8": 0.20035636507622254
+          },
+          "scene": {
+            "positive_scenes": 5051,
+            "top1": 0.45911700653335974,
+            "top3": 0.7220352405464264,
+            "mrr": 0.6200230193000913
+          }
+        }
+      },
+      "118576": {
+        "hgb": {
+          "rows": 116288,
+          "positives": 5291,
+          "prevalence": 0.04549910566868465,
+          "AP": 0.4839871985500793,
+          "AUC": 0.9243055562685824,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.637290369493787,
+          "recall_at_annotation_precision": {
+            "0.5": 0.45794745794745795,
+            "0.8": 0.12984312984312985
+          },
+          "scene": {
+            "positive_scenes": 5291,
+            "top1": 0.4827064827064827,
+            "top3": 0.7423927423927424,
+            "mrr": 0.6399145466558703
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 116288,
+          "positives": 5291,
+          "prevalence": 0.04549910566868465,
+          "AP": 0.523223391832326,
+          "AUC": 0.9292913414781574,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.49964123783737,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5137025137025137,
+            "0.8": 0.20544320544320543
+          },
+          "scene": {
+            "positive_scenes": 5291,
+            "top1": 0.4912114912114912,
+            "top3": 0.7501417501417501,
+            "mrr": 0.6471605779598483
+          }
+        }
+      },
+      "118578": {
+        "hgb": {
+          "rows": 114663,
+          "positives": 5212,
+          "prevalence": 0.045454941873141294,
+          "AP": 0.4751698907480529,
+          "AUC": 0.921560482112592,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.453646428020718,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4449347659247889,
+            "0.8": 0.11089792785878741
+          },
+          "scene": {
+            "positive_scenes": 5212,
+            "top1": 0.47678434382194934,
+            "top3": 0.7315809669992326,
+            "mrr": 0.6328313195957656
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 114663,
+          "positives": 5212,
+          "prevalence": 0.045454941873141294,
+          "AP": 0.5166891448884837,
+          "AUC": 0.9270195573802643,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.36706205302153,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5026861089792786,
+            "0.8": 0.21565617805065235
+          },
+          "scene": {
+            "positive_scenes": 5212,
+            "top1": 0.4863775901765157,
+            "top3": 0.7442440521872602,
+            "mrr": 0.6419677884317342
+          }
+        }
+      },
+      "128057": {
+        "hgb": {
+          "rows": 110373,
+          "positives": 5017,
+          "prevalence": 0.045454957281219135,
+          "AP": 0.5110778074609308,
+          "AUC": 0.9307395120079334,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.243609894934288,
+          "recall_at_annotation_precision": {
+            "0.5": 0.47598166234801675,
+            "0.8": 0.19553518038668527
+          },
+          "scene": {
+            "positive_scenes": 5017,
+            "top1": 0.4859477775563085,
+            "top3": 0.7608132350009966,
+            "mrr": 0.6480608270167499
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 110373,
+          "positives": 5017,
+          "prevalence": 0.045454957281219135,
+          "AP": 0.545205011751479,
+          "AUC": 0.9337921044529695,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.994401587013353,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5297986844727925,
+            "0.8": 0.24397050029898346
+          },
+          "scene": {
+            "positive_scenes": 5017,
+            "top1": 0.501295594977078,
+            "top3": 0.7626071357384892,
+            "mrr": 0.6554469577044216
+          }
+        }
+      },
+      "132831": {
+        "hgb": {
+          "rows": 112342,
+          "positives": 5107,
+          "prevalence": 0.04545940075839846,
+          "AP": 0.35848802286042386,
+          "AUC": 0.8629005610882492,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 7.885894157858966,
+          "recall_at_annotation_precision": {
+            "0.5": 0.3054630898766399,
+            "0.8": 0.007832386919913843
+          },
+          "scene": {
+            "positive_scenes": 5107,
+            "top1": 0.4090464068925005,
+            "top3": 0.6604660270217348,
+            "mrr": 0.5693884722328275
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 112342,
+          "positives": 5107,
+          "prevalence": 0.04545940075839846,
+          "AP": 0.393515996777111,
+          "AUC": 0.8668340274684442,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 8.656427278232663,
+          "recall_at_annotation_precision": {
+            "0.5": 0.36146465635402386,
+            "0.8": 0.03759545721558645
+          },
+          "scene": {
+            "positive_scenes": 5107,
+            "top1": 0.40982964558449186,
+            "top3": 0.6598785980027413,
+            "mrr": 0.5696135555539512
+          }
+        }
+      }
+    },
+    "censored_rows": 0,
+    "per_half": {
+      "117092_1": {
+        "hgb": {
+          "rows": 54362,
+          "positives": 2471,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.48148608124152537,
+          "AUC": 0.9153741591745628,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.592693787313557,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4237150951031971,
+            "0.8": 0.20153783893160665
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 54362,
+          "positives": 2471,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5253088828622604,
+          "AUC": 0.9209778449380333,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.556795422969728,
+          "recall_at_annotation_precision": {
+            "0.5": 0.48725212464589235,
+            "0.8": 0.2598138405503845
+          }
+        }
+      },
+      "117092_2": {
+        "hgb": {
+          "rows": 54207,
+          "positives": 2466,
+          "prevalence": 0.04549227959488627,
+          "AP": 0.49702002466143297,
+          "AUC": 0.923452304778434,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.925370834072302,
+          "recall_at_annotation_precision": {
+            "0.5": 0.44931062449310627,
+            "0.8": 0.20072992700729927
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 54207,
+          "positives": 2466,
+          "prevalence": 0.04549227959488627,
+          "AP": 0.5362488530712675,
+          "AUC": 0.928815583789325,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.787689204555635,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5129764801297648,
+            "0.8": 0.25790754257907544
+          }
+        }
+      },
+      "117093_1": {
+        "hgb": {
+          "rows": 53987,
+          "positives": 2454,
+          "prevalence": 0.04545538740807972,
+          "AP": 0.45735913439313086,
+          "AUC": 0.9107472750189856,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.061714583733478,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4030154849225754,
+            "0.8": 0.14506927465362673
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 53987,
+          "positives": 2454,
+          "prevalence": 0.04545538740807972,
+          "AP": 0.4938128620034873,
+          "AUC": 0.9157694325872577,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.863681736341592,
+          "recall_at_annotation_precision": {
+            "0.5": 0.44376528117359415,
+            "0.8": 0.20211898940505296
+          }
+        }
+      },
+      "117093_2": {
+        "hgb": {
+          "rows": 57131,
+          "positives": 2597,
+          "prevalence": 0.045456932313455045,
+          "AP": 0.46456317438252637,
+          "AUC": 0.9198828195327771,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.219853182767853,
+          "recall_at_annotation_precision": {
+            "0.5": 0.431651906045437,
+            "0.8": 0.1209087408548325
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 57131,
+          "positives": 2597,
+          "prevalence": 0.045456932313455045,
+          "AP": 0.5072595988402053,
+          "AUC": 0.9256892673555658,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.159125198821629,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4805544859453215,
+            "0.8": 0.1986907970735464
+          }
+        }
+      },
+      "118576_1": {
+        "hgb": {
+          "rows": 58076,
+          "positives": 2645,
+          "prevalence": 0.04554377023210965,
+          "AP": 0.4588667724002467,
+          "AUC": 0.9184224676336824,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.075291748172676,
+          "recall_at_annotation_precision": {
+            "0.5": 0.41928166351606805,
+            "0.8": 0.09716446124763706
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 58076,
+          "positives": 2645,
+          "prevalence": 0.04554377023210965,
+          "AP": 0.502084434927838,
+          "AUC": 0.9245058870001667,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.024217634355056,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4763705103969754,
+            "0.8": 0.17466918714555765
+          }
+        }
+      },
+      "118576_2": {
+        "hgb": {
+          "rows": 58212,
+          "positives": 2646,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5084618266195782,
+          "AUC": 0.9300000511468469,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.186160185630719,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5056689342403629,
+            "0.8": 0.18065003779289493
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 58212,
+          "positives": 2646,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.543772734697943,
+          "AUC": 0.9339614458604231,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.963000163354744,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5551776266061981,
+            "0.8": 0.2290249433106576
+          }
+        }
+      },
+      "118578_1": {
+        "hgb": {
+          "rows": 57640,
+          "positives": 2620,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.4648705798453369,
+          "AUC": 0.9213849543954871,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.227152756597413,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4267175572519084,
+            "0.8": 0.08969465648854962
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 57640,
+          "positives": 2620,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.513526644327978,
+          "AUC": 0.9271548271135271,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.297586175215516,
+          "recall_at_annotation_precision": {
+            "0.5": 0.4862595419847328,
+            "0.8": 0.2083969465648855
+          }
+        }
+      },
+      "118578_2": {
+        "hgb": {
+          "rows": 57023,
+          "positives": 2592,
+          "prevalence": 0.04545534258106378,
+          "AP": 0.48612349888740114,
+          "AUC": 0.9217014735895099,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.694529427876649,
+          "recall_at_annotation_precision": {
+            "0.5": 0.47337962962962965,
+            "0.8": 0.1392746913580247
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 57023,
+          "positives": 2592,
+          "prevalence": 0.04545534258106378,
+          "AP": 0.5202221258193452,
+          "AUC": 0.9268357877943101,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.444686065044955,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5185185185185185,
+            "0.8": 0.21682098765432098
+          }
+        }
+      },
+      "128057_1": {
+        "hgb": {
+          "rows": 54053,
+          "positives": 2457,
+          "prevalence": 0.045455386380034414,
+          "AP": 0.5338772286299569,
+          "AUC": 0.9324487669029883,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.74508174160971,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5079365079365079,
+            "0.8": 0.23931623931623933
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 54053,
+          "positives": 2457,
+          "prevalence": 0.045455386380034414,
+          "AP": 0.5616850250749283,
+          "AUC": 0.9355396658482168,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 12.356841945614612,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5527065527065527,
+            "0.8": 0.2661782661782662
+          }
+        }
+      },
+      "128057_2": {
+        "hgb": {
+          "rows": 56320,
+          "positives": 2560,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.48808534856482244,
+          "AUC": 0.9290774427141462,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 10.737877668426094,
+          "recall_at_annotation_precision": {
+            "0.5": 0.451953125,
+            "0.8": 0.147265625
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 56320,
+          "positives": 2560,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.528178940853305,
+          "AUC": 0.9321068827311197,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.619936698772708,
+          "recall_at_annotation_precision": {
+            "0.5": 0.50390625,
+            "0.8": 0.222265625
+          }
+        }
+      },
+      "132831_1": {
+        "hgb": {
+          "rows": 56474,
+          "positives": 2567,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.3456182097684486,
+          "AUC": 0.8542342169765328,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 7.603600614905869,
+          "recall_at_annotation_precision": {
+            "0.5": 0.3030775223996883,
+            "0.8": 0.0
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 56474,
+          "positives": 2567,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.3830572326573088,
+          "AUC": 0.8583131625012413,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 8.427259118460793,
+          "recall_at_annotation_precision": {
+            "0.5": 0.35566809505259056,
+            "0.8": 0.03700818075574601
+          }
+        }
+      },
+      "132831_2": {
+        "hgb": {
+          "rows": 55868,
+          "positives": 2540,
+          "prevalence": 0.04546430872771533,
+          "AP": 0.37229229054311663,
+          "AUC": 0.8716388592599418,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 8.188671530733401,
+          "recall_at_annotation_precision": {
+            "0.5": 0.30669291338582677,
+            "0.8": 0.023622047244094488
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 55868,
+          "positives": 2540,
+          "prevalence": 0.04546430872771533,
+          "AP": 0.40456532006433693,
+          "AUC": 0.875344096909691,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 8.898525709194637,
+          "recall_at_annotation_precision": {
+            "0.5": 0.3700787401574803,
+            "0.8": 0.03740157480314961
+          }
+        }
+      }
+    },
+    "per_seed": {
+      "11": {
+        "pooled": {
+          "listwise": {
+            "rows": 673353,
+            "positives": 30615,
+            "prevalence": 0.0454664938004286,
+            "AP": 0.4958232431373865,
+            "AUC": 0.9148710017598456,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 10.905244757023963,
+            "recall_at_annotation_precision": {
+              "0.5": 0.4785889269965703,
+              "0.8": 0.17951984321411074
+            },
+            "scene": {
+              "positive_scenes": 30615,
+              "top1": 0.47006369426751593,
+              "top3": 0.7268005879470848,
+              "mrr": 0.6271747125963097
+            }
+          }
+        },
+        "macro_match": {
+          "listwise": {
+            "AP": 0.498962546338861,
+            "brier": null,
+            "NLL": null
+          }
+        },
+        "macro_scene": {
+          "listwise": {
+            "top1": 0.4699914339469684,
+            "top3": 0.7267179306025929,
+            "mrr": 0.6271026658917207
+          }
+        },
+        "per_match": {
+          "117092": {
+            "listwise": {
+              "rows": 108569,
+              "positives": 4937,
+              "prevalence": 0.04547338558888817,
+              "AP": 0.5261010250320608,
+              "AUC": 0.9242074570263098,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.569427220317158,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4994936196070488,
+                "0.8": 0.24448045371683208
+              },
+              "scene": {
+                "positive_scenes": 4937,
+                "top1": 0.4800486125177233,
+                "top3": 0.727364796435082,
+                "mrr": 0.6334223929216658
+              }
+            }
+          },
+          "117093": {
+            "listwise": {
+              "rows": 111118,
+              "positives": 5051,
+              "prevalence": 0.04545618171673356,
+              "AP": 0.497947387170595,
+              "AUC": 0.9203590039464659,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.954448182067349,
+              "recall_at_annotation_precision": {
+                "0.5": 0.46070085131657096,
+                "0.8": 0.19520886953078598
+              },
+              "scene": {
+                "positive_scenes": 5051,
+                "top1": 0.4557513363690358,
+                "top3": 0.7226291823401306,
+                "mrr": 0.6179391321387312
+              }
+            }
+          },
+          "118576": {
+            "listwise": {
+              "rows": 116288,
+              "positives": 5291,
+              "prevalence": 0.04549910566868465,
+              "AP": 0.522151885923743,
+              "AUC": 0.9290025107344494,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.476091194537936,
+              "recall_at_annotation_precision": {
+                "0.5": 0.514080514080514,
+                "0.8": 0.19996219996219997
+              },
+              "scene": {
+                "positive_scenes": 5291,
+                "top1": 0.49272349272349275,
+                "top3": 0.7478737478737478,
+                "mrr": 0.6474040195104734
+              }
+            }
+          },
+          "118578": {
+            "listwise": {
+              "rows": 114663,
+              "positives": 5212,
+              "prevalence": 0.045454941873141294,
+              "AP": 0.5136076917997051,
+              "AUC": 0.9264552929564678,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.29927067629117,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5032617037605526,
+                "0.8": 0.21066768994627783
+              },
+              "scene": {
+                "positive_scenes": 5212,
+                "top1": 0.4834996162701458,
+                "top3": 0.7409823484267076,
+                "mrr": 0.6400291787799316
+              }
+            }
+          },
+          "128057": {
+            "listwise": {
+              "rows": 110373,
+              "positives": 5017,
+              "prevalence": 0.045454957281219135,
+              "AP": 0.5420989238016137,
+              "AUC": 0.9331421889899487,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.926068271228925,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5317919075144508,
+                "0.8": 0.24237592186565676
+              },
+              "scene": {
+                "positive_scenes": 5017,
+                "top1": 0.49750847119792707,
+                "top3": 0.7598166234801674,
+                "mrr": 0.6529451920383511
+              }
+            }
+          },
+          "132831": {
+            "listwise": {
+              "rows": 112342,
+              "positives": 5107,
+              "prevalence": 0.04545940075839846,
+              "AP": 0.39186836430544847,
+              "AUC": 0.8668699510158097,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.620183235324593,
+              "recall_at_annotation_precision": {
+                "0.5": 0.3538280791071079,
+                "0.8": 0.03054630898766399
+              },
+              "scene": {
+                "positive_scenes": 5107,
+                "top1": 0.4104170746034854,
+                "top3": 0.661640885059722,
+                "mrr": 0.5708760799611713
+              }
+            }
+          }
+        },
+        "censored_rows": 0,
+        "per_half": {
+          "117092_1": {
+            "listwise": {
+              "rows": 54362,
+              "positives": 2471,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5214245561204288,
+              "AUC": 0.9203627625541168,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.471340234649434,
+              "recall_at_annotation_precision": {
+                "0.5": 0.49048968029138,
+                "0.8": 0.24281667341157426
+              }
+            }
+          },
+          "117092_2": {
+            "listwise": {
+              "rows": 54207,
+              "positives": 2466,
+              "prevalence": 0.04549227959488627,
+              "AP": 0.5316422717715215,
+              "AUC": 0.9279875466194127,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.686428477663773,
+              "recall_at_annotation_precision": {
+                "0.5": 0.508110300081103,
+                "0.8": 0.24209245742092458
+              }
+            }
+          },
+          "117093_1": {
+            "listwise": {
+              "rows": 53987,
+              "positives": 2454,
+              "prevalence": 0.04545538740807972,
+              "AP": 0.49142058506473146,
+              "AUC": 0.915186225691133,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.811052618536943,
+              "recall_at_annotation_precision": {
+                "0.5": 0.441320293398533,
+                "0.8": 0.19600651996740015
+              }
+            }
+          },
+          "117093_2": {
+            "listwise": {
+              "rows": 57131,
+              "positives": 2597,
+              "prevalence": 0.045456932313455045,
+              "AP": 0.5038022998353018,
+              "AUC": 0.925066985797219,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.08306861451314,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4782441278398152,
+                "0.8": 0.1940700808625337
+              }
+            }
+          },
+          "118576_1": {
+            "listwise": {
+              "rows": 58076,
+              "positives": 2645,
+              "prevalence": 0.04554377023210965,
+              "AP": 0.5012063010631753,
+              "AUC": 0.92379964273095,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.004936537068042,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4763705103969754,
+                "0.8": 0.16521739130434782
+              }
+            }
+          },
+          "118576_2": {
+            "listwise": {
+              "rows": 58212,
+              "positives": 2646,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5425211724246927,
+              "AUC": 0.9340576012525971,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.935465793343239,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5513983371126229,
+                "0.8": 0.23469387755102042
+              }
+            }
+          },
+          "118578_1": {
+            "listwise": {
+              "rows": 57640,
+              "positives": 2620,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5099517397085881,
+              "AUC": 0.9267241856535167,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.218938273588938,
+              "recall_at_annotation_precision": {
+                "0.5": 0.48244274809160304,
+                "0.8": 0.21259541984732824
+              }
+            }
+          },
+          "118578_2": {
+            "listwise": {
+              "rows": 57023,
+              "positives": 2592,
+              "prevalence": 0.04545534258106378,
+              "AP": 0.5177765941329755,
+              "AUC": 0.9261486637516612,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.390885311436984,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5173611111111112,
+                "0.8": 0.20833333333333334
+              }
+            }
+          },
+          "128057_1": {
+            "listwise": {
+              "rows": 54053,
+              "positives": 2457,
+              "prevalence": 0.045455386380034414,
+              "AP": 0.5582455720058056,
+              "AUC": 0.9349383274009214,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 12.28117537795271,
+              "recall_at_annotation_precision": {
+                "0.5": 0.555962555962556,
+                "0.8": 0.26455026455026454
+              }
+            }
+          },
+          "128057_2": {
+            "listwise": {
+              "rows": 56320,
+              "positives": 2560,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5250105818291416,
+              "AUC": 0.9314231000627791,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.550232800241115,
+              "recall_at_annotation_precision": {
+                "0.5": 0.501953125,
+                "0.8": 0.212890625
+              }
+            }
+          },
+          "132831_1": {
+            "listwise": {
+              "rows": 56474,
+              "positives": 2567,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.3814899675280794,
+              "AUC": 0.8586669402047499,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.392779285617747,
+              "recall_at_annotation_precision": {
+                "0.5": 0.3432021815348656,
+                "0.8": 0.03506038176860148
+              }
+            }
+          },
+          "132831_2": {
+            "listwise": {
+              "rows": 55868,
+              "positives": 2540,
+              "prevalence": 0.04546430872771533,
+              "AP": 0.4034862366454351,
+              "AUC": 0.8750464736434274,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.874790972010697,
+              "recall_at_annotation_precision": {
+                "0.5": 0.371259842519685,
+                "0.8": 0.02716535433070866
+              }
+            }
+          }
+        }
+      },
+      "29": {
+        "pooled": {
+          "listwise": {
+            "rows": 673353,
+            "positives": 30615,
+            "prevalence": 0.0454664938004286,
+            "AP": 0.4966193060754084,
+            "AUC": 0.9147333021037374,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 10.922753539238753,
+            "recall_at_annotation_precision": {
+              "0.5": 0.47656377592683324,
+              "0.8": 0.1780499755022048
+            },
+            "scene": {
+              "positive_scenes": 30615,
+              "top1": 0.47146823452555936,
+              "top3": 0.7270618977625347,
+              "mrr": 0.6279519687483972
+            }
+          }
+        },
+        "macro_match": {
+          "listwise": {
+            "AP": 0.500110258598402,
+            "brier": null,
+            "NLL": null
+          }
+        },
+        "macro_scene": {
+          "listwise": {
+            "top1": 0.4714127790181993,
+            "top3": 0.7269506574916272,
+            "mrr": 0.6278814618850089
+          }
+        },
+        "per_match": {
+          "117092": {
+            "listwise": {
+              "rows": 108569,
+              "positives": 4937,
+              "prevalence": 0.04547338558888817,
+              "AP": 0.5294563697028567,
+              "AUC": 0.924379873217423,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.643214219621116,
+              "recall_at_annotation_precision": {
+                "0.5": 0.49706299372088314,
+                "0.8": 0.25926676119100667
+              },
+              "scene": {
+                "positive_scenes": 4937,
+                "top1": 0.4810613733036257,
+                "top3": 0.7279724529066235,
+                "mrr": 0.6336872677614791
+              }
+            }
+          },
+          "117093": {
+            "listwise": {
+              "rows": 111118,
+              "positives": 5051,
+              "prevalence": 0.04545618171673356,
+              "AP": 0.49825097253944606,
+              "AUC": 0.92046264851697,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.96112681976602,
+              "recall_at_annotation_precision": {
+                "0.5": 0.45951296772916256,
+                "0.8": 0.19025935458325083
+              },
+              "scene": {
+                "positive_scenes": 5051,
+                "top1": 0.46070085131657096,
+                "top3": 0.7202534151653138,
+                "mrr": 0.6208984329924196
+              }
+            }
+          },
+          "118576": {
+            "listwise": {
+              "rows": 116288,
+              "positives": 5291,
+              "prevalence": 0.04549910566868465,
+              "AP": 0.521018693525669,
+              "AUC": 0.928704189711244,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.451185377568134,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5154035154035154,
+                "0.8": 0.195993195993196
+              },
+              "scene": {
+                "positive_scenes": 5291,
+                "top1": 0.4915894915894916,
+                "top3": 0.7527877527877528,
+                "mrr": 0.6476301264879173
+              }
+            }
+          },
+          "118578": {
+            "listwise": {
+              "rows": 114663,
+              "positives": 5212,
+              "prevalence": 0.045454941873141294,
+              "AP": 0.5154609520253952,
+              "AUC": 0.9266437816526468,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.340042045680715,
+              "recall_at_annotation_precision": {
+                "0.5": 0.49693016116653876,
+                "0.8": 0.20990023023791252
+              },
+              "scene": {
+                "positive_scenes": 5212,
+                "top1": 0.4848426707597851,
+                "top3": 0.7415579432079816,
+                "mrr": 0.6411483775044273
+              }
+            }
+          },
+          "128057": {
+            "listwise": {
+              "rows": 110373,
+              "positives": 5017,
+              "prevalence": 0.045454957281219135,
+              "AP": 0.543420362039694,
+              "AUC": 0.9333526876534282,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.955139649074576,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5309946182977875,
+                "0.8": 0.24795694638230018
+              },
+              "scene": {
+                "positive_scenes": 5017,
+                "top1": 0.49790711580625874,
+                "top3": 0.7612118796093282,
+                "mrr": 0.6531289665886063
+              }
+            }
+          },
+          "132831": {
+            "listwise": {
+              "rows": 112342,
+              "positives": 5107,
+              "prevalence": 0.04545940075839846,
+              "AP": 0.3930542017573504,
+              "AUC": 0.8668062204315137,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.646268872885111,
+              "recall_at_annotation_precision": {
+                "0.5": 0.35950655962404543,
+                "0.8": 0.04072841198355199
+              },
+              "scene": {
+                "positive_scenes": 5107,
+                "top1": 0.41237517133346385,
+                "top3": 0.6579205012727629,
+                "mrr": 0.5707955999752043
+              }
+            }
+          }
+        },
+        "censored_rows": 0,
+        "per_half": {
+          "117092_1": {
+            "listwise": {
+              "rows": 54362,
+              "positives": 2471,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5243443412267309,
+              "AUC": 0.9203576542527065,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.53557550698808,
+              "recall_at_annotation_precision": {
+                "0.5": 0.48239579117766085,
+                "0.8": 0.2646701740186159
+              }
+            }
+          },
+          "117092_2": {
+            "listwise": {
+              "rows": 54207,
+              "positives": 2466,
+              "prevalence": 0.04549227959488627,
+              "AP": 0.5357469901466274,
+              "AUC": 0.9283289242462296,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.77665737829612,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5105433901054339,
+                "0.8": 0.24817518248175183
+              }
+            }
+          },
+          "117093_1": {
+            "listwise": {
+              "rows": 53987,
+              "positives": 2454,
+              "prevalence": 0.04545538740807972,
+              "AP": 0.49177049267752715,
+              "AUC": 0.9153404143230968,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.818750443431808,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4409127954360228,
+                "0.8": 0.1976365118174409
+              }
+            }
+          },
+          "117093_2": {
+            "listwise": {
+              "rows": 57131,
+              "positives": 2597,
+              "prevalence": 0.045456932313455045,
+              "AP": 0.5041790960563327,
+              "AUC": 0.9251206804898672,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.091357696108718,
+              "recall_at_annotation_precision": {
+                "0.5": 0.47593376973430884,
+                "0.8": 0.19021948402002312
+              }
+            }
+          },
+          "118576_1": {
+            "listwise": {
+              "rows": 58076,
+              "positives": 2645,
+              "prevalence": 0.04554377023210965,
+              "AP": 0.49903759896685695,
+              "AUC": 0.9240720432449627,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.957318562419351,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4718336483931947,
+                "0.8": 0.1724007561436673
+              }
+            }
+          },
+          "118576_2": {
+            "listwise": {
+              "rows": 58212,
+              "positives": 2646,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5424615204651823,
+              "AUC": 0.9332347015359753,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.934153450234009,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5555555555555556,
+                "0.8": 0.22675736961451248
+              }
+            }
+          },
+          "118578_1": {
+            "listwise": {
+              "rows": 57640,
+              "positives": 2620,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5117343935729695,
+              "AUC": 0.9268476972981373,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.258156658605328,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4801526717557252,
+                "0.8": 0.21183206106870228
+              }
+            }
+          },
+          "118578_2": {
+            "listwise": {
+              "rows": 57023,
+              "positives": 2592,
+              "prevalence": 0.04545534258106378,
+              "AP": 0.5194737679972976,
+              "AUC": 0.9263887102733532,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.428222481678203,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5131172839506173,
+                "0.8": 0.20871913580246915
+              }
+            }
+          },
+          "128057_1": {
+            "listwise": {
+              "rows": 54053,
+              "positives": 2457,
+              "prevalence": 0.045455386380034414,
+              "AP": 0.5594293821510101,
+              "AUC": 0.9350571988760995,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 12.307218719335998,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5506715506715507,
+                "0.8": 0.2665852665852666
+              }
+            }
+          },
+          "128057_2": {
+            "listwise": {
+              "rows": 56320,
+              "positives": 2560,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5272247949172805,
+              "AUC": 0.9316901107061477,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.59894548818017,
+              "recall_at_annotation_precision": {
+                "0.5": 0.504296875,
+                "0.8": 0.230078125
+              }
+            }
+          },
+          "132831_1": {
+            "listwise": {
+              "rows": 56474,
+              "positives": 2567,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.3822623866271689,
+              "AUC": 0.8578630444998231,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.409772505797715,
+              "recall_at_annotation_precision": {
+                "0.5": 0.34865601869887025,
+                "0.8": 0.031554343591741335
+              }
+            }
+          },
+          "132831_2": {
+            "listwise": {
+              "rows": 55868,
+              "positives": 2540,
+              "prevalence": 0.04546430872771533,
+              "AP": 0.4040054577549289,
+              "AUC": 0.8757653053691197,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.886211383406444,
+              "recall_at_annotation_precision": {
+                "0.5": 0.37283464566929136,
+                "0.8": 0.04251968503937008
+              }
+            }
+          }
+        }
+      },
+      "47": {
+        "pooled": {
+          "listwise": {
+            "rows": 673353,
+            "positives": 30615,
+            "prevalence": 0.0454664938004286,
+            "AP": 0.4976944267662868,
+            "AUC": 0.9147548443799416,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 10.946399978649666,
+            "recall_at_annotation_precision": {
+              "0.5": 0.4775763514617018,
+              "0.8": 0.18121835701453537
+            },
+            "scene": {
+              "positive_scenes": 30615,
+              "top1": 0.47169688061407805,
+              "top3": 0.7248081006042789,
+              "mrr": 0.6275299027576601
+            }
+          }
+        },
+        "macro_match": {
+          "listwise": {
+            "AP": 0.5005549908172348,
+            "brier": null,
+            "NLL": null
+          }
+        },
+        "macro_scene": {
+          "listwise": {
+            "top1": 0.47168732560884646,
+            "top3": 0.7247090183092619,
+            "mrr": 0.6274994246246125
+          }
+        },
+        "per_match": {
+          "117092": {
+            "listwise": {
+              "rows": 108569,
+              "positives": 4937,
+              "prevalence": 0.04547338558888817,
+              "AP": 0.5296384459568604,
+              "AUC": 0.9247714375048727,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.647218237611986,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4972655458780636,
+                "0.8": 0.25886165687664575
+              },
+              "scene": {
+                "positive_scenes": 4937,
+                "top1": 0.48207413408952804,
+                "top3": 0.7263520356491797,
+                "mrr": 0.6345803090564954
+              }
+            }
+          },
+          "117093": {
+            "listwise": {
+              "rows": 111118,
+              "positives": 5051,
+              "prevalence": 0.04545618171673356,
+              "AP": 0.5015368633178752,
+              "AUC": 0.9206365196709086,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.033413814720978,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4610968125123738,
+                "0.8": 0.20748366660067313
+              },
+              "scene": {
+                "positive_scenes": 5051,
+                "top1": 0.46030489012076814,
+                "top3": 0.7172837061967927,
+                "mrr": 0.6202629974629036
+              }
+            }
+          },
+          "118576": {
+            "listwise": {
+              "rows": 116288,
+              "positives": 5291,
+              "prevalence": 0.04549910566868465,
+              "AP": 0.520988803631849,
+              "AUC": 0.928831549483459,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.450528443912388,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5055755055755056,
+                "0.8": 0.21016821016821016
+              },
+              "scene": {
+                "positive_scenes": 5291,
+                "top1": 0.4881874881874882,
+                "top3": 0.749007749007749,
+                "mrr": 0.6440947255727291
+              }
+            }
+          },
+          "118578": {
+            "listwise": {
+              "rows": 114663,
+              "positives": 5212,
+              "prevalence": 0.045454941873141294,
+              "AP": 0.516900811080428,
+              "AUC": 0.9268528406404354,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.371718668632983,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5046047582501919,
+                "0.8": 0.21450498848810437
+              },
+              "scene": {
+                "positive_scenes": 5212,
+                "top1": 0.4840752110514198,
+                "top3": 0.7396392939370683,
+                "mrr": 0.6401760204937752
+              }
+            }
+          },
+          "128057": {
+            "listwise": {
+              "rows": 110373,
+              "positives": 5017,
+              "prevalence": 0.045454957281219135,
+              "AP": 0.5453705677846956,
+              "AUC": 0.9337387710365946,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.998043786745109,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5325891967311143,
+                "0.8": 0.24576440103647598
+              },
+              "scene": {
+                "positive_scenes": 5017,
+                "top1": 0.5040861072353996,
+                "top3": 0.7596173011760016,
+                "mrr": 0.6569769742368124
+              }
+            }
+          },
+          "132831": {
+            "listwise": {
+              "rows": 112342,
+              "positives": 5107,
+              "prevalence": 0.04545940075839846,
+              "AP": 0.3888944531317005,
+              "AUC": 0.8651824810207637,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.554764177349032,
+              "recall_at_annotation_precision": {
+                "0.5": 0.35931074995104756,
+                "0.8": 0.037008028196592914
+              },
+              "scene": {
+                "positive_scenes": 5107,
+                "top1": 0.41139612296847466,
+                "top3": 0.6563540238887801,
+                "mrr": 0.5689055209249597
+              }
+            }
+          }
+        },
+        "censored_rows": 0,
+        "per_half": {
+          "117092_1": {
+            "listwise": {
+              "rows": 54362,
+              "positives": 2471,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5245892716664444,
+              "AUC": 0.920836458073507,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.540963976661777,
+              "recall_at_annotation_precision": {
+                "0.5": 0.48441926345609065,
+                "0.8": 0.2573856738162687
+              }
+            }
+          },
+          "117092_2": {
+            "listwise": {
+              "rows": 54207,
+              "positives": 2466,
+              "prevalence": 0.04549227959488627,
+              "AP": 0.5354816397801234,
+              "AUC": 0.9286305662461635,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.770824512393006,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5093268450932684,
+                "0.8": 0.25304136253041365
+              }
+            }
+          },
+          "117093_1": {
+            "listwise": {
+              "rows": 53987,
+              "positives": 2454,
+              "prevalence": 0.04545538740807972,
+              "AP": 0.4938823660171822,
+              "AUC": 0.9153271652819739,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.865210796320136,
+              "recall_at_annotation_precision": {
+                "0.5": 0.441320293398533,
+                "0.8": 0.20089649551752242
+              }
+            }
+          },
+          "117093_2": {
+            "listwise": {
+              "rows": 57131,
+              "positives": 2597,
+              "prevalence": 0.045456932313455045,
+              "AP": 0.5086694855950604,
+              "AUC": 0.9254529457475378,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.190141078756794,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4782441278398152,
+                "0.8": 0.21293800539083557
+              }
+            }
+          },
+          "118576_1": {
+            "listwise": {
+              "rows": 58076,
+              "positives": 2645,
+              "prevalence": 0.04554377023210965,
+              "AP": 0.5006506996790575,
+              "AUC": 0.9243389361367845,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 10.992737253142135,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4684310018903592,
+                "0.8": 0.15425330812854443
+              }
+            }
+          },
+          "118576_2": {
+            "listwise": {
+              "rows": 58212,
+              "positives": 2646,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5407664307430073,
+              "AUC": 0.9332175550996412,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.896861476346162,
+              "recall_at_annotation_precision": {
+                "0.5": 0.54421768707483,
+                "0.8": 0.24640967498110355
+              }
+            }
+          },
+          "118578_1": {
+            "listwise": {
+              "rows": 57640,
+              "positives": 2620,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5146990723247457,
+              "AUC": 0.9268203720506906,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.323379591144404,
+              "recall_at_annotation_precision": {
+                "0.5": 0.4900763358778626,
+                "0.8": 0.20801526717557253
+              }
+            }
+          },
+          "118578_2": {
+            "listwise": {
+              "rows": 57023,
+              "positives": 2592,
+              "prevalence": 0.04545534258106378,
+              "AP": 0.5192724180239343,
+              "AUC": 0.9268328888358147,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.423792859945527,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5192901234567902,
+                "0.8": 0.2183641975308642
+              }
+            }
+          },
+          "128057_1": {
+            "listwise": {
+              "rows": 54053,
+              "positives": 2457,
+              "prevalence": 0.045455386380034414,
+              "AP": 0.5623656788672677,
+              "AUC": 0.9354533293210712,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 12.371816052019707,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5514855514855515,
+                "0.8": 0.2706552706552707
+              }
+            }
+          },
+          "128057_2": {
+            "listwise": {
+              "rows": 56320,
+              "positives": 2560,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5279323377766889,
+              "AUC": 0.93209717523484,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.614511431087156,
+              "recall_at_annotation_precision": {
+                "0.5": 0.50546875,
+                "0.8": 0.219140625
+              }
+            }
+          },
+          "132831_1": {
+            "listwise": {
+              "rows": 56474,
+              "positives": 2567,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.3793817202733829,
+              "AUC": 0.8567584570778445,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.346397846014424,
+              "recall_at_annotation_precision": {
+                "0.5": 0.3517724970783015,
+                "0.8": 0.038955979742890535
+              }
+            }
+          },
+          "132831_2": {
+            "listwise": {
+              "rows": 55868,
+              "positives": 2540,
+              "prevalence": 0.04546430872771533,
+              "AP": 0.3988749246637011,
+              "AUC": 0.8735877770847952,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 8.773363894138447,
+              "recall_at_annotation_precision": {
+                "0.5": 0.3649606299212598,
+                "0.8": 0.03503937007874016
+              }
+            }
+          }
+        }
+      }
+    },
+    "conditional_NLL": {
+      "hgb": 1.7582338093116725,
+      "listwise_ensemble": 1.7476928452550935
+    },
+    "switch_only": {
+      "pooled": {
+        "hgb": {
+          "rows": 374922,
+          "positives": 17045,
+          "prevalence": 0.045462789593568795,
+          "AP": 0.15686288848217025,
+          "AUC": 0.835934472564316,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 3.450357751570093,
+          "recall_at_annotation_precision": {
+            "0.5": 0.0,
+            "0.8": 0.0
+          },
+          "scene": {
+            "positive_scenes": 17045,
+            "top1": 0.15488413024347317,
+            "top3": 0.5444998533294221,
+            "mrr": 0.3993911287689844
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 374922,
+          "positives": 17045,
+          "prevalence": 0.045462789593568795,
+          "AP": 0.19967403282790025,
+          "AUC": 0.8466475130149569,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 4.39203213469651,
+          "recall_at_annotation_precision": {
+            "0.5": 0.0,
+            "0.8": 0.0
+          },
+          "scene": {
+            "positive_scenes": 17045,
+            "top1": 0.20369609856262832,
+            "top3": 0.5648577295394543,
+            "mrr": 0.43161667557662453
+          }
+        }
+      },
+      "macro_match": {
+        "hgb": {
+          "AP": 0.15893132413609337,
+          "brier": null,
+          "NLL": null
+        },
+        "listwise_ensemble": {
+          "AP": 0.20523273482911164,
+          "brier": null,
+          "NLL": null
+        }
+      },
+      "macro_scene": {
+        "hgb": {
+          "top1": 0.1551539650308962,
+          "top3": 0.5457714674345908,
+          "mrr": 0.4000838854546212
+        },
+        "listwise_ensemble": {
+          "top1": 0.20436416589232786,
+          "top3": 0.5662166136339478,
+          "mrr": 0.4325076430569547
+        }
+      },
+      "per_match": {
+        "117092": {
+          "hgb": {
+            "rows": 60211,
+            "positives": 2737,
+            "prevalence": 0.04545681021740214,
+            "AP": 0.15913030813474147,
+            "AUC": 0.8467178131118913,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.500692357727774,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2737,
+              "top1": 0.154548776032152,
+              "top3": 0.5414687614176106,
+              "mrr": 0.40066725192543723
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 60211,
+            "positives": 2737,
+            "prevalence": 0.04545681021740214,
+            "AP": 0.21416050971308465,
+            "AUC": 0.8597823089620203,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.711296474364099,
+            "recall_at_annotation_precision": {
+              "0.5": 0.031421264157837046,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2737,
+              "top1": 0.21008403361344538,
+              "top3": 0.5688710266715382,
+              "mrr": 0.4378108545238185
+            }
+          }
+        },
+        "117093": {
+          "hgb": {
+            "rows": 63910,
+            "positives": 2905,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16968370013419082,
+            "AUC": 0.8515267914187221,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.733041402952198,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2905,
+              "top1": 0.1783132530120482,
+              "top3": 0.5514629948364889,
+              "mrr": 0.41391818898510413
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 63910,
+            "positives": 2905,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2243369281576834,
+            "AUC": 0.8624643729295629,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.935412419469035,
+            "recall_at_annotation_precision": {
+              "0.5": 0.049225473321858865,
+              "0.8": 0.001376936316695353
+            },
+            "scene": {
+              "positive_scenes": 2905,
+              "top1": 0.21376936316695352,
+              "top3": 0.5693631669535284,
+              "mrr": 0.43994050055454
+            }
+          }
+        },
+        "118576": {
+          "hgb": {
+            "rows": 62878,
+            "positives": 2861,
+            "prevalence": 0.04550081109450046,
+            "AP": 0.16810750775950237,
+            "AUC": 0.8547326247776341,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.6946046392527054,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2861,
+              "top1": 0.16218105557497378,
+              "top3": 0.5658860538273331,
+              "mrr": 0.41073601414369704
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 62878,
+            "positives": 2861,
+            "prevalence": 0.04550081109450046,
+            "AP": 0.2149849604561204,
+            "AUC": 0.8659134688722734,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.724859959300923,
+            "recall_at_annotation_precision": {
+              "0.5": 0.02551555400209717,
+              "0.8": 0.0003495281370150297
+            },
+            "scene": {
+              "positive_scenes": 2861,
+              "top1": 0.20727018524991261,
+              "top3": 0.5858091576371898,
+              "mrr": 0.44174041264851216
+            }
+          }
+        },
+        "118578": {
+          "hgb": {
+            "rows": 62941,
+            "positives": 2861,
+            "prevalence": 0.04545526763159149,
+            "AP": 0.1677446778364728,
+            "AUC": 0.8519582040443803,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.6903242809176633,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2861,
+              "top1": 0.1670744494931842,
+              "top3": 0.5554002097168822,
+              "mrr": 0.41067634887390375
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 62941,
+            "positives": 2861,
+            "prevalence": 0.04545526763159149,
+            "AP": 0.21488113261987077,
+            "AUC": 0.8640230886372637,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.727309810635193,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0017476406850751485,
+              "0.8": 0.0013981125480601187
+            },
+            "scene": {
+              "positive_scenes": 2861,
+              "top1": 0.2132121635791681,
+              "top3": 0.5826634044040545,
+              "mrr": 0.4438961539420849
+            }
+          }
+        },
+        "128057": {
+          "hgb": {
+            "rows": 57706,
+            "positives": 2623,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16626254328351964,
+            "AUC": 0.8591156329993784,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.657775952237432,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2623,
+              "top1": 0.14944719786504004,
+              "top3": 0.5833015630956919,
+              "mrr": 0.41231134288918847
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 57706,
+            "positives": 2623,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.21773618851085527,
+            "AUC": 0.8695792414855675,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.790196147238816,
+            "recall_at_annotation_precision": {
+              "0.5": 0.02821197102554327,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2623,
+              "top1": 0.21768966831871903,
+              "top3": 0.6000762485703393,
+              "mrr": 0.4515526783910391
+            }
+          }
+        },
+        "132831": {
+          "hgb": {
+            "rows": 67276,
+            "positives": 3058,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.12265920766813317,
+            "AUC": 0.7712992737642083,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.6985025686989297,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3058,
+              "top1": 0.11935905820797907,
+              "top3": 0.47710922171353826,
+              "mrr": 0.3521941659103967
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 67276,
+            "positives": 3058,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.14529668951705543,
+            "AUC": 0.7819008364269997,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.1965271693752193,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3058,
+              "top1": 0.16415958142576847,
+              "top3": 0.49051667756703726,
+              "mrr": 0.38010525828173336
+            }
+          }
+        }
+      },
+      "censored_rows": 0,
+      "per_half": {
+        "117092_1": {
+          "hgb": {
+            "rows": 30580,
+            "positives": 1390,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.15756317637625453,
+            "AUC": 0.842473634658563,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.4663898802775996,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 30580,
+            "positives": 1390,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2216449721975629,
+            "AUC": 0.8569386135490374,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.876189388346384,
+            "recall_at_annotation_precision": {
+              "0.5": 0.04388489208633094,
+              "0.8": 0.008633093525179856
+            }
+          }
+        },
+        "117092_2": {
+          "hgb": {
+            "rows": 29631,
+            "positives": 1347,
+            "prevalence": 0.04545914751442746,
+            "AP": 0.16127923607049038,
+            "AUC": 0.8511226989543014,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.5477839970339278,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 29631,
+            "positives": 1347,
+            "prevalence": 0.04545914751442746,
+            "AP": 0.20910786437316345,
+            "AUC": 0.8626958171739246,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.599907297135268,
+            "recall_at_annotation_precision": {
+              "0.5": 0.016332590942835932,
+              "0.8": 0.0
+            }
+          }
+        },
+        "117093_1": {
+          "hgb": {
+            "rows": 30954,
+            "positives": 1407,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.1664586126082201,
+            "AUC": 0.8442536193705719,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.662089477380842,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 30954,
+            "positives": 1407,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2154990230885164,
+            "AUC": 0.8544856160047035,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.740978507947361,
+            "recall_at_annotation_precision": {
+              "0.5": 0.03909026297085998,
+              "0.8": 0.0014214641080312722
+            }
+          }
+        },
+        "117093_2": {
+          "hgb": {
+            "rows": 32956,
+            "positives": 1498,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.17311497710232387,
+            "AUC": 0.8581513329786952,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.808529496251125,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 32956,
+            "positives": 1498,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.23362439776885,
+            "AUC": 0.8696493920178905,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.139736750914699,
+            "recall_at_annotation_precision": {
+              "0.5": 0.05740987983978638,
+              "0.8": 0.0006675567423230974
+            }
+          }
+        },
+        "118576_1": {
+          "hgb": {
+            "rows": 32892,
+            "positives": 1498,
+            "prevalence": 0.0455429891766995,
+            "AP": 0.17150300812025193,
+            "AUC": 0.8536917797342581,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.765738947323983,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 32892,
+            "positives": 1498,
+            "prevalence": 0.0455429891766995,
+            "AP": 0.2247164214534902,
+            "AUC": 0.8660601215287538,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.934160570392656,
+            "recall_at_annotation_precision": {
+              "0.5": 0.029372496662216287,
+              "0.8": 0.011348464619492658
+            }
+          }
+        },
+        "118576_2": {
+          "hgb": {
+            "rows": 29986,
+            "positives": 1363,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16518366676491664,
+            "AUC": 0.8558833587106747,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.634040668828166,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 29986,
+            "positives": 1363,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20794128841209236,
+            "AUC": 0.8659114392432151,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.574708345066032,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0007336757153338225,
+              "0.8": 0.0007336757153338225
+            }
+          }
+        },
+        "118578_1": {
+          "hgb": {
+            "rows": 32890,
+            "positives": 1495,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.17202413638768468,
+            "AUC": 0.8567621859987717,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.784531000529063,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 32890,
+            "positives": 1495,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.22907408755328226,
+            "AUC": 0.8695911465782049,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.03962992617221,
+            "recall_at_annotation_precision": {
+              "0.5": 0.046822742474916385,
+              "0.8": 0.0006688963210702341
+            }
+          }
+        },
+        "118578_2": {
+          "hgb": {
+            "rows": 30051,
+            "positives": 1366,
+            "prevalence": 0.04545605803467439,
+            "AP": 0.1635178375442373,
+            "AUC": 0.8466896064716689,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.597272720382046,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 30051,
+            "positives": 1366,
+            "prevalence": 0.04545605803467439,
+            "AP": 0.2013843434610905,
+            "AUC": 0.857812289852084,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.430308129831062,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0014641288433382138,
+              "0.8": 0.0014641288433382138
+            }
+          }
+        },
+        "128057_1": {
+          "hgb": {
+            "rows": 27390,
+            "positives": 1245,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.15804708848306476,
+            "AUC": 0.8533579412313627,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.4770359466274248,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 27390,
+            "positives": 1245,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20952923069842652,
+            "AUC": 0.8648552212291507,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.609643075365383,
+            "recall_at_annotation_precision": {
+              "0.5": 0.024899598393574297,
+              "0.8": 0.0
+            }
+          }
+        },
+        "128057_2": {
+          "hgb": {
+            "rows": 30316,
+            "positives": 1378,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.1745470809685478,
+            "AUC": 0.8642421648966545,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.8400357813080515,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 30316,
+            "positives": 1378,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2260484953100221,
+            "AUC": 0.8738079088258457,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.9730668968204865,
+            "recall_at_annotation_precision": {
+              "0.5": 0.03483309143686502,
+              "0.8": 0.0
+            }
+          }
+        },
+        "132831_1": {
+          "hgb": {
+            "rows": 35112,
+            "positives": 1596,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11780877938573565,
+            "AUC": 0.761942852042985,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.5917931464861845,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 35112,
+            "positives": 1596,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.14005072798535126,
+            "AUC": 0.7713541633951211,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.0811160156777277,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          }
+        },
+        "132831_2": {
+          "hgb": {
+            "rows": 32164,
+            "positives": 1462,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.12853626913458116,
+            "AUC": 0.7813266352575452,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.8277979209607853,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 32164,
+            "positives": 1462,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.15157888104839565,
+            "AUC": 0.7930810061434302,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.334735383064704,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          }
+        }
+      }
+    },
+    "training": [
+      {
+        "fingerprint": "2277d9582edc4a6cf3f049b0b6f0a7600b3120fc05a3e2df852fe09e0a215737",
+        "sha256": "da2e150164eb5c0eb85de266348e72e9db34d404d6a50527c4da68f0497dcd83",
+        "held": "117092",
+        "seed": 11,
+        "steps": 1275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.8138905763626099,
+        "seconds": 2.904783600009978,
+        "train_scenes": 25678,
+        "test_scenes": 4937,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 201.25696,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "db4f586324124546173aa522fc3c99aae5a0eeba8676b0fdee6f2f6937eb1b0f",
+        "sha256": "bce6c7b05cbdb9b914ece4958e7724957dfab76f381c9442c57ea0c97d6c77bb",
+        "held": "117093",
+        "seed": 11,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.812265157699585,
+        "seconds": 2.6166157000116073,
+        "train_scenes": 25564,
+        "test_scenes": 5051,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812032,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "e38508040574b018fc4aa10640403f8d8c541a9fee3aad762a62a41cdc986e19",
+        "sha256": "b64b4372d1caa75e52958cae9c30b2ba5b08d94f6767a302bb8bc28153acfcb5",
+        "held": "118576",
+        "seed": 11,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 24,
+        "development_NLL": 1.8178908824920654,
+        "seconds": 2.7316225999966264,
+        "train_scenes": 25324,
+        "test_scenes": 5291,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812032,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "2ab8dc900b505f44721ca09b75fff7fc2e02d37a2ad0a30fbc1fc84cf34f11ec",
+        "sha256": "72ab7bd2cdd682a35c54188c18bf437cb0fd18fc4a4b29b53d132032667aeb75",
+        "held": "118578",
+        "seed": 11,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 22,
+        "development_NLL": 1.8128563165664673,
+        "seconds": 2.730095600010827,
+        "train_scenes": 25403,
+        "test_scenes": 5212,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812032,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "14a1e86b2aaec6896f0fe178f9b8dc8529e70acde49aecc40cd4c7038adb782c",
+        "sha256": "2776bcf7950452a87b84f8a7e6f54667ff2ae8ef3e9e10cb20af471680c782c5",
+        "held": "128057",
+        "seed": 11,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 22,
+        "development_NLL": 1.8112075328826904,
+        "seconds": 2.6638291999697685,
+        "train_scenes": 25598,
+        "test_scenes": 5017,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812032,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "3a22ac88d64b11dd4144092f36c4a9f03f83d5de74c8f393ff36b3aa7c627e8f",
+        "sha256": "fd18aaf2a30b545ef7732091353fe6bc52962970f52182faf2555de64b69211a",
+        "held": "132831",
+        "seed": 11,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 19,
+        "development_NLL": 1.9793661832809448,
+        "seconds": 2.596430200035684,
+        "train_scenes": 25508,
+        "test_scenes": 5107,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "d4d76a2f17ec4033dc7024af222e4e06fa5a531d26cf251b87adf70e6dd1a6dc",
+        "sha256": "493d052ec7cd13ca521a4455f378a2f20e2512efe4f9d0c3c552dc8909823bbc",
+        "held": "117092",
+        "seed": 29,
+        "steps": 1275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.8018221855163574,
+        "seconds": 2.709268999984488,
+        "train_scenes": 25678,
+        "test_scenes": 4937,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "29db53b253334823a7da22e5922ea8aecacbbcfdf40e9076254fe266aca6fb11",
+        "sha256": "ac22bebef6327c1395149e00cacb3081ebc0fc6db81e7fdb040d03b30dfa2882",
+        "held": "117093",
+        "seed": 29,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 23,
+        "development_NLL": 1.809165596961975,
+        "seconds": 2.6021283000009134,
+        "train_scenes": 25564,
+        "test_scenes": 5051,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "1b284d6fc665d1f77a2ace69f2974caf29b68d0842165fe348fafc0e004cfee6",
+        "sha256": "4d452e044efcd670d7cbbd77a36d3b59d9387ce6585bbd3a40891f399ccf7510",
+        "held": "118576",
+        "seed": 29,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 24,
+        "development_NLL": 1.8101133108139038,
+        "seconds": 2.6629273999715224,
+        "train_scenes": 25324,
+        "test_scenes": 5291,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "4a8dc99944cecc825c7312df4ab95466cedca59c5504c66d084d6ebe248ccf20",
+        "sha256": "bc29b77a0bd91c2dac3363d74af9dbb73ea8c48cc1733f0aa5eea790802cca8c",
+        "held": "118578",
+        "seed": 29,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.8050118684768677,
+        "seconds": 2.598989200021606,
+        "train_scenes": 25403,
+        "test_scenes": 5212,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "fb017b384b10dab025ff619b6c5a60afaad31cbc0d780487bf15fe697778e33e",
+        "sha256": "74643293e40af660f65eb649374f8b511bb9e39c5789b50ddaf9e4526f2e7c8a",
+        "held": "128057",
+        "seed": 29,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.8042200803756714,
+        "seconds": 2.6476359000080265,
+        "train_scenes": 25598,
+        "test_scenes": 5017,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "bb56841ac8da12f986b5f1c49a72bec33be6781c1ed6ded29cad004771fe89cd",
+        "sha256": "74e31f16a5a6440e5828e2d6ea12d285fee35793b1971f08b437033675baed36",
+        "held": "132831",
+        "seed": 29,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 17,
+        "development_NLL": 1.9630507230758667,
+        "seconds": 2.6336860999581404,
+        "train_scenes": 25508,
+        "test_scenes": 5107,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "b2521f6a58cde5686fc0e7ab5d98db21cb582eaecb838265d3084e1c708d5c99",
+        "sha256": "ef0894f7c24cca804f85ebddeef76843930b2ea19f39b8f94e22da19f2ccc536",
+        "held": "117092",
+        "seed": 47,
+        "steps": 1275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.8129518032073975,
+        "seconds": 2.8801763000083156,
+        "train_scenes": 25678,
+        "test_scenes": 4937,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "0214b5b29eae6f77fe99b242ba13c1cb4ad45da12d120c6090e7fae23226cee5",
+        "sha256": "34b49b21708ed90068c5d6c038972e53c60c352bbe5435f1037e0c3789df45d5",
+        "held": "117093",
+        "seed": 47,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.8058741092681885,
+        "seconds": 2.911759799986612,
+        "train_scenes": 25564,
+        "test_scenes": 5051,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "cffd677dc21ea637aee0f224e64624c22c9e588f9f9cfcda839023c3bf17bc5b",
+        "sha256": "959cac9a7f4e220f6001b4553d6d69d6eff32da8452e6e688932f11f10c0e862",
+        "held": "118576",
+        "seed": 47,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 24,
+        "development_NLL": 1.8135700225830078,
+        "seconds": 2.8090374000021257,
+        "train_scenes": 25324,
+        "test_scenes": 5291,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "a43aa4a780fc64bdad637fdd63174ef0862f6f11525db8ea58b12b67067796ab",
+        "sha256": "ce3e80b172fc6166314821db49f1fc94f64bcf5e448a091b8d515d8e7d2405ab",
+        "held": "118578",
+        "seed": 47,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 23,
+        "development_NLL": 1.8104405403137207,
+        "seconds": 2.7498476000037044,
+        "train_scenes": 25403,
+        "test_scenes": 5212,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "c15d6cf55177051a734569e5a8e79bb53c876f24327b831160e95624e186c81f",
+        "sha256": "d5850e1ad26ac5fdf96d323e0ce9c974f2d8526f1213b0b6ce8d2fcdcecb565a",
+        "held": "128057",
+        "seed": 47,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 23,
+        "development_NLL": 1.8070549964904785,
+        "seconds": 2.6070742000010796,
+        "train_scenes": 25598,
+        "test_scenes": 5017,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "4c303a237146441b54a2cd05d618286e2b3e556253d9af8afab01b4f523afe5e",
+        "sha256": "e363123f7b271559bbcb22c5e01bbd5b1e5c36cab196236002d8ddd2ad82abad",
+        "held": "132831",
+        "seed": 47,
+        "steps": 1250,
+        "epochs": 25,
+        "selected_epoch": 13,
+        "development_NLL": 1.9772133827209473,
+        "seconds": 2.671741500031203,
+        "train_scenes": 25508,
+        "test_scenes": 5107,
+        "development_scenes": 5215,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      }
+    ],
+    "scope": "Conditional on supported future occurrence for this diagnostic; not unconditional anticipation."
+  },
+  "next_BAS_1_2s": {
+    "pooled": {
+      "hgb": {
+        "rows": 145374,
+        "positives": 6609,
+        "prevalence": 0.04546204960997152,
+        "AP": 0.5772391607951863,
+        "AUC": 0.9347381604745496,
+        "brier": null,
+        "NLL": null,
+        "AP_over_prevalence": 12.697165344445365,
+        "recall_at_annotation_precision": {
+          "0.5": 0.6259645937358148,
+          "0.8": 0.27250718716901196
+        },
+        "scene": {
+          "positive_scenes": 6609,
+          "top1": 0.5957028294749583,
+          "top3": 0.7967922529883492,
+          "mrr": 0.7181262729694611
+        }
+      },
+      "listwise_ensemble": {
+        "rows": 145374,
+        "positives": 6609,
+        "prevalence": 0.04546204960997152,
+        "AP": 0.6350967487014134,
+        "AUC": 0.939661265274862,
+        "brier": null,
+        "NLL": null,
+        "AP_over_prevalence": 13.96982217366005,
+        "recall_at_annotation_precision": {
+          "0.5": 0.6840671811166591,
+          "0.8": 0.406112876380693
+        },
+        "scene": {
+          "positive_scenes": 6609,
+          "top1": 0.6031169617188682,
+          "top3": 0.7946739294900893,
+          "mrr": 0.7213571523859774
+        }
+      }
+    },
+    "macro_match": {
+      "hgb": {
+        "AP": 0.5842975036159187,
+        "brier": null,
+        "NLL": null
+      },
+      "listwise_ensemble": {
+        "AP": 0.6414150360379041,
+        "brier": null,
+        "NLL": null
+      }
+    },
+    "macro_scene": {
+      "hgb": {
+        "top1": 0.5984939075422675,
+        "top3": 0.7989230085961303,
+        "mrr": 0.7203576090561823
+      },
+      "listwise_ensemble": {
+        "top1": 0.6059469093409845,
+        "top3": 0.796646384234486,
+        "mrr": 0.723516592149268
+      }
+    },
+    "per_match": {
+      "117092": {
+        "hgb": {
+          "rows": 23760,
+          "positives": 1080,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6361082217504104,
+          "AUC": 0.9506331038931347,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.994380878509029,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7203703703703703,
+            "0.8": 0.337037037037037
+          },
+          "scene": {
+            "positive_scenes": 1080,
+            "top1": 0.6277777777777778,
+            "top3": 0.8333333333333334,
+            "mrr": 0.7467552114733487
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 23760,
+          "positives": 1080,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6638754561276978,
+          "AUC": 0.9493376445228298,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.605260034809351,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7240740740740741,
+            "0.8": 0.43148148148148147
+          },
+          "scene": {
+            "positive_scenes": 1080,
+            "top1": 0.6324074074074074,
+            "top3": 0.8240740740740741,
+            "mrr": 0.7463884884330146
+          }
+        }
+      },
+      "117093": {
+        "hgb": {
+          "rows": 25388,
+          "positives": 1154,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.605315109451135,
+          "AUC": 0.9437066804891477,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.31693240792497,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6629116117850953,
+            "0.8": 0.30675909878682844
+          },
+          "scene": {
+            "positive_scenes": 1154,
+            "top1": 0.6126516464471404,
+            "top3": 0.8119584055459272,
+            "mrr": 0.7310378131428952
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 25388,
+          "positives": 1154,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6450686716947788,
+          "AUC": 0.9425319877296875,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.191510777285133,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6871750433275563,
+            "0.8": 0.4020797227036395
+          },
+          "scene": {
+            "positive_scenes": 1154,
+            "top1": 0.6135181975736569,
+            "top3": 0.8076256499133448,
+            "mrr": 0.7300778446370437
+          }
+        }
+      },
+      "118576": {
+        "hgb": {
+          "rows": 24264,
+          "positives": 1104,
+          "prevalence": 0.04549950544015826,
+          "AP": 0.5945955043216969,
+          "AUC": 0.9369944197266651,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.068175105852948,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6494565217391305,
+            "0.8": 0.34057971014492755
+          },
+          "scene": {
+            "positive_scenes": 1104,
+            "top1": 0.6023550724637681,
+            "top3": 0.792572463768116,
+            "mrr": 0.7199401224202678
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 24264,
+          "positives": 1104,
+          "prevalence": 0.04549950544015826,
+          "AP": 0.6443234705763439,
+          "AUC": 0.9394131443831192,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.161109320710514,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6956521739130435,
+            "0.8": 0.427536231884058
+          },
+          "scene": {
+            "positive_scenes": 1104,
+            "top1": 0.6114130434782609,
+            "top3": 0.7898550724637681,
+            "mrr": 0.7237656249460706
+          }
+        }
+      },
+      "118578": {
+        "hgb": {
+          "rows": 22814,
+          "positives": 1037,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6096255987574658,
+          "AUC": 0.9491405585741576,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.411763172664248,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6933461909353905,
+            "0.8": 0.3172613307618129
+          },
+          "scene": {
+            "positive_scenes": 1037,
+            "top1": 0.6171648987463838,
+            "top3": 0.8148505303760849,
+            "mrr": 0.7355367964908986
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 22814,
+          "positives": 1037,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6772944099974962,
+          "AUC": 0.9523511508718446,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.900477019944917,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7155255544840887,
+            "0.8": 0.48601735776277727
+          },
+          "scene": {
+            "positive_scenes": 1037,
+            "top1": 0.6316297010607522,
+            "top3": 0.8090646094503375,
+            "mrr": 0.7438261524870089
+          }
+        }
+      },
+      "128057": {
+        "hgb": {
+          "rows": 21670,
+          "positives": 985,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6282580926263659,
+          "AUC": 0.9521408019003939,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.82167803778005,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7147208121827411,
+            "0.8": 0.37360406091370557
+          },
+          "scene": {
+            "positive_scenes": 985,
+            "top1": 0.6274111675126903,
+            "top3": 0.8162436548223351,
+            "mrr": 0.7435153129442469
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 21670,
+          "positives": 985,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6850123716617793,
+          "AUC": 0.9523868911114138,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 15.070272176559145,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7350253807106599,
+            "0.8": 0.48020304568527916
+          },
+          "scene": {
+            "positive_scenes": 985,
+            "top1": 0.6335025380710659,
+            "top3": 0.8182741116751269,
+            "mrr": 0.7441276958998667
+          }
+        }
+      },
+      "132831": {
+        "hgb": {
+          "rows": 27478,
+          "positives": 1249,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.43188249478843793,
+          "AUC": 0.897367404007464,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 9.501414885345634,
+          "recall_at_annotation_precision": {
+            "0.5": 0.3450760608486789,
+            "0.8": 0.1232986389111289
+          },
+          "scene": {
+            "positive_scenes": 1249,
+            "top1": 0.5036028823058447,
+            "top3": 0.7245796637309848,
+            "mrr": 0.645360397865436
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 27478,
+          "positives": 1249,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5329158361693282,
+          "AUC": 0.9117367476656988,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.724148395725221,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5396317053642914,
+            "0.8": 0.2409927942353883
+          },
+          "scene": {
+            "positive_scenes": 1249,
+            "top1": 0.5132105684547638,
+            "top3": 0.7309847878302642,
+            "mrr": 0.6529137464926034
+          }
+        }
+      }
+    },
+    "censored_rows": 0,
+    "per_half": {
+      "117092_1": {
+        "hgb": {
+          "rows": 12078,
+          "positives": 549,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6431248949987997,
+          "AUC": 0.9532401936922823,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.148747689973591,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7413479052823315,
+            "0.8": 0.33515482695810567
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 12078,
+          "positives": 549,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6648662234698153,
+          "AUC": 0.9502151934592438,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.627056916335937,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7358834244080146,
+            "0.8": 0.4899817850637523
+          }
+        }
+      },
+      "117092_2": {
+        "hgb": {
+          "rows": 11682,
+          "positives": 531,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6277210405949721,
+          "AUC": 0.9478595570714695,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.809862893089386,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6986817325800376,
+            "0.8": 0.3634651600753296
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 11682,
+          "positives": 531,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6631281793381725,
+          "AUC": 0.9484391711721023,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.588819945439795,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7099811676082862,
+            "0.8": 0.4011299435028249
+          }
+        }
+      },
+      "117093_1": {
+        "hgb": {
+          "rows": 12782,
+          "positives": 581,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5783086657152534,
+          "AUC": 0.9403064504320279,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 12.722790645735575,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6385542168674698,
+            "0.8": 0.26161790017211706
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 12782,
+          "positives": 581,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.617704472709577,
+          "AUC": 0.9357721024249445,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.589498399610692,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6626506024096386,
+            "0.8": 0.3442340791738382
+          }
+        }
+      },
+      "117093_2": {
+        "hgb": {
+          "rows": 12606,
+          "positives": 573,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6325676686059615,
+          "AUC": 0.9470417231032345,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.916488709331151,
+          "recall_at_annotation_precision": {
+            "0.5": 0.680628272251309,
+            "0.8": 0.3612565445026178
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 12606,
+          "positives": 573,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6724873792966066,
+          "AUC": 0.9490577758169106,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.794722344525345,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7242582897033158,
+            "0.8": 0.47469458987783597
+          }
+        }
+      },
+      "118576_1": {
+        "hgb": {
+          "rows": 13044,
+          "positives": 594,
+          "prevalence": 0.04553817847286108,
+          "AP": 0.5961423418820557,
+          "AUC": 0.9344038105283085,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.091044962137264,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6717171717171717,
+            "0.8": 0.35185185185185186
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 13044,
+          "positives": 594,
+          "prevalence": 0.04553817847286108,
+          "AP": 0.6431271477206564,
+          "AUC": 0.9354836855840871,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.122812314593,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6936026936026936,
+            "0.8": 0.4175084175084175
+          }
+        }
+      },
+      "118576_2": {
+        "hgb": {
+          "rows": 11220,
+          "positives": 510,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.594018598803639,
+          "AUC": 0.9400407352483477,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.06840917368006,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6235294117647059,
+            "0.8": 0.2607843137254902
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 11220,
+          "positives": 510,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6464197193001009,
+          "AUC": 0.9443497922044635,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.22123382460222,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7019607843137254,
+            "0.8": 0.45098039215686275
+          }
+        }
+      },
+      "118578_1": {
+        "hgb": {
+          "rows": 12386,
+          "positives": 563,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6563222711853994,
+          "AUC": 0.9599242768070003,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.439089966078788,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7495559502664298,
+            "0.8": 0.36767317939609234
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 12386,
+          "positives": 563,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.7286516626804583,
+          "AUC": 0.9641285335249098,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 16.030336578970083,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7637655417406749,
+            "0.8": 0.5968028419182948
+          }
+        }
+      },
+      "118578_2": {
+        "hgb": {
+          "rows": 10428,
+          "positives": 474,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5517253086750519,
+          "AUC": 0.9357458867753693,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 12.13795679085114,
+          "recall_at_annotation_precision": {
+            "0.5": 0.609704641350211,
+            "0.8": 0.2721518987341772
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 10428,
+          "positives": 474,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6165882354000152,
+          "AUC": 0.9376893202401936,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.564941178800334,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6582278481012658,
+            "0.8": 0.4050632911392405
+          }
+        }
+      },
+      "128057_1": {
+        "hgb": {
+          "rows": 10714,
+          "positives": 487,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6350349981765722,
+          "AUC": 0.9490341325825727,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.970769959884587,
+          "recall_at_annotation_precision": {
+            "0.5": 0.6837782340862423,
+            "0.8": 0.36960985626283366
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 10714,
+          "positives": 487,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.692230303975275,
+          "AUC": 0.9502165323541643,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 15.229066687456049,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7371663244353183,
+            "0.8": 0.486652977412731
+          }
+        }
+      },
+      "128057_2": {
+        "hgb": {
+          "rows": 10956,
+          "positives": 498,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6244298573059712,
+          "AUC": 0.9551493409092479,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 13.737456860731367,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7349397590361446,
+            "0.8": 0.3755020080321285
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 10956,
+          "positives": 498,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.6774148481196666,
+          "AUC": 0.9544619480023748,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 14.903126658632663,
+          "recall_at_annotation_precision": {
+            "0.5": 0.7309236947791165,
+            "0.8": 0.44377510040160645
+          }
+        }
+      },
+      "132831_1": {
+        "hgb": {
+          "rows": 14168,
+          "positives": 644,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.4242650836626225,
+          "AUC": 0.8870372615694941,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 9.333831840577695,
+          "recall_at_annotation_precision": {
+            "0.5": 0.327639751552795,
+            "0.8": 0.13509316770186336
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 14168,
+          "positives": 644,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5046138461684586,
+          "AUC": 0.9008285936572847,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 11.101504615706089,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5124223602484472,
+            "0.8": 0.25
+          }
+        }
+      },
+      "132831_2": {
+        "hgb": {
+          "rows": 13310,
+          "positives": 605,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.44213702482547457,
+          "AUC": 0.9083163067836245,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 9.72701454616044,
+          "recall_at_annotation_precision": {
+            "0.5": 0.3752066115702479,
+            "0.8": 0.1140495867768595
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 13310,
+          "positives": 605,
+          "prevalence": 0.045454545454545456,
+          "AP": 0.5634829493931307,
+          "AUC": 0.9236057906531235,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 12.396624886648874,
+          "recall_at_annotation_precision": {
+            "0.5": 0.5768595041322314,
+            "0.8": 0.2578512396694215
+          }
+        }
+      }
+    },
+    "per_seed": {
+      "11": {
+        "pooled": {
+          "listwise": {
+            "rows": 145374,
+            "positives": 6609,
+            "prevalence": 0.04546204960997152,
+            "AP": 0.6345692048117243,
+            "AUC": 0.9395000954560047,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 13.958218123815948,
+            "recall_at_annotation_precision": {
+              "0.5": 0.6831593281888334,
+              "0.8": 0.4020275382054774
+            },
+            "scene": {
+              "positive_scenes": 6609,
+              "top1": 0.5994855500075654,
+              "top3": 0.7966409441670449,
+              "mrr": 0.7198991796935038
+            }
+          }
+        },
+        "macro_match": {
+          "listwise": {
+            "AP": 0.6411407954198299,
+            "brier": null,
+            "NLL": null
+          }
+        },
+        "macro_scene": {
+          "listwise": {
+            "top1": 0.6023025301626918,
+            "top3": 0.7986360808516322,
+            "mrr": 0.722080929691402
+          }
+        },
+        "per_match": {
+          "117092": {
+            "listwise": {
+              "rows": 23760,
+              "positives": 1080,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6640726221783427,
+              "AUC": 0.9492302322163433,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.60959768792354,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7324074074074074,
+                "0.8": 0.44814814814814813
+              },
+              "scene": {
+                "positive_scenes": 1080,
+                "top1": 0.6314814814814815,
+                "top3": 0.8277777777777777,
+                "mrr": 0.7475631337871189
+              }
+            }
+          },
+          "117093": {
+            "listwise": {
+              "rows": 25388,
+              "positives": 1154,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6462351579828284,
+              "AUC": 0.9427683458606719,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.217173475622223,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6889081455805892,
+                "0.8": 0.4072790294627383
+              },
+              "scene": {
+                "positive_scenes": 1154,
+                "top1": 0.6135181975736569,
+                "top3": 0.8076256499133448,
+                "mrr": 0.7297502206774237
+              }
+            }
+          },
+          "118576": {
+            "listwise": {
+              "rows": 24264,
+              "positives": 1104,
+              "prevalence": 0.04549950544015826,
+              "AP": 0.6446832463272482,
+              "AUC": 0.9392809511964657,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.169016566018433,
+              "recall_at_annotation_precision": {
+                "0.5": 0.697463768115942,
+                "0.8": 0.4429347826086957
+              },
+              "scene": {
+                "positive_scenes": 1104,
+                "top1": 0.605072463768116,
+                "top3": 0.7916666666666666,
+                "mrr": 0.7206923661152864
+              }
+            }
+          },
+          "118578": {
+            "listwise": {
+              "rows": 22814,
+              "positives": 1037,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6777815539607146,
+              "AUC": 0.9524496995472076,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.91119418713572,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7184185149469624,
+                "0.8": 0.4869816779170685
+              },
+              "scene": {
+                "positive_scenes": 1037,
+                "top1": 0.6248794599807136,
+                "top3": 0.8138862102217936,
+                "mrr": 0.740143517359737
+              }
+            }
+          },
+          "128057": {
+            "listwise": {
+              "rows": 21670,
+              "positives": 985,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6839066540231871,
+              "AUC": 0.9523954065637695,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.045946388510115,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7390862944162436,
+                "0.8": 0.483248730964467
+              },
+              "scene": {
+                "positive_scenes": 985,
+                "top1": 0.6304568527918781,
+                "top3": 0.8182741116751269,
+                "mrr": 0.7438846559531839
+              }
+            }
+          },
+          "132831": {
+            "listwise": {
+              "rows": 27478,
+              "positives": 1249,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5301655380466587,
+              "AUC": 0.911279818776673,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.663641837026491,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5396317053642914,
+                "0.8": 0.24899919935948758
+              },
+              "scene": {
+                "positive_scenes": 1249,
+                "top1": 0.5084067253803043,
+                "top3": 0.732586068855084,
+                "mrr": 0.6504516842556625
+              }
+            }
+          }
+        },
+        "censored_rows": 0,
+        "per_half": {
+          "117092_1": {
+            "listwise": {
+              "rows": 12078,
+              "positives": 549,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6646299244376844,
+              "AUC": 0.9499041065525582,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.621858337629057,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7468123861566485,
+                "0.8": 0.4936247723132969
+              }
+            }
+          },
+          "117092_2": {
+            "listwise": {
+              "rows": 11682,
+              "positives": 531,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6639221569151318,
+              "AUC": 0.9485313825062941,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.606287452132898,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7175141242937854,
+                "0.8": 0.4124293785310734
+              }
+            }
+          },
+          "117093_1": {
+            "listwise": {
+              "rows": 12782,
+              "positives": 581,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6184948292044127,
+              "AUC": 0.9358646430183131,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.606886242497078,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6626506024096386,
+                "0.8": 0.35111876075731496
+              }
+            }
+          },
+          "117093_2": {
+            "listwise": {
+              "rows": 12606,
+              "positives": 573,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6745658550633853,
+              "AUC": 0.9494149959049496,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.840448811394475,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7207678883071553,
+                "0.8": 0.4816753926701571
+              }
+            }
+          },
+          "118576_1": {
+            "listwise": {
+              "rows": 13044,
+              "positives": 594,
+              "prevalence": 0.04553817847286108,
+              "AP": 0.6453334588544696,
+              "AUC": 0.9354640785363677,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.171262015652697,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6902356902356902,
+                "0.8": 0.43434343434343436
+              }
+            }
+          },
+          "118576_2": {
+            "listwise": {
+              "rows": 11220,
+              "positives": 510,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6447747195503187,
+              "AUC": 0.9441793449405905,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.185043830107011,
+              "recall_at_annotation_precision": {
+                "0.5": 0.703921568627451,
+                "0.8": 0.4411764705882353
+              }
+            }
+          },
+          "118578_1": {
+            "listwise": {
+              "rows": 12386,
+              "positives": 563,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.7301551059948208,
+              "AUC": 0.964425768540682,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 16.063412331886056,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7690941385435168,
+                "0.8": 0.6039076376554174
+              }
+            }
+          },
+          "118578_2": {
+            "listwise": {
+              "rows": 10428,
+              "positives": 474,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.615458699464248,
+              "AUC": 0.9375316328528954,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.540091388213456,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6729957805907173,
+                "0.8": 0.4050632911392405
+              }
+            }
+          },
+          "128057_1": {
+            "listwise": {
+              "rows": 10714,
+              "positives": 487,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6914489418512475,
+              "AUC": 0.9501420425740214,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.211876720727444,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7412731006160165,
+                "0.8": 0.48459958932238195
+              }
+            }
+          },
+          "128057_2": {
+            "listwise": {
+              "rows": 10956,
+              "positives": 498,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.676362261242514,
+              "AUC": 0.9545157105760966,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.879969747335307,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7349397590361446,
+                "0.8": 0.4819277108433735
+              }
+            }
+          },
+          "132831_1": {
+            "listwise": {
+              "rows": 14168,
+              "positives": 644,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5027478905454729,
+              "AUC": 0.9004423468009943,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.060453592000403,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5201863354037267,
+                "0.8": 0.22981366459627328
+              }
+            }
+          },
+          "132831_2": {
+            "listwise": {
+              "rows": 13310,
+              "positives": 605,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5604151090360142,
+              "AUC": 0.9230187893749126,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 12.329132398792312,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5867768595041323,
+                "0.8": 0.2512396694214876
+              }
+            }
+          }
+        }
+      },
+      "29": {
+        "pooled": {
+          "listwise": {
+            "rows": 145374,
+            "positives": 6609,
+            "prevalence": 0.04546204960997152,
+            "AP": 0.6326418107675102,
+            "AUC": 0.9391405384170088,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 13.915822454004545,
+            "recall_at_annotation_precision": {
+              "0.5": 0.6784687547284006,
+              "0.8": 0.40036314117113025
+            },
+            "scene": {
+              "positive_scenes": 6609,
+              "top1": 0.6023604176123468,
+              "top3": 0.793463458919655,
+              "mrr": 0.7203345930978633
+            }
+          }
+        },
+        "macro_match": {
+          "listwise": {
+            "AP": 0.6391260683276597,
+            "brier": null,
+            "NLL": null
+          }
+        },
+        "macro_scene": {
+          "listwise": {
+            "top1": 0.6049128121488229,
+            "top3": 0.795405997956726,
+            "mrr": 0.7223631603534283
+          }
+        },
+        "per_match": {
+          "117092": {
+            "listwise": {
+              "rows": 23760,
+              "positives": 1080,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6615070911190236,
+              "AUC": 0.9488964008099809,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.553156004618518,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7175925925925926,
+                "0.8": 0.42592592592592593
+              },
+              "scene": {
+                "positive_scenes": 1080,
+                "top1": 0.6296296296296297,
+                "top3": 0.8231481481481482,
+                "mrr": 0.744192638637083
+              }
+            }
+          },
+          "117093": {
+            "listwise": {
+              "rows": 25388,
+              "positives": 1154,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.642773735273631,
+              "AUC": 0.9421010542931433,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.141022176019883,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6863084922010398,
+                "0.8": 0.3934142114384749
+              },
+              "scene": {
+                "positive_scenes": 1154,
+                "top1": 0.6091854419410745,
+                "top3": 0.8050259965337955,
+                "mrr": 0.72721307825522
+              }
+            }
+          },
+          "118576": {
+            "listwise": {
+              "rows": 24264,
+              "positives": 1104,
+              "prevalence": 0.04549950544015826,
+              "AP": 0.6405950087076091,
+              "AUC": 0.9390149612963379,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.079164213117235,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7001811594202898,
+                "0.8": 0.40217391304347827
+              },
+              "scene": {
+                "positive_scenes": 1104,
+                "top1": 0.6041666666666666,
+                "top3": 0.7934782608695652,
+                "mrr": 0.719935589531304
+              }
+            }
+          },
+          "118578": {
+            "listwise": {
+              "rows": 22814,
+              "positives": 1037,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6734735162462817,
+              "AUC": 0.951735769635486,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.816417357418198,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7116682738669238,
+                "0.8": 0.4802314368370299
+              },
+              "scene": {
+                "positive_scenes": 1037,
+                "top1": 0.6277724204435873,
+                "top3": 0.8061716489874639,
+                "mrr": 0.740965413239492
+              }
+            }
+          },
+          "128057": {
+            "listwise": {
+              "rows": 21670,
+              "positives": 985,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6827889906344621,
+              "AUC": 0.9515824139957718,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.021357793958165,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7279187817258883,
+                "0.8": 0.46903553299492384
+              },
+              "scene": {
+                "positive_scenes": 985,
+                "top1": 0.6335025380710659,
+                "top3": 0.8152284263959391,
+                "mrr": 0.7438222403488155
+              }
+            }
+          },
+          "132831": {
+            "listwise": {
+              "rows": 27478,
+              "positives": 1249,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5336180679849514,
+              "AUC": 0.9114564059650634,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.73959749566893,
+              "recall_at_annotation_precision": {
+                "0.5": 0.544435548438751,
+                "0.8": 0.24739791833466773
+              },
+              "scene": {
+                "positive_scenes": 1249,
+                "top1": 0.5252201761409128,
+                "top3": 0.7293835068054444,
+                "mrr": 0.6580500021086546
+              }
+            }
+          }
+        },
+        "censored_rows": 0,
+        "per_half": {
+          "117092_1": {
+            "listwise": {
+              "rows": 12078,
+              "positives": 549,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6639234872230785,
+              "AUC": 0.9501354073303071,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.606316718907726,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7249544626593807,
+                "0.8": 0.4972677595628415
+              }
+            }
+          },
+          "117092_2": {
+            "listwise": {
+              "rows": 11682,
+              "positives": 531,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6593995451365364,
+              "AUC": 0.9476452417178262,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.506789993003801,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7099811676082862,
+                "0.8": 0.3954802259887006
+              }
+            }
+          },
+          "117093_1": {
+            "listwise": {
+              "rows": 12782,
+              "positives": 581,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6164116921747621,
+              "AUC": 0.9355905479376497,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.561057227844765,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6660929432013769,
+                "0.8": 0.3373493975903614
+              }
+            }
+          },
+          "117093_2": {
+            "listwise": {
+              "rows": 12606,
+              "positives": 573,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6691151674580497,
+              "AUC": 0.9484178833977358,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.720533684077092,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7137870855148342,
+                "0.8": 0.4607329842931937
+              }
+            }
+          },
+          "118576_1": {
+            "listwise": {
+              "rows": 13044,
+              "positives": 594,
+              "prevalence": 0.04553817847286108,
+              "AP": 0.6366487916923528,
+              "AUC": 0.9349859370140495,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.98055023372904,
+              "recall_at_annotation_precision": {
+                "0.5": 0.696969696969697,
+                "0.8": 0.3939393939393939
+              }
+            }
+          },
+          "118576_2": {
+            "listwise": {
+              "rows": 11220,
+              "positives": 510,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6461638045618439,
+              "AUC": 0.9440502737042529,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.215603700360564,
+              "recall_at_annotation_precision": {
+                "0.5": 0.703921568627451,
+                "0.8": 0.4392156862745098
+              }
+            }
+          },
+          "118578_1": {
+            "listwise": {
+              "rows": 12386,
+              "positives": 563,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.7238494495108274,
+              "AUC": 0.9634215393453679,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.924687889238204,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7566607460035524,
+                "0.8": 0.5737122557726465
+              }
+            }
+          },
+          "118578_2": {
+            "listwise": {
+              "rows": 10428,
+              "positives": 474,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6140088435570974,
+              "AUC": 0.9371395338387808,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.508194558256143,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6561181434599156,
+                "0.8": 0.39662447257383965
+              }
+            }
+          },
+          "128057_1": {
+            "listwise": {
+              "rows": 10714,
+              "positives": 487,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6903863000409391,
+              "AUC": 0.9492421417799524,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.188498600900662,
+              "recall_at_annotation_precision": {
+                "0.5": 0.731006160164271,
+                "0.8": 0.4804928131416838
+              }
+            }
+          },
+          "128057_2": {
+            "listwise": {
+              "rows": 10956,
+              "positives": 498,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6752389936718688,
+              "AUC": 0.953787995738932,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.855257860781114,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7248995983935743,
+                "0.8": 0.4497991967871486
+              }
+            }
+          },
+          "132831_1": {
+            "listwise": {
+              "rows": 14168,
+              "positives": 644,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5070180479668482,
+              "AUC": 0.9002233893827584,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.15439705527066,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5217391304347826,
+                "0.8": 0.2608695652173913
+              }
+            }
+          },
+          "132831_2": {
+            "listwise": {
+              "rows": 13310,
+              "positives": 605,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.562825501553422,
+              "AUC": 0.9237608672319416,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 12.382161034175285,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5702479338842975,
+                "0.8": 0.2644628099173554
+              }
+            }
+          }
+        }
+      },
+      "47": {
+        "pooled": {
+          "listwise": {
+            "rows": 145374,
+            "positives": 6609,
+            "prevalence": 0.04546204960997152,
+            "AP": 0.634602272373759,
+            "AUC": 0.9396152570998461,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 13.958945490098781,
+            "recall_at_annotation_precision": {
+              "0.5": 0.6831593281888334,
+              "0.8": 0.4074746557724315
+            },
+            "scene": {
+              "positive_scenes": 6609,
+              "top1": 0.6029656528975639,
+              "top3": 0.794522620668785,
+              "mrr": 0.7212128644247665
+            }
+          }
+        },
+        "macro_match": {
+          "listwise": {
+            "AP": 0.6407260707813555,
+            "brier": null,
+            "NLL": null
+          }
+        },
+        "macro_scene": {
+          "listwise": {
+            "top1": 0.605791243541813,
+            "top3": 0.7964432037723658,
+            "mrr": 0.7233507865507794
+          }
+        },
+        "per_match": {
+          "117092": {
+            "listwise": {
+              "rows": 23760,
+              "positives": 1080,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6620638279606208,
+              "AUC": 0.9491244937618394,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.565404215133658,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7166666666666667,
+                "0.8": 0.43148148148148147
+              },
+              "scene": {
+                "positive_scenes": 1080,
+                "top1": 0.6268518518518519,
+                "top3": 0.8212962962962963,
+                "mrr": 0.7431665839304729
+              }
+            }
+          },
+          "117093": {
+            "listwise": {
+              "rows": 25388,
+              "positives": 1154,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6427973815944719,
+              "AUC": 0.9420964951915244,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.14154239507838,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6967071057192374,
+                "0.8": 0.3925476603119584
+              },
+              "scene": {
+                "positive_scenes": 1154,
+                "top1": 0.6161178509532063,
+                "top3": 0.8084922010398613,
+                "mrr": 0.7318944326321413
+              }
+            }
+          },
+          "118576": {
+            "listwise": {
+              "rows": 24264,
+              "positives": 1104,
+              "prevalence": 0.04549950544015826,
+              "AP": 0.6446553021757324,
+              "AUC": 0.9392985899914896,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.16840240216664,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6983695652173914,
+                "0.8": 0.4266304347826087
+              },
+              "scene": {
+                "positive_scenes": 1104,
+                "top1": 0.615036231884058,
+                "top3": 0.7880434782608695,
+                "mrr": 0.724763444133901
+              }
+            }
+          },
+          "118578": {
+            "listwise": {
+              "rows": 22814,
+              "positives": 1037,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6772363011113797,
+              "AUC": 0.9521420532106166,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.899198624450353,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7135969141755063,
+                "0.8": 0.49373191899710706
+              },
+              "scene": {
+                "positive_scenes": 1037,
+                "top1": 0.6316297010607522,
+                "top3": 0.8071359691417551,
+                "mrr": 0.7428230264477208
+              }
+            }
+          },
+          "128057": {
+            "listwise": {
+              "rows": 21670,
+              "positives": 985,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6857287556999737,
+              "AUC": 0.9526655697193458,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.08603262539942,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7360406091370558,
+                "0.8": 0.4751269035532995
+              },
+              "scene": {
+                "positive_scenes": 985,
+                "top1": 0.6335025380710659,
+                "top3": 0.8203045685279188,
+                "mrr": 0.7446995024152385
+              }
+            }
+          },
+          "132831": {
+            "listwise": {
+              "rows": 27478,
+              "positives": 1249,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5318748561459545,
+              "AUC": 0.911656268474309,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.701246835211,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5380304243394716,
+                "0.8": 0.2433947157726181
+              },
+              "scene": {
+                "positive_scenes": 1249,
+                "top1": 0.5116092874299439,
+                "top3": 0.733386709367494,
+                "mrr": 0.6527577297452021
+              }
+            }
+          }
+        },
+        "censored_rows": 0,
+        "per_half": {
+          "117092_1": {
+            "listwise": {
+              "rows": 12078,
+              "positives": 549,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6617669762826801,
+              "AUC": 0.9495715326883771,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.558873478218961,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7249544626593807,
+                "0.8": 0.48451730418943534
+              }
+            }
+          },
+          "117092_2": {
+            "listwise": {
+              "rows": 11682,
+              "positives": 531,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.663464437505985,
+              "AUC": 0.9486923301280605,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.59621762513167,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7080979284369114,
+                "0.8": 0.3935969868173258
+              }
+            }
+          },
+          "117093_1": {
+            "listwise": {
+              "rows": 12782,
+              "positives": 581,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6152373364562973,
+              "AUC": 0.9352926123687556,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.535221402038541,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6626506024096386,
+                "0.8": 0.3373493975903614
+              }
+            }
+          },
+          "117093_2": {
+            "listwise": {
+              "rows": 12606,
+              "positives": 573,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6710009377424686,
+              "AUC": 0.948672709095943,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.762020630334309,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7347294938917975,
+                "0.8": 0.462478184991274
+              }
+            }
+          },
+          "118576_1": {
+            "listwise": {
+              "rows": 13044,
+              "positives": 594,
+              "prevalence": 0.04553817847286108,
+              "AP": 0.6446384605033736,
+              "AUC": 0.9353442727137505,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.156000132670043,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6986531986531986,
+                "0.8": 0.43265993265993263
+              }
+            }
+          },
+          "118576_2": {
+            "listwise": {
+              "rows": 11220,
+              "positives": 510,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6451985677618685,
+              "AUC": 0.9441928928434119,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.194368490761105,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6980392156862745,
+                "0.8": 0.43333333333333335
+              }
+            }
+          },
+          "118578_1": {
+            "listwise": {
+              "rows": 12386,
+              "positives": 563,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.7293309937233343,
+              "AUC": 0.9639443484709109,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 16.045281861913356,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7637655417406749,
+                "0.8": 0.5896980461811723
+              }
+            }
+          },
+          "118578_2": {
+            "listwise": {
+              "rows": 10428,
+              "positives": 474,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6148675555300153,
+              "AUC": 0.9375123458203094,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 13.527086221660335,
+              "recall_at_annotation_precision": {
+                "0.5": 0.6561181434599156,
+                "0.8": 0.40717299578059074
+              }
+            }
+          },
+          "128057_1": {
+            "listwise": {
+              "rows": 10714,
+              "positives": 487,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.692259904990722,
+              "AUC": 0.9506787303969904,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 15.229717909795884,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7351129363449692,
+                "0.8": 0.4702258726899384
+              }
+            }
+          },
+          "128057_2": {
+            "listwise": {
+              "rows": 10956,
+              "positives": 498,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.6783159827363934,
+              "AUC": 0.9545210868334688,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 14.922951620200655,
+              "recall_at_annotation_precision": {
+                "0.5": 0.7369477911646586,
+                "0.8": 0.42771084337349397
+              }
+            }
+          },
+          "132831_1": {
+            "listwise": {
+              "rows": 14168,
+              "positives": 644,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.5016044804771593,
+              "AUC": 0.900745178573725,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 11.035298570497504,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5077639751552795,
+                "0.8": 0.2391304347826087
+              }
+            }
+          },
+          "132831_2": {
+            "listwise": {
+              "rows": 13310,
+              "positives": 605,
+              "prevalence": 0.045454545454545456,
+              "AP": 0.564419767395532,
+              "AUC": 0.9235934313620264,
+              "brier": null,
+              "NLL": null,
+              "AP_over_prevalence": 12.417234882701704,
+              "recall_at_annotation_precision": {
+                "0.5": 0.5851239669421487,
+                "0.8": 0.2512396694214876
+              }
+            }
+          }
+        }
+      }
+    },
+    "conditional_NLL": {
+      "hgb": 1.4042089722657651,
+      "listwise_ensemble": 1.4293044329637374
+    },
+    "switch_only": {
+      "pooled": {
+        "hgb": {
+          "rows": 64407,
+          "positives": 2928,
+          "prevalence": 0.045460897107457265,
+          "AP": 0.1930457039285344,
+          "AUC": 0.8463364795051526,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 4.2464121082394515,
+          "recall_at_annotation_precision": {
+            "0.5": 0.0,
+            "0.8": 0.0
+          },
+          "scene": {
+            "positive_scenes": 2928,
+            "top1": 0.21584699453551912,
+            "top3": 0.5860655737704918,
+            "mrr": 0.44615820153622926
+          }
+        },
+        "listwise_ensemble": {
+          "rows": 64407,
+          "positives": 2928,
+          "prevalence": 0.045460897107457265,
+          "AP": 0.2032944883189678,
+          "AUC": 0.8498307698830387,
+          "brier": null,
+          "NLL": null,
+          "AP_over_prevalence": 4.47185386241795,
+          "recall_at_annotation_precision": {
+            "0.5": 0.0,
+            "0.8": 0.0
+          },
+          "scene": {
+            "positive_scenes": 2928,
+            "top1": 0.2465846994535519,
+            "top3": 0.585724043715847,
+            "mrr": 0.46265700574126006
+          }
+        }
+      },
+      "macro_match": {
+        "hgb": {
+          "AP": 0.19955522431779416,
+          "brier": null,
+          "NLL": null
+        },
+        "listwise_ensemble": {
+          "AP": 0.2102837012166057,
+          "brier": null,
+          "NLL": null
+        }
+      },
+      "macro_scene": {
+        "hgb": {
+          "top1": 0.2182498736193431,
+          "top3": 0.5906025028881735,
+          "mrr": 0.4491089029288174
+        },
+        "listwise_ensemble": {
+          "top1": 0.24901895144675776,
+          "top3": 0.5890771664116835,
+          "mrr": 0.46504776744361304
+        }
+      },
+      "per_match": {
+        "117092": {
+          "hgb": {
+            "rows": 9614,
+            "positives": 437,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.21277131648213943,
+            "AUC": 0.8640476178008448,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.680968962607067,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 437,
+              "top1": 0.2128146453089245,
+              "top3": 0.6361556064073226,
+              "mrr": 0.46106929967476473
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 9614,
+            "positives": 437,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.21178848083768673,
+            "AUC": 0.8602291222035787,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.6593465784291075,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 437,
+              "top1": 0.2517162471395881,
+              "top3": 0.6155606407322655,
+              "mrr": 0.47521913407631544
+            }
+          }
+        },
+        "117093": {
+          "hgb": {
+            "rows": 11506,
+            "positives": 523,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.21389599581522128,
+            "AUC": 0.8668569833894167,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.705711907934868,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0019120458891013384,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 523,
+              "top1": 0.2638623326959847,
+              "top3": 0.6290630975143403,
+              "mrr": 0.48353911222683016
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 11506,
+            "positives": 523,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.22575250947790168,
+            "AUC": 0.8618708314901405,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.966555208513837,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0038240917782026767,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 523,
+              "top1": 0.27724665391969405,
+              "top3": 0.6309751434034416,
+              "mrr": 0.4907039264113834
+            }
+          }
+        },
+        "118576": {
+          "hgb": {
+            "rows": 10991,
+            "positives": 500,
+            "prevalence": 0.045491765990355745,
+            "AP": 0.2149397022132188,
+            "AUC": 0.8525533314269375,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.724804534050976,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 500,
+              "top1": 0.23,
+              "top3": 0.584,
+              "mrr": 0.4520951138300983
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 10991,
+            "positives": 500,
+            "prevalence": 0.045491765990355745,
+            "AP": 0.22939418661200003,
+            "AUC": 0.8541239157372986,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.042543010104985,
+            "recall_at_annotation_precision": {
+              "0.5": 0.008,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 500,
+              "top1": 0.264,
+              "top3": 0.574,
+              "mrr": 0.46818157809682576
+            }
+          }
+        },
+        "118578": {
+          "hgb": {
+            "rows": 9922,
+            "positives": 451,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20876473277141216,
+            "AUC": 0.8658721535526468,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.592824120971067,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0022172949002217295,
+              "0.8": 0.0022172949002217295
+            },
+            "scene": {
+              "positive_scenes": 451,
+              "top1": 0.22394678492239467,
+              "top3": 0.6097560975609756,
+              "mrr": 0.45909634503737395
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 9922,
+            "positives": 451,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2258716718441713,
+            "AUC": 0.8695485647516366,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.969176780571769,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 451,
+              "top1": 0.2616407982261641,
+              "top3": 0.5964523281596452,
+              "mrr": 0.47985835985834274
+            }
+          }
+        },
+        "128057": {
+          "hgb": {
+            "rows": 9042,
+            "positives": 411,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2082305939441309,
+            "AUC": 0.868206918928854,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.581073066770879,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 411,
+              "top1": 0.22871046228710462,
+              "top3": 0.5912408759124088,
+              "mrr": 0.45883222279207686
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 9042,
+            "positives": 411,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.21158946016516098,
+            "AUC": 0.8628409278950064,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.654968123633541,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0072992700729927005,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 411,
+              "top1": 0.25304136253041365,
+              "top3": 0.6009732360097324,
+              "mrr": 0.46773444619086524
+            }
+          }
+        },
+        "132831": {
+          "hgb": {
+            "rows": 13332,
+            "positives": 606,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.13872900468064248,
+            "AUC": 0.7957721750487166,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.0520381029741346,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 606,
+              "top1": 0.15016501650165018,
+              "top3": 0.4933993399339934,
+              "mrr": 0.3800213240117602
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 13332,
+            "positives": 606,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.15730589836271358,
+            "AUC": 0.8099125565550426,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.460729763979699,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 606,
+              "top1": 0.18646864686468648,
+              "top3": 0.5165016501650165,
+              "mrr": 0.40858916002794554
+            }
+          }
+        }
+      },
+      "censored_rows": 0,
+      "per_half": {
+        "117092_1": {
+          "hgb": {
+            "rows": 4950,
+            "positives": 225,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.22985167699085257,
+            "AUC": 0.8724510288065843,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.056736893798757,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4950,
+            "positives": 225,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.226583904899677,
+            "AUC": 0.8662885361552028,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.984845907792894,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          }
+        },
+        "117092_2": {
+          "hgb": {
+            "rows": 4664,
+            "positives": 212,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20241230217819964,
+            "AUC": 0.8553459119496857,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.453070647920392,
+            "recall_at_annotation_precision": {
+              "0.5": 0.07075471698113207,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4664,
+            "positives": 212,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20333454085095026,
+            "AUC": 0.8542429520758109,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.473359898720906,
+            "recall_at_annotation_precision": {
+              "0.5": 0.014150943396226415,
+              "0.8": 0.0
+            }
+          }
+        },
+        "117093_1": {
+          "hgb": {
+            "rows": 5830,
+            "positives": 265,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20668752329171494,
+            "AUC": 0.8615192663038872,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.547125512417729,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 5830,
+            "positives": 265,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2045251380258782,
+            "AUC": 0.8535591381443999,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.499553036569321,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0037735849056603774,
+              "0.8": 0.0
+            }
+          }
+        },
+        "117093_2": {
+          "hgb": {
+            "rows": 5676,
+            "positives": 258,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.22570861061611852,
+            "AUC": 0.8723069240916725,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.965589433554607,
+            "recall_at_annotation_precision": {
+              "0.5": 0.003875968992248062,
+              "0.8": 0.003875968992248062
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 5676,
+            "positives": 258,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2510491850946493,
+            "AUC": 0.8700462998732333,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.523082072082285,
+            "recall_at_annotation_precision": {
+              "0.5": 0.015503875968992248,
+              "0.8": 0.0
+            }
+          }
+        },
+        "118576_1": {
+          "hgb": {
+            "rows": 5997,
+            "positives": 273,
+            "prevalence": 0.04552276138069034,
+            "AP": 0.22640293558746663,
+            "AUC": 0.8509153029593282,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.973400749882921,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 5997,
+            "positives": 273,
+            "prevalence": 0.04552276138069034,
+            "AP": 0.23878751822909167,
+            "AUC": 0.8504126318591728,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.245453285054443,
+            "recall_at_annotation_precision": {
+              "0.5": 0.01098901098901099,
+              "0.8": 0.0
+            }
+          }
+        },
+        "118576_2": {
+          "hgb": {
+            "rows": 4994,
+            "positives": 227,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.20403821258769306,
+            "AUC": 0.8543658725692143,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.4888406769292475,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4994,
+            "positives": 227,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.22223836547003553,
+            "AUC": 0.8591703793240791,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.889244040340782,
+            "recall_at_annotation_precision": {
+              "0.5": 0.039647577092511016,
+              "0.8": 0.0
+            }
+          }
+        },
+        "118578_1": {
+          "hgb": {
+            "rows": 4972,
+            "positives": 226,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.23118131131138434,
+            "AUC": 0.8827396335619376,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.085988848850455,
+            "recall_at_annotation_precision": {
+              "0.5": 0.004424778761061947,
+              "0.8": 0.004424778761061947
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4972,
+            "positives": 226,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2633419499062055,
+            "AUC": 0.8900760398136857,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.793522897936521,
+            "recall_at_annotation_precision": {
+              "0.5": 0.01327433628318584,
+              "0.8": 0.0
+            }
+          }
+        },
+        "118578_2": {
+          "hgb": {
+            "rows": 4950,
+            "positives": 225,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.18882647708452074,
+            "AUC": 0.8482995884773662,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.154182495859456,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4950,
+            "positives": 225,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.195058453551636,
+            "AUC": 0.8480065843621398,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.291285978135992,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          }
+        },
+        "128057_1": {
+          "hgb": {
+            "rows": 4202,
+            "positives": 191,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.18815485599771897,
+            "AUC": 0.8540518808877681,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.139406831949818,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4202,
+            "positives": 191,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.1931210462645008,
+            "AUC": 0.8487118539200444,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.248663017819018,
+            "recall_at_annotation_precision": {
+              "0.5": 0.005235602094240838,
+              "0.8": 0.005235602094240838
+            }
+          }
+        },
+        "128057_2": {
+          "hgb": {
+            "rows": 4840,
+            "positives": 220,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.22886008742750055,
+            "AUC": 0.8799193231011412,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.034921923405012,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 4840,
+            "positives": 220,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.2313710182544523,
+            "AUC": 0.8743988587170406,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.090162401597951,
+            "recall_at_annotation_precision": {
+              "0.5": 0.00909090909090909,
+              "0.8": 0.0
+            }
+          }
+        },
+        "132831_1": {
+          "hgb": {
+            "rows": 7062,
+            "positives": 321,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11992602403939343,
+            "AUC": 0.7749180746822462,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.6383725288666553,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 7062,
+            "positives": 321,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.1410488025152327,
+            "AUC": 0.7889624148686075,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.1030736553351193,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          }
+        },
+        "132831_2": {
+          "hgb": {
+            "rows": 6270,
+            "positives": 285,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16614742417624645,
+            "AUC": 0.8188201497896789,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.655243331877422,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            }
+          },
+          "listwise_ensemble": {
+            "rows": 6270,
+            "positives": 285,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.18202322921395125,
+            "AUC": 0.8341977751396034,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.004511042706928,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0035087719298245615,
+              "0.8": 0.0035087719298245615
+            }
+          }
+        }
+      }
+    },
+    "training": [
+      {
+        "fingerprint": "71f7cf9f695156a638cedd026b9aa9679b995ed3b47b36060fd62641f05506b9",
+        "sha256": "2cb583e713025c0b5362f58296449a5af02c311caf83fca1fe39aed5117d6ba9",
+        "held": "117092",
+        "seed": 11,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3659660816192627,
+        "seconds": 0.798848700011149,
+        "train_scenes": 5529,
+        "test_scenes": 1080,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "a146c44627a2e68464756faaf323af7722433344fb779b17a579d30b5f73e33b",
+        "sha256": "05587e77e3461ac89ad30aba1d2a5c621f0f68f55f6ac5edda368224ea618a5a",
+        "held": "117093",
+        "seed": 11,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.366502046585083,
+        "seconds": 0.6878245000261813,
+        "train_scenes": 5455,
+        "test_scenes": 1154,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "295de33ec7778ec90b6ffad0fc893e12f8673e4615681c0ae59e7b4ab9479125",
+        "sha256": "68a161541c6448a34e7d89fd84f4a026e8e0ebcc65c01e6fef360a653ce188c3",
+        "held": "118576",
+        "seed": 11,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3661551475524902,
+        "seconds": 0.6734519000165164,
+        "train_scenes": 5505,
+        "test_scenes": 1104,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "a971d8d79b84106a7e72c3a877116423b802adf269fd11c1c7ed558da94061d7",
+        "sha256": "b9270172898a4eb9e2518673366496753868f11a5c02f42570db1b00690ffe49",
+        "held": "118578",
+        "seed": 11,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.372051477432251,
+        "seconds": 0.6931981000234373,
+        "train_scenes": 5572,
+        "test_scenes": 1037,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "8456bffdff6e427d85b0925d39b4829f39f6f5f186a32d150b912b45e4af3bc5",
+        "sha256": "1626bf6ef21ef77996b2da54d4d2f89509b194bbaafe56109d44bd5d6262797b",
+        "held": "128057",
+        "seed": 11,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3662761449813843,
+        "seconds": 0.6921496999566443,
+        "train_scenes": 5624,
+        "test_scenes": 985,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "e4d13c7b6e42a852bd98c6b16aef59a0e8ad3206ed70258f06747a2552e57d7d",
+        "sha256": "a5c6500ab54b7531dfbdf1394998b718adafc6d3dcf21346a2fca1a5777aa2b6",
+        "held": "132831",
+        "seed": 11,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.372477650642395,
+        "seconds": 0.6686318999854848,
+        "train_scenes": 5360,
+        "test_scenes": 1249,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "b918ec74b0636ecfc85b3b47c7424cde439e40117565aaa60cf3b8ec3db7b1d0",
+        "sha256": "aa6ab09f87db6991045728104b4de44b2c68e25c010fce25b6a3d9f681fb052a",
+        "held": "117092",
+        "seed": 29,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3644330501556396,
+        "seconds": 0.661108200030867,
+        "train_scenes": 5529,
+        "test_scenes": 1080,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "4186eb2e936e5e39a7c8fc746e713203e606ace3e5b22b77750023c33116b785",
+        "sha256": "98e85fe49170526ab815b56d99fdfce70d5a7e0af22dab5f9b52970e77a5db84",
+        "held": "117093",
+        "seed": 29,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3651504516601562,
+        "seconds": 0.6421068999916315,
+        "train_scenes": 5455,
+        "test_scenes": 1154,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "5d3e91dec57adcdedc1ffcec26f4b8497b25c54cdf8a6586a57c6c7cdaa84863",
+        "sha256": "d9cc53a6853ce65805dbe248f1a78be34204f6ce19ce75489d4fa5d6b205cc31",
+        "held": "118576",
+        "seed": 29,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3688225746154785,
+        "seconds": 0.6512050000019372,
+        "train_scenes": 5505,
+        "test_scenes": 1104,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "79ba097c49da1600a0833b47f871af89500ee4764df2a406e031f9d8b82ce85c",
+        "sha256": "2d49b71f5af0b9b8f2e2ef7054ccdea7626541c56dbdefe1761567dfaf70ae7f",
+        "held": "118578",
+        "seed": 29,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3713409900665283,
+        "seconds": 0.6640290999785066,
+        "train_scenes": 5572,
+        "test_scenes": 1037,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "507eb7702096e573d1f88b30169a5537a888dbfdcfb7e9a6b891cae4297a6a78",
+        "sha256": "df862780d5301913cb3b7a72d54356a6a39ff2f0256f9387a1c53ab89e9c3c32",
+        "held": "128057",
+        "seed": 29,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.363430142402649,
+        "seconds": 0.6759974000160582,
+        "train_scenes": 5624,
+        "test_scenes": 985,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "33552d388435f6bf10c3ec44eb1661c5d74e4457c12db17ad919d2ffbaeae2ac",
+        "sha256": "a64f023bd35967689e7ac3b3ee38359efa7a1a9917481071854ca597ceb61680",
+        "held": "132831",
+        "seed": 29,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3660205602645874,
+        "seconds": 0.7217642000177875,
+        "train_scenes": 5360,
+        "test_scenes": 1249,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "f9bfca6290b0b02d31a57c00b8fdafabace06058c0385441cbce72f595db38d5",
+        "sha256": "d54f5a8ad9f30e76f1e4b76ee118ad0fe713f6d8f5d3803a64fb0bb8f8ffffba",
+        "held": "117092",
+        "seed": 47,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3645672798156738,
+        "seconds": 0.6811413999530487,
+        "train_scenes": 5529,
+        "test_scenes": 1080,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "dc98e323af99f8da68e4c5f77cd33b808df25f9b9ea1694bf4cec52410ffe7ad",
+        "sha256": "0133b2df3a21822dab63322e29b5de32d19792eded084d43b25aeb50558a2d0a",
+        "held": "117093",
+        "seed": 47,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.363174557685852,
+        "seconds": 0.6958086999948137,
+        "train_scenes": 5455,
+        "test_scenes": 1154,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "61b46c0eb26d7c43a97f359242749243a63921bd1b09b982d7d9a76dcca023a4",
+        "sha256": "797509b9a256467d0d4c525004568f7fadb0daf36d1006c12daa44c2e22d321c",
+        "held": "118576",
+        "seed": 47,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.366614818572998,
+        "seconds": 0.6755004999577068,
+        "train_scenes": 5505,
+        "test_scenes": 1104,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "be29aab696b3ba3c4b86e84a9918b43751e47cd44bddaf0e9a43a29886268e75",
+        "sha256": "54cd059e00b0b1e8d283c6212604cd761f86c252972f0c40b878f77bb497dd53",
+        "held": "118578",
+        "seed": 47,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3702988624572754,
+        "seconds": 0.6840480999671854,
+        "train_scenes": 5572,
+        "test_scenes": 1037,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "93525e529877ed58d42ff7729909a4c0fd952b077aabfbfddebd7a55b42b2704",
+        "sha256": "d1b5940f0e91bed942e1283dfbb76c7427a5efabfe43fcef69192fe44eac4520",
+        "held": "128057",
+        "seed": 47,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3619086742401123,
+        "seconds": 0.6842336999834515,
+        "train_scenes": 5624,
+        "test_scenes": 985,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      },
+      {
+        "fingerprint": "befc08ac8d98e077b004a5d148681b3c66125049319998084a72cd198a9d52a6",
+        "sha256": "e37636d2f32d1c320654257603ce5b0760b6b4fa89870a77d7da8610f5608bd7",
+        "held": "132831",
+        "seed": 47,
+        "steps": 275,
+        "epochs": 25,
+        "selected_epoch": 25,
+        "development_NLL": 1.3678592443466187,
+        "seconds": 0.7146378000034019,
+        "train_scenes": 5360,
+        "test_scenes": 1249,
+        "development_scenes": 1195,
+        "gpu": "NVIDIA RTX A5000",
+        "peak_GPU_allocated_MB": 224.812544,
+        "parameters": 4417
+      }
+    ],
+    "scope": "Conditional on supported future occurrence for this diagnostic; not unconditional anticipation."
+  }
+}

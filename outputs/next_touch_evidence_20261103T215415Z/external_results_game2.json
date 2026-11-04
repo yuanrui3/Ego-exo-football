@@ -1,0 +1,679 @@
+{
+  "status": "COMPLETE",
+  "mapping_revision": 2,
+  "claim": "INDEPENDENT_DOMAIN_PILOT_NOT_SEALED",
+  "sample": "Metrica Game2, frozen pretrained SoccerTrack six-match models, no Metrica fitting/selection",
+  "source_rows": 141156,
+  "player_slots": 26,
+  "event_count": 1935,
+  "censoring": {
+    "missing_ball": 2332,
+    "missing_future": 340,
+    "target_not_current_roster": 0,
+    "tie": 289
+  },
+  "results": {
+    "geometry_1s": {
+      "external_target": "geometry_1s",
+      "rows": 66836,
+      "scenes": 3038,
+      "positive_rows": 3038,
+      "models": {
+        "state": {
+          "all": {
+            "rows": 66836,
+            "positives": 3038,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.5077719680773042,
+            "AUC": 0.947992025253505,
+            "brier": 0.029608453175694875,
+            "NLL": 0.10180241161565672,
+            "AP_over_prevalence": 11.170983297700692,
+            "recall_at_annotation_precision": {
+              "0.5": 0.5085582620144832,
+              "0.8": 0.016129032258064516
+            },
+            "scene": {
+              "positive_scenes": 3038,
+              "top1": 0.5829493087557603,
+              "top3": 0.8235681369321922,
+              "mrr": 0.7214038868745911
+            }
+          },
+          "switch_only": {
+            "rows": 33528,
+            "positives": 1524,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16936903654801036,
+            "AUC": 0.8812734940284697,
+            "brier": 0.044615848709362305,
+            "NLL": 0.14947454571761223,
+            "AP_over_prevalence": 3.726118804056228,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1524,
+              "top1": 0.18963254593175852,
+              "top3": 0.6482939632545932,
+              "mrr": 0.45513451989829945
+            }
+          }
+        },
+        "kinematic": {
+          "all": {
+            "rows": 66836,
+            "positives": 3038,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.6518424057065201,
+            "AUC": 0.962083383818756,
+            "brier": 0.024067150487888683,
+            "NLL": 0.0861165913286382,
+            "AP_over_prevalence": 14.34053292554344,
+            "recall_at_annotation_precision": {
+              "0.5": 0.7439104674127716,
+              "0.8": 0.29822251481237655
+            },
+            "scene": {
+              "positive_scenes": 3038,
+              "top1": 0.6596445029624753,
+              "top3": 0.8614219881500987,
+              "mrr": 0.7746222869068781
+            }
+          },
+          "switch_only": {
+            "rows": 33528,
+            "positives": 1524,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.26618818941106154,
+            "AUC": 0.9112444134279803,
+            "brier": 0.04079397604773584,
+            "NLL": 0.13899828271394976,
+            "AP_over_prevalence": 5.856140167043353,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1524,
+              "top1": 0.33989501312335957,
+              "top3": 0.723753280839895,
+              "mrr": 0.5602378658944198
+            }
+          }
+        },
+        "nearest": {
+          "all": {
+            "rows": 66836,
+            "positives": 3038,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.4313114152891687,
+            "AUC": 0.9213101620876674,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 9.488851136361712,
+            "recall_at_annotation_precision": {
+              "0.5": 0.42560895325872283,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3038,
+              "top1": 0.49835418038183016,
+              "top3": 0.7307439104674127,
+              "mrr": 0.6449744198361685
+            }
+          },
+          "switch_only": {
+            "rows": 33528,
+            "positives": 1524,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11866360424091477,
+            "AUC": 0.8284292752447939,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.6105992933001247,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1524,
+              "top1": 0.0,
+              "top3": 0.463254593175853,
+              "mrr": 0.2922784038466403
+            }
+          }
+        },
+        "closest_approach": {
+          "all": {
+            "rows": 66836,
+            "positives": 3038,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.3645835621972565,
+            "AUC": 0.9425782517859354,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 8.020838368339643,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 3038,
+              "top1": 0.6359447004608295,
+              "top3": 0.8331138907175774,
+              "mrr": 0.7528474875898481
+            }
+          },
+          "switch_only": {
+            "rows": 33528,
+            "positives": 1524,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16898925979831342,
+            "AUC": 0.8777039147993639,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 3.7177637155628953,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1524,
+              "top1": 0.33989501312335957,
+              "top3": 0.6745406824146981,
+              "mrr": 0.5440894579820374
+            }
+          }
+        },
+        "constant_velocity": {
+          "all": {
+            "rows": 66836,
+            "positives": 3038,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.45741020629225687,
+            "AUC": 0.9391291919333699,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 10.063024538429651,
+            "recall_at_annotation_precision": {
+              "0.5": 0.46807109940750496,
+              "0.8": 0.004279131007241606
+            },
+            "scene": {
+              "positive_scenes": 3038,
+              "top1": 0.6224489795918368,
+              "top3": 0.8354180381830152,
+              "mrr": 0.7461542506014922
+            }
+          },
+          "switch_only": {
+            "rows": 33528,
+            "positives": 1524,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.24421108205370448,
+            "AUC": 0.9025552621211061,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 5.372643805181498,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 1524,
+              "top1": 0.4048556430446194,
+              "top3": 0.7139107611548556,
+              "mrr": 0.5913951812234095
+            }
+          }
+        }
+      }
+    },
+    "geometry_2s": {
+      "external_target": "geometry_2s",
+      "rows": 64790,
+      "scenes": 2945,
+      "positive_rows": 2945,
+      "models": {
+        "state": {
+          "all": {
+            "rows": 64790,
+            "positives": 2945,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.24832554594436512,
+            "AUC": 0.8650971642919667,
+            "brier": 0.038154952399281614,
+            "NLL": 0.14135666642427516,
+            "AP_over_prevalence": 5.463162010776032,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0499151103565365,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2945,
+              "top1": 0.3606112054329372,
+              "top3": 0.5887945670628183,
+              "mrr": 0.5233573394272906
+            }
+          },
+          "switch_only": {
+            "rows": 45694,
+            "positives": 2077,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11010324507549238,
+            "AUC": 0.7991018937338407,
+            "brier": 0.043633063691239496,
+            "NLL": 0.1654407989538728,
+            "AP_over_prevalence": 2.422271391660832,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2077,
+              "top1": 0.12518054886856042,
+              "top3": 0.4212806933076553,
+              "mrr": 0.3420291321475752
+            }
+          }
+        },
+        "kinematic": {
+          "all": {
+            "rows": 64790,
+            "positives": 2945,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.352769092410377,
+            "AUC": 0.8879756843228066,
+            "brier": 0.03523509655784146,
+            "NLL": 0.1306959001372268,
+            "AP_over_prevalence": 7.760920033028294,
+            "recall_at_annotation_precision": {
+              "0.5": 0.2624787775891341,
+              "0.8": 0.012224108658743633
+            },
+            "scene": {
+              "positive_scenes": 2945,
+              "top1": 0.40237691001697795,
+              "top3": 0.635314091680815,
+              "mrr": 0.561941007984349
+            }
+          },
+          "switch_only": {
+            "rows": 45694,
+            "positives": 2077,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.16224840973787175,
+            "AUC": 0.8337597648388345,
+            "brier": 0.042600207211639374,
+            "NLL": 0.15753724220605048,
+            "AP_over_prevalence": 3.5694650142331783,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2077,
+              "top1": 0.182956186807896,
+              "top3": 0.4872412132883967,
+              "mrr": 0.3960558185751442
+            }
+          }
+        },
+        "nearest": {
+          "all": {
+            "rows": 64790,
+            "positives": 2945,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.19738868179026609,
+            "AUC": 0.8266745400112361,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.342550999385853,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2945,
+              "top1": 0.29473684210526313,
+              "top3": 0.4869269949066214,
+              "mrr": 0.45450437029002
+            }
+          },
+          "switch_only": {
+            "rows": 45694,
+            "positives": 2077,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.08152629748603642,
+            "AUC": 0.7440281127438474,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 1.7935785446928012,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2077,
+              "top1": 0.0,
+              "top3": 0.2725084256138662,
+              "mrr": 0.22653604742614775
+            }
+          }
+        },
+        "closest_approach": {
+          "all": {
+            "rows": 64790,
+            "positives": 2945,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.19535090699968485,
+            "AUC": 0.8592294664038376,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.297719953993067,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2945,
+              "top1": 0.3962648556876061,
+              "top3": 0.599320882852292,
+              "mrr": 0.5450286245400885
+            }
+          },
+          "switch_only": {
+            "rows": 45694,
+            "positives": 2077,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.10684332849585398,
+            "AUC": 0.7915633454858834,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.3505532269087874,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2077,
+              "top1": 0.1868078960038517,
+              "top3": 0.43716899374097257,
+              "mrr": 0.37969133803811783
+            }
+          }
+        },
+        "constant_velocity": {
+          "all": {
+            "rows": 64790,
+            "positives": 2945,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.1954408913619442,
+            "AUC": 0.824106698643207,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 4.299699609962772,
+            "recall_at_annotation_precision": {
+              "0.5": 0.01799660441426146,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2945,
+              "top1": 0.33548387096774196,
+              "top3": 0.5724957555178268,
+              "mrr": 0.5036882871199969
+            }
+          },
+          "switch_only": {
+            "rows": 45694,
+            "positives": 2077,
+            "prevalence": 0.045454545454545456,
+            "AP": 0.11500828328238699,
+            "AUC": 0.7912376839016568,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 2.5301822322125136,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 2077,
+              "top1": 0.19402985074626866,
+              "top3": 0.45690900337024554,
+              "mrr": 0.38966125044784355
+            }
+          }
+        }
+      }
+    },
+    "next_BAS_0_1s": {
+      "external_target": "next_pass_actor_0_1s",
+      "rows": 72732,
+      "scenes": 3306,
+      "positive_rows": 853,
+      "models": {
+        "state": {
+          "all": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.27256496850683753,
+            "AUC": 0.974503499571794,
+            "brier": 0.009482035762469757,
+            "NLL": 0.03366519669441496,
+            "AP_over_prevalence": 23.24055719746695,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8112543962485346,
+              "top3": 0.9519343493552169,
+              "mrr": 0.8849213750298158
+            }
+          },
+          "switch_only": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.27256496850683753,
+            "AUC": 0.974503499571794,
+            "brier": 0.009482035762469757,
+            "NLL": 0.03366519669441496,
+            "AP_over_prevalence": 23.24055719746695,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8112543962485346,
+              "top3": 0.9519343493552169,
+              "mrr": 0.8849213750298158
+            }
+          }
+        },
+        "kinematic": {
+          "all": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.3232484354935395,
+            "AUC": 0.9802532708226099,
+            "brier": 0.009017055033965717,
+            "NLL": 0.030807565940011567,
+            "AP_over_prevalence": 27.562139754180674,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0035169988276670576,
+              "0.8": 0.0011723329425556857
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8628370457209847,
+              "top3": 0.9683470105509965,
+              "mrr": 0.9176960565390673
+            }
+          },
+          "switch_only": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.3232484354935395,
+            "AUC": 0.9802532708226099,
+            "brier": 0.009017055033965717,
+            "NLL": 0.030807565940011567,
+            "AP_over_prevalence": 27.562139754180674,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0035169988276670576,
+              "0.8": 0.0011723329425556857
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8628370457209847,
+              "top3": 0.9683470105509965,
+              "mrr": 0.9176960565390673
+            }
+          }
+        },
+        "nearest": {
+          "all": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.3184072958626924,
+            "AUC": 0.9722155918307872,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 27.149354563523264,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8229777256740914,
+              "top3": 0.9261430246189918,
+              "mrr": 0.8821972868866187
+            }
+          },
+          "switch_only": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.3184072958626924,
+            "AUC": 0.9722155918307872,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 27.149354563523264,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8229777256740914,
+              "top3": 0.9261430246189918,
+              "mrr": 0.8821972868866187
+            }
+          }
+        },
+        "closest_approach": {
+          "all": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.18356794474766486,
+            "AUC": 0.9685397109741563,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 15.652126327534772,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8558030480656507,
+              "top3": 0.9577960140679953,
+              "mrr": 0.909928678952866
+            }
+          },
+          "switch_only": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.18356794474766486,
+            "AUC": 0.9685397109741563,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 15.652126327534772,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.8558030480656507,
+              "top3": 0.9577960140679953,
+              "mrr": 0.909928678952866
+            }
+          }
+        },
+        "constant_velocity": {
+          "all": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.2956236644287147,
+            "AUC": 0.9587006459190965,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 25.206682721253546,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.7678780773739742,
+              "top3": 0.917936694021102,
+              "mrr": 0.8511648602797488
+            }
+          },
+          "switch_only": {
+            "rows": 72732,
+            "positives": 853,
+            "prevalence": 0.011727987680800748,
+            "AP": 0.2956236644287147,
+            "AUC": 0.9587006459190965,
+            "brier": null,
+            "NLL": null,
+            "AP_over_prevalence": 25.206682721253546,
+            "recall_at_annotation_precision": {
+              "0.5": 0.0,
+              "0.8": 0.0
+            },
+            "scene": {
+              "positive_scenes": 853,
+              "top1": 0.7678780773739742,
+              "top3": 0.917936694021102,
+              "mrr": 0.8511648602797488
+            }
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "Anonymous domain sample, not a population generalization guarantee.",
+    "Source PASS differs from SoccerTrack contact-like BAS taxonomy; task names separate.",
+    "Provided events synchronized by source; no independent visual physical-contact adjudication.",
+    "Unknown velocity channels are explicitly zeroed, no future imputation.",
+    "Mapping revision2 repairs Game1 source-denominator and pitch-mask mismatches after Game1 revision1 outcomes were seen; Game2 mapping was frozen before download.",
+    "External cohort conditions on available current ball and current roster; not a full-game missing-ball deployment score."
+  ]
+}

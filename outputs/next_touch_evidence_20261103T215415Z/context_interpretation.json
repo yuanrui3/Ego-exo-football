@@ -1,0 +1,164 @@
+{
+  "per_match": {
+    "117092": {
+      "baseline_AP": 0.24194480942216545,
+      "permutation_AP_drop": {
+        "state": 0.04988337725357117,
+        "relative_dynamics": 0.15592681177951964,
+        "current_competition": 0.09258782809589669,
+        "same_team_pressure": 0.016101366753918045,
+        "opponent_pressure": 0.09546175587759914,
+        "corridors": 0.03803566168215261,
+        "field_and_team_quality": 0.004545011098894075
+      },
+      "opponent_distance_partial_dependence": {
+        "1": 0.011055737691945237,
+        "2": 0.011055737691945237,
+        "4": 0.011025597948688317,
+        "8": 0.017041492911417586,
+        "16": 0.03041416671338211
+      },
+      "held": "117092",
+      "features": 53,
+      "train_rows": 612141,
+      "test_rows": 117801,
+      "seconds": 6.492058600008022,
+      "seed": 42
+    },
+    "117093": {
+      "baseline_AP": 0.25489891418595934,
+      "permutation_AP_drop": {
+        "state": 0.05735097480433285,
+        "relative_dynamics": 0.17201711847587958,
+        "current_competition": 0.09709755127532371,
+        "same_team_pressure": 0.012119333461984794,
+        "opponent_pressure": 0.09948908447581731,
+        "corridors": 0.04317721191331966,
+        "field_and_team_quality": 0.006197934257631044
+      },
+      "opponent_distance_partial_dependence": {
+        "1": 0.011437079318940573,
+        "2": 0.011437079318940573,
+        "4": 0.011374564208005727,
+        "8": 0.017836373656965717,
+        "16": 0.03209231381178048
+      },
+      "held": "117093",
+      "features": 53,
+      "train_rows": 608858,
+      "test_rows": 121084,
+      "seconds": 6.540167999977712,
+      "seed": 42
+    },
+    "118576": {
+      "baseline_AP": 0.2524811844442848,
+      "permutation_AP_drop": {
+        "state": 0.05273093475843138,
+        "relative_dynamics": 0.1699221174816025,
+        "current_competition": 0.08936677645924587,
+        "same_team_pressure": 0.02540919563087518,
+        "opponent_pressure": 0.0945970167105398,
+        "corridors": 0.0352388735955291,
+        "field_and_team_quality": 0.01096599917260549
+      },
+      "opponent_distance_partial_dependence": {
+        "1": 0.01153232200646323,
+        "2": 0.01153232200646323,
+        "4": 0.011635793367180578,
+        "8": 0.018101992990988088,
+        "16": 0.031370409267824605
+      },
+      "held": "118576",
+      "features": 53,
+      "train_rows": 602864,
+      "test_rows": 127078,
+      "seconds": 7.102770299999975,
+      "seed": 42
+    },
+    "118578": {
+      "baseline_AP": 0.2456304266904998,
+      "permutation_AP_drop": {
+        "state": 0.04288236337557849,
+        "relative_dynamics": 0.17300858007302689,
+        "current_competition": 0.07863698520362092,
+        "same_team_pressure": 0.018961794987875785,
+        "opponent_pressure": 0.09299290752010023,
+        "corridors": 0.03500371657885387,
+        "field_and_team_quality": 0.003873365555722069
+      },
+      "opponent_distance_partial_dependence": {
+        "1": 0.011662420848015689,
+        "2": 0.011616873892393874,
+        "4": 0.011663804815455446,
+        "8": 0.018981949259135433,
+        "16": 0.03075477434875658
+      },
+      "held": "118578",
+      "features": 53,
+      "train_rows": 606020,
+      "test_rows": 123922,
+      "seconds": 7.739040299959015,
+      "seed": 42
+    },
+    "128057": {
+      "baseline_AP": 0.2396588680535405,
+      "permutation_AP_drop": {
+        "state": 0.04589773522754906,
+        "relative_dynamics": 0.15866399713107932,
+        "current_competition": 0.10581391908695253,
+        "same_team_pressure": 0.01580186140178308,
+        "opponent_pressure": 0.08814805945190973,
+        "corridors": 0.03992154644582421,
+        "field_and_team_quality": 0.006744341775933194
+      },
+      "opponent_distance_partial_dependence": {
+        "1": 0.01137281786226911,
+        "2": 0.01137281786226911,
+        "4": 0.011642488689175081,
+        "8": 0.01859240171228429,
+        "16": 0.03035779725943986
+      },
+      "held": "128057",
+      "features": 53,
+      "train_rows": 609100,
+      "test_rows": 120842,
+      "seconds": 8.688274900021497,
+      "seed": 42
+    },
+    "132831": {
+      "baseline_AP": 0.17303190588860126,
+      "permutation_AP_drop": {
+        "state": 0.03068344668138348,
+        "relative_dynamics": 0.11421707230701961,
+        "current_competition": 0.03694260398726315,
+        "same_team_pressure": 0.00823781831828227,
+        "opponent_pressure": 0.04696097920628106,
+        "corridors": 0.02180337669419377,
+        "field_and_team_quality": 0.005265457558031705
+      },
+      "opponent_distance_partial_dependence": {
+        "1": 0.00870576131795911,
+        "2": 0.00870576131795911,
+        "4": 0.008730853025346699,
+        "8": 0.013235518129705283,
+        "16": 0.0215837833106094
+      },
+      "held": "132831",
+      "features": 53,
+      "train_rows": 610727,
+      "test_rows": 119215,
+      "seconds": 9.150743099977262,
+      "seed": 42
+    }
+  },
+  "scope": "Grouped held-match permutation importance and partial dependence, descriptive only. Correlated feature groups and impossible synthetic combinations prevent causal interpretation.",
+  "mean_group_AP_drop": {
+    "state": 0.046571472016807745,
+    "relative_dynamics": 0.15729261620802124,
+    "current_competition": 0.08340761068471715,
+    "same_team_pressure": 0.016105228425786527,
+    "opponent_pressure": 0.08627496720704121,
+    "corridors": 0.03553006448497887,
+    "field_and_team_quality": 0.006265351569802929
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-11-03T21:54:15Z",
+  "schema": "extended.evidence.football.1",
+  "fit": ["117092", "117093", "118576", "118578", "128057", "132831"],
+  "development": ["132877"],
+  "retrospective": "118577 and 128058 are excluded from training, selection and new scoring.",
+  "evidence_vocabulary": {
+    "VALIDATED": "Only a directly verified narrow fact, with source and uncertainty; not a global model certificate.",
+    "INTERNAL_OOF": "Six exploratory match-excluded fits, not independent generalization.",
+    "PROXY_ONLY": "Tracking geometry or algorithmic contact candidate, not physical touch.",
+    "INCONCLUSIVE": "Insufficient evidence for claim.",
+    "BLOCKED": "Missing required independent source evidence."
+  },
+  "targets": {
+    "geometric": "Future nearest eligible player at +1s and +2s; fixed current causal roster; ties <=0.2m and unsupported future labels censored.",
+    "annotated_next_actor": "Earliest uniquely timed supported BAS pass/high-pass/cross/shot/header actor in (t,t+1] and (t+1,t+2]; candidate recall and unsupported identities reported. Annotation semantics, not video-certified touch.",
+    "action": "Inherited disjoint 0-1,1-2,2-3s BAS labels; additional 3-5s only if reconstruction supports equivalent censoring."
+  },
+  "model": "Fixed HGB 100 iterations, max depth5, leaves15, min leaf50, L2=1, seed42. No test tuning. Reuse verified current/history/interpretable predictions where exact targets match.",
+  "counterfactual": "Remove last 0.48s (12 frames) of joint player-ball observations; all dynamic/static features reconstructed at that past frame, current roster fixed. No cross-time actor-ball mismatch.",
+  "tactical": "Causal source teams/positions at query; no inferred possession team, no guessed attack direction; family ablation opponent and same-team pressure.",
+  "external": {
+    "repository": "metrica-sports/sample-data",
+    "commit": "e706dd506b360d69d9d123d5b8026e7294b13996",
+    "sample": "Sample_Game_1",
+    "purpose": "Official synchronized anonymous 105x68m,25Hz tracking/event pilot, about 66MB; nonredistributed, acknowledge Metrica Sports.",
+    "evaluation": "Domain-shift pilot, not SoccerTrack sealed evaluation. Freeze label rules, features and metrics before any model result. Transfer compact 2s-relative-physics models trained on six SoccerTrack fits; no external fine-tuning. Also diagnostic geometric/event association, never pretend event taxonomies identical."
+  },
+  "review": "The 120-case queue remains unadjudicated. Audit existing 60-case historical human pass reviews and exact identity/clip provenance separately. No new human labels; no forced negatives.",
+  "adaptive": "At least three distinct hypotheses locked in adaptive_decisions.json before fitting each, after stages1-8 actual findings.",
+  "protection": "All original data, checkpoints, historical outputs, splits read-only. All new code/data caches/models private evidence stay in this fresh run. No commit/push.",
+  "resources": "CPU8 threads; CUDA only for justified model hypothesis; no runtime filler."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PARTIAL",
+  "directly_inspected_native_clock_sample_frames": [
+    {"case": "S001", "observations": "Night-time panorama, strong floodlight glare, distant small players; a single image does not establish ball-contact identity/time."},
+    {"case": "S009", "observations": "Day-time panorama with severe non-perspective panoramic geometry, play clustered at far right; small player/ball image scale. Field visibility does not establish exact touch."}
+  ],
+  "private_video_samples_extracted": 14,
+  "clip_rule": "Nearest annotated contact-like event to half midpoint; not chosen by model scores or optimized time offset.",
+  "independently_verified_physical_touches": 0,
+  "physical_sync": "UNVERIFIED",
+  "conclusion": "Technical decoding and source metadata are verified; independent visual contact adjudication remains unavailable without calibrated source-to-pitch mapping and deliberate clip review. No new human labeling requested."
+}

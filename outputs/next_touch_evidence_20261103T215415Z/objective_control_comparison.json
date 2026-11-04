@@ -1,0 +1,138 @@
+{
+  "geometry_2s": {
+    "pooled_softmax": {
+      "rows": 673353,
+      "positives": 30615,
+      "prevalence": 0.0454664938004286,
+      "AP": 0.49860571982176305,
+      "AUC": 0.9152487249338295,
+      "brier": null,
+      "NLL": null,
+      "AP_over_prevalence": 10.966443157247872,
+      "recall_at_annotation_precision": {
+        "0.5": 0.4795035113506451,
+        "0.8": 0.18294953454189122
+      },
+      "scene": {
+        "positive_scenes": 30615,
+        "top1": 0.4713049158909032,
+        "top3": 0.7282051282051282,
+        "mrr": 0.6280598990033258
+      }
+    },
+    "pooled_binary": {
+      "rows": 673353,
+      "positives": 30615,
+      "prevalence": 0.0454664938004286,
+      "AP": 0.4781474514512024,
+      "AUC": 0.9123153305839723,
+      "brier": null,
+      "NLL": null,
+      "AP_over_prevalence": 10.516479532158142,
+      "recall_at_annotation_precision": {
+        "0.5": 0.4617997713539115,
+        "0.8": 0.14470031030540584
+      },
+      "scene": {
+        "positive_scenes": 30615,
+        "top1": 0.4616691164461865,
+        "top3": 0.7215417279111547,
+        "mrr": 0.6209867236186476
+      }
+    },
+    "conditional_NLL": {
+      "softmax": 1.7476928452550935,
+      "binary": 1.7928253930304816
+    },
+    "paired_conditional_AP": {
+      "mean_delta": 0.018371378661959325,
+      "ci95": [
+        0.013283023942861877,
+        0.022166119285528713
+      ],
+      "per_match_delta": [
+        0.021299046149653056,
+        0.024566138581369135,
+        0.01809407645072325,
+        0.021782882745537524,
+        0.018210227754170027,
+        0.006275900290302949
+      ],
+      "clusters": 6,
+      "interpretation": "Descriptive match-bootstrap, not population significance."
+    },
+    "switch_top1": {
+      "softmax": 0.20369609856262832,
+      "binary": 0.1595189205045468
+    },
+    "scope": "Matched architecture/data/seeds/batches/epochs/development criterion; training loss and probability link differ deliberately."
+  },
+  "next_BAS_1_2s": {
+    "pooled_softmax": {
+      "rows": 145374,
+      "positives": 6609,
+      "prevalence": 0.04546204960997152,
+      "AP": 0.6350967487014134,
+      "AUC": 0.939661265274862,
+      "brier": null,
+      "NLL": null,
+      "AP_over_prevalence": 13.96982217366005,
+      "recall_at_annotation_precision": {
+        "0.5": 0.6840671811166591,
+        "0.8": 0.406112876380693
+      },
+      "scene": {
+        "positive_scenes": 6609,
+        "top1": 0.6031169617188682,
+        "top3": 0.7946739294900893,
+        "mrr": 0.7213571523859774
+      }
+    },
+    "pooled_binary": {
+      "rows": 145374,
+      "positives": 6609,
+      "prevalence": 0.04546204960997152,
+      "AP": 0.5954456940096766,
+      "AUC": 0.9308490581678749,
+      "brier": null,
+      "NLL": null,
+      "AP_over_prevalence": 13.097642959746214,
+      "recall_at_annotation_precision": {
+        "0.5": 0.6466939022545014,
+        "0.8": 0.3546678771372371
+      },
+      "scene": {
+        "positive_scenes": 6609,
+        "top1": 0.5728551974580118,
+        "top3": 0.7765168709335755,
+        "mrr": 0.6985258649615338
+      }
+    },
+    "conditional_NLL": {
+      "softmax": 1.4293044329637374,
+      "binary": 1.5358518575032019
+    },
+    "paired_conditional_AP": {
+      "mean_delta": 0.038585219286155124,
+      "ci95": [
+        0.03230940817022152,
+        0.043451086260364834
+      ],
+      "per_match_delta": [
+        0.03629293074372908,
+        0.04649711549596336,
+        0.04209749146073116,
+        0.041762542539694913,
+        0.04175865182439997,
+        0.023102583652412245
+      ],
+      "clusters": 6,
+      "interpretation": "Descriptive match-bootstrap, not population significance."
+    },
+    "switch_top1": {
+      "softmax": 0.2465846994535519,
+      "binary": 0.15129781420765026
+    },
+    "scope": "Matched architecture/data/seeds/batches/epochs/development criterion; training loss and probability link differ deliberately."
+  }
+}
