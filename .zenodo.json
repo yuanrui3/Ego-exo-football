@@ -1,0 +1,12 @@
+{
+  "title": "Ego-Exo Football Tracking Baseline",
+  "version": "v0.1.0",
+  "description": "<p>The frozen tracking-based football baseline, its software and configuration, public research reports, and an acceptance record. Video calibration remains experimental.</p><p>Original code is MIT-licensed. Original documentation, reports and data contributions are CC BY 4.0. Referenced data, footage, weights, and upstream dependencies retain their own terms. See LICENSE.md.</p>",
+  "creators": [
+    {
+      "name": "Chen, Yuanrui"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software"
+}
