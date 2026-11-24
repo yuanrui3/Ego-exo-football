@@ -113,7 +113,7 @@ deadlines are not reusable authorizations for new training.
 
 ## Original event-classification pipeline
 
-This repository contains our football tactical modeling pipeline for turning SoccerTrack event annotations and game-state snapshots into a supervised fine-tuning dataset for a tactical action model.
+This separate research pipeline turns SoccerTrack event annotations and game-state snapshots into a supervised fine-tuning dataset for a tactical action model. Its quick start below is not the supported tracking release or the experimental video path; begin with the [researcher tutorial](docs/handover/README.md) for the release.
 
 Pipeline:
 
@@ -267,6 +267,8 @@ The project depends on:
 - scikit-learn
 
 ## Quick start
+
+The following commands belong to the historical event-classification pipeline above and require its own local datasets and model dependencies. For the frozen tracking release, use [Local run and verification](#local-run-and-verification) instead.
 
 ### 1) Extract a match decision dataset
 

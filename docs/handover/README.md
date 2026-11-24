@@ -11,7 +11,7 @@
 
 ## Verify something on day one
 
-With a source checkout and Python 3, run the following from the repository root in a Python interpreter. It verifies the configuration bytes against the published manifest and needs no match data.
+With a source checkout and Python 3, open a Python interpreter from the repository root and paste the following. It verifies only the configuration bytes against the published manifest; it needs no dependencies or match data and does not check the models or run the baseline.
 
 ```python
 import hashlib
@@ -24,16 +24,69 @@ assert hashlib.sha256(config.read_bytes()).hexdigest() == manifest["canonical_co
 print("Release configuration matches the frozen manifest.")
 ```
 
-**When you have lab access**, inventory the checkpoints, indexes and tracking sources listed in the manifest. Then follow the Windows commands in the release guide and choose a fresh output directory. Use the generated viewer to inspect a query with the evaluation-only annotation hidden and then displayed. The guide documents a HIGH_PASS prediction beside a recorded PASS. That disagreement is an example of a classification error. The replay contains only the recorded play.
+### First lab run, not a clean-checkout test
+
+The canonical runner needs the pinned G1 and original S4 checkpoints and their
+configs, G1 integration manifest, 118577 first-half tracking cache and metadata,
+association manifest, training index and indexed retrospective shard files.
+The [configuration](../../configs/backbone_release_baseline.json) lists pinned
+paths and hashes; the [manifest](../../configs/backbone_release_manifest.json)
+and [release guide](../../results/tracking_backbone_release_baseline.md) give
+the remaining shard and environment details. These assets are local-only; the
+optional external-metre fixture is not needed for this demo. Install
+[`requirements-backbone.txt`](../../requirements-backbone.txt) in the lab
+environment. The documented Windows x64 environment used Python 3.14.8 and CPU
+inference; a fresh installation and asset transfer were not verified.
+
+Once those prerequisites are present, this is the first supported runnable
+entry point, from the repository root in PowerShell:
+
+```powershell
+$stamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+.\.venv\Scripts\python.exe -m src.backbone.release_baseline `
+  --config configs\backbone_release_baseline.json `
+  --output "outputs\release_demo_$stamp"
+```
+
+Choose a new, empty output directory and open its `viewer.html` locally. At
+sample 238 (frame 1720), toggle the evaluation-only annotation. The published
+demo recorded a HIGH_PASS prediction beside a PASS annotation: a classification
+error, not a comparison of alternative outcomes. The replay contains only the
+recorded play.
+
+The [fixture-only video regressions](../../README.md#local-run-and-verification)
+need their installed dependencies but not private data or checkpoints; passing
+them does not validate real video positions or the release models. Conversely,
+the release guide's `verify_release_baseline` command runs regressions **and a
+fresh local-data replay**, so it requires the lab assets and a separate fresh
+output directory. Historical viewer and verification links in the guide point
+to local-only outputs, not files included in a source checkout.
+
+### Where to look in the source
+
+These are functional responsibilities, not assignments to people:
+
+| Area | Public source |
+|---|---|
+| Configuration, pinned files and query/annotation join | [`release_baseline.run` and `_verified_queries`](../../src/backbone/release_baseline.py) |
+| Tracking and external-metre adapters | [`SoccerTrackSource`](../../src/backbone/source.py), [`ExternalObservationSource`](../../src/backbone/external.py) |
+| Simulated view and causal memory | [`SyntheticObservationProvider`](../../src/backbone/observation.py), [`CausalMemory`](../../src/backbone/memory.py) |
+| Replay and model interfaces | [`ReplayEngine`](../../src/backbone/pipeline.py), G1 [`ModelSession`](../../src/backbone/models.py), S4 [`ActionModelSession`](../../src/backbone/actions.py) |
+| Scoped verification | [`verify`](../../src/backbone/verify_release_baseline.py) |
 
 ## Roadmap from the published evidence
 
-| Milestone | Where the public record stands | What the next researcher should verify |
+This written backlog proposes evidence to resolve specific questions, not completed work,
+new release gates, or authorization to run experiments.
+
+| Open question | Where the public record stands | Measurable evidence needed |
 |---|---|---|
-| Track a player's observations and memory | A frozen tracking-based G1/original S4 release exists. A separate completion study replayed two full tracking halves covering 93.45 source minutes. | Inspect which fields are observed, inferred and unknown at the query. Verify fallback and unsupported-query behavior with the release guide. |
-| Connect real video to metric pitch positions | The global validation gate failed on both published cross-match examples. Their median withheld-landmark errors exceeded 8 m. | Trace the coordinate system, landmark support and field coverage in the cross-match handoff before treating an experimental projection as a measured position. |
-| Recognize and forecast football events | The release classifies event-conditioned actions. Receiver ranking and trajectory forecasting have separate datasets and evaluation protocols. | Check who supplied the actor and clock, where the labels originate and which matches were previously used. |
-| Recommend an action | The repository's action contract exposes supported outputs and unknowns. Class scores from different branches cannot establish the best action. | Define feasible actions, a simple comparator and an independently measured outcome before interpreting a score as tactical benefit. |
+| Can tracking retain a usable player view? | [Tolerance study](../../results/perception_identity_tolerance_20261030.md): focal gaps reduced support even where survivor predictions were unchanged; simulated visibility is not gaze. | On independently annotated matches, report focal identity switches/fragmentation, supported-query fraction and paired S4 macro-F1 and G1 error against the retained tracker, including unsupported queries and occlusions. |
+| Can video provide metric positions? | [Cross-match handoff](../../results/video_player_cross_match_20261028_handoff.md): both global calibrations failed; local validation was too sparse. | Meet the published global gate on each source: at least 50 withheld landmarks, median error ≤2 m and p90 ≤5 m, with spatial coverage; also measure footpoint, synchronization and identity errors before accepting video observations. |
+| Can actions be recognized without supplied event times? | The [release](../../results/tracking_backbone_release_baseline.md) scores seven classes only at supplied actor/query times. | On independently annotated, previously unseen matches, report event detection precision/recall, timing error, per-class F1 and unsupported-query rate against a simple baseline. |
+| Are forecasts useful at tactical horizons? | [Trajectory report](../../results/trajectory_forecasting_report.md) and [audit](../../results/trajectory_leakage_audit.md): 3-second forecasts use quantized tracks; contact timing is unverified. | On independently verified continuous tracks from unseen matches, compare horizon-specific metre errors and coverage to persistence and constant velocity, including missing-track cases; separately measure synchronized ball/contact errors for any interception claim. |
+| Does forecasting improve receiver prediction? | [Integration report](../../results/receiver_forecast_integration_report.md): social features improved matched top-1 by 1.773 percentage points, but the verdict was inconclusive and labels are next-actor proxies. | On unseen matches with verified receiver and contact labels, compare paired top-1/MRR and coverage against the matched no-forecast ranker with uncertainty intervals and a pre-event timing protocol. |
+| Can the system recommend an action? | The [action contract](../../results/tracking_backbone_release_baseline.md) exposes uncalibrated class scores, not tactical value. | Define feasible alternatives and a simple comparator; measure independently verified outcomes and uncertainty under a credible prospective or causal comparison of alternatives. Recorded action labels alone cannot identify the best action. |
 
 ## Keep the handover useful
 
