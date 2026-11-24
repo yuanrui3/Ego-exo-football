@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24448785.svg)](https://doi.org/10.5281/zenodo.24448785)
 
+[New researcher tutorial](docs/handover/README.md) | [Research evidence by question](results/README.md)
+
 ## Start here: current supported baseline
 
 The supported entry point is the **frozen tracking-based G1 + original v0.5
