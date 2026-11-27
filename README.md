@@ -185,6 +185,61 @@ The extractor supports the released SoccerTrack-v2 BAS format, where events are 
 - `data/` — stores extracted and prepared datasets
 - `outputs/` — stores trained adapters and evaluation artifacts
 
+## Synthetic goalkeeper pilot: incomplete
+
+This is a separate, synthetic-only research path, not part of the tracking
+release or a recommendation for goalkeeper action. The masked-motion fixture
+uses generated lateral attacker histories and the repository's causal
+visibility helper; its ridge model predicts the residual over a
+constant-velocity next-position forecast. The independent counterfactual
+component models simplified rolling-ball, attacker and keeper trajectories
+and resolves first contacts or a goal. It is not yet connected to the
+forecast or to a policy comparison.
+
+With Python and NumPy (already listed in `requirements.txt`), from a fresh
+checkout:
+
+```sh
+python -m unittest tests.test_synthetic_goalkeeper_pilot tests.test_goalkeeper_counterfactual -v
+python -m src.synthetic_goalkeeper_pilot --checkpoint /tmp/goalkeeper-pilot/checkpoint.json
+```
+
+The second command is a deterministic pretraining **fixture**, not a full
+pilot run. It writes its checkpoint outside the checkout; rerun the same
+command to resume at a completed family. Keep the checkpoint to avoid
+recomputing training; if the ephemeral `/tmp` directory is lost, the command
+starts that fixture again. Use an isolated, private artifact directory in an
+environment where `/tmp` is shared. A changed source or protocol requires a
+new checkpoint. The command requests two CPU threads before importing NumPy;
+the active BLAS limit is not independently verified. It has no accelerator
+or external data dependency.
+
+The local fixture run completed 48 training families (576 generated histories,
+2,304 masked next-position examples) and 12 separate development families
+(120 histories, 480 examples). Its development next-position MSE was
+0.2428 in the synthetic coordinate units; this is not an action-outcome score.
+An interrupted three-family run resumed to the same stage. The two invocations
+took approximately 0.11 and 0.65 seconds respectively; this is not the
+requested overnight evaluation. The receipt is ephemeral at
+`/tmp/goalkeeper-pilot-95f2af83/checkpoint.json` in the session environment.
+Its pretraining receipt SHA-256 is
+`cbc837ab8fee8fbcf7408b49836e6b26fd014bae4b27deccbc25ba74bd6420a0`.
+To resume that particular checkpoint while it remains available, run
+`python -m src.synthetic_goalkeeper_pilot --checkpoint /tmp/goalkeeper-pilot-95f2af83/checkpoint.json`
+from the checkout. The pretraining fixture passed 10 tests and the independent
+simulator passed 8, including causal/masked input, interrupted resume,
+identical-action, branch-order, illegal-action and timestep-convergence
+checks. These fixtures do not establish numerical convergence across a held
+scenario population.
+
+No held outcome has been accessed. The family generator, action planner,
+development comparator selection, held protocol, paired uncertainty, practical
+gate and registered robustness runs still need to be integrated and frozen
+before held evaluation. Consequently there is **no result** about whether a
+forecast prevents adverse outcomes, no outcome scores, uncertainty intervals,
+baseline wins or held failure examples to report, and no basis for a controlled
+drill.
+
 ## Raw-player trajectory forecasting
 
 The independent movement-forecasting experiment does not use SFT prompts, receiver
