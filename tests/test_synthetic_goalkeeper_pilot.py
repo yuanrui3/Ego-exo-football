@@ -1,7 +1,10 @@
 from src import synthetic_goalkeeper_pilot as pilot
 
 import json
+import os
 from pathlib import Path
+import subprocess
+import sys
 import unittest
 from unittest import mock
 import uuid
@@ -34,6 +37,24 @@ class CausalPretrainingTests(unittest.TestCase):
         future_changed[4:] = 1e9
         np.testing.assert_array_equal(pilot.visibility_mask(history[:4]),
                                       pilot.visibility_mask(future_changed[:4]))
+
+    def test_import_does_not_mutate_process_environment(self):
+        names = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+                 "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS")
+        env = os.environ.copy()
+        env.update({name: str(i + 3) for i, name in enumerate(names)})
+        env["PYTHONDONTWRITEBYTECODE"] = "1"
+        script = (
+            "import json, os; before = dict(os.environ); "
+            "from src import synthetic_goalkeeper_pilot as p; "
+            "print(json.dumps({'unchanged': before == dict(os.environ), "
+            "'requested': p.protocol()['blas_thread_env_requested'], "
+            "'verified': p.protocol()['blas_thread_limit_verified']}))"
+        )
+        result = subprocess.run([sys.executable, "-c", script], env=env, check=True,
+                                capture_output=True, text=True)
+        self.assertEqual(json.loads(result.stdout),
+                         {"unchanged": True, "requested": None, "verified": False})
 
     def test_contiguous_mask_and_target_never_in_features(self):
         for end in range(1, pilot.HISTORY - 1):

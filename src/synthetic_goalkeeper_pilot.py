@@ -14,11 +14,13 @@ import os
 import tempfile
 from pathlib import Path
 
-# In a fresh CLI process these are set before NumPy loads. An embedding process
-# may already have initialized BLAS; environment variables cannot verify it.
-for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
-              "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS"):
-    os.environ[_name] = "2"
+# Only the standalone CLI requests a limit; importing this module must not
+# modify the embedding process or its children's environment.
+_CLI_THREAD_REQUESTED = __name__ == "__main__"
+if _CLI_THREAD_REQUESTED:
+    for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+                  "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS", "BLIS_NUM_THREADS"):
+        os.environ[_name] = "2"
 
 import numpy as np
 
@@ -42,7 +44,8 @@ def protocol() -> dict:
     """Pretraining fixture protocol; this is not a registered held experiment."""
     return {
         "version": VERSION, "seed": SEED, "history": HISTORY, "ridge": RIDGE,
-        "numpy_version": np.__version__, "blas_thread_env_requested": 2,
+        "numpy_version": np.__version__,
+        "blas_thread_env_requested": 2 if _CLI_THREAD_REQUESTED else None,
         "blas_thread_limit_verified": False,
         "train_families": list(TRAIN_FAMILIES), "train_scenes": TRAIN_SCENES,
         "dev_families": list(DEV_FAMILIES), "dev_scenes": DEV_SCENES,

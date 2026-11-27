@@ -211,21 +211,22 @@ recomputing training; if the ephemeral `/tmp` directory is lost, the command
 starts that fixture again. Use an isolated, private artifact directory in an
 environment where `/tmp` is shared. A changed source or protocol requires a
 new checkpoint. The command requests two CPU threads before importing NumPy;
-it has no accelerator or external data dependency.
+the active BLAS limit is not independently verified. It has no accelerator
+or external data dependency.
 
 The local fixture run completed 48 training families (576 generated histories,
 2,304 masked next-position examples) and 12 separate development families
 (120 histories, 480 examples). Its development next-position MSE was
 0.2428 in the synthetic coordinate units; this is not an action-outcome score.
 An interrupted three-family run resumed to the same stage. The two invocations
-took approximately 0.10 and 0.49 seconds respectively; this is not the
+took approximately 0.11 and 0.65 seconds respectively; this is not the
 requested overnight evaluation. The receipt is ephemeral at
-`/tmp/goalkeeper-pilot-4a908a2c/checkpoint.json` in the session environment.
+`/tmp/goalkeeper-pilot-95f2af83/checkpoint.json` in the session environment.
 Its pretraining receipt SHA-256 is
-`a2743c27dd54a2928dc5d0eef2c9b1091b40d81c8f330800bd7e63760f23dfb1`.
+`cbc837ab8fee8fbcf7408b49836e6b26fd014bae4b27deccbc25ba74bd6420a0`.
 To resume that particular checkpoint while it remains available, run
-`python -m src.synthetic_goalkeeper_pilot --checkpoint /tmp/goalkeeper-pilot-4a908a2c/checkpoint.json`
-from the checkout. The pretraining fixture passed 9 tests and the independent
+`python -m src.synthetic_goalkeeper_pilot --checkpoint /tmp/goalkeeper-pilot-95f2af83/checkpoint.json`
+from the checkout. The pretraining fixture passed 10 tests and the independent
 simulator passed 8, including causal/masked input, interrupted resume,
 identical-action, branch-order, illegal-action and timestep-convergence
 checks. These fixtures do not establish numerical convergence across a held
@@ -235,7 +236,9 @@ No held outcome has been accessed. The family generator, action planner,
 development comparator selection, held protocol, paired uncertainty, practical
 gate and registered robustness runs still need to be integrated and frozen
 before held evaluation. Consequently there is **no result** about whether a
-forecast prevents adverse outcomes, and no basis for a controlled drill.
+forecast prevents adverse outcomes, no outcome scores, uncertainty intervals,
+baseline wins or held failure examples to report, and no basis for a controlled
+drill.
 
 ## Raw-player trajectory forecasting
 
